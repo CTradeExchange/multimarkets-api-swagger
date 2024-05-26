@@ -59747,4 +59747,6 @@ components:
         fail:
           type: boolean
   securitySchemes: {}
-servers: []
+servers:
+  - url: https://prewppc-3.cmfbl.com/api
+    description: PRE测试公司439
