@@ -7,8 +7,8 @@ info:
 tags:
   - name: Instructions
   - name: Authorization
-  - name: Basic Data
-  - name: Product Data
+  - name: Basic
+  - name: Product
   - name: Fund
   - name: Customer
   - name: Message
