@@ -5,7 +5,7 @@ info:
     client business
   version: 1.0.0
 tags:
-  - name: Basic Data
+  - name: Basic
   - name: Customer
   - name: Customer/Authorization
   - name: Customer/Basic
@@ -29,8 +29,8 @@ tags:
   - name: Trade/Full Margin Contract
   - name: Trade/Isolated Margin Contract
   - name: Trade/Leveraged
-  - name: Margin/Spot
-  - name: Margin/Stock
+  - name: Trade/Spot
+  - name: Trade/Stock
   - name: Markets
   - name: Markets/Websocket
   - name: Markets/HTTP
