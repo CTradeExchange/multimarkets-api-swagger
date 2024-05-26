@@ -6,7 +6,7 @@ info:
   version: 1.0.0
 tags:
   - name: Instructions
-  - name: Authorization
+  - name: Auth
   - name: Basic
   - name: Product
   - name: Fund
@@ -1445,7 +1445,7 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminDictDubboService.getListByParentCode
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: trace
           in: header
@@ -1699,7 +1699,7 @@ paths:
       description: >-
         bizType=config.admin.AdminSymbolDubboService.getSymbolTradeTypeByCompanyId
       tags:
-        - Product Data
+        - Product
       parameters:
         - name: trace
           in: header
@@ -2770,7 +2770,7 @@ paths:
       deprecated: false
       description: bizType=admin.admin.CompanyAuthDubboService.auth
       tags:
-        - Authorization
+        - Auth
       parameters:
         - name: trace
           in: header
@@ -3073,7 +3073,7 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminSymbolDubboService.getSymbolList
       tags:
-        - Product Data
+        - Product
       parameters:
         - name: trace
           in: header
@@ -5913,7 +5913,7 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminAssetsDubboService.getAssetsList
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: trace
           in: header
@@ -8073,7 +8073,7 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminDictDubboService.getListByParentCode
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: trace
           in: header
@@ -9892,7 +9892,7 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminAssetsDubboService.getTradeTypeList
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: trace
           in: header
@@ -24621,7 +24621,7 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminSymbolDubboService.getSymbolGroupList
       tags:
-        - Product Data
+        - Product
       parameters:
         - name: trace
           in: header
@@ -26117,7 +26117,7 @@ paths:
         version=0.0.1
         bizType=config.admin.AdminSymbolDubboService.getSymbolByCompanyId
       tags:
-        - Product Data
+        - Product
       parameters:
         - name: trace
           in: header
@@ -39906,7 +39906,7 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminSymbolDubboService.getFundByCompanyId
       tags:
-        - Product Data
+        - Product
       parameters:
         - name: trace
           in: header

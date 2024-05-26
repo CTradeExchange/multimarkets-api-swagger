@@ -7,7 +7,7 @@ info:
 tags:
   - name: Basic
   - name: Customer
-  - name: Customer/Authorization
+  - name: Customer/Auth
   - name: Customer/Basic
   - name: Customer/Extended
   - name: Customer/Verification
@@ -29,8 +29,8 @@ tags:
   - name: Trade/Full Margin Contract
   - name: Trade/Isolated Margin Contract
   - name: Trade/Leveraged
-  - name: Trade/Spot
-  - name: Trade/Stock
+  - name: Margin/Spot
+  - name: Margin/Stock
   - name: Markets
   - name: Markets/Websocket
   - name: Markets/HTTP
@@ -1009,7 +1009,7 @@ paths:
       description: ''
       operationId: updateLoginPwd
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -1365,7 +1365,7 @@ paths:
       description: |-
         IP country query, accessible to visitors
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: ip
           in: query
@@ -1449,7 +1449,7 @@ paths:
                   - data
       security: []
       x-docstype: TS.Clientapi.Base
-      x-docstitle: Basic Data
+      x-docstitle: Basic
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdV1v1v2:
     post:
       summary: Forget fund password (MFA)
@@ -2066,7 +2066,7 @@ paths:
         bizType=customer.app.CustomerWebApiService.login
         Guest Accessible
       tags:
-        - Customer/Authorization
+        - Customer/Auth
       parameters:
         - name: version
           in: header
@@ -4901,7 +4901,7 @@ paths:
       deprecated: false
       description: ''
       tags:
-        - Customer/Authorization
+        - Customer/Auth
       parameters:
         - name: companyId
           in: header
@@ -6497,7 +6497,7 @@ paths:
       deprecated: false
       description: Get current service time
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -6810,7 +6810,7 @@ paths:
         version=0.0.1
         bizType=customer.app.CustomerDubboApiService.resetAccount
       tags:
-        - Customer/Authorization
+        - Customer/Auth
       parameters:
         - name: companyId
           in: header
@@ -8077,7 +8077,7 @@ paths:
         Get all asset list data supported by the platform
       operationId: getAssetsList
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -9132,7 +9132,7 @@ paths:
         Guest access
       operationId: register
       tags:
-        - Customer/Authorization
+        - Customer/Auth
       parameters:
         - name: version
           in: header
@@ -11059,7 +11059,7 @@ paths:
         Accessible to visitors
       operationId: getListByParentId
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -13692,7 +13692,7 @@ paths:
         Guest access
       operationId: getListByParentCode
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -14218,7 +14218,7 @@ paths:
         Batch get dictionary data
       operationId: getListByParentId
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -16386,7 +16386,7 @@ paths:
         Accessible to visitors
       operationId: getCountryListByParentId
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -18457,7 +18457,7 @@ paths:
         Accessible to visitors
       operationId: getCountryListByParentCode
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -20361,7 +20361,7 @@ paths:
         Guest access available
       operationId: getSymbolList
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -22900,7 +22900,7 @@ paths:
         bizType=config.app.AppSymbolDubboService.getSymbolBaseList Query product information, including basic products and brief trading parameters, such as decimal places, deal modes, etc. Visitors can access
       operationId: getSymbolBaseList
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -24284,7 +24284,7 @@ paths:
         Exchange final access token with a temporary token
       operationId: getSymbolBaseList
       tags:
-        - Customer/Authorization
+        - Customer/Auth
       parameters:
         - name: companyId
           in: header
@@ -24984,7 +24984,7 @@ paths:
         bizType=config.app.AppSymbolDubboService.getSymbolDetail Get detailed trading parameters for product configuration 
       operationId: getSymbolDetail
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -27376,7 +27376,7 @@ paths:
       description: Get fund detailed information
       operationId: getFundInfo
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -29620,7 +29620,7 @@ paths:
       description: Pagination query for fund list data
       operationId: findFundPage
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -31955,7 +31955,7 @@ paths:
       description: Fund Detailed Information Pagination Query (with real-time information)
       operationId: findFundPageWithRealTimeInfo
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -35010,7 +35010,7 @@ paths:
       description: Query net asset value and premium rate
       operationId: getEquityPremiumRate
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
@@ -37086,7 +37086,7 @@ paths:
         Get fund details based on fund manager 
       operationId: getFundInfoByCustomerNo
       tags:
-        - Basic Data
+        - Basic
       parameters:
         - name: companyId
           in: header
