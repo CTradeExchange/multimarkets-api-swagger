@@ -27689,4 +27689,6 @@ components:
         fail:
           type: boolean
   securitySchemes: {}
-servers: []
+servers:
+  - url: https://pre-api-test.cmfbl.com/openapi-b
+    description: PRE环境-公司439
