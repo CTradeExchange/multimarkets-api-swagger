@@ -6,16 +6,16 @@ info:
     support such as customer information, fund management, activity push, etc.
   version: 1.0.0
 tags:
-  - name: Trade
-  - name: Trade/Spot
-  - name: Markets/HTTP
-  - name: Customer
-  - name: Message
+  - name: Auth
   - name: Basic
   - name: Product
-  - name: Auth
-  - name: Activities
   - name: Fund
+  - name: Customer
+  - name: Message
+  - name: Trade
+  - name: Trade/Spot
+  - name: Activities
+  - name: Markets/HTTP
 paths:
   /tradeapi.admin.OrderAdminApiService.queryCapitalFlowList:
     post:
