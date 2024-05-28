@@ -6,17 +6,16 @@ info:
     support such as customer information, fund management, activity push, etc.
   version: 1.0.0
 tags:
-  - name: Auth
-  - name: Basic
-  - name: Product
-  - name: Fund
-  - name: Customer
-  - name: Message
   - name: Trade
   - name: Trade/Spot
-  - name: Activities
-  - name: Markets
   - name: Markets/HTTP
+  - name: Customer
+  - name: Message
+  - name: Basic
+  - name: Product
+  - name: Auth
+  - name: Activities
+  - name: Fund
 paths:
   /tradeapi.admin.OrderAdminApiService.queryCapitalFlowList:
     post:
@@ -27,7 +26,6 @@ paths:
         version=0.0.1
         bizType=tradeapi.admin.OrderAdminApiService.queryCapitalFlowList
       tags:
-        - Trade
         - Trade
       parameters:
         - name: trace
@@ -172,7 +170,6 @@ paths:
         version=0.0.1
         bizType=report.admin.CatsTradeDealService.getTradeDealInfoByDealId
       tags:
-        - Trade/Spot
         - Trade/Spot
       parameters:
         - name: companyId
@@ -325,7 +322,6 @@ paths:
       description: ''
       tags:
         - Markets/HTTP
-        - Markets/HTTP
       parameters:
         - name: token
           in: query
@@ -459,7 +455,6 @@ paths:
         bizType=customer.app.CustomerWebApiService.checkCustomerExist
       tags:
         - Customer
-        - Customer
       parameters:
         - name: trace
           in: header
@@ -526,7 +521,6 @@ paths:
       deprecated: false
       description: ''
       tags:
-        - Message
         - Message
       parameters:
         - name: trace
@@ -666,7 +660,6 @@ paths:
       description: bizType=config.admin.AdminDictDubboService.getListByParentCode
       tags:
         - Basic
-        - Basic
       parameters:
         - name: trace
           in: header
@@ -735,7 +728,6 @@ paths:
       description: >-
         bizType=config.admin.AdminSymbolDubboService.getSymbolTradeTypeByCompanyId
       tags:
-        - Product
         - Product
       parameters:
         - name: trace
@@ -1067,7 +1059,6 @@ paths:
       description: bizType=admin.admin.CompanyAuthDubboService.auth
       tags:
         - Auth
-        - Auth
       parameters:
         - name: trace
           in: header
@@ -1375,7 +1366,6 @@ paths:
       description: bizType=message.admin.PlatFormMessageThirdSendAdminService.add
       tags:
         - Activities
-        - Activities
       parameters:
         - name: token
           in: header
@@ -1490,7 +1480,6 @@ paths:
         **accountId becomes optional
       tags:
         - Fund
-        - Fund
       parameters:
         - name: trace
           in: header
@@ -1590,7 +1579,6 @@ paths:
         version=0.0.1
         bizType=tradeapi.admin.OrderAdminApiService.queryPositionPage
       tags:
-        - Trade
         - Trade
       parameters:
         - name: trace
@@ -1930,7 +1918,6 @@ paths:
         bizType=report.admin.CatsTradeDealService.getTradeDealInfoByOrderId
       tags:
         - Trade/Spot
-        - Trade/Spot
       parameters:
         - name: companyId
           in: header
@@ -2088,7 +2075,6 @@ paths:
       description: ''
       tags:
         - Markets/HTTP
-        - Markets/HTTP
       parameters:
         - name: token
           in: query
@@ -2224,7 +2210,6 @@ paths:
 
         bizType=customer.admin.WhiteCustomerAdminApiService.addCusAndOpenAccountAndKyc
       tags:
-        - Customer
         - Customer
       parameters:
         - name: trace
@@ -2392,7 +2377,6 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminAssetsDubboService.getAssetsList
       tags:
-        - Basic
         - Basic
       parameters:
         - name: trace
@@ -4553,7 +4537,6 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminSymbolDubboService.getSymbolList
       tags:
-        - Product
         - Product
       parameters:
         - name: trace
@@ -6930,7 +6913,6 @@ paths:
         bizType=fund.admin.CustomerAdjustProposalAdminDubboService.addCustomerAdjustProposal
       tags:
         - Activities
-        - Activities
       parameters:
         - name: token
           in: header
@@ -7025,7 +7007,6 @@ paths:
         version=0.0.1
         bizType=fund.admin.CustomerFundAdminDubboService.getExchangeRate
       tags:
-        - Fund
         - Fund
       parameters:
         - name: trace
@@ -7126,7 +7107,6 @@ paths:
         version=0.0.1
         bizType=tradeapi.admin.PositionAdminApiService.queryAllPositionPage
       tags:
-        - Trade
         - Trade
       parameters:
         - name: trace
@@ -7880,7 +7860,6 @@ paths:
       description: ''
       tags:
         - Markets/HTTP
-        - Markets/HTTP
       parameters:
         - name: token
           in: query
@@ -8001,7 +7980,6 @@ paths:
         version=0.0.1
         bizType=customer.admin.WhiteCustomerAdminApiService.page
       tags:
-        - Customer
         - Customer
       parameters:
         - name: trace
@@ -8252,7 +8230,6 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminDictDubboService.getListByParentCode
       tags:
-        - Basic
         - Basic
       parameters:
         - name: trace
@@ -9878,7 +9855,6 @@ paths:
       description: bizType=config.admin.AdminSymbolDubboService.getSymbolGroupList
       tags:
         - Product
-        - Product
       parameters:
         - name: trace
           in: header
@@ -9981,7 +9957,6 @@ paths:
       description: bizType=tradeapi.admin.OrderAdminApiService.cancelPboOrder
       tags:
         - Activities
-        - Activities
       parameters:
         - name: token
           in: header
@@ -10074,7 +10049,6 @@ paths:
 
         bizType=fund.admin.CustomerActivityBonusAdminDubboService.lockTradeAccount
       tags:
-        - Fund
         - Fund
       parameters:
         - name: trace
@@ -10173,7 +10147,6 @@ paths:
       deprecated: false
       description: ''
       tags:
-        - Markets/HTTP
         - Markets/HTTP
       parameters:
         - name: token
@@ -10295,7 +10268,6 @@ paths:
         version=0.0.1
         bizType=customer.admin.WhiteCustomerAdminApiService.detail
       tags:
-        - Customer
         - Customer
       parameters:
         - name: trace
@@ -10715,7 +10687,6 @@ paths:
       deprecated: false
       description: bizType=config.admin.AdminAssetsDubboService.getTradeTypeList
       tags:
-        - Basic
         - Basic
       parameters:
         - name: trace
@@ -24913,7 +24884,6 @@ paths:
         bizType=config.admin.AdminSymbolDubboService.getSymbolByCompanyId
       tags:
         - Product
-        - Product
       parameters:
         - name: trace
           in: header
@@ -38041,7 +38011,6 @@ paths:
       description: bizType=tradeapi.admin.OrderAdminApiService.forcedOrder
       tags:
         - Activities
-        - Activities
       parameters:
         - name: token
           in: header
@@ -38150,7 +38119,6 @@ paths:
         bizType=fund.admin.CustomerActivityBonusAdminDubboService.unlockTradeAccount
       tags:
         - Fund
-        - Fund
       parameters:
         - name: trace
           in: header
@@ -38237,7 +38205,6 @@ paths:
       deprecated: false
       description: ''
       tags:
-        - Markets/HTTP
         - Markets/HTTP
       parameters:
         - name: token
@@ -38361,7 +38328,6 @@ paths:
         bizType=customer.admin.CustomerGroupAdminApiService.groupList
         Accessible after B-side authentication
       tags:
-        - Customer
         - Customer
       parameters:
         - name: trace
@@ -39851,7 +39817,6 @@ paths:
       description: bizType=config.admin.AdminSymbolDubboService.getFundByCompanyId
       tags:
         - Product
-        - Product
       parameters:
         - name: trace
           in: header
@@ -39972,7 +39937,6 @@ paths:
       description: bizType=customer.admin.CustomerAdminApiService.queryAccountList
       tags:
         - Activities
-        - Activities
       parameters:
         - name: token
           in: header
@@ -40090,7 +40054,6 @@ paths:
         bizType=fund.admin.CustomerActivityBonusAdminDubboService.queryOneLockTradeAccount
       tags:
         - Fund
-        - Fund
       parameters:
         - name: trace
           in: header
@@ -40177,7 +40140,6 @@ paths:
       deprecated: false
       description: ''
       tags:
-        - Markets/HTTP
         - Markets/HTTP
       parameters:
         - name: token
@@ -40343,7 +40305,6 @@ paths:
       description: ''
       tags:
         - Fund
-        - Fund
       parameters:
         - name: trace
           in: header
@@ -40422,7 +40383,6 @@ paths:
       deprecated: false
       description: ''
       tags:
-        - Markets/HTTP
         - Markets/HTTP
       parameters:
         - name: token
@@ -40547,7 +40507,6 @@ paths:
         bizType=fund.admin.CustomerActivityBonusAdminDubboService.queryTradeTypeLockTradeAccount
       tags:
         - Fund
-        - Fund
       parameters:
         - name: trace
           in: header
@@ -40641,7 +40600,6 @@ paths:
       deprecated: false
       description: ''
       tags:
-        - Markets/HTTP
         - Markets/HTTP
       parameters:
         - name: token
