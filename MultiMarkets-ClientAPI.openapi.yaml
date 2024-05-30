@@ -53843,6 +53843,9 @@ components:
           type: number
         remark:
           type: string
+        executeAvgPrice:
+          type: string
+          description: 成交均价
     CustomerGroupWithdrawAmountConfigDto:
       type: object
       properties:
