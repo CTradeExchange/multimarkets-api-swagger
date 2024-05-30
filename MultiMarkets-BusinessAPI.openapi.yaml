@@ -1353,7 +1353,7 @@ paths:
       security: []
   /auth/admin.admin.CompanyAuthDubboService.auth:
     post:
-      summary: B端认证鉴权接口
+      summary: 鉴权接口
       deprecated: false
       description: bizType=admin.admin.CompanyAuthDubboService.auth
       tags:
