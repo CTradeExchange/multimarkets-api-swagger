@@ -53292,8 +53292,6 @@ components:
           type: string
         requestNum:
           type: string
-        executeNum:
-          type: string
         loanAmount:
           type: string
         executeTime:
@@ -53324,6 +53322,12 @@ components:
           type: string
         tradeAmount:
           type: string
+        executeNum:
+          type: string
+          description: 成交额
+        executeAmount:
+          type: string
+          description: 成交额
     BaseResultInteger:
       type: object
       properties:
