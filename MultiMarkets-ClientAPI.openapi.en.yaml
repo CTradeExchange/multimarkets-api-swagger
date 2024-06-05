@@ -10461,7 +10461,42 @@ paths:
         bizType=message.app.PlatFormMessageTempApiService.getPlatformTempParentTypeList
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -13582,7 +13617,42 @@ paths:
         bizType=message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogList
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -16840,7 +16910,42 @@ paths:
         bizType=message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogByPage
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -19153,7 +19258,42 @@ paths:
         bizType=message.app.CompanyNoticeApiService.customerViewNoticePage
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -21262,7 +21402,42 @@ paths:
         bizType=message.app.CompanyNoticeApiService.customerViewMsgPage
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -23669,7 +23844,42 @@ paths:
         bizType=message.app.CompanyNoticeApiService.msgRead
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -25442,7 +25652,42 @@ paths:
         bizType=message.app.CompanyNoticeApiService.msgAllRead
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -27133,7 +27378,42 @@ paths:
         bizType=messagepush.app.OfflinePushService.clientIdBindCustomer
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -30701,7 +30981,42 @@ paths:
       description: ''
       tags:
         - Message
-      parameters: []
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
       responses:
         '200':
           description: Success
