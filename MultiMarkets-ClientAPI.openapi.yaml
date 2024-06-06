@@ -30678,58 +30678,6 @@ paths:
                     msgParams: null
                     ok: false
       security: []
-  /global/getMsgPushToken:
-    post:
-      summary: 获取token
-      deprecated: false
-      description: ''
-      tags:
-        - 消息接口
-      parameters:
-        - name: companyId
-          in: header
-          description: ''
-          required: false
-          example: '{{company}}'
-          schema:
-            type: string
-        - name: token
-          in: header
-          description: ''
-          required: false
-          example: '{{LoginResult.data.token}}'
-          schema:
-            type: string
-        - name: lang
-          in: header
-          description: ''
-          required: false
-          example: en-US
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: false
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-        - name: version
-          in: header
-          description: ''
-          required: false
-          example: 0.0.1
-          schema:
-            type: string
-      responses:
-        '200':
-          description: 成功
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-      security: []
   /global/fund.app.WithdrawAppDubboService.queryWithdrawLimitConfig:
     post:
       summary: 查询取款限制配置
