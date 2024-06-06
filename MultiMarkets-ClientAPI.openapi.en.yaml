@@ -30974,58 +30974,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
       security: []
-  /global/getMsgPushToken:
-    post:
-      summary: Get token
-      deprecated: false
-      description: ''
-      tags:
-        - Message
-      parameters:
-        - name: companyId
-          in: header
-          description: ''
-          required: false
-          example: '{{company}}'
-          schema:
-            type: string
-        - name: token
-          in: header
-          description: ''
-          required: false
-          example: '{{LoginResult.data.token}}'
-          schema:
-            type: string
-        - name: lang
-          in: header
-          description: ''
-          required: false
-          example: en-US
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: false
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-        - name: version
-          in: header
-          description: ''
-          required: false
-          example: 0.0.1
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-      security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketStpProfitRecord:
     post:
       summary: Market maker single profit and loss detailed report
