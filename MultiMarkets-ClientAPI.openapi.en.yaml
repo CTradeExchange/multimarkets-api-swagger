@@ -43,6 +43,7 @@ tags:
   - name: Credit Card/Query
   - name: External Settlement
   - name: Market Maker
+  - name: 消息接口
 paths:
   /global/customer.app.CustomerWebApiService.bindLoginPwd:
     post:
@@ -4197,6 +4198,76 @@ paths:
                   - remark
                   - estimateForcePrice
                   - floatProfitLoss
+      security: []
+  /global/getMsgPushToken:
+    post:
+      summary: get Msg Token
+      deprecated: false
+      description: >-
+        This interface is used by customers to access OpenAPI and apply for the
+        authentication token for message subscription when they need to
+        subscribe to account, position, and transaction push messages.
+      tags:
+        - Message
+        - 消息接口
+      parameters:
+        - name: companyId
+          in: header
+          description: company id
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: Trace
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: language
+          required: false
+          example: zh-CN
+          schema:
+            type: string
+        - name: recvWindow
+          in: header
+          description: Time window
+          required: false
+          example: '5000'
+          schema:
+            type: string
+        - name: apiKey
+          in: header
+          description: apiKey
+          required: false
+          example: '{{apikey}}'
+          schema:
+            type: string
+        - name: signature
+          in: header
+          description: signature
+          required: false
+          example: '{{sign}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example: {}
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeEmail:
     post:
