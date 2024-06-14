@@ -2659,7 +2659,50 @@ paths:
             application/json:
               schema:
                 type: object
-                properties: {}
+                properties:
+                  bizCode:
+                    type: string
+                    title: 模块标识码
+                    description: 模块标识码
+                  code:
+                    type: string
+                    title: 状态返回码
+                    description: 状态返回码
+                  msg:
+                    type: string
+                    title: 状态描述
+                    description: 状态描述
+                  tm:
+                    type: integer
+                    format: int64
+                    title: 处理时长（毫秒）
+                    description: 处理时长（毫秒）
+                  trace:
+                    type: string
+                    title: 跟踪码
+                    description: 跟踪码
+                  msgParams:
+                    type: string
+                    title: 返回描述中占位符参数串，多个参数间以,分割
+                    description: 返回描述中占位符参数串，多个参数间以,分割
+                  data:
+                    type: string
+                    title: Msg Token
+                    description: Msg Token
+                required:
+                  - data
+              examples:
+                '1':
+                  summary: 成功示例
+                  value:
+                    msg: Success
+                    fail: false
+                    trace: ''
+                    code: '0'
+                    data: 6230de2c-281a-47fe-9d5d-b5f6ac60f482push
+                    bizCode: ''
+                    tm: 0
+                    ok: true
       security: []
   /thirdExt/switchAccount:
     post:
