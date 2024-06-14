@@ -4267,7 +4267,45 @@ paths:
             application/json:
               schema:
                 type: object
-                properties: {}
+                properties:
+                  bizCode:
+                    type: string
+                    title: Module identifier code
+                    description: Module identifier code
+                  code:
+                    type: string
+                    title: Status return code
+                    description: Status return code
+                  msg:
+                    type: string
+                    title: Status description
+                    description: Status description
+                  tm:
+                    type: integer
+                    format: int64
+                    title: Processing time (milliseconds)
+                    description: Processing time (milliseconds)
+                  trace:
+                    type: string
+                    title: Tracking code
+                    description: Tracking code
+                  data:
+                    type: string
+                    description: Msg Token
+                required:
+                  - data
+              examples:
+                '1':
+                  summary: Success
+                  value:
+                    msg: Success
+                    fail: false
+                    trace: ''
+                    code: '0'
+                    data: 6230de2c-281a-47fe-9d5d-b5f6ac60f482push
+                    bizCode: ''
+                    tm: 0
+                    ok: true
       security: []
   /global/customer.app.CustomerWebApiService.changeEmail:
     post:
@@ -29220,18 +29258,6 @@ paths:
                     type: string
                     title: Tracking code
                     description: Tracking code
-                  msgParams:
-                    type: string
-                    title: >-
-                      Placeholder parameter string in return description,
-                      multiple parameters separated by commas
-                    description: >-
-                      Placeholder parameter string in return description,
-                      multiple parameters separated by commas
-                  ok:
-                    type: boolean
-                  fail:
-                    type: boolean
       security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketMatchProfitRecord:
     post:
