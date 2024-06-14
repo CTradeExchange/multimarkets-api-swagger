@@ -2594,6 +2594,73 @@ paths:
                     msgParams: null
                     ok: false
       security: []
+  /global/getMsgPushToken:
+    post:
+      summary: 获取token
+      deprecated: false
+      description: 此接口用于客户接入Openapi时，需要订阅账户、持仓、交易推送消息时申请消息订阅的鉴权Token
+      tags:
+        - 消息接口
+        - 消息接口
+      parameters:
+        - name: companyId
+          in: header
+          description: 公司ID
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: Trace
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: 语言
+          required: false
+          example: zh-CN
+          schema:
+            type: string
+        - name: recvWindow
+          in: header
+          description: 时间窗口
+          required: false
+          example: '5000'
+          schema:
+            type: string
+        - name: apiKey
+          in: header
+          description: apiKey
+          required: false
+          example: '{{apikey}}'
+          schema:
+            type: string
+        - name: signature
+          in: header
+          description: 签名
+          required: false
+          example: '{{sign}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example: {}
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      security: []
   /thirdExt/switchAccount:
     post:
       summary: 真实模拟账户切换
