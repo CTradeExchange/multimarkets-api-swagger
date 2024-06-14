@@ -6245,22 +6245,14 @@ paths:
     post:
       summary: 下单
       deprecated: false
-      description: >-
+      description: |
         说明：合约全仓交易下单
 
-
         ```
-
         group=tradeApi
-
         version=0.0.1
-
         bizType=tradeapi.app.OrderApiService.addMarketOrder
-
         ```
-
-
-        ![服务器截图.png](https://api.apifox.cn/api/v1/projects/2362754/resources/389669/image-preview)
       tags:
         - 交易接口/全仓合约交易
       parameters:
