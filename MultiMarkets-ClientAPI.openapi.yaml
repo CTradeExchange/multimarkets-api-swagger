@@ -54144,77 +54144,130 @@ components:
         busiiType:
           type: integer
           format: int32
+          title: 订单业务类型
+          description: 订单业务类型
         direction:
           type: integer
           format: int32
+          title: 订单买卖方向
+          description: 订单买卖方向
         status:
           type: integer
           format: int32
+          title: 订单状态
+          description: 订单状态
         userGroupId:
           type: integer
           format: int64
+          title: 客户组ID
+          description: 客户组ID
         symbolId:
           type: integer
           format: int64
+          title: 产品ID
+          description: 产品ID
         digits:
           type: integer
           format: int64
+          title: 产品小数位
+          description: 产品小数位
         contractSize:
           type: integer
           format: int32
+          title: 产品合约大小
+          description: 产品合约大小
         requestPrice:
           type: number
+          title: 请求价格
+          description: 请求价格
         requestNum:
           type: number
+          title: 请求数量
+          description: 请求数量
         requestTime:
           type: integer
           format: int64
+          title: 请求时间
+          description: 请求时间
         executeMarginRate:
           type: integer
           format: int32
+          title: 执行保证金比例
+          description: 执行保证金比例
         executeMarginRateDigits:
           type: integer
           format: int32
+          title: 执行保证金比例小数位
+          description: 执行保证金比例小数位
         spread:
           type: integer
           format: int32
+          title: 成交点差
+          description: 成交点差
         pointRatio:
           type: integer
           format: int32
+          title: 成交大点比例
+          description: 成交大点比例
         executePrice:
           type: number
+          title: 成交价
+          description: 成交价
         executeRate:
           type: integer
           format: int64
+          title: 成交汇率
+          description: 成交汇率
         rateDigits:
           type: integer
           format: int64
+          title: 汇率小数位
+          description: 汇率小数位
         fee:
           type: number
+          title: 成交手续费
+          description: 成交手续费
         feeDigits:
           type: integer
           format: int64
+          title: 成交手续费小数位
+          description: 成交手续费小数位
         executeTime:
           type: integer
           format: int64
+          title: 成交时间
+          description: 成交时间
         createTime:
           type: integer
           format: int64
+          title: 创建时间
+          description: 创建时间
         updateTime:
           type: integer
           format: int64
+          title: 最后更新时间
+          description: 最后更新时间
         positionId:
           type: integer
           format: int64
+          title: 仓位ID
+          description: 仓位ID
         stopLoss:
           type: number
+          title: 止损单价
+          description: 止损单价
         takeProfit:
           type: number
+          title: 止盈单价
+          description: 止盈单价
         remark:
           type: string
+          title: 备注
+          description: 备注
         executeAvgPrice:
           type: string
           description: 成交均价
+          title: 成交均价
     CustomerGroupWithdrawAmountConfigDto:
       type: object
       properties:
