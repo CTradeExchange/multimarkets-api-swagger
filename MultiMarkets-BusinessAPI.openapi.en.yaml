@@ -8146,7 +8146,7 @@ paths:
       deprecated: false
       description: bizType=tradeapi.admin.OrderAdminApiService.cancelPboOrder
       tags:
-        - Activities
+        - Trade
       parameters:
         - name: token
           in: header
@@ -9236,7 +9236,7 @@ paths:
       deprecated: false
       description: bizType=tradeapi.admin.OrderAdminApiService.forcedOrder
       tags:
-        - Activities
+        - Trade
       parameters:
         - name: token
           in: header
