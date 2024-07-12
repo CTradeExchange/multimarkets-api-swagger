@@ -2051,59 +2051,71 @@ paths:
       security: []
   /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
     post:
-      summary: 取消预埋单
+      summary: 批量取消预埋单
       deprecated: false
-      description: bizType=tradeapi.admin.OrderAdminApiService.cancelPboOrder
+      description: |-
+        group=tradeApi
+        version=0.0.1
+        bizType=tradeapi.admin.OrderAdminApiService.cancelPboOrder
       tags:
-        - 新客推广活动
+        - 交易服务相关
       parameters:
+        - name: trace
+          in: header
+          description: 全局链路唯一标志
+          required: true
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: companyId
+          in: header
+          description: 公司ID
+          required: true
+          example: '{{company}}'
+          schema:
+            type: string
         - name: token
           in: header
-          description: ''
+          description: B端鉴权后token
           required: true
           example: '{{auto_token}}'
           schema:
             type: string
         - name: version
           in: header
-          description: ''
+          description: 接口版本号
           required: true
           example: 0.0.1
           schema:
             type: string
         - name: group
           in: header
-          description: ''
+          description: 接口分组
           required: true
           example: tradeApi
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: true
-          example: '{{mock_trace}}'
           schema:
             type: string
       requestBody:
         content:
           application/json:
             schema:
-              title: ''
               type: object
               properties:
                 tradeType:
-                  description: 交易玩法:合约全仓是1
                   type: integer
+                  description: 交易玩法
                 customerNo:
                   type: string
                   description: 客户编号
                 customerId:
+                  type: integer
                   description: 客户Id
-                  type: integer
                 customerGroupId:
-                  description: 客户组Id
                   type: integer
+                  description: 客户组Id
+                trace:
+                  type: string
+                  description: 全局链路唯一标志
               required:
                 - tradeType
                 - customerNo
@@ -2111,8 +2123,8 @@ paths:
                 - customerGroupId
             example:
               tradeType: 1
-              customerNo: '86000188'
-              customerId: 189
+              customerNo: '86000020'
+              customerId: 21
               customerGroupId: 1
       responses:
         '200':
@@ -2127,12 +2139,11 @@ paths:
                   value:
                     msg: Success
                     fail: false
-                    trace: t-jgl2h-s5ndh-338f8-5bdi0al-1660127057
+                    trace: t-2wrm8-8eq82jj-uo22f7-dze1q865-1668773417
                     code: '0'
-                    data:
-                      - CATS:PROORDER:1_1557311743581831168
+                    data: null
                     bizCode: ''
-                    tm: 349
+                    tm: 5
                     msgParams: null
                     ok: true
       security: []
