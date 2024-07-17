@@ -8142,7 +8142,7 @@ paths:
       security: []
   /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
     post:
-      summary: Cancel pending order
+      summary: Single Customer Cancel pending order
       deprecated: false
       description: bizType=tradeapi.admin.OrderAdminApiService.cancelPboOrder
       tags:
@@ -9232,7 +9232,7 @@ paths:
       security: []
   /tradeapi.admin.OrderAdminApiService.forcedOrder:
     post:
-      summary: Batch manual closing
+      summary: Single Customer closing position
       deprecated: false
       description: bizType=tradeapi.admin.OrderAdminApiService.forcedOrder
       tags:
