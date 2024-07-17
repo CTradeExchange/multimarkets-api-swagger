@@ -2051,7 +2051,7 @@ paths:
       security: []
   /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
     post:
-      summary: 批量取消预埋单
+      summary: 单客户批量取消预埋单
       deprecated: false
       description: |-
         group=tradeApi
@@ -6653,7 +6653,7 @@ paths:
       security: []
   /tradeapi.admin.OrderAdminApiService.forcedOrder:
     post:
-      summary: 批量平仓
+      summary: 单客户批量平仓
       deprecated: false
       description: |-
         group=tradeApi
