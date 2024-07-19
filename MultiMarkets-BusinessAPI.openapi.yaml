@@ -7969,7 +7969,7 @@ paths:
               required:
                 - customerNo
             example:
-              customerNo: null
+              customerNo: '86002678'
               size: 20
               current: 1
       responses:
