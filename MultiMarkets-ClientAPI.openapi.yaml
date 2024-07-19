@@ -1078,14 +1078,14 @@ paths:
           in: header
           description: Company Id，用户所在国家
           required: false
-          example: ''
+          example: 0
           schema:
             type: integer
         - name: timestamp
           in: header
           description: 请求发起时间戳，精确到毫秒，13位
           required: true
-          example: ''
+          example: 0
           schema:
             type: number
       requestBody:
@@ -36115,14 +36115,14 @@ paths:
           in: header
           description: Company Id，用户所在国家
           required: false
-          example: ''
+          example: 0
           schema:
             type: integer
         - name: timestamp
           in: header
           description: 请求发起时间戳，精确到毫秒，13位
           required: true
-          example: ''
+          example: 0
           schema:
             type: number
       requestBody:
