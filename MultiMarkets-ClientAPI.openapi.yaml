@@ -39360,7 +39360,8 @@ paths:
       description: |
         version=0.0.1
         bizType=customer.app.CustomerWebApiService.changeCountry
-        登录之后可以访问
+        登录之后可以访问，
+        如果客户有已经审批通过的KYC，则拒绝修改国家，
         修改成功后，客户修改前所在国家的待审核KYC，全部拒绝
       operationId: updateAssertsPwd
       tags:
