@@ -1882,14 +1882,14 @@ paths:
           in: header
           description: Company Id, country where the user is located
           required: false
-          example: ''
+          example: 0
           schema:
             type: integer
         - name: timestamp
           in: header
           description: Request initiation timestamp, accurate to the millisecond, 13 digits
           required: true
-          example: ''
+          example: 0
           schema:
             type: number
       requestBody:
@@ -8695,14 +8695,14 @@ paths:
           in: header
           description: Company Id, country where the user is located
           required: false
-          example: ''
+          example: 0
           schema:
             type: integer
         - name: timestamp
           in: header
           description: Request initiation timestamp, accurate to the millisecond, 13 digits
           required: true
-          example: ''
+          example: 0
           schema:
             type: number
       requestBody:
@@ -11856,7 +11856,7 @@ paths:
             Request initiation timestamp, accurate to the millisecond, 13
             digits.
           required: true
-          example: ''
+          example: 0
           schema:
             type: number
       requestBody:
@@ -15152,7 +15152,7 @@ paths:
             Request initiation timestamp, accurate to the millisecond, 13
             digits.
           required: false
-          example: ''
+          example: 0
           schema:
             type: number
       requestBody:
