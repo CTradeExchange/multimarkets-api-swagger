@@ -41077,10 +41077,15 @@ paths:
       summary: Modify country
       deprecated: false
       description: >-
-        version=0.0.1 bizType=customer.app.CustomerWebApiService.changeCountry
-        After logging in, you can access it. After successful modification, the
-        pending KYC of the country where the customer was before the
-        modification will all be rejected. 
+        version=0.0.1 bizType=customer.app.CustomerWebApiService.changeCountry 
+
+        You can access it after logging in.
+
+        If the customer has an approved KYC, the country change will be
+        rejected.
+
+        After the change is successful, all the KYCs pending for review in the
+        country where the customer changed before will be rejected.
       operationId: updateAssertsPwd
       tags:
         - Customer/Basic
