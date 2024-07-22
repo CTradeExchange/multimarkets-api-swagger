@@ -5693,13 +5693,6 @@ paths:
       tags:
         - Basic
       parameters:
-        - name: ip
-          in: query
-          description: ''
-          required: false
-          example: 127.0.0.1
-          schema:
-            type: string
         - name: companyId
           in: header
           description: ''
