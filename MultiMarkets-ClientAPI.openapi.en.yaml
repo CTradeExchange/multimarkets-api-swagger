@@ -2567,7 +2567,8 @@ paths:
                   title: Expiration type
                   description: >-
                     Expiration type, only valid for pending orders. 1-Valid for
-                    the day; 2-Valid for the week;
+                    the day; 2-Valid for the week； 3-30 days; 4-90 days; Default
+                    2
                   format: int32
                 remark:
                   type: string
@@ -2891,7 +2892,8 @@ paths:
                   title: Expiration type
                   description: >-
                     Expiration type, only valid for pending orders. 1-Valid for
-                    the day; 2-Valid for the week;
+                    the day; 2-Valid for the week； 3-30 days; 4-90 days; Default
+                    2
                   format: int32
                 remark:
                   type: string
