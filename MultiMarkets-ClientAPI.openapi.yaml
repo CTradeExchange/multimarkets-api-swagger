@@ -3262,6 +3262,7 @@ paths:
       summary: 申请绑直充支付钱包地址
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.applyRechargeBindAddress
         申请绑直充支付钱包地址
         登录后方可访问
@@ -3623,6 +3624,7 @@ paths:
       summary: 查询客户是否有未完成的提案
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.CustomerProposalQueryService.isHaveUnCompleteProposal
         查询客户是否有未完成的提案
         登录后方可访问
@@ -4184,6 +4186,7 @@ paths:
       summary: 获取取款手续费
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.computeWithdrawFee
         获取取款(提现/提币)手续费
         登录后方可访问
@@ -4211,6 +4214,7 @@ paths:
       summary: 标记开卡费存款使用汇率
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.markOpenCardDepositRate
         标记开卡费存款使用汇率
         登录后方可访问
@@ -4362,6 +4366,7 @@ paths:
       summary: 预付款订单信息
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.prePaymentOrder
         version=0.0.1
         预付款订单信息，订单信息只会保存15分钟，支付订单时需要将此接口返回结果，传入orderNo。
@@ -4456,6 +4461,7 @@ paths:
       summary: 获取取款货币对汇率
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getWithdrawExchangeRate
         获取取款货币对汇率
         登录后方可访问
@@ -5074,6 +5080,7 @@ paths:
       summary: 不同玩法之间相同币种资产资金划转
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.capitalTransfer
         不同玩法之间相同资产资金划转
         登录后方可访问
@@ -5207,6 +5214,7 @@ paths:
       summary: 查询客户额度调整提案分页数据
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.CustomerProposalQueryService.queryDepositAdjustPageList
         查询客户额度调整提案分页数据
         登录后方可访问
@@ -5549,6 +5557,7 @@ paths:
       summary: 创建取款提案
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.createWithdrawProposal
         创建取款(提现/提币)提案
         登录后方可访问
@@ -6063,6 +6072,7 @@ paths:
       summary: 代理客户资产资金划转给被代理客户
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.capitalTransferForAgent
         不同玩法之间相同资产资金划转
         登录后方可访问
@@ -7511,6 +7521,7 @@ paths:
       summary: 查询资金划转记录
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.capitalTransferRecord
         查询资金划转记录
         登录后方可访问
@@ -7832,6 +7843,7 @@ paths:
       summary: 查询客户存款提案分页数据
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.CustomerProposalQueryService.queryDepositPageList
         查询客户取款提案分页数据
         登录后方可访问
@@ -8324,6 +8336,7 @@ paths:
       summary: 获取开仓保证金总额/存款总额比例
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getAccountMarginRate
         获取开仓保证金总额/存款总额比例
         登录后方可访问
@@ -10095,6 +10108,7 @@ paths:
       summary: 资产资金划转
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.capitalTransferSupportDiffCurr
         资产资金划转
         登录后方可访问
@@ -10277,6 +10291,7 @@ paths:
       summary: 查询客户取款提案分页数据
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.CustomerProposalQueryService.queryWithdrawPageList
         查询客户取款提案分页数据
         登录后方可访问
@@ -10481,6 +10496,7 @@ paths:
       summary: 获取所有取款币种列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getAllWithdrawCurrencyList
         获取所有出金币种列表
         登录后方可访问
@@ -13066,6 +13082,7 @@ paths:
       summary: 创建存款提案
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.createDepositProposal
         创建存款提案
         登录后方可访问
@@ -13759,6 +13776,7 @@ paths:
       summary: 获取客户钱包类出金币种链地址列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getCoinWithdrawCurrencyList
         获取客户钱包类出金币种链地址列表
         登录后方可访问
@@ -15232,6 +15250,7 @@ paths:
       summary: 查询直充支付钱包地址
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getBindRechargeAddress
         查询直充支付钱包地址
         登录后方可访问
@@ -15790,6 +15809,7 @@ paths:
       summary: 获取取款账户币种列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getWithdrawAccountCurrencyList
         获取取款账户币种列表
         登录后方可访问
@@ -17159,6 +17179,7 @@ paths:
       summary: 获取直充支付通道支持币种信息
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getDepositCoinList
         获取直充支付通道支持币种信息
         登录后方可访问
@@ -17483,6 +17504,7 @@ paths:
       summary: 获取取款额度限制信息
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getWithdrawAmountLimitInfo
         获取取款额度限制信息
         汇率转换后的结果
@@ -19324,6 +19346,7 @@ paths:
       summary: 获取支付通道支持的账户币种信息列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getDepositAccountCurrencyList
         获取支付通道支持的账户币种信息列表
         登录后方可访问
@@ -19902,6 +19925,7 @@ paths:
       summary: 获取取款币种列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getWithdrawCurrencyList
         获取取款币种列表
         登录后方可访问
@@ -21503,6 +21527,7 @@ paths:
       summary: 查询支付通道支持的充值账户币种和链信息
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getDepositAccountCurrencyListV2
         查询支付通道支持的充值账户币种和链信息
         登录后方可访问
@@ -23787,6 +23812,7 @@ paths:
       summary: 获取客户支持的存款币种列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getDepositCoinList
         获取客户支持的存款币种列表
         登录后方可访问
@@ -24406,6 +24432,7 @@ paths:
       summary: 获取取款方式
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getWithdrawMethodList
         获取取款方式
         登录后方可访问
@@ -26190,6 +26217,7 @@ paths:
       summary: 获取存款货币对汇率
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getDepositExchangeRate
         获取存款货币对汇率
         登录后方可访问
@@ -26252,6 +26280,7 @@ paths:
       summary: 获取24小时取款次数
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.getWithdrawTimesIn24Hour
         获取取款方式
         登录后方可访问
@@ -28333,6 +28362,7 @@ paths:
       summary: 获取支付通道信息
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getPayChannels
         获取支付通道信息
         version=0.0.1时请求参数中accountCurrency和rechargeType会作为查询过滤条件
@@ -28535,6 +28565,7 @@ paths:
       summary: 查询第三方支付取款银行列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.queryPayWithdrawBankList
         查询第三方支付取款银行列表
         登录后方可访问
@@ -30780,6 +30811,7 @@ paths:
       summary: 查询取款限制配置
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.queryWithdrawLimitConfig
         查询取款限制配置
         登录后方可访问
@@ -30806,6 +30838,7 @@ paths:
       summary: 获取支付通道信息不过滤账户币种和充值方式
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getPayChannelsV2
         获取支付通道信息不过滤账户币种和充值方式
         accountCurrency和rechargeType不会作查询过滤条件
@@ -30995,6 +31028,7 @@ paths:
       summary: 查询取款货币和限制条件列表
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.withdrawCurrencyList
         查询取款货币列表
         登录后方可访问
@@ -31137,6 +31171,8 @@ paths:
       summary: 获取客户组取款方式
       deprecated: false
       description: >-
+        version: 0.0.1
+
         bizType=fund.app.WithdrawAppDubboService.getCustomerGroupWithdrawMethodList
 
         获取客户组取款方式
@@ -31200,6 +31236,8 @@ paths:
       summary: 获取客户组取款风控配置
       deprecated: false
       description: >-
+        version: 0.0.1
+
         bizType=fund.app.WithdrawAppDubboService.queryCustomerGroupWithdrawRiskConfig
 
         获取客户组取款风控配置
@@ -32888,6 +32926,8 @@ paths:
       summary: 检查客户的取款限制条件
       deprecated: false
       description: >-
+        version: 0.0.1
+
         bizType=fund.app.WithdrawAppDubboService.checkWithdrawRiskLimitConfig
 
         检查客户的取款限制条件
@@ -33251,6 +33291,7 @@ paths:
       summary: 获取取款方式+币+链的剩余提现金额
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.WithdrawAppDubboService.queryRemainWithdrawAmount
         获取方式+币+链的剩余提现金额
         登录后方可访问
@@ -33639,6 +33680,7 @@ paths:
       summary: 获取支付通道信息过滤账户币种和链名称
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getPayChannelsV3
         获取支付通道信息过滤账户币种和链名称
         登录后方可访问
@@ -34447,6 +34489,7 @@ paths:
       summary: 查询加密货币支付状态
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.getPayStatus
         查询加密货币支付状态
         登录后方可访问
@@ -35002,6 +35045,7 @@ paths:
       summary: 判断用户是否已入金
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.judgeIsAlreadyDeposit
         判断用户是否已入金
         登录后方可访问
@@ -35715,6 +35759,7 @@ paths:
       summary: 手动借款
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.manualLoan
         手动借款
         登录后方可访问
@@ -35981,6 +36026,7 @@ paths:
       summary: 手动还款
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.manualRepayment
         手动还款
         登录后方可访问
@@ -36248,6 +36294,7 @@ paths:
       summary: 查询存款提案
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.queryDepositProposal
         查询存款提案
         登录后方可访问
@@ -36433,6 +36480,7 @@ paths:
       summary: 查询三方支付通道的支付类型
       deprecated: false
       description: |-
+        version: 0.0.1
         bizType=fund.app.DepositAppDubboService.queryPayChannelType
         查询三方支付通道的支付类型
         登录后方可访问
