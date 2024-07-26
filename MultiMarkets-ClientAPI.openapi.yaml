@@ -3940,8 +3940,9 @@ paths:
     post:
       summary: 批量查询货币对的存取款汇率
       deprecated: false
-      description: |-
+      description: |
         bizType=fund.app.FundExchangeRateQueryService.getExchangeRateList
+        version: 0.0.1
         批量查询货币对的存取款汇率
         游客可访问
       operationId: getExchangeRateList
@@ -4652,8 +4653,9 @@ paths:
     post:
       summary: 查询货币对的交易汇率
       deprecated: false
-      description: |-
+      description: |
         bizType=fund.app.FundExchangeRateQueryService.getTradeExchangeRate
+        version: 0.0.1
         查询货币对的交易汇率
       operationId: getExchangeRateList
       tags:
