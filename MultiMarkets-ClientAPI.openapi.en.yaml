@@ -3195,6 +3195,7 @@ paths:
         bizType=fund.app.FundExchangeRateQueryService.getExchangeRateList
         Batch query deposit and withdrawal exchange rates for currency pairs
         Accessible to visitors
+        version: 0.0.1
       operationId: getExchangeRateList
       tags:
         - Funds/Rate
@@ -6790,6 +6791,7 @@ paths:
       description: |-
         bizType=fund.app.FundExchangeRateQueryService.getTradeExchangeRate
         Query the Trading Exchange Rate of Currency Pairs
+        version: 0.0.1
       operationId: getExchangeRateList
       tags:
         - Funds/Rate
