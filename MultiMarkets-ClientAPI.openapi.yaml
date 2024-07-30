@@ -6383,6 +6383,15 @@ paths:
                   title: 杠杆倍数
                   format: int32
                   description: 杠杆倍数，仅开仓有效，同个产品应仅有一个杠杆倍数
+                source:
+                  type: string
+                  title: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
+                  description: （限制最高255字符）
               required:
                 - tradeType
                 - bizType
