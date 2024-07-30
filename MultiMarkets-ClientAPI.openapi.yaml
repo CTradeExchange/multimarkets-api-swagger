@@ -9235,7 +9235,12 @@ paths:
                 source:
                   type: string
                   title: 订单来源
-                  description: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
+                  description: （限制最高255字符）
               required:
                 - tradeType
                 - bizType
@@ -9247,7 +9252,6 @@ paths:
                 - accountCurrency
                 - accountDigits
                 - entryType
-                - source
       responses:
         '200':
           description: 成功
@@ -54543,6 +54547,15 @@ components:
         expiryType:
           type: string
           description: 到期类型。1-1天；2-7天；3-30天；4-90天。默认4
+        source:
+          type: string
+          description: >-
+            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符）
+          title: 订单来源
+        thirdPartyOrder:
+          type: string
+          title: 三方订单标识
+          description: （限制最高255字符）
     CustomerGroupWithdrawConditionConfigDto:
       type: object
       properties:
