@@ -16109,14 +16109,20 @@ paths:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
       security: []
-  /global/tradeapi.app.OrderApiService.queryPBOOrderPage:
+  /global/tradeapi.app.OrderApiService.queryOrderPage:
     post:
-      summary: 平仓时到CP划账
-      deprecated: true
-      description: >-
-        当会员有投注过的一局游戏完结，而会员有净赢额，CATS2会发出此请求到CP系统。CP系统需要修改会员帐户结余。此请求会不停发出，直到被处理及正确回覆为止。
+      summary: 订单列表
+      deprecated: false
+      description: |-
+        说明：查看订单列表
+
+        ```
+        group=tradeApi
+        version=0.0.1
+        bizType=tradeapi.app.OrderApiService.queryOrderPage
+        ```
       tags:
-        - 外部结算接口
+        - 交易接口/逐仓合约交易
       parameters:
         - name: companyId
           in: header
@@ -16166,51 +16172,61 @@ paths:
             schema:
               type: object
               properties:
-                username:
-                  type: string
-                  description: 客户身份唯一编号
-                  title: ''
-                  maxLength: 48
-                currency:
-                  type: string
-                  description: 账户货币code，标准ISO 3字元货币单位
-                  title: ''
-                  maxLength: 16
-                amount:
-                  type: string
-                  description: 操作金额
-                amountDigist:
+                tradeType:
                   type: integer
-                  description: 金额小数位
-                txid:
+                  title: 玩法ID
+                  description: 玩法ID，本玩法下应填2
+                  format: long
+                accountId:
+                  type: integer
+                  title: 账户ID
+                  description: 账户ID
+                  format: long
+                accountCurrency:
                   type: string
-                  description: 唯一交易编号，多次请求需要保持业务幂等
-                  maxLength: 48
-                requesttime:
+                  title: 账户货币
+                  description: 账户货币
+                bizType:
+                  type: integer
+                  title: 业务类型
+                  description: >-
+                    业务类型，1-市价开；2-市价平；3-止损平仓单；4-止盈平仓单；5-爆仓强平单；6-到期平仓单；7-销户平仓单；8-手动强平单；9-延时订单；10-限价预埋单；11-停损预埋单；13-撮合限价开仓单；14-撮合限价平仓单
+                  format: int32
+                direction:
+                  type: integer
+                  title: 订单买卖方向
+                  description: 订单买卖方向，1-买；2-卖；
+                  format: int32
+                status:
+                  type: integer
+                  title: 订单状态
+                  description: 订单状态，1-收到订单；2-订单成交；3-订单部分成交；4-订单取消；5-订单部分取消；6-订单拒绝；7-订单过期；
+                  format: long
+                symbolId:
+                  type: integer
+                  title: 产品ID
+                  format: int32
+                  description: 产品ID
+                orderIds:
+                  type: string
+                  title: 订单ID串
+                  description: 订单ID串，多个订单ID间以,分割
+                positionId:
+                  type: integer
+                  title: 仓位id
+                  format: long
+                  description: 仓位id
+                size:
                   type: integer
                   format: long
-                  description: 请求发起时间戳，精确到毫秒，13位
-                ip:
-                  type: string
-                  description: 用户ip
-                remark:
-                  type: string
-                  description: 三方业务备注信息
-                  maxLength: 200
+                  title: 每页条数
+                  description: 每页条数，默认20
+                current:
+                  type: integer
+                  title: 当前页码
+                  description: 当前页码
               required:
-                - currency
-                - username
-                - amount
-                - txid
-                - remark
-                - ip
-                - amountDigist
-            example:
-              tradeType: 81
-              accountId: 15
-              sortType: desc
-              sortFieldName: orderTime
-              accountCurrency: USDT
+                - tradeType
       responses:
         '200':
           description: 成功
@@ -16221,44 +16237,196 @@ paths:
                 properties:
                   bizCode:
                     type: string
-                    description: 模块标识码
+                    title: 模块标识码
                   code:
                     type: string
-                    description: 状态返回码，code=0标识当前请求操作成功，其他code处理异常
+                    title: 状态返回码
                   msg:
                     type: string
-                    description: 状态描述
+                    title: 状态描述
                   tm:
                     type: integer
                     format: int64
-                    description: 处理时长（毫秒）
+                    title: 处理时长（毫秒）
                   trace:
                     type: string
-                    description: 跟踪码
+                    title: 跟踪码
                   msgParams:
                     type: string
-                    description: 返回描述中占位符参数串，多个参数间以,分割
-                  data:
-                    type: object
-                    properties: {}
-                    description: 消息体
+                    title: 返回描述中占位符参数串，多个参数间以,分割
                   ok:
                     type: boolean
                   fail:
                     type: boolean
+                  data:
+                    type: object
+                    properties:
+                      current:
+                        type: integer
+                        title: 当前页码
+                        format: int32
+                      size:
+                        type: integer
+                        title: 每页数据量
+                        format: int32
+                      total:
+                        type: integer
+                        title: 数据总数
+                        format: int32
+                      records:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              title: 主键
+                              format: long
+                            dealId:
+                              type: integer
+                              title: 成交单id
+                              format: long
+                            bizType:
+                              type: integer
+                              title: 订单业务类型
+                              description: >-
+                                1-市价开；2-市价平；3-止损平仓单；4-止盈平仓单；5-爆仓强平单；6-到期平仓单；7-销户平仓单；8-手动强平单；9-延时订单；10-限价预埋单；11-停损预埋单；
+                              format: int32
+                            direction:
+                              type: integer
+                              title: 订单买卖方向
+                              description: 1-买；2-卖；
+                              format: int32
+                            status:
+                              type: integer
+                              title: 订单状态
+                              description: >-
+                                1-收到订单；2-订单成交；3-订单部分成交；4-订单取消；5-订单部分取消；6-订单拒绝；7-订单过期；
+                              format: int32
+                            customerGroupId:
+                              type: integer
+                              title: 客户组ID
+                              format: long
+                            symbolId:
+                              type: integer
+                              title: 产品ID
+                              format: long
+                            digits:
+                              type: integer
+                              title: 产品小数位
+                              format: long
+                            symbolName:
+                              type: string
+                              title: 产品名称
+                            requestPrice:
+                              type: string
+                              title: 请求价格
+                              description: '*'
+                            requestNum:
+                              type: string
+                              title: 请求数量
+                              description: '*'
+                            contractSize:
+                              type: integer
+                              title: 产品合约大小
+                              format: int32
+                            executePrice:
+                              type: string
+                              title: 成交价
+                              description: '*'
+                            requestTime:
+                              type: integer
+                              title: 请求时间
+                              description: 13位时间戳
+                              format: long
+                            executeTime:
+                              type: integer
+                              title: 成交时间
+                              description: 13位时间戳
+                              format: long
+                            fee:
+                              type: string
+                              title: 成交手续费
+                              description: '*'
+                            executeMargin:
+                              type: integer
+                              title: 执行保证金
+                              description: '*'
+                              format: int32
+                            accountDigits:
+                              type: integer
+                              title: 账户小数位
+                              format: int32
+                            executeNum:
+                              type: string
+                              title: 已成交数量
+                            cancelNum:
+                              type: string
+                              title: 已取消数量
+                            positionId:
+                              type: integer
+                              title: 仓位ID
+                              format: long
+                            stopLoss:
+                              type: string
+                              title: 止损单价
+                              description: '*'
+                            takeProfit:
+                              type: string
+                              title: 止盈单价
+                              description: '*'
+                            remark:
+                              type: string
+                              title: 备注
+                            createTime:
+                              type: integer
+                              title: 创建时间
+                              description: 13位时间戳
+                              format: long
+                            updateTime:
+                              type: integer
+                              title: 最后更新时间
+                              description: 13位时间戳
+                              format: long
+                            seq:
+                              type: integer
+                              title: 报价序号
+                              format: long
+                            interest:
+                              type: integer
+                              title: 持仓利息
+                              format: long
+                            pnl:
+                              type: integer
+                              title: 盈亏
+                              format: long
+                        title: 订单集合
+                    title: 数据体
               examples:
                 '1':
                   summary: 成功示例
                   value:
-                    msgParams: veniam sit
-                    msg: anim nisi consectetur sit sed
-                    trace: laboris
-                    tm: 62
-                    bizCode: '10'
-                    data: {}
-                    code: '100'
+                    msg: Success
                     fail: false
+                    trace: x-11w38izu-238ws9-maphaym-1f261yz-1677573205
+                    code: '0'
+                    data: []
+                    bizCode: ''
+                    tm: 7
+                    msgParams: null
                     ok: true
+                '2':
+                  summary: 异常示例
+                  value:
+                    msg: System error
+                    fail: true
+                    trace: x-6c5e5-162tc21-ri3151-6m634-1677573324
+                    code: '500'
+                    data: tradeapi.app.OrderApiService.queryOrderPage
+                    bizCode: TA
+                    tm: 0
+                    msgParams: null
+                    ok: false
       security: []
   /global/config.app.AppDictDubboService.getCountryListByParentCode:
     post:
@@ -16663,325 +16831,6 @@ paths:
                     type: object
                     properties: {}
                     title: 数据体
-      security: []
-  /global/tradeapi.app.OrderApiService.queryOrderPage:
-    post:
-      summary: 订单列表
-      deprecated: false
-      description: |-
-        说明：查看订单列表
-
-        ```
-        group=tradeApi
-        version=0.0.1
-        bizType=tradeapi.app.OrderApiService.queryOrderPage
-        ```
-      tags:
-        - 交易接口/逐仓合约交易
-      parameters:
-        - name: companyId
-          in: header
-          description: ''
-          required: false
-          example: '{{company}}'
-          schema:
-            type: string
-        - name: token
-          in: header
-          description: ''
-          required: false
-          example: '{{LoginResult.data.token}}'
-          schema:
-            type: string
-        - name: lang
-          in: header
-          description: ''
-          required: false
-          example: en-US
-          schema:
-            type: string
-        - name: group
-          in: header
-          description: ''
-          required: false
-          example: tradeApi
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: false
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-        - name: version
-          in: header
-          description: ''
-          required: false
-          example: 0.0.1
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                tradeType:
-                  type: integer
-                  title: 玩法ID
-                  description: 玩法ID，本玩法下应填2
-                  format: long
-                accountId:
-                  type: integer
-                  title: 账户ID
-                  description: 账户ID
-                  format: long
-                accountCurrency:
-                  type: string
-                  title: 账户货币
-                  description: 账户货币
-                bizType:
-                  type: integer
-                  title: 业务类型
-                  description: >-
-                    业务类型，1-市价开；2-市价平；3-止损平仓单；4-止盈平仓单；5-爆仓强平单；6-到期平仓单；7-销户平仓单；8-手动强平单；9-延时订单；10-限价预埋单；11-停损预埋单；13-撮合限价开仓单；14-撮合限价平仓单
-                  format: int32
-                direction:
-                  type: integer
-                  title: 订单买卖方向
-                  description: 订单买卖方向，1-买；2-卖；
-                  format: int32
-                status:
-                  type: integer
-                  title: 订单状态
-                  description: 订单状态，1-收到订单；2-订单成交；3-订单部分成交；4-订单取消；5-订单部分取消；6-订单拒绝；7-订单过期；
-                  format: long
-                symbolId:
-                  type: integer
-                  title: 产品ID
-                  format: int32
-                  description: 产品ID
-                orderIds:
-                  type: string
-                  title: 订单ID串
-                  description: 订单ID串，多个订单ID间以,分割
-                positionId:
-                  type: integer
-                  title: 仓位id
-                  format: long
-                  description: 仓位id
-                size:
-                  type: integer
-                  format: long
-                  title: 每页条数
-                  description: 每页条数，默认20
-                current:
-                  type: integer
-                  title: 当前页码
-                  description: 当前页码
-              required:
-                - tradeType
-      responses:
-        '200':
-          description: 成功
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  bizCode:
-                    type: string
-                    title: 模块标识码
-                  code:
-                    type: string
-                    title: 状态返回码
-                  msg:
-                    type: string
-                    title: 状态描述
-                  tm:
-                    type: integer
-                    format: int64
-                    title: 处理时长（毫秒）
-                  trace:
-                    type: string
-                    title: 跟踪码
-                  msgParams:
-                    type: string
-                    title: 返回描述中占位符参数串，多个参数间以,分割
-                  ok:
-                    type: boolean
-                  fail:
-                    type: boolean
-                  data:
-                    type: object
-                    properties:
-                      current:
-                        type: integer
-                        title: 当前页码
-                        format: int32
-                      size:
-                        type: integer
-                        title: 每页数据量
-                        format: int32
-                      total:
-                        type: integer
-                        title: 数据总数
-                        format: int32
-                      records:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                              title: 主键
-                              format: long
-                            dealId:
-                              type: integer
-                              title: 成交单id
-                              format: long
-                            bizType:
-                              type: integer
-                              title: 订单业务类型
-                              description: >-
-                                1-市价开；2-市价平；3-止损平仓单；4-止盈平仓单；5-爆仓强平单；6-到期平仓单；7-销户平仓单；8-手动强平单；9-延时订单；10-限价预埋单；11-停损预埋单；
-                              format: int32
-                            direction:
-                              type: integer
-                              title: 订单买卖方向
-                              description: 1-买；2-卖；
-                              format: int32
-                            status:
-                              type: integer
-                              title: 订单状态
-                              description: >-
-                                1-收到订单；2-订单成交；3-订单部分成交；4-订单取消；5-订单部分取消；6-订单拒绝；7-订单过期；
-                              format: int32
-                            customerGroupId:
-                              type: integer
-                              title: 客户组ID
-                              format: long
-                            symbolId:
-                              type: integer
-                              title: 产品ID
-                              format: long
-                            digits:
-                              type: integer
-                              title: 产品小数位
-                              format: long
-                            symbolName:
-                              type: string
-                              title: 产品名称
-                            requestPrice:
-                              type: string
-                              title: 请求价格
-                              description: '*'
-                            requestNum:
-                              type: string
-                              title: 请求数量
-                              description: '*'
-                            contractSize:
-                              type: integer
-                              title: 产品合约大小
-                              format: int32
-                            executePrice:
-                              type: string
-                              title: 成交价
-                              description: '*'
-                            requestTime:
-                              type: integer
-                              title: 请求时间
-                              description: 13位时间戳
-                              format: long
-                            executeTime:
-                              type: integer
-                              title: 成交时间
-                              description: 13位时间戳
-                              format: long
-                            fee:
-                              type: string
-                              title: 成交手续费
-                              description: '*'
-                            executeMargin:
-                              type: integer
-                              title: 执行保证金
-                              description: '*'
-                              format: int32
-                            accountDigits:
-                              type: integer
-                              title: 账户小数位
-                              format: int32
-                            executeNum:
-                              type: string
-                              title: 已成交数量
-                            cancelNum:
-                              type: string
-                              title: 已取消数量
-                            positionId:
-                              type: integer
-                              title: 仓位ID
-                              format: long
-                            stopLoss:
-                              type: string
-                              title: 止损单价
-                              description: '*'
-                            takeProfit:
-                              type: string
-                              title: 止盈单价
-                              description: '*'
-                            remark:
-                              type: string
-                              title: 备注
-                            createTime:
-                              type: integer
-                              title: 创建时间
-                              description: 13位时间戳
-                              format: long
-                            updateTime:
-                              type: integer
-                              title: 最后更新时间
-                              description: 13位时间戳
-                              format: long
-                            seq:
-                              type: integer
-                              title: 报价序号
-                              format: long
-                            interest:
-                              type: integer
-                              title: 持仓利息
-                              format: long
-                            pnl:
-                              type: integer
-                              title: 盈亏
-                              format: long
-                        title: 订单集合
-                    title: 数据体
-              examples:
-                '1':
-                  summary: 成功示例
-                  value:
-                    msg: Success
-                    fail: false
-                    trace: x-11w38izu-238ws9-maphaym-1f261yz-1677573205
-                    code: '0'
-                    data: []
-                    bizCode: ''
-                    tm: 7
-                    msgParams: null
-                    ok: true
-                '2':
-                  summary: 异常示例
-                  value:
-                    msg: System error
-                    fail: true
-                    trace: x-6c5e5-162tc21-ri3151-6m634-1677573324
-                    code: '500'
-                    data: tradeapi.app.OrderApiService.queryOrderPage
-                    bizCode: TA
-                    tm: 0
-                    msgParams: null
-                    ok: false
       security: []
   /global/customer.app.CustomerWebApiService.changeLang:
     post:
@@ -35827,6 +35676,157 @@ paths:
           content:
             application/json:
               schema: *ref_0
+      security: []
+  /global/tradeapi.app.OrderApiService.queryPBOOrderPage:
+    post:
+      summary: 平仓时到CP划账
+      deprecated: true
+      description: >-
+        当会员有投注过的一局游戏完结，而会员有净赢额，CATS2会发出此请求到CP系统。CP系统需要修改会员帐户结余。此请求会不停发出，直到被处理及正确回覆为止。
+      tags:
+        - 外部结算接口
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: group
+          in: header
+          description: ''
+          required: false
+          example: tradeApi
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: 客户身份唯一编号
+                  title: ''
+                  maxLength: 48
+                currency:
+                  type: string
+                  description: 账户货币code，标准ISO 3字元货币单位
+                  title: ''
+                  maxLength: 16
+                amount:
+                  type: string
+                  description: 操作金额
+                amountDigist:
+                  type: integer
+                  description: 金额小数位
+                txid:
+                  type: string
+                  description: 唯一交易编号，多次请求需要保持业务幂等
+                  maxLength: 48
+                requesttime:
+                  type: integer
+                  format: long
+                  description: 请求发起时间戳，精确到毫秒，13位
+                ip:
+                  type: string
+                  description: 用户ip
+                remark:
+                  type: string
+                  description: 三方业务备注信息
+                  maxLength: 200
+              required:
+                - currency
+                - username
+                - amount
+                - txid
+                - remark
+                - ip
+                - amountDigist
+            example:
+              tradeType: 81
+              accountId: 15
+              sortType: desc
+              sortFieldName: orderTime
+              accountCurrency: USDT
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bizCode:
+                    type: string
+                    description: 模块标识码
+                  code:
+                    type: string
+                    description: 状态返回码，code=0标识当前请求操作成功，其他code处理异常
+                  msg:
+                    type: string
+                    description: 状态描述
+                  tm:
+                    type: integer
+                    format: int64
+                    description: 处理时长（毫秒）
+                  trace:
+                    type: string
+                    description: 跟踪码
+                  msgParams:
+                    type: string
+                    description: 返回描述中占位符参数串，多个参数间以,分割
+                  data:
+                    type: object
+                    properties: {}
+                    description: 消息体
+                  ok:
+                    type: boolean
+                  fail:
+                    type: boolean
+              examples:
+                '1':
+                  summary: 成功示例
+                  value:
+                    msgParams: veniam sit
+                    msg: anim nisi consectetur sit sed
+                    trace: laboris
+                    tm: 62
+                    bizCode: '10'
+                    data: {}
+                    code: '100'
+                    fail: false
+                    ok: true
       security: []
   /global/tradeapi.app.OrderApiService.checkOrderStatus:
     post:
