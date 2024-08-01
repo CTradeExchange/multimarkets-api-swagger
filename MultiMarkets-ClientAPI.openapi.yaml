@@ -6387,7 +6387,7 @@ paths:
                   type: string
                   title: 订单来源
                   description: >-
-                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符）
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考）
                 thirdPartyOrder:
                   type: string
                   title: 三方订单标识
@@ -9236,7 +9236,7 @@ paths:
                   type: string
                   title: 订单来源
                   description: >-
-                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符）
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考）
                 thirdPartyOrder:
                   type: string
                   title: 三方订单标识
@@ -17873,7 +17873,7 @@ paths:
                   type: string
                   title: 订单来源
                   description: >-
-                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；（枚举仅供参考）
                 thirdPartyOrder:
                   type: string
                   title: 三方订单标识
@@ -18002,6 +18002,14 @@ paths:
                               format: int32
                               description: 1-买；2-卖；
                               title: 平仓方向
+                            source:
+                              type: string
+                              title: 订单来源
+                              description: >-
+                                H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                            thirdPartyOrder:
+                              type: string
+                              title: 三方订单标识
                         title: 平仓列表集合
                     title: 数据体
               examples:
@@ -18929,6 +18937,14 @@ paths:
                   title: 每页数据量
                   description: 默认20
                   format: int32
+                source:
+                  type: string
+                  title: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
               required:
                 - tradeType
                 - sortFieldName
@@ -19055,6 +19071,14 @@ paths:
                               format: int32
                               description: 1-买；2-卖；
                               title: 平仓方向
+                            source:
+                              type: string
+                              title: 订单来源
+                              description: >-
+                                H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                            thirdPartyOrder:
+                              type: string
+                              title: 三方订单标识
                         title: 平仓列表集合
                     title: 数据体
               examples:
