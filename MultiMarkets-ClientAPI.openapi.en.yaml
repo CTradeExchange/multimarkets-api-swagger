@@ -13007,6 +13007,16 @@ paths:
                       remark:
                         type: string
                         title: Remarks
+                      source:
+                        type: string
+                        description: >-
+                          H5: mobile web; PC_Web: pcweb; System: system;
+                          Android: Android native app; iOS: Apple native app;
+                          HOS: Hongmeng OS; PC_Win: pcwindows client; PC_Mac:
+                          pcmac client; default is the same as login source.
+                          (The enumeration is for reference only)
+                      thirdPartyOrder:
+                        type: string
                     title: Data Body
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransfer:
@@ -43350,6 +43360,15 @@ components:
         takeProfit:
           type: number
         remark:
+          type: string
+        source:
+          type: string
+          description: >-
+            H5: mobile web; PC_Web: pcweb; System: system; Android: Android
+            native app; iOS: Apple native app; HOS: Hongmeng OS; PC_Win:
+            pcwindows client; PC_Mac: pcmac client; default is the same as login
+            source. (The enumeration is for reference only)
+        thirdPartyOrder:
           type: string
     BasePageVoSpotQueryOrderVo:
       type: object
