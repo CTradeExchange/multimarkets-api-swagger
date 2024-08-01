@@ -2590,6 +2590,17 @@ paths:
                   description: >-
                     Leverage ratio, only valid for opening positions, there
                     should only be one leverage ratio for the same product
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (limited to 255 characters,
+                    enumeration is for reference only)
+                thirdPartyOrder:
+                  type: string
+                  description: (limited to 255 characters)
               required:
                 - tradeType
                 - bizType
@@ -2926,7 +2937,15 @@ paths:
                 source:
                   type: string
                   title: Order source
-                  description: Order source
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (limited to 255 characters,
+                    enumeration is for reference only)
+                thirdPartyOrder:
+                  type: string
+                  description: (limited to 255 characters)
               required:
                 - tradeType
                 - bizType
@@ -2938,7 +2957,7 @@ paths:
                 - accountCurrency
                 - accountDigits
                 - entryType
-                - source
+                - thirdPartyOrder
             example: ''
       responses:
         '200':
@@ -12559,6 +12578,16 @@ paths:
                   title: Data quantity per page
                   description: Default 20
                   format: int32
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
               required:
                 - tradeType
                 - sortFieldName
