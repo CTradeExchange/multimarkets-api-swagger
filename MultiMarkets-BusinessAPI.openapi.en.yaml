@@ -1892,6 +1892,16 @@ paths:
                   type: integer
                   format: long
                   description: Current page. Default 1
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
               required:
                 - tradeType
                 - customerId
@@ -2108,6 +2118,16 @@ paths:
                           type: string
                           title: Margin Type
                           description: Margin Type, 1 - Percent; 2 - Range;
+                        source:
+                          type: string
+                          description: >-
+                            H5: mobile web; PC_Web: pcweb; System: system;
+                            Android: Android native app; iOS: Apple native app;
+                            HOS: Hongmeng OS; PC_Win: pcwindows client; PC_Mac:
+                            pcmac client; default is the same as login source.
+                            (The enumeration is for reference only)
+                        thirdPartyOrder:
+                          type: string
                     title: Data Body
                     description: Data Body
               examples:
@@ -5309,6 +5329,16 @@ paths:
                   type: integer
                   format: long
                   description: Current page. Default 1
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
               required:
                 - tradeType
             example: ''
@@ -5526,6 +5556,17 @@ paths:
                               type: integer
                               description: Customer ID
                               format: long
+                            source:
+                              type: string
+                              description: >-
+                                H5: mobile web; PC_Web: pcweb; System: system;
+                                Android: Android native app; iOS: Apple native
+                                app; HOS: Hongmeng OS; PC_Win: pcwindows client;
+                                PC_Mac: pcmac client; default is the same as
+                                login source. (The enumeration is for reference
+                                only)
+                            thirdPartyOrder:
+                              type: string
                         description: Result list
                     title: Data body
                     description: Data body
@@ -11097,6 +11138,15 @@ components:
             places, value when tradeTpe is 1 and 2, bizType is 2, 3, 4, 5, 6, 7,
             8
           type: integer
+        source:
+          type: string
+          description: >-
+            H5: mobile web; PC_Web: pcweb; System: system; Android: Android
+            native app; iOS: Apple native app; HOS: Hongmeng OS; PC_Win:
+            pcwindows client; PC_Mac: pcmac client; default is the same as login
+            source. (The enumeration is for reference only)
+        thirdPartyOrder:
+          type: string
       required:
         - customerGroupId
         - customerId
