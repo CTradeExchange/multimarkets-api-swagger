@@ -20352,6 +20352,14 @@ paths:
                   title: 每页数据量
                   description: 每页数据量，默认20
                   format: int32
+                source:
+                  type: string
+                  title: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
               required:
                 - tradeType
                 - sortFieldName
@@ -20547,6 +20555,14 @@ paths:
                               type: string
                               title: 占用保证金
                               description: 占用保证金
+                            source:
+                              type: string
+                              title: 订单来源
+                              description: >-
+                                H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                            thirdPartyOrder:
+                              type: string
+                              title: 三方订单标识
                           required:
                             - executePrice
                             - executeNum
@@ -29506,6 +29522,14 @@ paths:
                         type: string
                         title: 保证金类型
                         description: 1-比例；2-范围；
+                      source:
+                        type: string
+                        title: 订单来源
+                        description: >-
+                          H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                      thirdPartyOrder:
+                        type: string
+                        title: 三方订单标识
                     title: 数据体
               examples:
                 '1':
@@ -29566,6 +29590,18 @@ paths:
                     tm: 27
                     msgParams: null
                     ok: true
+                '2':
+                  summary: 异常示例
+                  value:
+                    msg: Close position fail
+                    fail: true
+                    trace: x-pw16m-so77fl71-x21ucw-sh0wz4-1677571968
+                    code: '30001'
+                    data: tradeapi.app.PositionApiService.queryPositionDetail
+                    bizCode: C
+                    tm: 93
+                    msgParams: null
+                    ok: false
       security: []
   /global/config.app.AppSymbolDubboService.findFundPageWithRealTimeInfo:
     post:
@@ -30639,6 +30675,14 @@ paths:
                         type: string
                         title: 保证金类型
                         description: 1-比例；2-范围；
+                      source:
+                        type: string
+                        title: 订单来源
+                        description: >-
+                          H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                      thirdPartyOrder:
+                        type: string
+                        title: 三方订单标识
                     title: 数据体
               examples:
                 '1':
@@ -53435,6 +53479,14 @@ components:
           type: string
         accountIds:
           type: string
+        source:
+          type: string
+          title: 订单来源
+          description: >-
+            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+        thirdPartyOrder:
+          type: string
+          title: 三方订单标识
     BaseResultQueryCustomerWithdrawExchangeRateDto:
       type: object
       properties:
@@ -53794,6 +53846,14 @@ components:
         executeAmount:
           type: string
           description: 成交额
+        source:
+          type: string
+          title: 订单来源
+          description: >-
+            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+        thirdPartyOrder:
+          type: string
+          title: 三方订单标识
     BaseResultInteger:
       type: object
       properties:
@@ -54594,7 +54654,7 @@ components:
         source:
           type: string
           description: >-
-            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符）
+            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考）
           title: 订单来源
         thirdPartyOrder:
           type: string
