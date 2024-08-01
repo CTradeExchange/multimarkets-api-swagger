@@ -16225,6 +16225,14 @@ paths:
                   type: integer
                   title: 当前页码
                   description: 当前页码
+                source:
+                  type: string
+                  title: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
               required:
                 - tradeType
       responses:
@@ -16400,6 +16408,14 @@ paths:
                               type: integer
                               title: 盈亏
                               format: long
+                            source:
+                              type: string
+                              title: 订单来源
+                              description: >-
+                                H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                            thirdPartyOrder:
+                              type: string
+                              title: 三方订单标识
                         title: 订单集合
                     title: 数据体
               examples:
@@ -31601,6 +31617,14 @@ paths:
                   title: 当前页
                   description: 默认1
                   format: long
+                source:
+                  type: string
+                  title: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
               required:
                 - tradeType
       responses:
@@ -31766,6 +31790,14 @@ paths:
                           type: string
                           title: 保证金类型
                           description: 1-比例；2-范围；
+                        source:
+                          type: string
+                          title: 订单来源
+                          description: >-
+                            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                        thirdPartyOrder:
+                          type: string
+                          title: 三方订单标识
                     title: 数据体
               examples:
                 '1':
@@ -53344,6 +53376,14 @@ components:
         positionId:
           type: integer
           format: int64
+        source:
+          type: string
+          title: 订单来源
+          description: >-
+            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+        thirdPartyOrder:
+          type: string
+          title: 三方订单标识
     WithdrawAmountLimitReqDto:
       type: object
       properties:
@@ -54429,6 +54469,14 @@ components:
           type: string
           description: 成交均价
           title: 成交均价
+        source:
+          type: string
+          title: 订单来源
+          description: >-
+            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+        thirdPartyOrder:
+          type: string
+          title: 三方订单标识
     CustomerGroupWithdrawAmountConfigDto:
       type: object
       properties:
