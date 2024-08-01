@@ -12720,6 +12720,17 @@ paths:
                               format: int32
                               description: 1-Buy; 2-Sell;
                               title: Closing direction
+                            source:
+                              type: string
+                              description: >-
+                                H5: mobile web; PC_Web: pcweb; System: system;
+                                Android: Android native app; iOS: Apple native
+                                app; HOS: Hongmeng OS; PC_Win: pcwindows client;
+                                PC_Mac: pcmac client; default is the same as
+                                login source. (The enumeration is for reference
+                                only)
+                            thirdPartyOrder:
+                              type: string
                         title: Closing List Collection
                     title: Data Body
               examples:
@@ -16054,6 +16065,16 @@ paths:
                   type: integer
                   title: Current page number
                   description: Current page number
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
               required:
                 - tradeType
             example: ''
@@ -16240,6 +16261,17 @@ paths:
                               type: integer
                               title: Profit and Loss
                               format: long
+                            source:
+                              type: string
+                              description: >-
+                                H5: mobile web; PC_Web: pcweb; System: system;
+                                Android: Android native app; iOS: Apple native
+                                app; HOS: Hongmeng OS; PC_Win: pcwindows client;
+                                PC_Mac: pcmac client; default is the same as
+                                login source. (The enumeration is for reference
+                                only)
+                            thirdPartyOrder:
+                              type: string
                         title: Order collection
                     title: Data Body
               examples:
@@ -18697,6 +18729,16 @@ paths:
                   title: Data quantity per page
                   description: Default 20
                   format: int32
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
               required:
                 - tradeType
                 - sortFieldName
@@ -18830,6 +18872,17 @@ paths:
                               format: int32
                               description: 1-Buy; 2-Sell;
                               title: Closing direction
+                            source:
+                              type: string
+                              description: >-
+                                H5: mobile web; PC_Web: pcweb; System: system;
+                                Android: Android native app; iOS: Apple native
+                                app; HOS: Hongmeng OS; PC_Win: pcwindows client;
+                                PC_Mac: pcmac client; default is the same as
+                                login source. (The enumeration is for reference
+                                only)
+                            thirdPartyOrder:
+                              type: string
                         title: Closing List Collection
                     title: Data Body
               examples:
@@ -20588,6 +20641,16 @@ paths:
                         type: string
                         title: Margin type
                         description: 1-Ratio; 2-Range;
+                      source:
+                        type: string
+                        description: >-
+                          H5: mobile web; PC_Web: pcweb; System: system;
+                          Android: Android native app; iOS: Apple native app;
+                          HOS: Hongmeng OS; PC_Win: pcwindows client; PC_Mac:
+                          pcmac client; default is the same as login source.
+                          (The enumeration is for reference only)
+                      thirdPartyOrder:
+                        type: string
                     title: Data Body
               examples:
                 '1':
@@ -20767,6 +20830,16 @@ paths:
                   title: Data quantity per page
                   description: Number of data per page, default 20
                   format: int32
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
               required:
                 - tradeType
                 - sortFieldName
@@ -20967,6 +21040,17 @@ paths:
                               type: string
                               title: Margin in use
                               description: Margin in use
+                            source:
+                              type: string
+                              description: >-
+                                H5: mobile web; PC_Web: pcweb; System: system;
+                                Android: Android native app; iOS: Apple native
+                                app; HOS: Hongmeng OS; PC_Win: pcwindows client;
+                                PC_Mac: pcmac client; default is the same as
+                                login source. (The enumeration is for reference
+                                only)
+                            thirdPartyOrder:
+                              type: string
                           required:
                             - executePrice
                             - executeNum
@@ -30416,6 +30500,16 @@ paths:
                         type: string
                         title: Margin type
                         description: 1-Ratio; 2-Range;
+                      source:
+                        type: string
+                        description: >-
+                          H5: mobile web; PC_Web: pcweb; System: system;
+                          Android: Android native app; iOS: Apple native app;
+                          HOS: Hongmeng OS; PC_Win: pcwindows client; PC_Mac:
+                          pcmac client; default is the same as login source.
+                          (The enumeration is for reference only)
+                      thirdPartyOrder:
+                        type: string
                     title: Data Body
               examples:
                 '1':
@@ -31619,6 +31713,16 @@ paths:
                   title: Current Page
                   description: Default 1
                   format: long
+                source:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
               required:
                 - tradeType
             example: ''
@@ -31793,6 +31897,16 @@ paths:
                           type: string
                           title: Margin type
                           description: 1-Ratio; 2-Range;
+                        source:
+                          type: string
+                          description: >-
+                            H5: mobile web; PC_Web: pcweb; System: system;
+                            Android: Android native app; iOS: Apple native app;
+                            HOS: Hongmeng OS; PC_Win: pcwindows client; PC_Mac:
+                            pcmac client; default is the same as login source.
+                            (The enumeration is for reference only)
+                        thirdPartyOrder:
+                          type: string
                     title: Data Body
               examples:
                 '1':
@@ -43154,6 +43268,15 @@ components:
         positionId:
           type: integer
           format: int64
+        source:
+          type: string
+          description: >-
+            H5: mobile web; PC_Web: pcweb; System: system; Android: Android
+            native app; iOS: Apple native app; HOS: Hongmeng OS; PC_Win:
+            pcwindows client; PC_Mac: pcmac client; default is the same as login
+            source. (The enumeration is for reference only)
+        thirdPartyOrder:
+          type: string
     SpotQueryOrderVo:
       type: object
       properties:
@@ -45415,6 +45538,15 @@ components:
           type: string
         accountIds:
           type: string
+        source:
+          type: string
+          description: >-
+            H5: mobile web; PC_Web: pcweb; System: system; Android: Android
+            native app; iOS: Apple native app; HOS: Hongmeng OS; PC_Win:
+            pcwindows client; PC_Mac: pcmac client; default is the same as login
+            source. (The enumeration is for reference only)
+        thirdPartyOrder:
+          type: string
     SpotTradeRecordList:
       type: object
       properties:
@@ -45472,6 +45604,15 @@ components:
         symbolCode:
           type: string
         tradeAmount:
+          type: string
+        source:
+          type: string
+          description: >-
+            H5: mobile web; PC_Web: pcweb; System: system; Android: Android
+            native app; iOS: Apple native app; HOS: Hongmeng OS; PC_Win:
+            pcwindows client; PC_Mac: pcmac client; default is the same as login
+            source. (The enumeration is for reference only)
+        thirdPartyOrder:
           type: string
     SpotTradeRecordVo:
       type: object
