@@ -5556,7 +5556,7 @@ paths:
                               type: integer
                               description: Customer ID
                               format: long
-                            source:
+                            querySource:
                               type: string
                               description: >-
                                 H5: mobile web; PC_Web: pcweb; System: system;
