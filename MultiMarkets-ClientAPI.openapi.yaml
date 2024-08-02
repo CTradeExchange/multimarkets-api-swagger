@@ -16233,7 +16233,7 @@ paths:
                   type: integer
                   title: 当前页码
                   description: 当前页码
-                source:
+                querySource:
                   type: string
                   title: 订单来源
                   description: >-
@@ -18961,7 +18961,7 @@ paths:
                   title: 每页数据量
                   description: 默认20
                   format: int32
-                source:
+                querySource:
                   type: string
                   title: 订单来源
                   description: >-
@@ -20376,7 +20376,7 @@ paths:
                   title: 每页数据量
                   description: 每页数据量，默认20
                   format: int32
-                source:
+                querySource:
                   type: string
                   title: 订单来源
                   description: >-
@@ -31625,7 +31625,7 @@ paths:
                   title: 当前页
                   description: 默认1
                   format: long
-                source:
+                querySource:
                   type: string
                   title: 订单来源
                   description: >-
@@ -53384,7 +53384,7 @@ components:
         positionId:
           type: integer
           format: int64
-        source:
+        querySource:
           type: string
           title: 订单来源
           description: >-
@@ -53527,7 +53527,7 @@ components:
           type: string
         accountIds:
           type: string
-        source:
+        querySource:
           type: string
           title: 订单来源
           description: >-
