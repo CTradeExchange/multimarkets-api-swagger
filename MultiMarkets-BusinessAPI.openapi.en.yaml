@@ -1892,7 +1892,7 @@ paths:
                   type: integer
                   format: long
                   description: Current page. Default 1
-                source:
+                querySource:
                   type: string
                   description: >-
                     H5: mobile web; PC_Web: pcweb; System: system; Android:
