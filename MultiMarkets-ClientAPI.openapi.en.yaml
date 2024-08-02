@@ -12578,7 +12578,7 @@ paths:
                   title: Data quantity per page
                   description: Default 20
                   format: int32
-                source:
+                querySource:
                   type: string
                   description: >-
                     H5: mobile web; PC_Web: pcweb; System: system; Android:
@@ -16075,7 +16075,7 @@ paths:
                   type: integer
                   title: Current page number
                   description: Current page number
-                source:
+                querySource:
                   type: string
                   description: >-
                     H5: mobile web; PC_Web: pcweb; System: system; Android:
@@ -18739,7 +18739,7 @@ paths:
                   title: Data quantity per page
                   description: Default 20
                   format: int32
-                source:
+                querySource:
                   type: string
                   description: >-
                     H5: mobile web; PC_Web: pcweb; System: system; Android:
@@ -20840,7 +20840,7 @@ paths:
                   title: Data quantity per page
                   description: Number of data per page, default 20
                   format: int32
-                source:
+                querySource:
                   type: string
                   description: >-
                     H5: mobile web; PC_Web: pcweb; System: system; Android:
@@ -31723,7 +31723,7 @@ paths:
                   title: Current Page
                   description: Default 1
                   format: long
-                source:
+                querySource:
                   type: string
                   description: >-
                     H5: mobile web; PC_Web: pcweb; System: system; Android:
@@ -43278,7 +43278,7 @@ components:
         positionId:
           type: integer
           format: int64
-        source:
+        querySource:
           type: string
           description: >-
             H5: mobile web; PC_Web: pcweb; System: system; Android: Android
@@ -45557,7 +45557,7 @@ components:
           type: string
         accountIds:
           type: string
-        source:
+        querySource:
           type: string
           description: >-
             H5: mobile web; PC_Web: pcweb; System: system; Android: Android
