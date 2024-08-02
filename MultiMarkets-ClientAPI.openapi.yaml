@@ -17893,7 +17893,7 @@ paths:
                   title: 每页数据量
                   description: 默认20
                   format: int32
-                source:
+                querySource:
                   type: string
                   title: 订单来源
                   description: >-
