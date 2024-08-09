@@ -43,7 +43,6 @@ tags:
   - name: Credit Card/Query
   - name: External Settlement
   - name: Market Maker
-  - name: 消息接口
 paths:
   /global/customer.app.CustomerWebApiService.bindLoginPwd:
     post:
@@ -4229,7 +4228,6 @@ paths:
         subscribe to account, position, and transaction push messages.
       tags:
         - Message
-        - 消息接口
       parameters:
         - name: companyId
           in: header
