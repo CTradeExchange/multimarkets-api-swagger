@@ -2594,7 +2594,6 @@ paths:
       description: 此接口用于客户接入Openapi时，需要订阅账户、持仓、交易推送消息时申请消息订阅的鉴权Token
       tags:
         - 消息接口
-        - 消息接口
       parameters:
         - name: companyId
           in: header
