@@ -6386,11 +6386,11 @@ paths:
                   type: string
                   title: 订单来源
                   description: >-
-                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考）
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考，只能使用字母、数字、下划线）
                 thirdPartyOrder:
                   type: string
                   title: 三方订单标识
-                  description: （限制最高255字符）
+                  description: （限制最高255字符，只能使用字母、数字、下划线）
               required:
                 - tradeType
                 - bizType
@@ -9235,11 +9235,11 @@ paths:
                   type: string
                   title: 订单来源
                   description: >-
-                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考）
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考，只能使用字母、数字、下划线）
                 thirdPartyOrder:
                   type: string
                   title: 三方订单标识
-                  description: （限制最高255字符）
+                  description: （限制最高255字符，只能使用字母、数字、下划线）
               required:
                 - tradeType
                 - bizType
@@ -54679,12 +54679,12 @@ components:
         source:
           type: string
           description: >-
-            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考）
+            H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（限制最高255字符，枚举仅供参考，只能使用字母、数字、下划线）
           title: 订单来源
         thirdPartyOrder:
           type: string
           title: 三方订单标识
-          description: （限制最高255字符）
+          description: （限制最高255字符，只能使用字母、数字、下划线）
     CustomerGroupWithdrawConditionConfigDto:
       type: object
       properties:
