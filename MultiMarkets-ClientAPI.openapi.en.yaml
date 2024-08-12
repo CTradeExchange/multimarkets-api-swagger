@@ -2596,10 +2596,13 @@ paths:
                     Android native app; iOS: Apple native app; HOS: Hongmeng OS;
                     PC_Win: pcwindows client; PC_Mac: pcmac client; default is
                     the same as login source. (limited to 255 characters,
-                    enumeration is for reference only)
+                    enumeration is for reference only,Only letters, numbers, and
+                    underscores can be used)
                 thirdPartyOrder:
                   type: string
-                  description: (limited to 255 characters)
+                  description: >-
+                    (limited to 255 characters,Only letters, numbers, and
+                    underscores can be used)
               required:
                 - tradeType
                 - bizType
@@ -2941,10 +2944,13 @@ paths:
                     Android native app; iOS: Apple native app; HOS: Hongmeng OS;
                     PC_Win: pcwindows client; PC_Mac: pcmac client; default is
                     the same as login source. (limited to 255 characters,
-                    enumeration is for reference only)
+                    enumeration is for reference only,Only letters, numbers, and
+                    underscores can be used)
                 thirdPartyOrder:
                   type: string
-                  description: (limited to 255 characters)
+                  description: >-
+                    (limited to 255 characters,Only letters, numbers, and
+                    underscores can be used)
               required:
                 - tradeType
                 - bizType
