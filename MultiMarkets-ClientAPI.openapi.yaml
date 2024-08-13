@@ -10845,7 +10845,7 @@ paths:
                   type: string
                   title: 排序类型
                   description: 排序类型 desc 降序；asc 升序
-                source:
+                querySource:
                   type: string
                   title: 订单来源
                   description: 订单来源
@@ -10855,7 +10855,7 @@ paths:
                   description: 三方订单ID
               required:
                 - tradeType
-                - source
+                - querySource
                 - thirdPartyOrder
             example:
               tradeType: 59
