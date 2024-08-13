@@ -6538,9 +6538,17 @@ paths:
                 sortType:
                   type: string
                   title: ''
-                  description: "\tSort Type desc Descending; asc Ascending"
+                  description: Sort Type desc Descending; asc Ascending
+                querySource:
+                  type: string
+                  description: Query Source
+                thirdPartyOrder:
+                  type: string
+                  description: Third Party Order
               required:
                 - tradeType
+                - querySource
+                - thirdPartyOrder
             example:
               tradeType: 59
               accountCurrency: aliqua fugiat laboris
