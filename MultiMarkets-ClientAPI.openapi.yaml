@@ -46317,6 +46317,7 @@ components:
         - amount
         - toCustomerNo
         - toTradeType
+        - tradeType
       properties:
         accountId:
           type: integer
@@ -46347,6 +46348,9 @@ components:
         currency:
           type: string
           description: 划转的币种
+        tradeType:
+          type: string
+          description: 划出账户玩法
     LoginPwdBindDTO:
       type: object
       required:
