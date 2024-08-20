@@ -7068,15 +7068,15 @@ paths:
                 - tradeTypeCurrencyList
                 - pwd
             example:
-              phone: '{{mock_phone}}'
+              email: test439@chixi88.com
+              emailArea: '+86'
               pwd: dc483e80a7a0bd9ef71d8cf973673924
-              country: '{{national_code}}'
-              registerSource: 1
+              country: CN
               customerGroupId: 1
+              registerSource: 1
               tradeTypeCurrencyList:
                 - allCurrency: USDT
                   tradeType: '1'
-              phoneArea: '+86'
       responses:
         '200':
           description: 成功
