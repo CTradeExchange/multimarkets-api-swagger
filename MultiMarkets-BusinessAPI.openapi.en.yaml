@@ -5021,7 +5021,15 @@ paths:
                 - businessType
                 - amount
                 - withdraw
-            example: "{\r\n    \"customerNo\": \"{{customerNo}}\",\r\n    \"accountId\": {{accountId}},\r\n    \"accountCurrency\": \"USDT\",\r\n    \"tradeType\": 1,\r\n    \"businessType\": 4,\r\n    \"amount\": 5,\r\n    \"withdraw\": true,\r\n    \"remark\": \"test\"\r\n}"
+            example:
+              customerNo: '86000020'
+              accountId: 1000450
+              accountCurrency: USDT
+              tradeType: 1
+              businessType: 4
+              amount: 5
+              withdraw: true
+              remark: test
       responses:
         '200':
           description: Success
@@ -9829,6 +9837,20 @@ paths:
       tags:
         - Activities
       parameters:
+        - name: trace
+          in: header
+          description: ''
+          required: true
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: companyId
+          in: header
+          description: ''
+          required: true
+          example: '{{company}}'
+          schema:
+            type: string
         - name: token
           in: header
           description: ''
@@ -9841,13 +9863,6 @@ paths:
           description: ''
           required: true
           example: 0.0.1
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: true
-          example: '{{mock_trace}}'
           schema:
             type: string
       requestBody:
@@ -9867,7 +9882,7 @@ paths:
                 - customerNo
                 - tradeType
             example:
-              customerNo: '{{customerNo}}'
+              customerNo: '86000020'
               tradeType: 1
       responses:
         '200':
