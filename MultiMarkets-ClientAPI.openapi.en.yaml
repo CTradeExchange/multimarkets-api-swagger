@@ -33943,10 +33943,12 @@ paths:
       security: []
   /global/tradeapi.app.OrderApiService.closeTradePboOrder:
     post:
-      summary: Cancel limit order
+      summary: Cancel limit order(For aggregation mode only)
       deprecated: false
-      description: >-
-        Explanation: Cancel limit order   group=tradeApi version=0.0.1
+      description: |-
+        Explanation: Cancel limit order(For aggregation mode only)
+        group=tradeApi 
+        version=0.0.1 
         bizType=tradeapi.app.OrderApiService.closeTradePboOrder
       tags:
         - Trade/Isolated Margin Contract
@@ -34058,7 +34060,10 @@ paths:
                     description: Failure flag
                   data:
                     type: object
-                    properties: {}
+                    properties:
+                      leftover:
+                        type: string
+                        description: Cancel quantity
                     description: Data Body
               examples:
                 '1':
