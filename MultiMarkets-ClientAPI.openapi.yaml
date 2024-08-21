@@ -35074,10 +35074,10 @@ paths:
       security: []
   /global/tradeapi.app.OrderApiService.closeTradePboOrder:
     post:
-      summary: 取消限价单
+      summary: 取消限价单（仅用于聚合模式）
       deprecated: false
       description: |-
-        说明：取消限价单
+        说明：取消限价单（仅用于聚合模式）
 
         ```
         group=tradeApi
@@ -35189,7 +35189,10 @@ paths:
                     description: 失败标志
                   data:
                     type: object
-                    properties: {}
+                    properties:
+                      leftover:
+                        type: string
+                        description: 取消数量
                     description: 数据体
               examples:
                 '1':
