@@ -10855,8 +10855,6 @@ paths:
                   description: 三方订单ID
               required:
                 - tradeType
-                - querySource
-                - thirdPartyOrder
             example:
               tradeType: 59
               accountCurrency: aliqua fugiat laboris
