@@ -18223,7 +18223,7 @@ paths:
                   type: string
                   title: 排序字段名
                   description: >-
-                    pnl-利润；openTime-开仓时间；closeTime-平仓时间；orderId-订单id；symbolId-产品id；
+                    pnl-利润；openTime-开仓时间；closeTime-平仓时间；orderId-订单id；symbolId-产品id；（默认按执行时间倒叙）
                 sortType:
                   type: string
                   title: 排序类型
@@ -18272,8 +18272,6 @@ paths:
                   title: 三方订单标识
               required:
                 - tradeType
-                - sortFieldName
-                - sortType
       responses:
         '200':
           description: 成功
@@ -19291,7 +19289,7 @@ paths:
                   type: string
                   title: 排序字段名
                   description: >-
-                    pnl-利润；openTime-开仓时间；closeTime-平仓时间；orderId-订单id；symbolId-产品id；
+                    pnl-利润；openTime-开仓时间；closeTime-平仓时间；orderId-订单id；symbolId-产品id；（默认按执行时间倒叙）
                 sortType:
                   type: string
                   title: 排序类型
@@ -19340,8 +19338,6 @@ paths:
                   title: 三方订单标识
               required:
                 - tradeType
-                - sortFieldName
-                - sortType
       responses:
         '200':
           description: 成功
