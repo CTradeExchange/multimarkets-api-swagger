@@ -153,7 +153,6 @@ paths:
               endTime: 1669219199999
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -339,6 +338,7 @@ paths:
                         description: Record Collection
                     description: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.admin.CatsTradeDealService.getTradeDealInfoByDealId:
     post:
@@ -409,7 +409,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -496,6 +495,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-b-api/depth-tick:
     get:
@@ -546,7 +546,6 @@ paths:
             type: string
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -628,6 +627,7 @@ paths:
                             - price: '136.427'
                               volume: '400000.00'
           headers: {}
+          x-apifox-name: OK
       security: []
   /customer.app.CustomerWebApiService.checkCustomerExist:
     post:
@@ -691,7 +691,6 @@ paths:
               phoneArea: '+86'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -734,6 +733,7 @@ paths:
                   - code
                   - tm
           headers: {}
+          x-apifox-name: Success
       security: []
   /message.admin.VerificationAdminService.queryCodeSendStatus:
     post:
@@ -803,7 +803,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -889,6 +888,7 @@ paths:
                   - msgParams
                   - data
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminDictDubboService.getListByParentCode:
     post:
@@ -936,7 +936,6 @@ paths:
               parentCode: phone_code
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -1051,6 +1050,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolTradeTypeByCompanyId:
     post:
@@ -1110,7 +1110,6 @@ paths:
               customerGroupId: 50
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -1205,6 +1204,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /auth/admin.admin.CompanyAuthDubboService.auth:
     post:
@@ -1241,7 +1241,6 @@ paths:
               appSecret: '{{app_secret}}'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -1513,6 +1512,7 @@ paths:
                     ok: true
                     fail: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /message.admin.PlatFormMessageThirdSendAdminService.add:
     post:
@@ -1603,7 +1603,6 @@ paths:
               }
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -1661,6 +1660,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.operationBonus:
     post:
@@ -1756,7 +1756,6 @@ paths:
               accountId: '40'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -1811,6 +1810,7 @@ paths:
                   - code
                   - tm
           headers: {}
+          x-apifox-name: Success
       security: []
   /tradeapi.admin.OrderAdminApiService.queryPositionPage:
     post:
@@ -1926,7 +1926,6 @@ paths:
               sortFieldName: openTime
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -2200,6 +2199,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.admin.CatsTradeDealService.getTradeDealInfoByOrderId:
     post:
@@ -2276,7 +2276,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -2363,6 +2362,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-stock-b-api/depth-tick:
     get:
@@ -2413,7 +2413,6 @@ paths:
             type: string
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -2495,6 +2494,7 @@ paths:
                             - price: '136.427'
                               volume: '400000.00'
           headers: {}
+          x-apifox-name: OK
       security: []
   /customer.admin.WhiteCustomerAdminApiService.addCusAndOpenAccountAndKyc:
     post:
@@ -2618,7 +2618,6 @@ paths:
               phoneArea: '+86'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -2668,6 +2667,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminAssetsDubboService.getAssetsList:
     post:
@@ -2712,7 +2712,6 @@ paths:
               companyId: '360'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -4829,6 +4828,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolList:
     post:
@@ -4880,7 +4880,6 @@ paths:
               name: EURUSD
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -4966,6 +4965,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /fund.admin.CustomerAdjustProposalAdminDubboService.addCustomerAdjustProposal:
     post:
@@ -5048,7 +5048,6 @@ paths:
               remark: test
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -5106,6 +5105,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /fund.admin.CustomerFundAdminDubboService.getExchangeRate:
     post:
@@ -5178,7 +5178,6 @@ paths:
                 BNB: USDT
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -5244,6 +5243,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /tradeapi.admin.PositionAdminApiService.queryAllPositionPage:
     post:
@@ -5370,7 +5370,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -6021,6 +6020,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-b-api/trade-tick:
     get:
@@ -6071,7 +6071,6 @@ paths:
             type: string
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -6141,6 +6140,7 @@ paths:
                           turnover: '0'
                           trade_direction: 0
           headers: {}
+          x-apifox-name: OK
       security: []
   /customer.admin.WhiteCustomerAdminApiService.page:
     post:
@@ -6203,7 +6203,6 @@ paths:
               current: 1
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -6394,6 +6393,7 @@ paths:
                     tm: 0
                     trace: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminDictDubboService.getCountryListByParentCode:
     post:
@@ -6439,7 +6439,6 @@ paths:
               parentCode: '-1'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -8105,6 +8104,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolGroupList:
     post:
@@ -8144,7 +8144,6 @@ paths:
             example: {}
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -8211,6 +8210,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
     post:
@@ -8279,7 +8279,6 @@ paths:
               customerGroupId: 1
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema: &ref_0
@@ -8299,6 +8298,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.lockTradeAccount:
     post:
@@ -8382,7 +8382,6 @@ paths:
               type: 1
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema: *ref_0
@@ -8401,6 +8400,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-stock-b-api/trade-tick:
     get:
@@ -8451,7 +8451,6 @@ paths:
             type: string
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -8521,6 +8520,7 @@ paths:
                           turnover: '0'
                           trade_direction: 0
           headers: {}
+          x-apifox-name: OK
       security: []
   /customer.admin.WhiteCustomerAdminApiService.detail:
     post:
@@ -8589,7 +8589,6 @@ paths:
               customerNo: '{{customer}}'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -8943,6 +8942,7 @@ paths:
                     tm: 0
                     trace: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminAssetsDubboService.getTradeTypeList:
     post:
@@ -8983,7 +8983,6 @@ paths:
               companyId: '360'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -9090,6 +9089,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolByCompanyId:
     post:
@@ -9143,7 +9143,6 @@ paths:
               companyId: '{{company}}'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -9307,6 +9306,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /tradeapi.admin.OrderAdminApiService.forcedOrder:
     post:
@@ -9375,7 +9375,6 @@ paths:
               customerGroupId: 1
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema: *ref_0
@@ -9409,6 +9408,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.unlockTradeAccount:
     post:
@@ -9481,7 +9481,6 @@ paths:
               tradeType: 5
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema: *ref_0
@@ -9500,6 +9499,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-b-api/kline:
     get:
@@ -9527,7 +9527,6 @@ paths:
             type: string
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -9621,6 +9620,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
   /customer.admin.CustomerGroupAdminApiService.groupList:
     post:
@@ -9672,7 +9672,6 @@ paths:
               customerNo: '86000020'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -9731,6 +9730,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /config.admin.AdminSymbolDubboService.getFundByCompanyId:
     post:
@@ -9779,7 +9779,6 @@ paths:
               companyId: '{{company}}'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -9862,6 +9861,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /customer.admin.CustomerAdminApiService.queryAccountList:
     post:
@@ -9920,7 +9920,6 @@ paths:
               tradeType: 1
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -10013,6 +10012,7 @@ paths:
                         "ok": true
                     }
           headers: {}
+          x-apifox-name: Success
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryOneLockTradeAccount:
     post:
@@ -10084,7 +10084,6 @@ paths:
               type: 1
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -10141,6 +10140,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-b-api/batch-kline:
     get:
@@ -10212,7 +10212,6 @@ paths:
                     adjust_type: 0
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -10306,6 +10305,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
   /fund.admin.CustomerAdjustProposalAdminDubboService.getCustomerAdjustProposalById:
     post:
@@ -10365,7 +10365,6 @@ paths:
               type: 1
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -10422,6 +10421,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-stock-b-api/kline:
     get:
@@ -10449,7 +10449,6 @@ paths:
             type: string
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -10543,6 +10542,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryTradeTypeLockTradeAccount:
     post:
@@ -10608,7 +10608,6 @@ paths:
               companyId: '{{company}}'
       responses:
         '200':
-          description: Success
           content:
             application/json:
               schema:
@@ -10695,6 +10694,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /quote-stock-b-api/batch-kline:
     get:
@@ -10766,7 +10766,6 @@ paths:
                     adjust_type: 0
       responses:
         '200':
-          description: OK
           content:
             application/json:
               schema:
@@ -10860,6 +10859,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
 components:
   schemas:
