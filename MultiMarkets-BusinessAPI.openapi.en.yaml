@@ -4972,6 +4972,8 @@ paths:
       summary: Bonus distribution / rebate
       deprecated: false
       description: >-
+        version=0.0.1
+
         bizType=fund.admin.CustomerAdjustProposalAdminDubboService.addCustomerAdjustProposal
       tags:
         - Activities
@@ -5048,6 +5050,7 @@ paths:
               remark: test
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
