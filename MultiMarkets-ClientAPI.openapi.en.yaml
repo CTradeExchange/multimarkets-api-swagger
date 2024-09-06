@@ -112,12 +112,12 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 type: string
           headers: {}
+          x-apifox-name: Success
       security: []
     post:
       summary: External system adjustment
@@ -244,7 +244,6 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -304,6 +303,7 @@ paths:
                     fail: false
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /geoip/country:
     get:
@@ -336,7 +336,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -388,6 +387,7 @@ paths:
                   - msgParams
                   - data
           headers: {}
+          x-apifox-name: Success
       security: []
   /thirdExt/now:
     post:
@@ -420,7 +420,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -471,6 +470,7 @@ paths:
                     ok: true
                     fail: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppAssetsDubboService.getAssetsList:
     post:
@@ -526,12 +526,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListAssets'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppDictDubboService.getListByParentId:
     post:
@@ -581,7 +581,6 @@ paths:
               parentId: '1'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -696,6 +695,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppDictDubboService.getListByParentCode:
     post:
@@ -745,7 +745,6 @@ paths:
               parentCode: USDT
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -860,6 +859,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppDictDubboService.getMapByParentCodes:
     post:
@@ -915,7 +915,6 @@ paths:
               parentId: '1'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -992,6 +991,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppDictDubboService.getCountryListByParentId:
     post:
@@ -1040,7 +1040,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -1132,6 +1131,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppDictDubboService.getCountryListByParentCode:
     post:
@@ -1183,7 +1183,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -1274,6 +1273,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolList:
     post:
@@ -1341,7 +1341,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -1427,6 +1426,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolBaseList:
     post:
@@ -1476,7 +1476,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -1642,6 +1641,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolDetail:
     post:
@@ -1709,7 +1709,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -2263,6 +2262,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.getFundInfo:
     post:
@@ -2307,7 +2307,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_7
@@ -2429,6 +2428,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.findFundPage:
     post:
@@ -2478,7 +2478,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_6
@@ -2709,6 +2708,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.findFundPageWithRealTimeInfo:
     post:
@@ -2760,7 +2760,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_6
@@ -3007,6 +3006,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.getEquityPremiumRate:
     post:
@@ -3061,7 +3061,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -3719,6 +3718,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppSymbolDubboService.getFundInfoByCustomerNo:
     post:
@@ -3771,7 +3771,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_7
@@ -3789,6 +3788,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.bindLoginPwd:
     post:
@@ -3854,12 +3854,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_8
                 $ref: '#/components/schemas/BaseResult1'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changeEmail:
     post:
@@ -3936,11 +3936,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailV1v1v2:
     post:
@@ -4033,11 +4033,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changePhone:
     post:
@@ -4114,7 +4114,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -4132,6 +4131,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changePhoneV1v1v2:
     post:
@@ -4225,11 +4225,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.checkCustomerExist:
     post:
@@ -4305,7 +4305,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -4341,6 +4340,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.destroy:
     post:
@@ -4401,11 +4401,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.enableOrForbidMFA:
     post:
@@ -4469,11 +4469,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerInfo:
     post:
@@ -4531,7 +4531,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -4785,6 +4784,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwd:
     post:
@@ -4889,11 +4889,11 @@ paths:
               verifyCodeToken: adczczxczczczxczczxczxczxc
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdV1v1v2:
     post:
@@ -4984,11 +4984,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.forgetLoginPwd:
     post:
@@ -5080,11 +5080,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwd:
     post:
@@ -5152,7 +5152,6 @@ paths:
               googleCode: '44'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -5170,6 +5169,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.bindEmail:
     post:
@@ -5249,7 +5249,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -5267,6 +5266,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.bindPhone:
     post:
@@ -5346,7 +5346,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -5364,6 +5363,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changeLang:
     post:
@@ -5426,7 +5426,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -5444,6 +5443,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerLang:
     post:
@@ -5501,7 +5501,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5550,6 +5549,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changeCustomerAddressAndPostalCode:
     post:
@@ -5620,7 +5620,6 @@ paths:
               address: Da Dong Men, Wuhan, Hubei, China
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5669,6 +5668,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.firstSetPhone:
     post:
@@ -5774,7 +5774,6 @@ paths:
               phone: '18190281711'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5823,6 +5822,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.firstSetEmail:
     post:
@@ -5922,7 +5922,6 @@ paths:
               email: 18190281711@qq.com
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5971,6 +5970,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.firstTimeSettingLoginPassword:
     post:
@@ -6039,7 +6039,6 @@ paths:
               newPwd: Aa123456@
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6088,6 +6087,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.findThirdAccountInfo:
     post:
@@ -6145,7 +6145,6 @@ paths:
             example: {}
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6215,6 +6214,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.checkGoogleMFAStatus:
     post:
@@ -6287,7 +6287,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6338,6 +6337,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.checkStatus:
     post:
@@ -6411,7 +6411,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6433,6 +6432,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountAssetsInfo:
     post:
@@ -6504,11 +6504,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountById:
     post:
@@ -6580,7 +6580,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6773,6 +6772,7 @@ paths:
                 required:
                   - data
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerAssets:
     post:
@@ -6834,7 +6834,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6906,6 +6905,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerAssetsInfo:
     post:
@@ -6978,7 +6978,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7268,6 +7267,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.queryLiabilitiesWaterByPage:
     post:
@@ -7360,7 +7360,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7503,6 +7502,7 @@ paths:
                 required:
                   - data
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwd:
     post:
@@ -7572,11 +7572,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwdMFA:
     post:
@@ -7668,11 +7668,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwd:
     post:
@@ -7742,11 +7742,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwdMFA:
     post:
@@ -7838,7 +7838,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -7856,6 +7855,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.groupList:
     post:
@@ -7913,7 +7913,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7963,6 +7962,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailMFA:
     post:
@@ -8075,7 +8075,6 @@ paths:
               googleCode: '64'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8093,6 +8092,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changePhoneMFA:
     post:
@@ -8211,7 +8211,6 @@ paths:
               googleCode: '97'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8229,6 +8228,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.changeCountry:
     post:
@@ -8298,7 +8298,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8316,6 +8315,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwdMFA:
     post:
@@ -8405,7 +8405,6 @@ paths:
               sendToken: '{{sendToken}}'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8423,6 +8422,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdMFA:
     post:
@@ -8512,7 +8512,6 @@ paths:
               sendToken: '{{sendToken}}'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8530,6 +8529,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.bindThirdAccount:
     post:
@@ -8602,7 +8602,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -8651,6 +8650,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.queryLatestBalanceOfUserAccountInExternalSystem:
     post:
@@ -8702,7 +8702,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -8747,6 +8746,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.findPhoneAndEmail:
     post:
@@ -8796,7 +8796,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -8843,6 +8842,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerThirdLoginService.config:
     post:
@@ -8904,7 +8904,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -8961,6 +8960,7 @@ paths:
                   - bizCode
                   - msg
           headers: {}
+          x-apifox-name: Success
       security: []
   /h/com.cats.customer.api.app.CustomerThirdLoginService/appleVerify:
     post:
@@ -9007,7 +9007,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9077,6 +9076,7 @@ paths:
                   - bizCode
                   - msg
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.facebookVerify:
     post:
@@ -9102,7 +9102,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9172,6 +9171,7 @@ paths:
                   - bizCode
                   - msg
           headers: {}
+          x-apifox-name: Success
       security: []
   /h/com.cats.customer.api.app.CustomerThirdLoginService/googleVerify:
     post:
@@ -9200,7 +9200,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9275,6 +9274,7 @@ paths:
                   - data
                   - msgParams
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.telegramVerify:
     post:
@@ -9343,7 +9343,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9431,6 +9430,7 @@ paths:
                   - bizCode
                   - msg
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.metaMaskVerify:
     post:
@@ -9466,7 +9466,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9536,6 +9535,7 @@ paths:
                   - bizCode
                   - msg
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.twitterVerify:
     post:
@@ -9610,7 +9610,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9680,6 +9679,7 @@ paths:
                   - bizCode
                   - msg
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.login:
     post:
@@ -9749,7 +9749,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9957,6 +9956,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.socialLogin:
     post:
@@ -10022,7 +10022,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -10230,6 +10229,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.register:
     post:
@@ -10363,7 +10363,6 @@ paths:
               thirdServerCode: '10'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -10496,6 +10495,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /third/login/customer.app.CustomerThirdLoginService.socialRegister:
     post:
@@ -10613,7 +10613,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -10742,6 +10741,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /login/customer.app.CustomerWebApiService.login:
     post:
@@ -10842,7 +10842,6 @@ paths:
               loginPwd: dc483e80a7a0bd9ef71d8cf973673924
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -11168,6 +11167,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /thirdExt/switchAccount:
     post:
@@ -11214,13 +11214,13 @@ paths:
             example: {}
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerDubboApiService.resetAccount:
     post:
@@ -11276,13 +11276,13 @@ paths:
             example: {}
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
+          x-apifox-name: Success
       security: []
   /register/customer.app.CustomerWebApiService.register:
     post:
@@ -11435,7 +11435,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -11558,6 +11557,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/thirdExt/randomKey:
     post:
@@ -11607,7 +11607,6 @@ paths:
             example: {}
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -11659,6 +11658,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.WithdrawBankWebApiService.add:
     post:
@@ -11776,7 +11776,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -11806,6 +11805,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.WithdrawBankWebApiService.addV1v2v8:
     post:
@@ -11913,11 +11913,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.WithdrawBankWebApiService.bankList:
     post:
@@ -11981,12 +11981,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListCustomerWithdrawBankVO'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.WithdrawBankWebApiService.delete:
     post:
@@ -12014,12 +12014,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerExtendWebApiService.findCustomerExtend:
     post:
@@ -12083,7 +12083,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -12115,6 +12114,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerExtendWebApiService.saveCustomerExtend:
     post:
@@ -12181,7 +12181,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -12212,6 +12211,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerOptionalWebApiService.add:
     post:
@@ -12291,7 +12291,6 @@ paths:
               tradeType: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -12309,6 +12308,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerOptionalWebApiService.delete:
     post:
@@ -12383,7 +12383,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -12413,6 +12412,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerOptionalWebApiService.optionalList:
     post:
@@ -12484,7 +12484,6 @@ paths:
                 - 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -12539,6 +12538,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.add:
     post:
@@ -12631,11 +12631,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.addV1v1v2:
     post:
@@ -12734,11 +12734,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.delete:
     post:
@@ -12801,11 +12801,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.updateWallet:
     post:
@@ -12833,11 +12833,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.walletList:
     post:
@@ -12901,7 +12901,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -12978,6 +12977,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.addWithdrawalAddressMFA:
     post:
@@ -13075,11 +13075,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressList:
     post:
@@ -13146,7 +13146,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -13228,6 +13227,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressGroupList:
     post:
@@ -13290,7 +13290,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -13367,6 +13366,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.GoogleVerifyApiService.generateGoogleAccount:
     post:
@@ -13424,7 +13424,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_19
@@ -13452,6 +13451,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.GoogleVerifyApiService.checkGoogleCode:
     post:
@@ -13514,7 +13514,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -13566,6 +13565,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.checkKycApply:
     post:
@@ -13635,7 +13635,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -13687,6 +13686,7 @@ paths:
                          "ok": true
                      }
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.findAllBizKyc:
     post:
@@ -13756,7 +13756,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_10
@@ -13775,6 +13774,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.findAllBizKycList:
     post:
@@ -13836,7 +13836,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -13918,6 +13917,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.findAllCusKycListByBiz:
     post:
@@ -13983,11 +13983,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_10
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.findAllLevelKyc:
     post:
@@ -14067,11 +14067,11 @@ paths:
               levelCode: level_1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_10
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.findCompanyCountry:
     post:
@@ -14129,7 +14129,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -14191,6 +14190,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.kycApply:
     post:
@@ -14287,11 +14287,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.KycWebApiService.kycLevelApply:
     post:
@@ -14383,7 +14383,6 @@ paths:
                   elementValue: '1'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -14441,6 +14440,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerApiWebService.applyApi:
     post:
@@ -14526,7 +14526,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -14585,6 +14584,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerApiWebService.delApi:
     post:
@@ -14646,7 +14646,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -14676,6 +14675,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerApiWebService.editApiPermission:
     post:
@@ -14781,7 +14781,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -14811,6 +14810,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerApiWebService.page:
     post:
@@ -14879,7 +14879,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -15040,6 +15039,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerApiWebService.queryApi:
     post:
@@ -15101,7 +15101,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -15258,6 +15257,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerOfAgentPage:
     post:
@@ -15326,7 +15326,6 @@ paths:
               current: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -15463,6 +15462,7 @@ paths:
                   - fail
                   - ok
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.registerOfAgentShareLink:
     post:
@@ -15588,7 +15588,6 @@ paths:
               customerGroupId: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -15756,6 +15755,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.checkToken:
     post:
@@ -15834,7 +15834,6 @@ paths:
               smsCode: '16'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -15897,6 +15896,7 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.checkPhone:
     post:
@@ -15985,7 +15985,6 @@ paths:
               smsCode: '16'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -16036,6 +16035,7 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.checkPhoneForRetriedLoginPwd:
     post:
@@ -16113,7 +16113,6 @@ paths:
               smsSendToken: cillum
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -16164,6 +16163,7 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.retrieveLoginPwd:
     post:
@@ -16235,7 +16235,6 @@ paths:
               smsCode: '16'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -16286,6 +16285,7 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/customer.app.CustomerWebApiService.firstSetLoginPwd:
     post:
@@ -16372,7 +16372,6 @@ paths:
               smsCode: '16'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -16469,6 +16468,7 @@ paths:
                     trace: cillum
                     tm: 29
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.VerificationApiService.verifyCodeSend:
     post:
@@ -16586,7 +16586,6 @@ paths:
               customerId: 88
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -16649,6 +16648,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/getMsgPushToken:
     post:
@@ -16712,7 +16712,6 @@ paths:
             example: {}
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -16757,6 +16756,7 @@ paths:
                     tm: 0
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /global/message.app.VerificationApiService.verifyCodeCheck:
     post:
@@ -16879,7 +16879,6 @@ paths:
               verifyCodeToken: '95'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -16942,6 +16941,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.PlatFormMessageTempApiService.getPlatformTempParentTypeList:
     post:
@@ -17008,7 +17008,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -17054,6 +17053,7 @@ paths:
                         - desc
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogList:
     post:
@@ -17138,7 +17138,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -17200,6 +17199,7 @@ paths:
                           title: Creator
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogByPage:
     post:
@@ -17322,7 +17322,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -17412,6 +17411,7 @@ paths:
                     title: Data Body
                     description: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.CompanyNoticeApiService.customerViewNoticePage:
     post:
@@ -17507,7 +17507,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -17589,6 +17588,7 @@ paths:
                     title: Data Body
                     description: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.CompanyNoticeApiService.customerViewMsgPage:
     post:
@@ -17680,7 +17680,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -17750,6 +17749,7 @@ paths:
                           description: 1-Unread; 2-Read;
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.CompanyNoticeApiService.msgRead:
     post:
@@ -17822,7 +17822,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -17858,6 +17857,7 @@ paths:
                     properties: {}
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.CompanyNoticeApiService.msgAllRead:
     post:
@@ -17925,7 +17925,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -17961,6 +17960,7 @@ paths:
                     properties: {}
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/messagepush.app.OfflinePushService.clientIdBindCustomer:
     post:
@@ -18030,7 +18030,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -18066,6 +18065,7 @@ paths:
                     title: Data Body
                     description: true-success; false-failure;
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/message.app.CompanyNoticeApiService.sendContactUsMsg:
     post:
@@ -18142,7 +18142,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -18170,6 +18169,7 @@ paths:
                     title: Tracking code
                     description: Tracking code
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.addMarketOrder:
     post:
@@ -18350,7 +18350,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -18503,6 +18502,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.updatePboOrder:
     post:
@@ -18609,7 +18609,6 @@ paths:
               requestNum: 35
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -18736,6 +18735,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.updateOrder:
     post:
@@ -18850,7 +18850,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -19015,6 +19014,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.queryHistoryCloseOrderList:
     post:
@@ -19148,7 +19148,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -19312,6 +19311,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.setCrossLevelNum:
     post:
@@ -19421,7 +19421,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -19475,6 +19474,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.calculateMarketOrder:
     post:
@@ -19618,7 +19618,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -19679,6 +19678,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdMMPositionApiService.queryPositionDetail:
     post:
@@ -19760,7 +19760,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -19994,6 +19993,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.queryCapitalFlowList:
     post:
@@ -20112,7 +20112,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -20310,6 +20309,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.addMarketOrder:
     post:
@@ -20508,7 +20508,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -20666,6 +20665,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.queryPBOOrderPage:
     post:
@@ -20769,7 +20769,6 @@ paths:
               sortFieldName: Shao Ke County De
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -20928,6 +20927,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.updateOrder:
     post:
@@ -21042,7 +21042,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -21092,6 +21091,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.queryOrderDetail:
     post:
@@ -21175,7 +21175,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -21353,6 +21352,7 @@ paths:
                         type: string
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.queryOrderPage:
     post:
@@ -21493,7 +21493,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -21713,6 +21712,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.queryHistoryCloseOrderList:
     post:
@@ -21851,7 +21851,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -22028,6 +22027,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.queryTradeRecordPage:
     post:
@@ -22164,7 +22164,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -22433,6 +22432,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.PositionApiService.updateCrossLevelNum:
     post:
@@ -22517,7 +22517,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -22587,6 +22586,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.PositionApiService.updateOccupyTheMargin:
     post:
@@ -22692,7 +22692,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -22762,6 +22761,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.calculateMarketOrder:
     post:
@@ -22922,7 +22922,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -23020,6 +23019,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.calculationBurstPrice:
     post:
@@ -23111,7 +23111,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -23185,6 +23184,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.PositionApiService.queryPositionDetail:
     post:
@@ -23271,7 +23271,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -23521,6 +23520,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.PositionApiService.queryPositionPage:
     post:
@@ -23662,7 +23662,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -23914,6 +23913,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.queryCapitalFlowList:
     post:
@@ -24030,7 +24030,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -24266,6 +24265,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.closeTradePboOrder:
     post:
@@ -24343,7 +24343,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -24417,6 +24416,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.checkOrderStatus:
     post:
@@ -24504,7 +24504,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -24577,6 +24576,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.addOrder:
     post:
@@ -24714,7 +24714,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -24841,6 +24840,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.updateOrder:
     post:
@@ -24952,7 +24952,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -25002,6 +25001,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.queryTradeRecordPage:
     post:
@@ -25125,7 +25125,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -25328,6 +25327,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.previewOrder:
     post:
@@ -25424,7 +25424,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -25664,6 +25663,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.addRepaymentOrder:
     post:
@@ -25760,7 +25760,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -26000,6 +25999,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.queryCapitalFlowList:
     post:
@@ -26118,7 +26118,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -26315,6 +26314,7 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryCapitalFlowList:
     post:
@@ -26336,12 +26336,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoSpotSubjectWaterVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.SpotOrderApiService.closeTradePboOrder:
     post:
@@ -26363,12 +26363,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_12
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryOrderPage:
     post:
@@ -26431,12 +26431,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderPageVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryOrderDetail:
     post:
@@ -26458,11 +26458,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_12
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryTradeRecordPage:
     post:
@@ -26484,12 +26484,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotTradeRecordVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.placeOrder:
     post:
@@ -26571,7 +26571,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -26611,6 +26610,7 @@ paths:
                         format: long
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.cancelOrder:
     post:
@@ -26658,7 +26658,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -26690,6 +26689,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.queryOrderDetail:
     post:
@@ -26726,7 +26726,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -26811,6 +26810,7 @@ paths:
                         title: Filled quantity
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.queryOrderPage:
     post:
@@ -26898,7 +26898,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -27002,6 +27001,7 @@ paths:
                           title: Data Body
                         title: Entrust list
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.queryPendingOrderList:
     post:
@@ -27029,7 +27029,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -27117,6 +27116,7 @@ paths:
                           type: string
                           title: Filled quantity
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.checkOrder:
     post:
@@ -27202,7 +27202,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -27256,6 +27255,7 @@ paths:
                         title: Amount of loan required for this transaction
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.calculateOrder:
     post:
@@ -27308,7 +27308,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -27356,6 +27355,7 @@ paths:
                         title: Number of shares that can be bought with a loan
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.queryDealPage:
     post:
@@ -27429,7 +27429,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -27548,6 +27547,7 @@ paths:
                         title: Deal list collection
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.getPositionDealDetailList:
     post:
@@ -27584,7 +27584,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -27639,6 +27638,7 @@ paths:
                         title: Deal amount
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockPositionApiService.queryPositionDetail:
     post:
@@ -27720,7 +27720,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -27885,6 +27884,7 @@ paths:
                         description: 1-Ratio; 2-Range;
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockPositionApiService.queryPositionPage:
     post:
@@ -27998,7 +27998,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -28165,6 +28164,7 @@ paths:
                           description: 1-Ratio; 2-Range;
                     title: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockOrderApiService.queryCapitalFlowList:
     post:
@@ -28285,7 +28285,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -28437,6 +28436,7 @@ paths:
                           title: Data Body
                         title: Transaction Collection
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.StockAccountApiService.queryAccountAssetsInfo:
     post:
@@ -28514,7 +28514,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -28632,6 +28631,7 @@ paths:
                         type: string
                         title: Leverage ratio
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/tradeapi.app.OrderApiService.queryPBOOrderPage:
     post:
@@ -28746,7 +28746,6 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -28797,6 +28796,7 @@ paths:
                     fail: false
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /get-user-amount:
     post:
@@ -28920,7 +28920,6 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -28980,6 +28979,7 @@ paths:
                     fail: false
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /external-system-credit-limit-adjustment:
     post:
@@ -29111,7 +29111,6 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -29173,6 +29172,7 @@ paths:
                     fail: false
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /cancel-external-system-credit-limit-adjustment:
     post:
@@ -29300,7 +29300,6 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -29361,6 +29360,7 @@ paths:
                     fail: false
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.indexSample:
     post:
@@ -29388,12 +29388,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListIndexSymbolCombinationVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.indexSimplePerformance:
     post:
@@ -29417,13 +29417,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListIndexSingleAssetPerformanceVo
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.assetPerformance:
     post:
@@ -29446,12 +29446,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListSingleAssetPerformanceDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.batchMarketPerformance:
     post:
@@ -29474,13 +29474,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultMapLongListFundTrendChartTypeDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.fundNetValueChangeQuote:
     post:
@@ -29503,12 +29503,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundNetValueCompareDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.investCombination:
     post:
@@ -29531,13 +29531,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListRealTimeInvestCombinationDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.marketPerformance:
     post:
@@ -29560,12 +29560,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_13
                 $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/report.app.ReportDatadDubboService.marketPerformanceQuoteChange:
     post:
@@ -29588,11 +29588,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_13
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundApplyAppDubboService.apply:
     post:
@@ -29614,12 +29614,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerFundApplyDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundApplyAppDubboService.calcApplyShares:
     post:
@@ -29640,12 +29640,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundApplyCalcDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundApplyAppDubboService.customerPage:
     post:
@@ -29667,12 +29667,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_16
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundApplyAppDubboService.getFundCurrencyList:
     post:
@@ -29694,12 +29694,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_24
                 $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundApplyAppDubboService.page:
     post:
@@ -29720,11 +29720,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_16
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.calcDeduct:
     post:
@@ -29746,12 +29746,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundManagementFeesCalcDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.deduct:
     post:
@@ -29772,12 +29772,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_18
                 $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.excute:
     post:
@@ -29800,11 +29800,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_18
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.page:
     post:
@@ -29826,12 +29826,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoFundManagementFeesDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundsApplyExecuteService.confirmFundsApplyExecuteInfo:
     post:
@@ -29853,11 +29853,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_19
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundsApplyExecuteService.getFundsApplyExecuteInfo:
     post:
@@ -29879,12 +29879,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundsApplyExecuteInfoDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.getOrderExecuteStandardConfigSymbolList:
     post:
@@ -29909,13 +29909,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListOrderExecuteStandardConfigSymbolDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.getOrderExecuteStandardConfigs:
     post:
@@ -29939,13 +29939,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListOrderExecuteStandardConfigDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.saveOrderExecuteStandardConfigs:
     post:
@@ -29969,11 +29969,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_19
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundOperationInfoAppDubboService.queryFundInfo:
     post:
@@ -29995,12 +29995,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundOperationInfoDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.calFundRedeem:
     post:
@@ -30022,12 +30022,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerFundRedeemDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.calShares:
     post:
@@ -30049,12 +30049,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_21
                 $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.checkShares:
     post:
@@ -30075,11 +30075,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_21
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.createFundRedeem:
     post:
@@ -30100,11 +30100,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_18
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.getFundRedeemCurrencyList:
     post:
@@ -30125,11 +30125,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_24
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.page:
     post:
@@ -30151,12 +30151,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_26
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryManagerPage:
     post:
@@ -30177,11 +30177,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_26
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryNotConfirmedRecs:
     post:
@@ -30202,12 +30202,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultLong'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.applyRechargeBindAddress:
     post:
@@ -30264,13 +30264,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_30
                 $ref: >-
                   #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.markOpenCardDepositRate:
     post:
@@ -30309,7 +30309,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -30344,6 +30343,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.prePaymentOrder:
     post:
@@ -30377,7 +30377,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -30425,6 +30424,7 @@ paths:
                     type: boolean
                     description: Operation failure, true=success, false=failure
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransfer:
     post:
@@ -30482,12 +30482,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_28
                 $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferForAgent:
     post:
@@ -30569,11 +30569,11 @@ paths:
               currency: HKD
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_28
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferRecord:
     post:
@@ -30630,12 +30630,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCapitalTransferRecordResDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferSupportDiffCurr:
     post:
@@ -30692,11 +30692,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_28
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.createDepositProposal:
     post:
@@ -30753,12 +30753,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCreateCustomerDepositRespDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getBindRechargeAddress:
     post:
@@ -30814,11 +30814,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_30
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getCryptoBlockchainInfo:
     post:
@@ -30875,12 +30875,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCryptoBlockchainRespDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getDepositAccountCurrencyList:
     post:
@@ -30942,13 +30942,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultSetDepositAccountCurrencyRespDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getDepositAccountCurrencyListV2:
     post:
@@ -31010,13 +31010,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListDepositAccountCurrencyRespV2Dto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getDepositCoinList:
     post:
@@ -31073,12 +31073,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_35
                 $ref: '#/components/schemas/BaseResultSetString'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getDepositExchangeRate:
     post:
@@ -31135,13 +31135,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryCustomerDepositExchangeRateDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannels:
     post:
@@ -31206,13 +31206,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_31
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV2:
     post:
@@ -31272,11 +31272,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_31
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV3:
     post:
@@ -31338,13 +31338,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespV3Dto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.getPayStatus:
     post:
@@ -31401,12 +31401,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultQueryCoinPayStatusRespDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.judgeIsAlreadyDeposit:
     post:
@@ -31464,11 +31464,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_19
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.manualLoan:
     post:
@@ -31525,11 +31525,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.manualRepayment:
     post:
@@ -31586,11 +31586,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService/queryDepositProposal:
     post:
@@ -31647,12 +31647,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerDepositProposalDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.DepositAppDubboService.queryPayChannelType:
     post:
@@ -31709,12 +31709,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListFundPayChannelTypeDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.CustomerProposalQueryService.isHaveUnCompleteProposal:
     post:
@@ -31736,11 +31736,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_19
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.CustomerProposalQueryService.queryDepositAdjustPageList:
     post:
@@ -31762,13 +31762,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerAdjustProposalDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.CustomerProposalQueryService.queryDepositPageList:
     post:
@@ -31790,13 +31790,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerDepositProposalDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.CustomerProposalQueryService.queryWithdrawPageList:
     post:
@@ -31853,13 +31853,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerWithdrawProposalDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundExchangeRateQueryService.getExchangeRateList:
     post:
@@ -31917,12 +31917,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListExchangeRateConvertDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.FundExchangeRateQueryService.getTradeExchangeRate:
     post:
@@ -32002,7 +32002,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -32032,6 +32031,7 @@ paths:
                   fail:
                     type: string
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.computeWithdrawFee:
     post:
@@ -32053,12 +32053,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultComputeWithdrawFeeRespDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawExchangeRate:
     post:
@@ -32080,13 +32080,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryCustomerWithdrawExchangeRateDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.createWithdrawProposal:
     post:
@@ -32227,12 +32227,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerWithdrawProposalDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getAccountMarginRate:
     post:
@@ -32253,12 +32253,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultString'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getAllWithdrawCurrencyList:
     post:
@@ -32315,13 +32315,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_34
                 $ref: >-
                   #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getCoinWithdrawCurrencyList:
     post:
@@ -32342,11 +32342,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_34
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAccountCurrencyList:
     post:
@@ -32368,11 +32368,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_35
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAmountLimitInfo:
     post:
@@ -32395,12 +32395,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultWithdrawAmountLimitRespDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawCurrencyList:
     post:
@@ -32456,11 +32456,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_34
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawMethodList:
     post:
@@ -32516,12 +32516,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_37
                 $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawTimesIn24Hour:
     post:
@@ -32542,12 +32542,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultInteger'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.queryPayWithdrawBankList:
     post:
@@ -32569,12 +32569,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultJSONArray'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.queryWithdrawLimitConfig:
     post:
@@ -32596,12 +32596,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultQueryWithdrawLimitConfigRespDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.withdrawCurrencyList:
     post:
@@ -32622,12 +32622,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultWithdrawCurrencyResDto'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.getCustomerGroupWithdrawMethodList:
     post:
@@ -32687,11 +32687,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_37
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.queryCustomerGroupWithdrawRiskConfig:
     post:
@@ -32760,7 +32760,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -33005,6 +33004,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.checkWithdrawRiskLimitConfig:
     post:
@@ -33138,7 +33138,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -33172,6 +33171,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/fund.app.WithdrawAppDubboService.queryRemainWithdrawAmount:
     post:
@@ -33233,13 +33233,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryRemainWithdrawAmountRespDto
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardActiveService.applyCard:
     post:
@@ -33388,7 +33388,6 @@ paths:
               applyCurrency: HKD
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -33428,6 +33427,7 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 1585
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardActiveService.activationCard:
     post:
@@ -33537,7 +33537,6 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"emailSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"emailCode\": \"61\",\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -33578,6 +33577,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardActiveService.lockCard:
     post:
@@ -33680,7 +33680,6 @@ paths:
               smsCode: '16'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -33700,6 +33699,7 @@ paths:
                     description: Return message body. true-success
                 title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardActiveService.addSuspendCardProposal:
     post:
@@ -33799,7 +33799,6 @@ paths:
               smsCode: '16'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -33818,6 +33817,7 @@ paths:
                     description: true-Success
                 title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AmountActiveService.addTransferProposal:
     post:
@@ -33917,7 +33917,6 @@ paths:
               toCustomerNo: '86000002'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -33951,6 +33950,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardActiveService.unlockCard:
     post:
@@ -34050,7 +34050,6 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -34070,6 +34069,7 @@ paths:
                     description: Return message body. true-success
                 title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardActiveService.modifyTradePassword:
     post:
@@ -34184,7 +34184,6 @@ paths:
               checkPassword: '123456'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -34218,6 +34217,7 @@ paths:
                     ok: false
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardActiveService.settingCardLimit:
     post:
@@ -34315,7 +34315,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -34335,6 +34334,7 @@ paths:
                     description: Return message body. true-success
                 title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.sendVerifyCode:
     post:
@@ -34455,7 +34455,6 @@ paths:
               cardId: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -34496,6 +34495,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.batchSettingSubscriptionType:
     post:
@@ -34618,7 +34618,6 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 93,\r\n    \"customerNo\": \"86000000\",\r\n    \"subscriptionType\": 2,\r\n    \"subscriptionTo\": \"+86 12345678901\",\r\n}"
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -34638,6 +34637,7 @@ paths:
                     description: Return message body. true-success
                 title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.sendWatsAppVerifyCode:
     post:
@@ -34740,7 +34740,6 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\"\r\n    \"customerGroupId\": 1,\r\n    \"country\": \"CN\",\r\n    \"watsAppAccount\": \"\"\r\n}"
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -34779,6 +34778,7 @@ paths:
                     ok: false
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.updateWatsAppAccount:
     post:
@@ -34887,7 +34887,6 @@ paths:
             example: "{\r\n    \"watsAppAccount\": \"+123 321\",\r\n    \"oldWatsAppSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"oldWatsAppCode\": \"61\",\r\n    \"newWatsAppSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"newWatsAppCode\": \"16\",\r\n}"
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -34907,6 +34906,7 @@ paths:
                     description: Return message body. true-success
                 title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /passToCreditUpload:
     post:
@@ -34969,13 +34969,13 @@ paths:
                 - userPhone
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCardList:
     post:
@@ -35066,7 +35066,6 @@ paths:
               trace: ryder_test
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -35246,6 +35245,7 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 429
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.getCardSensitiveInfo:
     post:
@@ -35345,7 +35345,6 @@ paths:
               smsCode: '16'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -35401,6 +35400,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryApplyCardProposalList:
     post:
@@ -35499,7 +35499,6 @@ paths:
               trace: ryder_test
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -35672,6 +35671,7 @@ paths:
                     description: Return message body.
                 title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCustomerOfAgentPage:
     post:
@@ -35776,7 +35776,6 @@ paths:
               current: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -35931,6 +35930,7 @@ paths:
                   - fail
                   - ok
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordPage:
     post:
@@ -36050,7 +36050,6 @@ paths:
               trace: ryder_test
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -36275,6 +36274,7 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 143
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.queryCustomerNoticeSubscription:
     post:
@@ -36363,7 +36363,6 @@ paths:
             example: {}
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -36445,6 +36444,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.querySendVerifyCodeInfo:
     post:
@@ -36560,7 +36560,6 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"ip\": \"::1\",\r\n    \"lang\": \"zh-CN\",\r\n    \"trace\": \"ryder_test\",\r\n    \"bizType\": 1,\r\n    \"sendType\": 2,\r\n    \"country\": \"w\"\r\n    \"customerGroupId\": 1,\r\n    \"cardId\": 1\r\n}"
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -36606,6 +36605,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordList:
     post:
@@ -36758,7 +36758,6 @@ paths:
               trace: ryder_test
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -36973,6 +36972,7 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 143
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordMonthTotal:
     post:
@@ -37121,7 +37121,6 @@ paths:
               trace: ryder_test
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -37216,6 +37215,7 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 143
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppRateDubboService.findDepositExchangeRate:
     post:
@@ -37283,7 +37283,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -37352,6 +37351,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCardTypeInfo:
     post:
@@ -37411,7 +37411,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -37496,6 +37495,7 @@ paths:
                     title: Data Body
                     description: Data Body
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.sendCustomerPasswordUrl:
     post:
@@ -37554,7 +37554,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -37612,6 +37611,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.checkCardDisplayStatus:
     post:
@@ -37659,7 +37659,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -37736,6 +37735,7 @@ paths:
                           time
                     title: ''
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.checkActionStatus:
     post:
@@ -37818,7 +37818,6 @@ paths:
               trace: culpa fugiat
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -37863,6 +37862,7 @@ paths:
                     format: int32
                     description: Display status. 0-No action; 1-In progress;
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppMessageService.checkWatsAppAccount:
     post:
@@ -37905,7 +37905,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -37954,6 +37953,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AmountQueryService.queryCustomerTransferProposalPage:
     post:
@@ -38076,7 +38076,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -38252,6 +38251,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.findCustomerInfoUnderAgentByCustomerNo:
     post:
@@ -38329,7 +38329,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -38380,6 +38379,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCustomerOfAgentList:
     post:
@@ -38404,7 +38404,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -38487,6 +38486,7 @@ paths:
                     type: boolean
                     description: Operation failure, true=success, false=failure
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/passToCredit.app.AppContactCustomerDubboService.info:
     post:
@@ -38535,7 +38535,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -38590,6 +38589,7 @@ paths:
                     type: boolean
                     description: Operation failure, true=success, false=failure
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketPosition:
     post:
@@ -38647,7 +38647,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -38735,6 +38734,7 @@ paths:
                   - estimateForcePrice
                   - floatProfitLoss
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppJcStrategyDubboService.getPageView:
     post:
@@ -38832,7 +38832,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -38901,6 +38900,7 @@ paths:
                   fail:
                     type: string
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppJcStrategyDubboService.add:
     post:
@@ -38996,7 +38996,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -39043,6 +39042,7 @@ paths:
                   fail:
                     type: string
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppJcStrategyDubboService.updateStatus:
     post:
@@ -39125,7 +39125,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -39172,6 +39171,7 @@ paths:
                   fail:
                     type: string
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppJcStrategyDubboService.update:
     post:
@@ -39269,7 +39269,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -39316,6 +39315,7 @@ paths:
                   fail:
                     type: string
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppJcStrategyDubboService.removeById:
     post:
@@ -39393,7 +39393,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -39440,6 +39439,7 @@ paths:
                   fail:
                     type: string
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketTrade:
     post:
@@ -39525,7 +39525,6 @@ paths:
               endTime: 1115548412230
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -39646,6 +39645,7 @@ paths:
                   - executeTime
                   - status
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketEntrust:
     post:
@@ -39707,7 +39707,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -39814,6 +39813,7 @@ paths:
                   - externalOrderId
                   - blacklist
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketStpRecord:
     post:
@@ -39887,7 +39887,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40018,6 +40017,7 @@ paths:
                   - currency
                   - executeTime
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketNetRecord:
     post:
@@ -40091,7 +40091,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40222,6 +40221,7 @@ paths:
                   - currency
                   - executeTime
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketMatchProfitRecord:
     post:
@@ -40291,7 +40291,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40389,6 +40388,7 @@ paths:
                   - tradeVolume
                   - profitLossU
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketStpProfitRecord:
     post:
@@ -40458,7 +40458,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40540,6 +40539,7 @@ paths:
                   - tradeCurrency
                   - commission
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.settlementProfitLossDayReport:
     post:
@@ -40571,7 +40571,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40615,6 +40614,7 @@ paths:
                   - executeTime
                   - totalNetProfitLoss
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketNetStatistics:
     post:
@@ -40638,7 +40638,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40678,6 +40677,7 @@ paths:
                   - stpShortThreshold
                   - status
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppJcStrategyDubboService.getSymbolList:
     post:
@@ -40734,7 +40734,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40817,6 +40816,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/config.app.AppJcStrategyDubboService.queryJcAllAccount:
     post:
@@ -40866,7 +40866,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -40990,6 +40989,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketStpStatistics:
     post:
@@ -41041,7 +41041,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -41140,6 +41139,7 @@ paths:
                   - createTime
                   - occupyTheMarginTarget
           headers: {}
+          x-apifox-name: Success
       security: []
   /marketDay:
     post:
@@ -41170,7 +41170,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -41229,6 +41228,7 @@ paths:
                   - executeTime
                   - occupyTheMargin
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.addSymbolMMBotConf:
     post:
@@ -41344,12 +41344,12 @@ paths:
               accountId: 33
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultMMBotConfVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.querySymbolMMBotConfPageList:
     post:
@@ -41415,12 +41415,12 @@ paths:
               size: 20
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoMMBotConfVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.addAmmSymbol:
     post:
@@ -41523,12 +41523,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_38
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.addAmmMaker:
     post:
@@ -41583,11 +41583,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_38
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.addAmmAmount:
     post:
@@ -41642,11 +41642,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_38
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolInfo:
     post:
@@ -41683,11 +41683,11 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_38
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.getAmmSymbolAmount:
     post:
@@ -41720,12 +41720,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolAmountVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolPage:
     post:
@@ -41773,12 +41773,12 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoAmmSymbolInfoVo'
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.getUnclaimedMarketAmount:
     post:
@@ -41797,7 +41797,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -41825,6 +41824,7 @@ paths:
                   - shortIncomePercent
                   - accountCurrency
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.extractUnclaimedMarketAmount:
     post:
@@ -41843,13 +41843,13 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.getLevel:
     post:
@@ -41868,7 +41868,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -41884,6 +41883,7 @@ paths:
                   - makerLevel
                   - takerLevel
           headers: {}
+          x-apifox-name: Success
       security: []
   /getNetPositionStatistics:
     post:
@@ -41907,7 +41907,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -41927,6 +41926,7 @@ paths:
                   - shortVolume
                   - totalVolume
           headers: {}
+          x-apifox-name: Success
       security: []
   /getNetFloatProfitStatistics:
     post:
@@ -41950,7 +41950,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -41970,6 +41969,7 @@ paths:
                   - shortFloatProfit
                   - totalFloatProfit
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.marketIncomeReport:
     post:
@@ -42017,7 +42017,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -42089,6 +42088,7 @@ paths:
                   - amount
                   - percent
           headers: {}
+          x-apifox-name: Success
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.trafficStatisticsDayReport:
     post:
@@ -42120,7 +42120,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -42168,6 +42167,7 @@ paths:
                   - takerLongTrafficFee
                   - takerShortTraffic
           headers: {}
+          x-apifox-name: Success
       security: []
 components:
   schemas:
