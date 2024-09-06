@@ -110,12 +110,12 @@ paths:
             type: string
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 type: string
           headers: {}
-          x-apifox-name: 成功
       security: []
     post:
       summary: 外部系统调额
@@ -223,6 +223,7 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -271,7 +272,6 @@ paths:
                     fail: false
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /geoip/country:
     get:
@@ -306,6 +306,7 @@ paths:
             type: string
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -355,7 +356,6 @@ paths:
                   - msgParams
                   - data
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Base
       x-docstitle: 基础数据
@@ -390,6 +390,7 @@ paths:
             type: string
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -438,7 +439,6 @@ paths:
                     ok: true
                     fail: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppAssetsDubboService.getAssetsList:
     post:
@@ -491,12 +491,12 @@ paths:
                   description: 资产类型 0、全部资产1、通用资产 2、基金资产 默认0
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListAssets'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppDictDubboService.getListByParentId:
     post:
@@ -546,6 +546,7 @@ paths:
               parentId: '1'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -658,7 +659,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppDictDubboService.getListByParentCode:
     post:
@@ -708,6 +708,7 @@ paths:
               parentCode: USDT
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -820,7 +821,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppDictDubboService.getMapByParentCodes:
     post:
@@ -876,6 +876,7 @@ paths:
               parentId: '1'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -949,7 +950,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppDictDubboService.getCountryListByParentId:
     post:
@@ -997,6 +997,7 @@ paths:
                 - parentId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -1086,7 +1087,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppDictDubboService.getCountryListByParentCode:
     post:
@@ -1137,6 +1137,7 @@ paths:
                 - parentCode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -1225,7 +1226,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolList:
     post:
@@ -1289,6 +1289,7 @@ paths:
                 - customerGroupId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -1372,7 +1373,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolBaseList:
     post:
@@ -1421,6 +1421,7 @@ paths:
               $ref: '#/components/schemas/SearchSymbolBaseDto'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -1580,7 +1581,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolDetail:
     post:
@@ -1647,6 +1647,7 @@ paths:
                 - symbolId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -2192,7 +2193,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.getFundInfo:
     post:
@@ -2236,6 +2236,7 @@ paths:
                   description: 基金ID
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_7
@@ -2357,7 +2358,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.findFundPage:
     post:
@@ -2406,6 +2406,7 @@ paths:
                   description: 搜索名称
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_6
@@ -2636,7 +2637,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.findFundPageWithRealTimeInfo:
     post:
@@ -2687,6 +2687,7 @@ paths:
                   type: string
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_6
@@ -2933,7 +2934,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.getEquityPremiumRate:
     post:
@@ -2983,6 +2983,7 @@ paths:
                   description: 目标资产编码
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -3640,7 +3641,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppSymbolDubboService.getFundInfoByCustomerNo:
     post:
@@ -3693,6 +3693,7 @@ paths:
                 - customerNo
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_7
@@ -3710,7 +3711,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /login/customer.app.CustomerWebApiService.login:
     post:
@@ -3807,6 +3807,7 @@ paths:
               loginPwd: dc483e80a7a0bd9ef71d8cf973673924
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -4144,7 +4145,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /thirdExt/switchAccount:
     post:
@@ -4191,13 +4191,13 @@ paths:
             example: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerDubboApiService.resetAccount:
     post:
@@ -4253,13 +4253,13 @@ paths:
             example: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
-          x-apifox-name: 成功
       security: []
   /register/customer.app.CustomerWebApiService.register:
     post:
@@ -4403,6 +4403,7 @@ paths:
                 - verifyCode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -4515,7 +4516,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/thirdExt/randomKey:
     post:
@@ -4565,6 +4565,7 @@ paths:
             example: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -4614,7 +4615,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.bindLoginPwd:
     post:
@@ -4679,12 +4679,12 @@ paths:
                 - pwd
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_8
                 $ref: '#/components/schemas/BaseResult1'
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Customer
       x-docstitle: 客户接口
@@ -4762,11 +4762,11 @@ paths:
                 - emailArea
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailV1v1v2:
     post:
@@ -4854,11 +4854,11 @@ paths:
                 - sendTokenOld
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changePhone:
     post:
@@ -4934,6 +4934,7 @@ paths:
                 - sendToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -4951,7 +4952,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changePhoneV1v1v2:
     post:
@@ -5039,11 +5039,11 @@ paths:
                 - sendTokenOld
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.checkCustomerExist:
     post:
@@ -5118,6 +5118,7 @@ paths:
                 - loginName
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -5151,7 +5152,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.destroy:
     post:
@@ -5211,11 +5211,11 @@ paths:
                   description: 销户备注
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.enableOrForbidMFA:
     post:
@@ -5276,11 +5276,11 @@ paths:
               $ref: '#/components/schemas/EnableOrForbidMFADTO'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerInfo:
     post:
@@ -5337,6 +5337,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -5560,7 +5561,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwd:
     post:
@@ -5658,11 +5658,11 @@ paths:
               verifyCodeToken: adczczxczczczxczczxczxczxc
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdV1v1v2:
     post:
@@ -5747,11 +5747,11 @@ paths:
                 - sendToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.forgetLoginPwd:
     post:
@@ -5842,11 +5842,11 @@ paths:
                 - verifyCode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwd:
     post:
@@ -5914,6 +5914,7 @@ paths:
               googleCode: '44'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -5931,7 +5932,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.bindEmail:
     post:
@@ -6010,6 +6010,7 @@ paths:
                 - emailArea
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -6027,7 +6028,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.bindPhone:
     post:
@@ -6106,6 +6106,7 @@ paths:
                 - phoneArea
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -6123,7 +6124,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changeLang:
     post:
@@ -6185,6 +6185,7 @@ paths:
                 - newLang
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -6202,7 +6203,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerLang:
     post:
@@ -6259,6 +6259,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -6305,7 +6306,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changeCustomerAddressAndPostalCode:
     post:
@@ -6376,6 +6376,7 @@ paths:
               address: 中國湖北省武汉市大东门
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -6422,7 +6423,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.firstSetPhone:
     post:
@@ -6521,6 +6521,7 @@ paths:
               phone: '18190281711'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -6567,7 +6568,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.firstSetEmail:
     post:
@@ -6660,6 +6660,7 @@ paths:
               email: 18190281711@qq.com
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -6706,7 +6707,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.firstTimeSettingLoginPassword:
     post:
@@ -6775,6 +6775,7 @@ paths:
               newPwd: Aa123456@
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -6821,7 +6822,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.findThirdAccountInfo:
     post:
@@ -6879,6 +6879,7 @@ paths:
             example: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -6940,7 +6941,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.checkGoogleMFAStatus:
     post:
@@ -7012,6 +7012,7 @@ paths:
                 - phoneArea
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -7058,7 +7059,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.checkStatus:
     post:
@@ -7127,6 +7127,7 @@ paths:
                 - type
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -7148,7 +7149,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountAssetsInfo:
     post:
@@ -7219,11 +7219,11 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountById:
     post:
@@ -7294,6 +7294,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -7482,7 +7483,6 @@ paths:
                 required:
                   - data
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerAssets:
     post:
@@ -7543,6 +7543,7 @@ paths:
                   description: 玩法Id
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -7612,7 +7613,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerAssetsInfo:
     post:
@@ -7679,6 +7679,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -7958,7 +7959,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.queryLiabilitiesWaterByPage:
     post:
@@ -8050,6 +8050,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -8176,7 +8177,6 @@ paths:
                 required:
                   - data
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwd:
     post:
@@ -8245,11 +8245,11 @@ paths:
                 - oldPwd
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwdMFA:
     post:
@@ -8338,11 +8338,11 @@ paths:
                 - type
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwd:
     post:
@@ -8411,11 +8411,11 @@ paths:
                 - oldPwd
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwdMFA:
     post:
@@ -8504,6 +8504,7 @@ paths:
                 - type
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8521,7 +8522,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.groupList:
     post:
@@ -8578,6 +8578,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -8623,7 +8624,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailMFA:
     post:
@@ -8725,6 +8725,7 @@ paths:
               googleCode: '64'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8742,7 +8743,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changePhoneMFA:
     post:
@@ -8850,6 +8850,7 @@ paths:
               googleCode: '97'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8867,7 +8868,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.changeCountry:
     post:
@@ -8932,6 +8932,7 @@ paths:
                 - newCountry
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -8949,7 +8950,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwdMFA:
     post:
@@ -9037,6 +9037,7 @@ paths:
               sendToken: '{{sendToken}}'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -9054,7 +9055,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdMFA:
     post:
@@ -9142,6 +9142,7 @@ paths:
               sendToken: '{{sendToken}}'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -9159,7 +9160,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.bindThirdAccount:
     post:
@@ -9229,6 +9229,7 @@ paths:
                 - thirdUserId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -9275,7 +9276,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.queryLatestBalanceOfUserAccountInExternalSystem:
     post:
@@ -9326,6 +9326,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -9368,7 +9369,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.findPhoneAndEmail:
     post:
@@ -9417,6 +9417,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -9461,7 +9462,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerExtendWebApiService.findCustomerExtend:
     post:
@@ -9524,6 +9524,7 @@ paths:
                 - type
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -9555,7 +9556,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerExtendWebApiService.saveCustomerExtend:
     post:
@@ -9621,6 +9621,7 @@ paths:
                 - type
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -9651,7 +9652,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.GoogleVerifyApiService.generateGoogleAccount:
     post:
@@ -9708,6 +9708,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_12
@@ -9735,7 +9736,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.GoogleVerifyApiService.checkGoogleCode:
     post:
@@ -9797,6 +9797,7 @@ paths:
                 - code
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -9846,7 +9847,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.checkKycApply:
     post:
@@ -9913,6 +9913,7 @@ paths:
                 - businessCode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -9949,7 +9950,6 @@ paths:
                   summary: 成功示例
                   value: "{\r\n    \"msg\": \"Success\",\r\n    \"fail\": false,\r\n    \"trace\": \"x-y87e-cait-r4b6-c135wj-1677641720\",\r\n    \"code\": \"0\",\r\n    \"data\": 2,//正常2=成功，异常状态【0认证，1审核中，3审核拒绝】\r\n    \"bizCode\": \"\",\r\n    \"tm\": 6551651,\r\n    \"msgParams\": \"CUSTOMER_API_0000602\",\r\n    \"ok\": true\r\n}"
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.findAllBizKyc:
     post:
@@ -10016,6 +10016,7 @@ paths:
                 - businessCode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_9
@@ -10034,7 +10035,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.findAllBizKycList:
     post:
@@ -10095,6 +10095,7 @@ paths:
                   description: '开户类型：0.个人 1.企业 '
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -10170,7 +10171,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.findAllCusKycListByBiz:
     post:
@@ -10233,11 +10233,11 @@ paths:
                 - businessCode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_9
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.findAllLevelKyc:
     post:
@@ -10315,11 +10315,11 @@ paths:
               levelCode: level_1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_9
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.findCompanyCountry:
     post:
@@ -10376,6 +10376,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -10433,7 +10434,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.kycApply:
     post:
@@ -10523,11 +10523,11 @@ paths:
                 - elementList
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.KycWebApiService.kycLevelApply:
     post:
@@ -10615,6 +10615,7 @@ paths:
                   elementValue: '1'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -10674,7 +10675,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWalletWebApiService.add:
     post:
@@ -10766,11 +10766,11 @@ paths:
                 - sendToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Customer
       x-docstitle: 客户接口
@@ -10863,11 +10863,11 @@ paths:
                 - sendToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWalletWebApiService.delete:
     post:
@@ -10929,11 +10929,11 @@ paths:
                   minimum: 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWalletWebApiService.updateWallet:
     post:
@@ -10960,11 +10960,11 @@ paths:
                   minimum: 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWalletWebApiService.walletList:
     post:
@@ -11027,6 +11027,7 @@ paths:
                   description: 链名称
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -11101,7 +11102,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWalletWebApiService.addWithdrawalAddressMFA:
     post:
@@ -11196,11 +11196,11 @@ paths:
                 - sendToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressList:
     post:
@@ -11266,6 +11266,7 @@ paths:
                 - chainName
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -11343,7 +11344,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressGroupList:
     post:
@@ -11405,6 +11405,7 @@ paths:
                   description: 币种
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -11479,7 +11480,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.WithdrawBankWebApiService.add:
     post:
@@ -11596,6 +11596,7 @@ paths:
                 - country
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -11625,7 +11626,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.WithdrawBankWebApiService.addV1v2v8:
     post:
@@ -11732,11 +11732,11 @@ paths:
                 - lastName
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.WithdrawBankWebApiService.bankList:
     post:
@@ -11799,12 +11799,12 @@ paths:
                   description: 银行卡号
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListCustomerWithdrawBankVO'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.WithdrawBankWebApiService.delete:
     post:
@@ -11831,12 +11831,12 @@ paths:
                 - id
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerThirdLoginService.config:
     post:
@@ -11896,6 +11896,7 @@ paths:
                   description: 第三方源 google,facebook,twitter,telegram,apple,metamask
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -11948,7 +11949,6 @@ paths:
                   - bizCode
                   - msg
           headers: {}
-          x-apifox-name: 成功
       security: []
   /h/com.cats.customer.api.app.CustomerThirdLoginService/appleVerify:
     post:
@@ -11994,6 +11994,7 @@ paths:
                 - companyId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -12061,7 +12062,6 @@ paths:
                   - bizCode
                   - msg
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.facebookVerify:
     post:
@@ -12086,6 +12086,7 @@ paths:
                   description: 校验accessToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -12153,7 +12154,6 @@ paths:
                   - bizCode
                   - msg
           headers: {}
-          x-apifox-name: 成功
       security: []
   /h/com.cats.customer.api.app.CustomerThirdLoginService/googleVerify:
     post:
@@ -12181,6 +12181,7 @@ paths:
                   title: 校验token app端必传
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -12253,7 +12254,6 @@ paths:
                   - data
                   - msgParams
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.telegramVerify:
     post:
@@ -12315,6 +12315,7 @@ paths:
                 - channelSource
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -12396,7 +12397,6 @@ paths:
                   - bizCode
                   - msg
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.metaMaskVerify:
     post:
@@ -12431,6 +12431,7 @@ paths:
                 - timestamp
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -12498,7 +12499,6 @@ paths:
                   - bizCode
                   - msg
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.twitterVerify:
     post:
@@ -12572,6 +12572,7 @@ paths:
                 - oauth_proxy
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -12639,7 +12640,6 @@ paths:
                   - bizCode
                   - msg
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.login:
     post:
@@ -12706,6 +12706,7 @@ paths:
                 - phone
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -12896,7 +12897,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.socialLogin:
     post:
@@ -12961,6 +12961,7 @@ paths:
                 - authToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -13151,7 +13152,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.register:
     post:
@@ -13279,6 +13279,7 @@ paths:
               thirdServerCode: '10'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -13399,7 +13400,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /third/login/customer.app.CustomerThirdLoginService.socialRegister:
     post:
@@ -13512,6 +13512,7 @@ paths:
                 - authToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -13629,7 +13630,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerOptionalWebApiService.add:
     post:
@@ -13707,6 +13707,7 @@ paths:
               tradeType: 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -13724,7 +13725,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerOptionalWebApiService.delete:
     post:
@@ -13796,6 +13796,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -13825,7 +13826,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerOptionalWebApiService.optionalList:
     post:
@@ -13895,6 +13895,7 @@ paths:
                 - 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -13949,7 +13950,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerApiWebService.applyApi:
     post:
@@ -14026,6 +14026,7 @@ paths:
                 - tag
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -14084,7 +14085,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerApiWebService.delApi:
     post:
@@ -14145,6 +14145,7 @@ paths:
                   description: api的id
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -14174,7 +14175,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerApiWebService.editApiPermission:
     post:
@@ -14271,6 +14271,7 @@ paths:
                   description: 发送邮箱验证码返回token,emailCode不为空时必传
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
@@ -14300,7 +14301,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerApiWebService.page:
     post:
@@ -14368,6 +14368,7 @@ paths:
                   description: API标签
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -14524,7 +14525,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerApiWebService.queryApi:
     post:
@@ -14585,6 +14585,7 @@ paths:
                   description: API的Id
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -14741,7 +14742,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.checkToken:
     post:
@@ -14820,6 +14820,7 @@ paths:
               smsCode: '16'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -14878,7 +14879,6 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.checkPhone:
     post:
@@ -14967,6 +14967,7 @@ paths:
               smsCode: '16'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -15013,7 +15014,6 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.checkPhoneForRetriedLoginPwd:
     post:
@@ -15091,6 +15091,7 @@ paths:
               smsSendToken: cillum
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -15137,7 +15138,6 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.retrieveLoginPwd:
     post:
@@ -15209,6 +15209,7 @@ paths:
               smsCode: '16'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -15255,7 +15256,6 @@ paths:
                     fail: true
                     trace: nisi eu pariatur
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.firstSetLoginPwd:
     post:
@@ -15340,6 +15340,7 @@ paths:
               smsCode: '16'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -15434,7 +15435,6 @@ paths:
                     trace: cillum
                     tm: 29
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerOfAgentPage:
     post:
@@ -15503,6 +15503,7 @@ paths:
               current: 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -15631,7 +15632,6 @@ paths:
                   - fail
                   - ok
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Customer
       x-docstitle: 客户接口
@@ -15753,6 +15753,7 @@ paths:
               customerGroupId: 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -15912,7 +15913,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/getMsgPushToken:
     post:
@@ -15973,6 +15973,7 @@ paths:
             example: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -16022,7 +16023,6 @@ paths:
                     tm: 0
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.VerificationApiService.verifyCodeSend:
     post:
@@ -16124,6 +16124,7 @@ paths:
               customerId: 88
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -16182,7 +16183,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.VerificationApiService.verifyCodeCheck:
     post:
@@ -16286,6 +16286,7 @@ paths:
               verifyCodeToken: '95'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -16344,7 +16345,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.PlatFormMessageTempApiService.getPlatformTempParentTypeList:
     post:
@@ -16412,6 +16412,7 @@ paths:
                 - companyId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -16455,7 +16456,6 @@ paths:
                         - desc
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogList:
     post:
@@ -16542,6 +16542,7 @@ paths:
                 - companyId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -16601,7 +16602,6 @@ paths:
                           title: 创建人
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogByPage:
     post:
@@ -16726,6 +16726,7 @@ paths:
                 - companyId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -16811,7 +16812,6 @@ paths:
                     title: 数据体
                     description: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.CompanyNoticeApiService.customerViewNoticePage:
     post:
@@ -16907,6 +16907,7 @@ paths:
                 - current
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -16984,7 +16985,6 @@ paths:
                     title: 数据体
                     description: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.CompanyNoticeApiService.customerViewMsgPage:
     post:
@@ -17076,6 +17076,7 @@ paths:
                 - customerNo
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -17143,7 +17144,6 @@ paths:
                           description: 1-未读；2-已读；
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.CompanyNoticeApiService.msgRead:
     post:
@@ -17216,6 +17216,7 @@ paths:
                 - id
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -17249,7 +17250,6 @@ paths:
                     properties: {}
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.CompanyNoticeApiService.msgAllRead:
     post:
@@ -17317,6 +17317,7 @@ paths:
                 - customerNo
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -17350,7 +17351,6 @@ paths:
                     properties: {}
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/messagepush.app.OfflinePushService.clientIdBindCustomer:
     post:
@@ -17421,6 +17421,7 @@ paths:
                 - clientId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -17454,7 +17455,6 @@ paths:
                     title: 数据体
                     description: true-成功；false-失败；
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/message.app.CompanyNoticeApiService.sendContactUsMsg:
     post:
@@ -17531,6 +17531,7 @@ paths:
                 - companyId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -17566,7 +17567,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundExchangeRateQueryService.getExchangeRateList:
     post:
@@ -17623,12 +17623,12 @@ paths:
               $ref: '#/components/schemas/FundExchangeRateBatchQueryDto'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListExchangeRateConvertDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Fund
       x-docstitle: 资金接口
@@ -17709,6 +17709,7 @@ paths:
                 - trace
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -17736,7 +17737,6 @@ paths:
                   fail:
                     type: string
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Fund
       x-docstitle: 资金接口
@@ -17760,11 +17760,11 @@ paths:
               $ref: '#/components/schemas/FundBaseDto'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_12
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Fund
       x-docstitle: 资金接口
@@ -17789,13 +17789,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerAdjustProposalDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.CustomerProposalQueryService.queryDepositPageList:
     post:
@@ -17818,13 +17818,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerDepositProposalDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.CustomerProposalQueryService.queryWithdrawPageList:
     post:
@@ -17882,13 +17882,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerWithdrawProposalDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.applyRechargeBindAddress:
     post:
@@ -17945,13 +17945,13 @@ paths:
               $ref: '#/components/schemas/CustomerRechargeWalletAddrReqDto'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_15
                 $ref: >-
                   #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Fund
       x-docstitle: 资金接口
@@ -17992,6 +17992,7 @@ paths:
                 - blockchainName
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -18024,7 +18025,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Fund
       x-docstitle: 资金接口
@@ -18055,6 +18055,7 @@ paths:
                 - extend
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -18089,7 +18090,6 @@ paths:
                     type: boolean
                     description: 操作是否失败，成功=false，失败=true
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Fund
       x-docstitle: 资金接口
@@ -18149,12 +18149,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_13
                 $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferForAgent:
     post:
@@ -18235,11 +18235,11 @@ paths:
               currency: HKD
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_13
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferRecord:
     post:
@@ -18297,12 +18297,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCapitalTransferRecordResDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferSupportDiffCurr:
     post:
@@ -18360,11 +18360,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_13
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.createDepositProposal:
     post:
@@ -18422,12 +18422,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCreateCustomerDepositRespDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getBindRechargeAddress:
     post:
@@ -18484,11 +18484,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_15
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getCryptoBlockchainInfo:
     post:
@@ -18546,12 +18546,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCryptoBlockchainRespDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getDepositAccountCurrencyList:
     post:
@@ -18609,13 +18609,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultSetDepositAccountCurrencyRespDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getDepositAccountCurrencyListV2:
     post:
@@ -18673,13 +18673,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListDepositAccountCurrencyRespV2Dto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getDepositCoinList:
     post:
@@ -18737,12 +18737,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_20
                 $ref: '#/components/schemas/BaseResultSetString'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getDepositExchangeRate:
     post:
@@ -18800,13 +18800,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryCustomerDepositExchangeRateDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannels:
     post:
@@ -18866,13 +18866,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_16
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV2:
     post:
@@ -18931,11 +18931,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_16
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV3:
     post:
@@ -18993,13 +18993,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespV3Dto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.getPayStatus:
     post:
@@ -19057,12 +19057,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultQueryCoinPayStatusRespDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.judgeIsAlreadyDeposit:
     post:
@@ -19121,11 +19121,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_12
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.manualLoan:
     post:
@@ -19183,11 +19183,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.manualRepayment:
     post:
@@ -19245,11 +19245,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_8
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService/queryDepositProposal:
     post:
@@ -19307,12 +19307,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerDepositProposalDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.DepositAppDubboService.queryPayChannelType:
     post:
@@ -19370,12 +19370,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListFundPayChannelTypeDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.computeWithdrawFee:
     post:
@@ -19397,12 +19397,12 @@ paths:
               $ref: '#/components/schemas/ComputeWithdrawReqDto'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultComputeWithdrawFeeRespDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Fund
       x-docstitle: 资金接口
@@ -19427,13 +19427,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryCustomerWithdrawExchangeRateDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.createWithdrawProposal:
     post:
@@ -19567,12 +19567,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerWithdrawProposalDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getAccountMarginRate:
     post:
@@ -19594,12 +19594,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultString'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getAllWithdrawCurrencyList:
     post:
@@ -19657,13 +19657,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_19
                 $ref: >-
                   #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getCoinWithdrawCurrencyList:
     post:
@@ -19685,11 +19685,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_19
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAccountCurrencyList:
     post:
@@ -19712,11 +19712,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_20
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAmountLimitInfo:
     post:
@@ -19740,12 +19740,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultWithdrawAmountLimitRespDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawCurrencyList:
     post:
@@ -19802,11 +19802,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_19
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawMethodList:
     post:
@@ -19863,12 +19863,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_22
                 $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawTimesIn24Hour:
     post:
@@ -19890,12 +19890,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultInteger'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.queryPayWithdrawBankList:
     post:
@@ -19918,12 +19918,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultJSONArray'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.queryWithdrawLimitConfig:
     post:
@@ -19946,12 +19946,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultQueryWithdrawLimitConfigRespDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.withdrawCurrencyList:
     post:
@@ -19973,12 +19973,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultWithdrawCurrencyResDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.getCustomerGroupWithdrawMethodList:
     post:
@@ -20040,11 +20040,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_22
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.queryCustomerGroupWithdrawRiskConfig:
     post:
@@ -20115,6 +20115,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -20341,7 +20342,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.checkWithdrawRiskLimitConfig:
     post:
@@ -20478,6 +20478,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -20509,7 +20510,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.WithdrawAppDubboService.queryRemainWithdrawAmount:
     post:
@@ -20567,13 +20567,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryRemainWithdrawAmountRespDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.addMarketOrder:
     post:
@@ -20733,6 +20733,7 @@ paths:
                 - accountDigits
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -20875,7 +20876,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Trade
       x-docstitle: 交易接口
@@ -20990,6 +20990,7 @@ paths:
                 - accountDigits
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -21150,7 +21151,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.queryOrderPage:
     post:
@@ -21280,6 +21280,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -21486,7 +21487,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.queryHistoryCloseOrderList:
     post:
@@ -21784,7 +21784,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.queryTradeRecordPage:
     post:
@@ -21852,12 +21851,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotTradeRecordVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.setCrossLevelNum:
     post:
@@ -21962,6 +21961,7 @@ paths:
                 - symbolId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -22013,7 +22013,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.calculateMarketOrder:
     post:
@@ -22151,6 +22150,7 @@ paths:
                 - accountDigits
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -22209,7 +22209,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdMMPositionApiService.queryPositionDetail:
     post:
@@ -22291,6 +22290,7 @@ paths:
                 - positionId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -22526,7 +22526,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.PositionApiService.queryPositionPage:
     post:
@@ -22664,6 +22663,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -22905,7 +22905,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.queryCapitalFlowList:
     post:
@@ -23023,6 +23022,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -23225,7 +23225,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.updatePboOrder:
     post:
@@ -23326,6 +23325,7 @@ paths:
               requestNum: 47
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -23450,7 +23450,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.queryPBOOrderPage:
     post:
@@ -23556,6 +23555,7 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -23602,7 +23602,6 @@ paths:
                     fail: false
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.addMarketOrder:
     post:
@@ -23770,6 +23769,7 @@ paths:
                 - entryType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -23917,7 +23917,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Trade
       x-docstitle: 交易接口
@@ -24020,6 +24019,7 @@ paths:
               sortFieldName: 少可县得
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -24168,7 +24168,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.updateOrder:
     post:
@@ -24281,6 +24280,7 @@ paths:
                 - accountDigits
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -24328,7 +24328,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.queryOrderDetail:
     post:
@@ -24416,6 +24415,7 @@ paths:
                 - orderId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -24581,7 +24581,6 @@ paths:
                         title: 三方订单标识
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.queryHistoryCloseOrderList:
     post:
@@ -24885,7 +24884,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.PositionApiService.updateCrossLevelNum:
     post:
@@ -24969,6 +24967,7 @@ paths:
                 - symbolId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -25034,7 +25033,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.PositionApiService.updateOccupyTheMargin:
     post:
@@ -25141,6 +25139,7 @@ paths:
                 - remark
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -25206,7 +25205,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.calculateMarketOrder:
     post:
@@ -25354,6 +25352,7 @@ paths:
                 - accountDigits
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -25441,7 +25440,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.calculationBurstPrice:
     post:
@@ -25531,6 +25529,7 @@ paths:
                 - positionId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -25600,7 +25599,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.PositionApiService.queryPositionDetail:
     post:
@@ -25687,6 +25685,7 @@ paths:
                 - positionId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -25926,7 +25925,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.queryCapitalFlowList:
     post:
@@ -26040,6 +26038,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -26242,7 +26241,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.closeTradePboOrder:
     post:
@@ -26322,6 +26320,7 @@ paths:
                 - orderId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -26391,7 +26390,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.checkOrderStatus:
     post:
@@ -26477,6 +26475,7 @@ paths:
                 - operatorType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -26543,7 +26542,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.OrderApiService.addOrder:
     post:
@@ -26669,12 +26667,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotOrderAddVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Trade
       x-docstitle: 交易接口
@@ -26788,6 +26786,7 @@ paths:
                 - remark
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -26835,7 +26834,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.queryTradeRecordPage:
     post:
@@ -26957,6 +26955,7 @@ paths:
                 - sortType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -27157,7 +27156,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.previewOrder:
     post:
@@ -27253,6 +27251,7 @@ paths:
                 - sourceCurrency
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -27484,7 +27483,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.addRepaymentOrder:
     post:
@@ -27580,6 +27578,7 @@ paths:
                 - sourceCurrency
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -27811,7 +27810,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.queryCapitalFlowList:
     post:
@@ -27929,6 +27927,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -28098,7 +28097,6 @@ paths:
                     msgParams: null
                     ok: false
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryCapitalFlowList:
     post:
@@ -28125,12 +28123,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoSpotSubjectWaterVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.SpotOrderApiService.closeTradePboOrder:
     post:
@@ -28157,12 +28155,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_23
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryOrderPage:
     post:
@@ -28230,12 +28228,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderPageVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryOrderDetail:
     post:
@@ -28262,11 +28260,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_23
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.placeOrder:
     post:
@@ -28347,6 +28345,7 @@ paths:
                 - requestNum
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -28384,7 +28383,6 @@ paths:
                         format: long
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.Trade
       x-docstitle: 交易接口
@@ -28432,6 +28430,7 @@ paths:
                 - orderId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -28461,7 +28460,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.queryOrderDetail:
     post:
@@ -28498,6 +28496,7 @@ paths:
                 - orderId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -28574,7 +28573,6 @@ paths:
                         title: 已成交数量
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.queryOrderPage:
     post:
@@ -28658,6 +28656,7 @@ paths:
                 - sortType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -28752,7 +28751,6 @@ paths:
                           title: 数据体
                         title: 委托列表
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.queryPendingOrderList:
     post:
@@ -28784,6 +28782,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -28862,7 +28861,6 @@ paths:
                           type: string
                           title: 已成交数量
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.checkOrder:
     post:
@@ -28943,6 +28941,7 @@ paths:
                 - requestNum
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -28990,7 +28989,6 @@ paths:
                         title: 本次交易需贷款金额
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.calculateOrder:
     post:
@@ -29047,6 +29045,7 @@ paths:
                 - digits
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -29092,7 +29091,6 @@ paths:
                         title: 贷款可买入股数
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.queryDealPage:
     post:
@@ -29166,6 +29164,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -29278,7 +29277,6 @@ paths:
                         title: 成交单列表集合
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.getPositionDealDetailList:
     post:
@@ -29315,6 +29313,7 @@ paths:
                 - positionId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -29367,7 +29366,6 @@ paths:
                         title: 成交金额
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockPositionApiService.queryPositionDetail:
     post:
@@ -29449,6 +29447,7 @@ paths:
                 - positionId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -29605,7 +29604,6 @@ paths:
                         description: 1-比例；2-范围；
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockPositionApiService.queryPositionPage:
     post:
@@ -29717,6 +29715,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -29875,7 +29874,6 @@ paths:
                           description: 1-比例；2-范围；
                     title: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockOrderApiService.queryCapitalFlowList:
     post:
@@ -29994,6 +29992,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -30113,7 +30112,6 @@ paths:
                           title: 数据体
                         title: 流水集合
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/tradeapi.app.StockAccountApiService.queryAccountAssetsInfo:
     post:
@@ -30191,6 +30189,7 @@ paths:
                 - currencyCode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -30306,7 +30305,6 @@ paths:
                         type: string
                         title: 杠杆倍数
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundApplyAppDubboService.apply:
     post:
@@ -30328,12 +30326,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerFundApplyDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundApplyAppDubboService.calcApplyShares:
     post:
@@ -30354,12 +30352,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundApplyCalcDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundApplyAppDubboService.customerPage:
     post:
@@ -30381,12 +30379,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_26
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundApplyAppDubboService.getFundCurrencyList:
     post:
@@ -30408,12 +30406,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_31
                 $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundApplyAppDubboService.page:
     post:
@@ -30434,11 +30432,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_26
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.calFundRedeem:
     post:
@@ -30460,12 +30458,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerFundRedeemDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.calShares:
     post:
@@ -30487,12 +30485,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_28
                 $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.checkShares:
     post:
@@ -30513,11 +30511,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_28
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.createFundRedeem:
     post:
@@ -30538,12 +30536,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_36
                 $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.getFundRedeemCurrencyList:
     post:
@@ -30564,11 +30562,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_31
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.page:
     post:
@@ -30590,12 +30588,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_33
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryManagerPage:
     post:
@@ -30616,11 +30614,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_33
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryNotConfirmedRecs:
     post:
@@ -30642,12 +30640,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultLong'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundOperationInfoAppDubboService.queryFundInfo:
     post:
@@ -30668,12 +30666,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundOperationInfoDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.calcDeduct:
     post:
@@ -30695,12 +30693,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundManagementFeesCalcDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.deduct:
     post:
@@ -30721,11 +30719,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_36
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.excute:
     post:
@@ -30748,11 +30746,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_36
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.page:
     post:
@@ -30774,12 +30772,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoFundManagementFeesDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundsApplyExecuteService.confirmFundsApplyExecuteInfo:
     post:
@@ -30801,11 +30799,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_12
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundsApplyExecuteService.getFundsApplyExecuteInfo:
     post:
@@ -30827,12 +30825,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundsApplyExecuteInfoDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.getOrderExecuteStandardConfigSymbolList:
     post:
@@ -30857,13 +30855,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListOrderExecuteStandardConfigSymbolDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.getOrderExecuteStandardConfigs:
     post:
@@ -30887,13 +30885,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListOrderExecuteStandardConfigDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.saveOrderExecuteStandardConfigs:
     post:
@@ -30917,11 +30915,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_12
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.indexSample:
     post:
@@ -30952,12 +30950,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListIndexSymbolCombinationVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.indexSimplePerformance:
     post:
@@ -30983,13 +30981,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListIndexSingleAssetPerformanceVo
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.assetPerformance:
     post:
@@ -31013,12 +31011,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListSingleAssetPerformanceDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.batchMarketPerformance:
     post:
@@ -31042,13 +31040,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultMapLongListFundTrendChartTypeDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.fundNetValueChangeQuote:
     post:
@@ -31072,12 +31070,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundNetValueCompareDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.investCombination:
     post:
@@ -31101,13 +31099,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListRealTimeInvestCombinationDto
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.marketPerformance:
     post:
@@ -31131,12 +31129,12 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_37
                 $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/report.app.ReportDatadDubboService.marketPerformanceQuoteChange:
     post:
@@ -31160,11 +31158,11 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_37
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardActiveService.applyCard:
     post:
@@ -31312,6 +31310,7 @@ paths:
               applyCurrency: HKD
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -31349,7 +31348,6 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 1585
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardActiveService.activationCard:
     post:
@@ -31460,6 +31458,7 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"emailSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"emailCode\": \"61\",\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -31500,7 +31499,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardActiveService.lockCard:
     post:
@@ -31604,6 +31602,7 @@ paths:
               smsCode: '16'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -31623,7 +31622,6 @@ paths:
                     description: 返回消息体。true-成功
                 title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardActiveService.addSuspendCardProposal:
     post:
@@ -31724,6 +31722,7 @@ paths:
               smsCode: '16'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -31742,7 +31741,6 @@ paths:
                     description: true-成功
                 title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AmountActiveService.addTransferProposal:
     post:
@@ -31838,6 +31836,7 @@ paths:
               toCustomerNo: '86000002'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -31871,7 +31870,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardActiveService.unlockCard:
     post:
@@ -31972,6 +31970,7 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -31991,7 +31990,6 @@ paths:
                     description: 返回消息体。true-成功
                 title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardActiveService.modifyTradePassword:
     post:
@@ -32107,6 +32105,7 @@ paths:
               checkPassword: '123456'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -32140,7 +32139,6 @@ paths:
                     ok: false
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardActiveService.settingCardLimit:
     post:
@@ -32238,6 +32236,7 @@ paths:
                 - cardId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -32257,7 +32256,6 @@ paths:
                     description: 返回消息体。true-成功
                 title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.sendVerifyCode:
     post:
@@ -32376,6 +32374,7 @@ paths:
               cardId: 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -32416,7 +32415,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.batchSettingSubscriptionType:
     post:
@@ -32530,6 +32528,7 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 93,\r\n    \"customerNo\": \"86000000\",\r\n    \"subscriptionType\": 2,\r\n    \"subscriptionTo\": \"+86 12345678901\",\r\n}"
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -32549,7 +32548,6 @@ paths:
                     description: 返回消息体。true-成功
                 title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.sendWatsAppVerifyCode:
     post:
@@ -32650,6 +32648,7 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\"\r\n    \"customerGroupId\": 1,\r\n    \"country\": \"CN\",\r\n    \"watsAppAccount\": \"\"\r\n}"
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -32688,7 +32687,6 @@ paths:
                     ok: false
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.updateWatsAppAccount:
     post:
@@ -32798,6 +32796,7 @@ paths:
             example: "{\r\n    \"watsAppAccount\": \"+123 321\",\r\n    \"oldWatsAppSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"oldWatsAppCode\": \"61\",\r\n    \"newWatsAppSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"newWatsAppCode\": \"16\",\r\n}"
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -32817,7 +32816,6 @@ paths:
                     description: 返回消息体。true-成功
                 title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /passToCreditUpload:
     post:
@@ -32874,13 +32872,13 @@ paths:
                 - userPhone
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCardList:
     post:
@@ -32972,6 +32970,7 @@ paths:
               trace: ryder_test
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -33147,7 +33146,6 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 429
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.getCardSensitiveInfo:
     post:
@@ -33248,6 +33246,7 @@ paths:
               smsCode: '16'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -33303,7 +33302,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryApplyCardProposalList:
     post:
@@ -33400,6 +33398,7 @@ paths:
               trace: ryder_test
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -33558,7 +33557,6 @@ paths:
                     description: 返回消息体。
                 title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCustomerOfAgentPage:
     post:
@@ -33663,6 +33661,7 @@ paths:
               current: 1
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -33807,7 +33806,6 @@ paths:
                   - fail
                   - ok
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordPage:
     post:
@@ -33923,6 +33921,7 @@ paths:
               trace: ryder_test
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -34137,7 +34136,6 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 143
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.queryCustomerNoticeSubscription:
     post:
@@ -34229,6 +34227,7 @@ paths:
             example: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -34294,7 +34293,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.querySendVerifyCodeInfo:
     post:
@@ -34408,6 +34406,7 @@ paths:
             example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"ip\": \"::1\",\r\n    \"lang\": \"zh-CN\",\r\n    \"trace\": \"ryder_test\",\r\n    \"bizType\": 1,\r\n    \"sendType\": 2,\r\n    \"country\": \"w\"\r\n    \"customerGroupId\": 1,\r\n    \"cardId\": 1\r\n}"
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -34453,7 +34452,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordList:
     post:
@@ -34598,6 +34596,7 @@ paths:
               trace: ryder_test
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -34802,7 +34801,6 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 143
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordMonthTotal:
     post:
@@ -34947,6 +34945,7 @@ paths:
               trace: ryder_test
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -35041,7 +35040,6 @@ paths:
                     bizCode: PASS_TO_CREDIT
                     tm: 143
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppRateDubboService.findDepositExchangeRate:
     post:
@@ -35109,6 +35107,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -35173,7 +35172,6 @@ paths:
                   fail:
                     type: boolean
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCardTypeInfo:
     post:
@@ -35233,6 +35231,7 @@ paths:
                 - customerNo
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -35313,7 +35312,6 @@ paths:
                     title: 数据体
                     description: 数据体
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.sendCustomerPasswordUrl:
     post:
@@ -35372,6 +35370,7 @@ paths:
                 - checkToken
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -35425,7 +35424,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.checkCardDisplayStatus:
     post:
@@ -35473,6 +35471,7 @@ paths:
                 - cardType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -35535,7 +35534,6 @@ paths:
                         description: 超时时间。13位时间戳，到达此时间，提案超时
                     title: ''
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.checkActionStatus:
     post:
@@ -35619,6 +35617,7 @@ paths:
               trace: culpa fugiat
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -35659,7 +35658,6 @@ paths:
                     format: int32
                     description: 展示状态。0-无动作；1-处理中；
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppMessageService.checkWatsAppAccount:
     post:
@@ -35702,6 +35700,7 @@ paths:
                 - watsAppAccount
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -35748,7 +35747,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AmountQueryService.queryCustomerTransferProposalPage:
     post:
@@ -35867,6 +35865,7 @@ paths:
                   description: 当前页
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36036,7 +36035,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.findCustomerInfoUnderAgentByCustomerNo:
     post:
@@ -36116,6 +36114,7 @@ paths:
                 - selectCustomerNo
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36166,7 +36165,6 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCustomerOfAgentList:
     post:
@@ -36190,6 +36188,7 @@ paths:
                   description: 持卡人姓，名，客户编号
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36261,7 +36260,6 @@ paths:
                     type: boolean
                     description: 操作是否失败，成功=false，失败=true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/passToCredit.app.AppContactCustomerDubboService.info:
     post:
@@ -36310,6 +36308,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36353,7 +36352,6 @@ paths:
                     type: boolean
                     description: 操作是否失败，成功=false，失败=true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /get-user-amount:
     post:
@@ -36458,6 +36456,7 @@ paths:
               accountCurrency: USDT
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36506,7 +36505,6 @@ paths:
                     fail: false
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /marketPosition:
     post:
@@ -36561,6 +36559,7 @@ paths:
                 - endTime
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36648,7 +36647,6 @@ paths:
                   - estimateForcePrice
                   - floatProfitLoss
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppJcStrategyDubboService.getPageView:
     post:
@@ -36743,6 +36741,7 @@ paths:
                 - symbolNames
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36809,7 +36808,6 @@ paths:
                   fail:
                     type: string
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.JC
       x-docstitle: 净仓配置
@@ -36906,6 +36904,7 @@ paths:
                 - waitingTime
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -36950,7 +36949,6 @@ paths:
                   fail:
                     type: string
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.JC
       x-docstitle: 净仓配置
@@ -37032,6 +37030,7 @@ paths:
                 - status
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -37076,7 +37075,6 @@ paths:
                   fail:
                     type: string
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.JC
       x-docstitle: 净仓配置
@@ -37173,6 +37171,7 @@ paths:
                 - status
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -37217,7 +37216,6 @@ paths:
                   fail:
                     type: string
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.JC
       x-docstitle: 净仓配置
@@ -37294,6 +37292,7 @@ paths:
                 - id
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -37338,7 +37337,6 @@ paths:
                   fail:
                     type: string
           headers: {}
-          x-apifox-name: 成功
       security: []
       x-docstype: TS.Clientapi.JC
       x-docstitle: 净仓配置
@@ -37420,6 +37418,7 @@ paths:
               endTime: 1115548412230
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -37537,7 +37536,6 @@ paths:
                   - executeTime
                   - status
           headers: {}
-          x-apifox-name: 成功
       security: []
   /marketEntrust:
     post:
@@ -37596,6 +37594,7 @@ paths:
                 - numberStatisticMode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -37699,7 +37698,6 @@ paths:
                   - externalOrderId
                   - blacklist
           headers: {}
-          x-apifox-name: 成功
       security: []
   /marketStpRecord:
     post:
@@ -37770,6 +37768,7 @@ paths:
                 - lpDealId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -37897,7 +37896,6 @@ paths:
                   - currency
                   - executeTime
           headers: {}
-          x-apifox-name: 成功
       security: []
   /marketNetRecord:
     post:
@@ -37968,6 +37966,7 @@ paths:
                 - lpDealId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38095,7 +38094,6 @@ paths:
                   - currency
                   - executeTime
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketMatchProfitRecord:
     post:
@@ -38162,6 +38160,7 @@ paths:
                 - numberStatisticMode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38257,7 +38256,6 @@ paths:
                   - tradeVolume
                   - profitLossU
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketStpProfitRecord:
     post:
@@ -38324,6 +38322,7 @@ paths:
                 - numberStatisticMode
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38403,7 +38402,6 @@ paths:
                   - tradeCurrency
                   - commission
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.settlementProfitLossDayReport:
     post:
@@ -38434,6 +38432,7 @@ paths:
                 - regeneration
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38477,7 +38476,6 @@ paths:
                   - executeTime
                   - totalNetProfitLoss
           headers: {}
-          x-apifox-name: 成功
       security: []
   /marketNetStatistics:
     post:
@@ -38500,6 +38498,7 @@ paths:
                 - symbolName
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38539,7 +38538,6 @@ paths:
                   - stpShortThreshold
                   - status
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppJcStrategyDubboService.getSymbolList:
     post:
@@ -38595,6 +38593,7 @@ paths:
                 - tradeType
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38675,7 +38674,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/config.app.AppJcStrategyDubboService.queryJcAllAccount:
     post:
@@ -38722,6 +38720,7 @@ paths:
               properties: {}
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38843,7 +38842,6 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
-          x-apifox-name: 成功
       security: []
   /marketStpStatistics:
     post:
@@ -38894,6 +38892,7 @@ paths:
                 - lpDealId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -38989,7 +38988,6 @@ paths:
                   - createTime
                   - occupyTheMarginTarget
           headers: {}
-          x-apifox-name: 成功
       security: []
   /marketDay:
     post:
@@ -39016,6 +39014,7 @@ paths:
                 - date
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -39071,7 +39070,6 @@ paths:
                   - executeTime
                   - occupyTheMargin
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.addSymbolMMBotConf:
     post:
@@ -39185,12 +39183,12 @@ paths:
               accountId: 33
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultMMBotConfVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.querySymbolMMBotConfPageList:
     post:
@@ -39256,12 +39254,12 @@ paths:
               size: 20
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoMMBotConfVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.addAmmSymbol:
     post:
@@ -39355,12 +39353,12 @@ paths:
                 - accountId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: &ref_38
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.addAmmMaker:
     post:
@@ -39412,11 +39410,11 @@ paths:
               $ref: '#/components/schemas/AddAmmMakerDto'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_38
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.addAmmAmount:
     post:
@@ -39468,11 +39466,11 @@ paths:
               $ref: '#/components/schemas/AddAmmAmountDto'
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_38
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolInfo:
     post:
@@ -39504,11 +39502,11 @@ paths:
                 - accountId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema: *ref_38
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.getAmmSymbolAmount:
     post:
@@ -39538,12 +39536,12 @@ paths:
                 - accountId
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolAmountVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolPage:
     post:
@@ -39586,12 +39584,12 @@ paths:
                 - symbolName
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoAmmSymbolInfoVo'
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.getUnclaimedMarketAmount:
     post:
@@ -39610,6 +39608,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -39637,7 +39636,6 @@ paths:
                   - shortIncomePercent
                   - accountCurrency
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.extractUnclaimedMarketAmount:
     post:
@@ -39656,13 +39654,13 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
                 type: object
                 properties: {}
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.getLevel:
     post:
@@ -39681,6 +39679,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -39696,7 +39695,6 @@ paths:
                   - makerLevel
                   - takerLevel
           headers: {}
-          x-apifox-name: 成功
       security: []
   /getNetPositionStatistics:
     post:
@@ -39720,6 +39718,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -39739,7 +39738,6 @@ paths:
                   - shortVolume
                   - totalVolume
           headers: {}
-          x-apifox-name: 成功
       security: []
   /getNetFloatProfitStatistics:
     post:
@@ -39763,6 +39761,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -39782,7 +39781,6 @@ paths:
                   - shortFloatProfit
                   - totalFloatProfit
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.marketIncomeReport:
     post:
@@ -39830,6 +39828,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -39901,7 +39900,6 @@ paths:
                   - amount
                   - percent
           headers: {}
-          x-apifox-name: 成功
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.trafficStatisticsDayReport:
     post:
@@ -39933,6 +39931,7 @@ paths:
             example: ''
       responses:
         '200':
+          description: ''
           content:
             application/json:
               schema:
@@ -39980,7 +39979,6 @@ paths:
                   - takerLongTrafficFee
                   - takerShortTraffic
           headers: {}
-          x-apifox-name: 成功
       security: []
 components:
   schemas:
