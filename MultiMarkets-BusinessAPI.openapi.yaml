@@ -51,7 +51,6 @@ paths:
               appSecret: '{{app_secret}}'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -317,6 +316,7 @@ paths:
                     ok: true
                     fail: false
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminDictDubboService.getListByParentCode:
     post:
@@ -362,7 +362,6 @@ paths:
               parentCode: phone_code
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -475,6 +474,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminAssetsDubboService.getAssetsList:
     post:
@@ -519,7 +519,6 @@ paths:
               companyId: '360'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -2636,6 +2635,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminDictDubboService.getCountryListByParentCode:
     post:
@@ -2681,7 +2681,6 @@ paths:
               parentCode: '-1'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -4345,6 +4344,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminAssetsDubboService.getTradeTypeList:
     post:
@@ -4385,7 +4385,6 @@ paths:
               companyId: '360'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -4490,6 +4489,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolTradeTypeByCompanyId:
     post:
@@ -4549,7 +4549,6 @@ paths:
               customerGroupId: 50
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -4642,6 +4641,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolList:
     post:
@@ -4691,7 +4691,6 @@ paths:
               name: EURUSD
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -4775,6 +4774,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolGroupList:
     post:
@@ -4814,7 +4814,6 @@ paths:
             example: {}
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -4879,6 +4878,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolByCompanyId:
     post:
@@ -4932,7 +4932,6 @@ paths:
               companyId: '{{company}}'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5092,6 +5091,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /config.admin.AdminSymbolDubboService.getFundByCompanyId:
     post:
@@ -5140,7 +5140,6 @@ paths:
               companyId: '{{company}}'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5269,6 +5268,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerAdjustProposalAdminDubboService.addCustomerAdjustProposal:
     post:
@@ -5341,7 +5341,6 @@ paths:
             example: "{\r\n    \"customerNo\": \"{{customerNo}}\",\r\n    \"accountId\": {{accountId}},\r\n    \"accountCurrency\": \"USDT\",\r\n    \"tradeType\": 1,\r\n    \"businessType\": 4,\r\n    \"amount\": 5,\r\n    \"withdraw\": true,\r\n    \"remark\": \"test\"\r\n}"
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5395,6 +5394,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.operationBonus:
     post:
@@ -5490,7 +5490,6 @@ paths:
               accountId: '40'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5541,6 +5540,7 @@ paths:
                   - code
                   - tm
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerFundAdminDubboService.getExchangeRate:
     post:
@@ -5613,7 +5613,6 @@ paths:
                 BNB: USDT
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -5675,6 +5674,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.lockTradeAccount:
     post:
@@ -5743,7 +5743,6 @@ paths:
               type: 24
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: &ref_1
@@ -5763,6 +5762,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.unlockTradeAccount:
     post:
@@ -5827,7 +5827,6 @@ paths:
               }
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_1
@@ -5846,6 +5845,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryOneLockTradeAccount:
     post:
@@ -5910,11 +5910,11 @@ paths:
               }
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_1
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerAdjustProposalAdminDubboService.getCustomerAdjustProposalById:
     post:
@@ -5974,7 +5974,6 @@ paths:
               type: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6013,6 +6012,7 @@ paths:
                   - code
                   - tm
           headers: {}
+          x-apifox-name: 成功
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryTradeTypeLockTradeAccount:
     post:
@@ -6072,7 +6072,6 @@ paths:
               }
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6129,6 +6128,7 @@ paths:
                   summary: '成功示例 '
                   value: "lockStatus：是否被锁定，true被锁定\r\n{\r\n    \"msg\": \"Success\",\r\n    \"fail\": false,\r\n    \"trace\": \"t-c88b6-no22of4-2je3o88-t6o3s5-1660556892\",\r\n    \"code\": \"0\",\r\n    \"data\": [\r\n        {\r\n            \"lockStatus\": false,\r\n            \"type\": 1,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        },\r\n        {\r\n            \"lockStatus\": false,\r\n            \"type\": 2,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        },\r\n        {\r\n            \"lockStatus\": true,\r\n            \"type\": 3,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        }\r\n    ],\r\n    \"bizCode\": \"\",\r\n    \"tm\": 54,\r\n    \"msgParams\": null,\r\n    \"ok\": true,\r\n    \"class\": \"com.cats.common.core.base.vo.BaseResult\"\r\n}"
           headers: {}
+          x-apifox-name: 成功
       security: []
   /customer.app.CustomerWebApiService.checkCustomerExist:
     post:
@@ -6190,7 +6190,6 @@ paths:
               phoneArea: '+86'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6229,6 +6228,7 @@ paths:
                   - code
                   - tm
           headers: {}
+          x-apifox-name: 成功
       security: []
   /customer.admin.WhiteCustomerAdminApiService.addCusAndOpenAccountAndKyc:
     post:
@@ -6416,7 +6416,6 @@ paths:
                   tradeType: '1'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6466,6 +6465,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /customer.admin.WhiteCustomerAdminApiService.page:
     post:
@@ -6528,7 +6528,6 @@ paths:
               current: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -6715,6 +6714,7 @@ paths:
                     tm: 0
                     trace: ''
           headers: {}
+          x-apifox-name: 成功
       security: []
   /customer.admin.WhiteCustomerAdminApiService.detail:
     post:
@@ -6780,7 +6780,6 @@ paths:
               customerNo: '{{customer}}'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7114,6 +7113,7 @@ paths:
                     tm: 0
                     trace: ''
           headers: {}
+          x-apifox-name: 成功
       security: []
   /customer.admin.CustomerAdminApiService.queryAccountList:
     post:
@@ -7165,7 +7165,6 @@ paths:
               tradeType: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7228,6 +7227,7 @@ paths:
                         "ok": true
                     }
           headers: {}
+          x-apifox-name: 成功
       security: []
   /customer.admin.CustomerGroupAdminApiService.groupList:
     post:
@@ -7279,7 +7279,6 @@ paths:
               customerNo: '86000020'
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7314,6 +7313,7 @@ paths:
                   fail:
                     type: boolean
           headers: {}
+          x-apifox-name: 成功
       security: []
   /message.admin.VerificationAdminService.queryCodeSendStatus:
     post:
@@ -7379,7 +7379,6 @@ paths:
                 - sendToken
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7459,6 +7458,7 @@ paths:
                   - msgParams
                   - data
           headers: {}
+          x-apifox-name: 成功
       security: []
   /message.admin.PlatFormMessageThirdSendAdminService.add:
     post:
@@ -7546,7 +7546,6 @@ paths:
               }
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7600,6 +7599,7 @@ paths:
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
           headers: {}
+          x-apifox-name: 成功
       security: []
   /global/report.admin.CatsTradeDealService.getTradeDealInfoByDealId:
     post:
@@ -7671,7 +7671,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7758,6 +7757,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /global/report.admin.CatsTradeDealService.getTradeDealInfoByOrderId:
     post:
@@ -7835,7 +7835,6 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -7922,6 +7921,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
     post:
@@ -8002,7 +8002,6 @@ paths:
               customerGroupId: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_1
@@ -8020,6 +8019,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /tradeapi.admin.OrderAdminApiService.forcedOrder:
     post:
@@ -8100,7 +8100,6 @@ paths:
               customerGroupId: 1
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema: *ref_1
@@ -8118,6 +8117,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /tradeapi.admin.OrderAdminApiService.queryCapitalFlowList:
     post:
@@ -8238,7 +8238,6 @@ paths:
               endTime: 1669219199999
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -8390,6 +8389,7 @@ paths:
                         description: 流水集合
                     description: 数据体
           headers: {}
+          x-apifox-name: 成功
       security: []
   /tradeapi.admin.OrderAdminApiService.queryPositionPage:
     post:
@@ -8499,7 +8499,6 @@ paths:
               sortFieldName: openTime
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -8761,6 +8760,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /tradeapi.admin.PositionAdminApiService.queryAllPositionPage:
     post:
@@ -8879,7 +8879,6 @@ paths:
                 - tradeType
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9502,6 +9501,7 @@ paths:
                     msgParams: null
                     ok: true
           headers: {}
+          x-apifox-name: 成功
       security: []
   /quote-b-api/depth-tick:
     get:
@@ -9544,7 +9544,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9626,6 +9625,7 @@ paths:
                             - price: '136.427'
                               volume: '400000.00'
           headers: {}
+          x-apifox-name: OK
       security: []
   /quote-stock-b-api/depth-tick:
     get:
@@ -9668,7 +9668,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9750,6 +9749,7 @@ paths:
                             - price: '136.427'
                               volume: '400000.00'
           headers: {}
+          x-apifox-name: OK
       security: []
   /quote-b-api/trade-tick:
     get:
@@ -9792,7 +9792,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9860,6 +9859,7 @@ paths:
                           turnover: '0'
                           trade_direction: 0
           headers: {}
+          x-apifox-name: OK
       security: []
   /quote-stock-b-api/trade-tick:
     get:
@@ -9902,7 +9902,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -9970,6 +9969,7 @@ paths:
                           turnover: '0'
                           trade_direction: 0
           headers: {}
+          x-apifox-name: OK
       security: []
   /quote-b-api/kline:
     get:
@@ -9995,7 +9995,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -10086,6 +10085,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
   /quote-b-api/batch-kline:
     get:
@@ -10155,7 +10155,6 @@ paths:
                     adjust_type: 0
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -10246,6 +10245,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
   /quote-stock-b-api/kline:
     get:
@@ -10271,7 +10271,6 @@ paths:
             type: string
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -10362,6 +10361,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
   /quote-stock-b-api/batch-kline:
     get:
@@ -10431,7 +10431,6 @@ paths:
                     adjust_type: 0
       responses:
         '200':
-          description: ''
           content:
             application/json:
               schema:
@@ -10522,6 +10521,7 @@ paths:
                           volume: '0'
                           turnover: '0'
           headers: {}
+          x-apifox-name: OK
       security: []
 components:
   schemas:
