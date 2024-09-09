@@ -20721,6 +20721,11 @@ paths:
                   type: string
                   title: 三方订单标识
                   description: （限制最高255字符，只能使用字母、数字、下划线）
+                slippage:
+                  type: string
+                  title: 交易滑点
+                  description: >-
+                    仅市价单有效。可为百分比（仅支持2位小数，超出部分按四舍五入处理）也可以时浮点型仅支持4位小数，超出部分按四舍五入处理）。其他格式不支持。
               required:
                 - tradeType
                 - bizType
@@ -23756,6 +23761,11 @@ paths:
                   type: string
                   title: 三方订单标识
                   description: （限制最高255字符，只能使用字母、数字、下划线）
+                slippage:
+                  type: string
+                  description: >-
+                    仅市价单有效。可为百分比（仅支持2位小数，超出部分按四舍五入处理）也可以时浮点型仅支持4位小数，超出部分按四舍五入处理）。其他格式不支持。
+                  title: 交易滑点
               required:
                 - tradeType
                 - bizType
@@ -26657,6 +26667,11 @@ paths:
                   type: string
                   title: 三方订单标识
                   description: （限制最高255字符，只能使用字母、数字、下划线）
+                slippage:
+                  type: string
+                  title: 交易滑点
+                  description: >-
+                    仅市价单有效。可为百分比（仅支持2位小数，超出部分按四舍五入处理）也可以时浮点型仅支持4位小数，超出部分按四舍五入处理）。其他格式不支持。
               required:
                 - tradeType
                 - bizType
@@ -41493,6 +41508,11 @@ components:
           type: string
           title: 三方订单标识
           description: （限制最高255字符，只能使用字母、数字、下划线）
+        slippage:
+          type: string
+          title: 交易滑点
+          description: >-
+            仅市价单有效。可为百分比（仅支持2位小数，超出部分按四舍五入处理）也可以时浮点型仅支持4位小数，超出部分按四舍五入处理）。其他格式不支持。
     RealTimeInvestCombinationDto:
       type: object
       properties:
