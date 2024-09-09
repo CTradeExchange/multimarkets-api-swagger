@@ -18337,6 +18337,13 @@ paths:
                   description: >-
                     (limited to 255 characters,Only letters, numbers, and
                     underscores can be used)
+                slippage:
+                  type: string
+                  description: >-
+                    Only market orders are valid. It can be a percentage (only
+                    supports 2 decimal places, rounding off any excess) or a
+                    floating-point type that only supports 4 decimal places,
+                    rounding off any excess). Other formats are not supported.
               required:
                 - tradeType
                 - bizType
@@ -20493,6 +20500,13 @@ paths:
                   description: >-
                     (limited to 255 characters,Only letters, numbers, and
                     underscores can be used)
+                slippage:
+                  type: string
+                  description: >-
+                    Only market orders are valid. It can be a percentage (only
+                    supports 2 decimal places, rounding off any excess) or a
+                    floating-point type that only supports 4 decimal places,
+                    rounding off any excess). Other formats are not supported.
               required:
                 - tradeType
                 - bizType
@@ -20504,7 +20518,6 @@ paths:
                 - accountCurrency
                 - accountDigits
                 - entryType
-                - thirdPartyOrder
             example: ''
       responses:
         '200':
