@@ -49836,8 +49836,9 @@ components:
           type: string
           description: 支付地址，仅`paymentChannelCode`为`blockatm_qr`返回
         expireTime:
-          type: string
+          type: integer
           description: 过期时间，仅`paymentChannelCode`为`blockatm_qr`返回
+          format: long
         apiKey:
           type: string
           description: apiKey，仅`paymentChannelCode`为`blockatm_qr`返回
