@@ -46527,17 +46527,31 @@ components:
           description: Directly Redirect to Payment Channel Address
         amount:
           type: string
+          description: Payment amount, returned only when paymentChannelCode is blockatm_qr
         currency:
           type: string
+          description: >-
+            Payment currency, only returned when paymentChannelCode is
+            blockatm_qr
         toAddress:
           type: string
+          description: >-
+            Payment address, only returned when paymentChannelCode is
+            blockatm_qr
         expireTime:
           type: integer
           format: long
+          description: >-
+            Expiration time, only returned when paymentChannelCode is
+            blockatm_qr
         apiKey:
           type: string
+          description: apiKey, only returned when paymentChannelCode is blockatm_qr
         paymentChannelCode:
           type: string
+          description: >-
+            Payment channel code, only returned when paymentChannelCode is
+            blockatm_qr
     CreateCustomerDepositReqDto:
       type: object
       required:
