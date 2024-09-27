@@ -49710,6 +49710,8 @@ components:
         - paymentChannelType
         - paymentMerchantNo
         - tradeType
+        - accountCurrency
+        - paymentCurrency
       properties:
         accountId:
           type: integer
