@@ -49712,6 +49712,7 @@ components:
         - tradeType
         - accountCurrency
         - paymentCurrency
+        - paymentChannelClientType
       properties:
         accountId:
           type: integer
@@ -49825,6 +49826,24 @@ components:
         browserOpenUrl:
           type: string
           description: 直接跳转支付通道地址
+        amount:
+          type: string
+          description: 支付金额，仅`paymentChannelCode`为`blockatm_qr`返回
+        currency:
+          type: string
+          description: 支付币种，仅`paymentChannelCode`为`blockatm_qr`返回
+        toAddress:
+          type: string
+          description: 支付地址，仅`paymentChannelCode`为`blockatm_qr`返回
+        expireTime:
+          type: string
+          description: 过期时间，仅`paymentChannelCode`为`blockatm_qr`返回
+        apiKey:
+          type: string
+          description: apiKey，仅`paymentChannelCode`为`blockatm_qr`返回
+        paymentChannelCode:
+          type: string
+          description: 支付渠道编码，仅`paymentChannelCode`为`blockatm_qr`返回
     LoginPwdBindDTO:
       type: object
       required:
