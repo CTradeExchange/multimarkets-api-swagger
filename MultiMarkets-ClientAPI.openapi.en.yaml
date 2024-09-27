@@ -46525,6 +46525,19 @@ components:
         browserOpenUrl:
           type: string
           description: Directly Redirect to Payment Channel Address
+        amount:
+          type: string
+        currency:
+          type: string
+        toAddress:
+          type: string
+        expireTime:
+          type: integer
+          format: long
+        apiKey:
+          type: string
+        paymentChannelCode:
+          type: string
     CreateCustomerDepositReqDto:
       type: object
       required:
@@ -46533,6 +46546,9 @@ components:
         - paymentChannelType
         - paymentMerchantNo
         - tradeType
+        - paymentCurrency
+        - accountCurrency
+        - paymentChannelClientType
       properties:
         accountId:
           type: integer
