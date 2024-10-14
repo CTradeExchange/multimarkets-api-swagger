@@ -49790,6 +49790,9 @@ components:
         remark:
           type: string
           description: 备注
+        chainId:
+          type: string
+          description: 网络链ID
     QueryWalletDTO:
       type: object
       properties:
