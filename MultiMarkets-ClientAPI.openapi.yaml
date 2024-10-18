@@ -1789,7 +1789,7 @@ paths:
                         description: 交易时间
                       quoteTimeList:
                         type: array
-                        items: &ref_43
+                        items: &ref_44
                           $ref: '#/components/schemas/QuoteTime'
                         description: 行情时间
                       holidayTimeList:
@@ -1878,17 +1878,17 @@ paths:
                         description: 限制划出资产比例
                       borrowInterestList:
                         type: array
-                        items: &ref_44
+                        items: &ref_45
                           $ref: '#/components/schemas/BorrowInterest'
                         description: 借款利息
                       borrowLimitList:
                         type: array
-                        items: &ref_45
+                        items: &ref_46
                           $ref: '#/components/schemas/BorrowLimit'
                         description: 借款限额
                       borrowStatusList:
                         type: array
-                        items: &ref_46
+                        items: &ref_47
                           $ref: '#/components/schemas/BorrowStatus'
                         description: 借款产品
                       totalCredit:
@@ -1986,7 +1986,7 @@ paths:
                         description: 隔夜提前时间（分）
                       longLoanYearRatio:
                         type: array
-                        items: &ref_47
+                        items: &ref_48
                           $ref: '#/components/schemas/BorrowAssetsInterest'
                         description: 融资年利息率
                       shortLoanYearRatio:
@@ -14447,7 +14447,7 @@ paths:
                             permissionDTOList:
                               type: array
                               description: 权限列表
-                              items: &ref_57
+                              items: &ref_62
                                 $ref: '#/components/schemas/CustomerApiPermissionDTO'
                             ipLimit:
                               type: boolean
@@ -17730,7 +17730,7 @@ paths:
                   msgParams:
                     type: string
                     description: 返回描述中占位符参数串，多个参数间以,分割
-                  data: &ref_61
+                  data: &ref_67
                     $ref: '#/components/schemas/ExchangeRateConvertDto'
                   ok:
                     type: string
@@ -19457,7 +19457,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_50
+            schema: &ref_52
               $ref: '#/components/schemas/QueryCustomerWithdrawExchangeRateDto'
             example: ''
       responses:
@@ -30844,7 +30844,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_54
+            schema: &ref_59
               $ref: '#/components/schemas/FundsApplyExecuteInfoDto'
             example: ''
       responses:
@@ -40109,7 +40109,7 @@ components:
           description: 1:市场价 2:净值
         columnList:
           type: array
-          items: &ref_49
+          items: &ref_51
             $ref: '#/components/schemas/FundTrendChartDto'
       required:
         - name
@@ -40145,7 +40145,7 @@ components:
           description: 支持玩法数组
         etf:
           type: boolean
-    UpdateDTO:
+    UpdateDTO: &ref_39
       type: object
       properties:
         lang:
@@ -40259,7 +40259,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_48
+        data: &ref_50
           $ref: '#/components/schemas/BlackCustomerAdminVO'
         ok:
           type: boolean
@@ -40356,7 +40356,7 @@ components:
         dealId:
           type: string
           description: 成交单Id
-    FundNetValueChangeQuoteChartVo:
+    FundNetValueChangeQuoteChartVo: &ref_49
       type: object
       properties:
         symbolId:
@@ -40647,7 +40647,7 @@ components:
         operate:
           type: integer
           format: int32
-    FundBatchMarketPerfChartVo:
+    FundBatchMarketPerfChartVo: &ref_53
       type: object
       properties:
         symbolId:
@@ -40699,20 +40699,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    DetailDTO:
-      type: object
-      properties:
-        lang:
-          type: string
-          description: 语言信息
-        status:
-          type: integer
-          format: int32
-          description: 状态 1、2、3、启用、禁用、删除
-        id:
-          type: integer
-          format: int64
-          description: 主键id
+    DetailDTO: *ref_39
     QueryWithdrawLimitConfigRespDto:
       type: object
       properties:
@@ -40725,19 +40712,19 @@ components:
         digit:
           type: integer
           format: int32
-        withdrawConditionConfig: &ref_39
+        withdrawConditionConfig: &ref_40
           $ref: '#/components/schemas/CustomerGroupWithdrawConditionConfigDto'
         withdrawTimeConfigList:
           type: array
           description: 取款时间限制配置
-          items: &ref_40
+          items: &ref_41
             $ref: '#/components/schemas/CustomerGroupWithdrawTimeConfigDto'
-        withdrawAmountConfig: &ref_41
+        withdrawAmountConfig: &ref_42
           $ref: '#/components/schemas/CustomerGroupWithdrawAmountConfigDto'
         withdrawFeeConfigList:
           type: array
           description: 取款手续费配置
-          items: &ref_42
+          items: &ref_43
             $ref: '#/components/schemas/CustomerGroupWithdrawFeeConfigDto'
         customerGroupEnable:
           type: boolean
@@ -40769,20 +40756,20 @@ components:
         enableWithdraw:
           type: boolean
           description: 是否允许取款
-        withdrawRiskConfig: &ref_71
+        withdrawRiskConfig: &ref_78
           $ref: '#/components/schemas/WithdrawRiskConfigDto'
-        withdrawConditionConfig: *ref_39
+        withdrawConditionConfig: *ref_40
         withdrawTimeConfigList:
           type: array
           description: 取款时间限制配置
-          items: *ref_40
+          items: *ref_41
         withdrawAmountConfigList:
           type: array
-          items: *ref_41
+          items: *ref_42
         withdrawFeeConfigList:
           type: array
           description: 取款手续费配置
-          items: *ref_42
+          items: *ref_43
         customerGroupEnable:
           type: boolean
           description: 客户组是否允许取款
@@ -40958,7 +40945,7 @@ components:
           description: 交易时间
         quoteTimeList:
           type: array
-          items: *ref_43
+          items: *ref_44
           description: 行情时间
         holidayTimeList:
           type: array
@@ -41046,15 +41033,15 @@ components:
           description: 限制划出资产比例
         borrowInterestList:
           type: array
-          items: *ref_44
+          items: *ref_45
           description: 借款利息
         borrowLimitList:
           type: array
-          items: *ref_45
+          items: *ref_46
           description: 借款限额
         borrowStatusList:
           type: array
-          items: *ref_46
+          items: *ref_47
           description: 借款产品
         totalCredit:
           type: number
@@ -41151,7 +41138,7 @@ components:
           description: 隔夜提前时间（分）
         longLoanYearRatio:
           type: array
-          items: *ref_47
+          items: *ref_48
           description: 融资年利息率
         shortLoanYearRatio:
           type: number
@@ -41244,20 +41231,7 @@ components:
           format: int32
         inAmount:
           type: number
-    FundInvestCombChartVo:
-      type: object
-      properties:
-        symbolId:
-          type: integer
-          format: int64
-          title: 产品id
-          description: 和fundId任选其一
-        fundId:
-          type: integer
-          format: int64
-          title: 基金id
-          description: 和symbolId任选其一
-      title: ''
+    FundInvestCombChartVo: *ref_49
     DividendInfo:
       type: object
       properties:
@@ -41291,7 +41265,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_48
+          items: *ref_50
         total:
           type: integer
           format: int64
@@ -41362,7 +41336,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_51
+        data: &ref_54
           $ref: '#/components/schemas/SpotQueryOrderVo'
         ok:
           type: boolean
@@ -41399,7 +41373,7 @@ components:
               type: string
             value:
               type: array
-              items: *ref_49
+              items: *ref_51
           title: 数据体
           required:
             - key
@@ -42665,7 +42639,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_50
+        data: *ref_52
         ok:
           type: boolean
         fail:
@@ -42875,7 +42849,7 @@ components:
           type: integer
           format: int64
           description: 当前页
-        orderIds: &ref_55
+        orderIds: &ref_60
           description: 排序字段列表
           $ref: '#/components/schemas/FieldOrderDto'
     BaseResultFundNetValueCompareDto:
@@ -43029,30 +43003,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    FundMarketPerfQuoteChangeChartVo:
-      type: object
-      properties:
-        symbolId:
-          type: integer
-          format: int64
-          title: 基金id
-          description: 和symbolId任选其一
-        fundId:
-          type: integer
-          format: int64
-          description: 和fundId任选其一
-          title: 产品id
-        days:
-          type: integer
-          title: 天数
-        type:
-          type: integer
-          title: 类型
-          description: ' 1-按天统计 2-按小时统计'
-      required:
-        - days
-        - type
-      title: ''
+    FundMarketPerfQuoteChangeChartVo: *ref_53
     MarginInfo:
       type: object
       properties:
@@ -43132,7 +43083,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_51
+          items: *ref_54
         total:
           type: integer
           format: int64
@@ -43259,7 +43210,7 @@ components:
         channelName:
           type: string
           description: 通道名称
-    CustGroupWithdrawMethodQueryReqDto:
+    CustGroupWithdrawMethodQueryReqDto: &ref_56
       type: object
       properties: {}
     QueryWithdrawRiskConfigReqDto:
@@ -43729,7 +43680,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_53
+        data: &ref_57
           $ref: '#/components/schemas/OpenFundsVo'
         ok:
           type: boolean
@@ -43959,7 +43910,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_69
+        data: &ref_76
           $ref: '#/components/schemas/CustomerWithdrawProposalDto'
         ok:
           type: boolean
@@ -43999,7 +43950,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_75
+        data: &ref_84
           $ref: '#/components/schemas/CustomerSimpleVO'
         ok:
           type: boolean
@@ -44153,7 +44104,7 @@ components:
         purchaseFeeProportion:
           type: number
           description: 申购手续费率
-    QueryCustomerDTO:
+    QueryCustomerDTO: &ref_83
       type: object
       properties:
         lang:
@@ -44243,7 +44194,7 @@ components:
         configDtoList:
           type: array
           description: 下单执行标准配置数组
-          items: &ref_52
+          items: &ref_55
             $ref: '#/components/schemas/OrderExecuteStandardConfigDto'
     QueryEquityPremiumRateVo:
       type: object
@@ -44388,7 +44339,7 @@ components:
         elementCodeInputGroup:
           type: string
           description: KYC元素code，组合
-    OrderExecuteStandardConfigDto:
+    OrderExecuteStandardConfigDto: &ref_58
       type: object
       required:
         - baseCurrency
@@ -44506,7 +44457,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_52
+          items: *ref_55
         ok:
           type: boolean
         fail:
@@ -44554,16 +44505,14 @@ components:
         customerNo:
           type: string
           description: 客户编号
-    QueryOrderExecuteStandardConfigSymbolListReqDto:
-      type: object
-      properties: {}
+    QueryOrderExecuteStandardConfigSymbolListReqDto: *ref_56
     BasePageVoOpenFundsVo:
       type: object
       properties:
         records:
           type: array
           description: 结果列表
-          items: *ref_53
+          items: *ref_57
         total:
           type: integer
           format: int64
@@ -44605,30 +44554,7 @@ components:
           type: integer
           format: int64
           description: 白标公司Id
-    OrderExecuteStandardConfigSymbolDto:
-      type: object
-      required:
-        - baseCurrency
-        - profitCurrency
-        - rate
-        - symbolId
-      properties:
-        baseCurrency:
-          type: string
-          description: 基础货币
-        profitCurrency:
-          type: string
-          description: 盈利货币
-        rate:
-          type: number
-          description: 下单比例
-        symbolId:
-          type: integer
-          format: int64
-          description: 产品ID
-        symbolName:
-          type: string
-          description: 产品名称
+    OrderExecuteStandardConfigSymbolDto: *ref_58
     SearchFundsDto:
       type: object
       properties:
@@ -44908,7 +44834,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_54
+        data: *ref_59
         ok:
           type: boolean
         fail:
@@ -45099,7 +45025,7 @@ components:
         fundsApplyExecuteRecordDetailDtoList:
           type: array
           description: 基金产品申购执行明细记录列表
-          items: &ref_66
+          items: &ref_72
             $ref: '#/components/schemas/FundsApplyExecuteRecordDetailDto'
     BaseResultListTradeTypeVo:
       type: object
@@ -45231,7 +45157,7 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: *ref_55
+          items: *ref_60
         proposalNoList:
           type: array
           description: 赎回编号
@@ -45285,7 +45211,7 @@ components:
         assetsVoList:
           type: array
           description: 资产列表
-          items: &ref_56
+          items: &ref_61
             $ref: '#/components/schemas/Assets'
     ApiReqDTO:
       type: object
@@ -45323,7 +45249,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: &ref_59
+          items: &ref_64
             $ref: '#/components/schemas/CustomerFundRedeemDto'
         total:
           type: integer
@@ -45413,7 +45339,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_58
+        data: &ref_63
           $ref: '#/components/schemas/CustomerApiVO'
         ok:
           type: boolean
@@ -45516,7 +45442,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_56
+          items: *ref_61
         ok:
           type: boolean
         fail:
@@ -45569,7 +45495,7 @@ components:
         permissionDTOList:
           type: array
           description: 权限列表
-          items: *ref_57
+          items: *ref_62
         ipLimit:
           type: boolean
           description: 是否开启了IP限制
@@ -45757,7 +45683,7 @@ components:
           type: boolean
         fail:
           type: boolean
-        data: &ref_62
+        data: &ref_68
           title: 数据体
           $ref: '#/components/schemas/AmmSymbolAmountVo'
       title: ''
@@ -45853,7 +45779,7 @@ components:
         permissionList:
           type: array
           description: 开启权限
-          items: *ref_57
+          items: *ref_62
         whiteIps:
           type: string
           description: 白名单IP
@@ -45892,7 +45818,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_58
+          items: *ref_63
         total:
           type: integer
           format: int64
@@ -46091,7 +46017,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_59
+        data: *ref_64
         ok:
           type: boolean
         fail:
@@ -46105,7 +46031,7 @@ components:
           type: integer
           format: int64
           description: 基金ID
-    ComCustomerDTO:
+    ComCustomerDTO: &ref_66
       type: object
       properties:
         lang:
@@ -46429,7 +46355,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: &ref_60
+          items: &ref_65
             $ref: '#/components/schemas/CustomerGroupVO'
         ok:
           type: boolean
@@ -46551,7 +46477,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_60
+        data: *ref_65
         ok:
           type: boolean
         fail:
@@ -46584,19 +46510,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    QueryGroupDTO:
-      type: object
-      properties:
-        lang:
-          type: string
-          description: 语言信息
-        customerNo:
-          type: string
-          description: 客户编号
-        id:
-          type: integer
-          format: int64
-          description: 客户Id
+    QueryGroupDTO: *ref_66
     BaseResultVoid:
       type: object
       properties:
@@ -46844,7 +46758,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_61
+          items: *ref_67
         ok:
           type: boolean
         fail:
@@ -46923,7 +46837,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: &ref_64
+          items: &ref_70
             $ref: '#/components/schemas/CustomerFundCurrencyDto'
         ok:
           type: boolean
@@ -47078,7 +46992,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_62
+          items: *ref_68
         total:
           type: integer
           format: int64
@@ -47167,7 +47081,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    BaseResultBasePageVoMMBotConfVo:
+    BaseResultBasePageVoMMBotConfVo: &ref_69
       type: object
       properties:
         bizCode:
@@ -47189,39 +47103,13 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_63
+        data:
           $ref: '#/components/schemas/BasePageVoAmmSymbolInfoVo'
         ok:
           type: boolean
         fail:
           type: boolean
-    BaseResultBasePageVoAmmSymbolInfoVo:
-      type: object
-      properties:
-        bizCode:
-          type: string
-          description: 模块标识码
-        code:
-          type: string
-          description: 状态返回码
-        msg:
-          type: string
-          description: 状态描述
-        tm:
-          type: integer
-          format: int64
-          description: 处理时长（毫秒）
-        trace:
-          type: string
-          description: 跟踪码
-        msgParams:
-          type: string
-          description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_63
-        ok:
-          type: boolean
-        fail:
-          type: boolean
+    BaseResultBasePageVoAmmSymbolInfoVo: *ref_69
     CreateFundApplyReqDto:
       type: object
       required:
@@ -47303,7 +47191,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: &ref_67
+          items: &ref_73
             $ref: '#/components/schemas/CustomerFundApplyDto'
         total:
           type: integer
@@ -47361,7 +47249,7 @@ components:
         list:
           type: array
           description: 一篮子资产列表
-          items: *ref_64
+          items: *ref_70
     CustomerGroupAddDTO:
       type: object
       required:
@@ -47405,7 +47293,7 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: &ref_65
+          items: &ref_71
             $ref: '#/components/schemas/InnerTradeAssetsDTO'
           maxItems: 2147483647
           minItems: 1
@@ -47543,7 +47431,7 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_65
+          items: *ref_71
           maxItems: 2147483647
           minItems: 1
         transfer:
@@ -47631,7 +47519,7 @@ components:
         executeList:
           type: array
           description: 执行标准列表
-          items: *ref_66
+          items: *ref_72
     AddOptionalDTO:
       type: object
       required:
@@ -47678,7 +47566,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_67
+        data: *ref_73
         ok:
           type: boolean
         fail:
@@ -47839,7 +47727,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_70
+        data: &ref_77
           $ref: '#/components/schemas/CustomerDepositProposalDto'
         ok:
           type: boolean
@@ -47882,7 +47770,7 @@ components:
         profitCurrency:
           type: string
           description: 盈利货币
-    ManualRepaymentDto:
+    ManualRepaymentDto: &ref_74
       type: object
       required:
         - accountCurrency
@@ -48008,30 +47896,14 @@ components:
           description: 数据体
           additionalProperties:
             type: array
-            items: &ref_68
+            items: &ref_75
               $ref: '#/components/schemas/CustomerOptionalVO'
           properties: {}
         ok:
           type: boolean
         fail:
           type: boolean
-    ManualLoanDto:
-      type: object
-      required:
-        - accountCurrency
-        - amount
-        - tradeType
-      properties:
-        tradeType:
-          type: integer
-          format: int64
-          description: 玩法类型
-        accountCurrency:
-          type: string
-          description: 账户币种
-        amount:
-          type: number
-          description: 金额
+    ManualLoanDto: *ref_74
     CustomerOptionalVO:
       type: object
       properties:
@@ -48191,7 +48063,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_68
+          items: *ref_75
         ok:
           type: boolean
         fail:
@@ -50340,7 +50212,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_69
+          items: *ref_76
         total:
           type: integer
           format: int64
@@ -50387,7 +50259,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_70
+          items: *ref_77
         total:
           type: integer
           format: int64
@@ -50774,7 +50646,7 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: *ref_55
+          items: *ref_60
         startTime:
           type: integer
           format: int64
@@ -50825,7 +50697,7 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: *ref_55
+          items: *ref_60
         startTime:
           type: integer
           format: int64
@@ -50859,7 +50731,7 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: *ref_55
+          items: *ref_60
         startTime:
           type: integer
           format: int64
@@ -51296,7 +51168,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_71
+        data: *ref_78
         ok:
           type: boolean
         fail:
@@ -51462,9 +51334,7 @@ components:
         lang:
           type: string
           description: 请求语言
-    FundBaseDto:
-      type: object
-      properties: {}
+    FundBaseDto: *ref_56
     LoginPwdForgetDTO:
       type: object
       required:
@@ -51618,7 +51488,7 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_65
+          items: *ref_71
           maxItems: 2147483647
           minItems: 1
     QueryAccountAssetsInfoDTO:
@@ -51857,7 +51727,7 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_65
+          items: *ref_71
           maxItems: 2147483647
           minItems: 1
         thirdServerCode:
@@ -51990,7 +51860,7 @@ components:
         code:
           type: string
           description: google验证码
-    GoogleQueryCodeDTO:
+    GoogleQueryCodeDTO: &ref_79
       type: object
       properties:
         lang:
@@ -52027,23 +51897,7 @@ components:
         qrcode:
           type: string
           description: 二维码信息
-    GoogleUpdateStatusCodeDTO:
-      type: object
-      properties:
-        lang:
-          type: string
-          description: 语言信息
-        status:
-          type: integer
-          format: int32
-          description: 状态 1、2、3、启用、禁用、删除
-        id:
-          type: integer
-          format: int64
-          description: Id
-        customerNo:
-          type: string
-          description: 客户编号
+    GoogleUpdateStatusCodeDTO: *ref_79
     InitDbDTO:
       type: object
       required:
@@ -52163,7 +52017,7 @@ components:
         kycElementList:
           type: array
           description: 路径与元素关系
-          items: &ref_73
+          items: &ref_81
             $ref: '#/components/schemas/KycSettingAddInnerDTO'
           maxItems: 2147483647
           minItems: 1
@@ -52262,7 +52116,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_72
+        data: &ref_80
           $ref: '#/components/schemas/KycCompanyChannelConfigDTO'
         ok:
           type: boolean
@@ -52293,7 +52147,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_72
+          items: *ref_80
         ok:
           type: boolean
         fail:
@@ -52707,7 +52561,7 @@ components:
         kycElementList:
           type: array
           description: 路径与元素关系
-          items: *ref_73
+          items: *ref_81
           maxItems: 2147483647
           minItems: 1
     UpdateKycChannelStatusDTO:
@@ -53602,7 +53456,7 @@ components:
         withdrawBankList:
           type: array
           description: 银行卡集合
-          items: &ref_76
+          items: &ref_85
             $ref: '#/components/schemas/CusWithdrawBankAddDTO'
         bankCardNumber:
           type: string
@@ -53619,11 +53473,11 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_65
+          items: *ref_71
         walletList:
           type: array
           description: 钱包集合
-          items: &ref_77
+          items: &ref_86
             $ref: '#/components/schemas/AdminAddWalletDTO'
         firstName:
           type: string
@@ -53774,11 +53628,11 @@ components:
             type: string
         right:
           type: array
-          items: &ref_74
+          items: &ref_82
             $ref: '#/components/schemas/WhiteCustomerAdminPageExcelVO'
         value:
           type: array
-          items: *ref_74
+          items: *ref_82
         key:
           type: array
           items:
@@ -54020,24 +53874,8 @@ components:
           type: integer
           format: int64
           description: 交易账号首次激活时间
-    CustomerBaseDTO:
-      type: object
-      properties:
-        lang:
-          type: string
-          description: 语言信息
-        customerNo:
-          type: string
-          description: 客户编号
-    CommonCustomerNODTO:
-      type: object
-      properties:
-        lang:
-          type: string
-          description: 语言信息
-        customerNo:
-          type: string
-          description: 客户编号
+    CustomerBaseDTO: *ref_83
+    CommonCustomerNODTO: *ref_83
     BaseResultListCustomerSimpleVO:
       type: object
       properties:
@@ -54063,7 +53901,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_75
+          items: *ref_84
         ok:
           type: boolean
         fail:
@@ -54570,7 +54408,7 @@ components:
         withdrawBankList:
           type: array
           description: 银行卡集合
-          items: *ref_76
+          items: *ref_85
         bankCardNumber:
           type: string
           description: 银行卡号
@@ -54586,7 +54424,7 @@ components:
         walletList:
           type: array
           description: 钱包集合
-          items: *ref_77
+          items: *ref_86
         firstName:
           type: string
           description: 名
@@ -54900,7 +54738,7 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: &ref_78
+          items: &ref_87
             $ref: '#/components/schemas/KycShowInnerDTO'
         ext3:
           type: string
@@ -55015,7 +54853,7 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: *ref_78
+          items: *ref_87
         ext3:
           type: string
           description: 信用卡卡类型-》原始
@@ -55106,20 +54944,7 @@ components:
           type: integer
           format: int64
           description: 申请时间，结束
-    KycExternalValidationDTO:
-      type: object
-      properties:
-        lang:
-          type: string
-          description: 语言信息
-        status:
-          type: integer
-          format: int32
-          description: 状态 1、2、3、启用、禁用、删除
-        id:
-          type: integer
-          format: int64
-          description: 主键id
+    KycExternalValidationDTO: *ref_39
     BasePageVoKycUserVO:
       type: object
       properties:
@@ -55212,7 +55037,7 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: *ref_78
+          items: *ref_87
         ext3:
           type: string
           description: 信用卡卡类型-》原始
@@ -55337,7 +55162,7 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: *ref_78
+          items: *ref_87
         ext3:
           type: string
           description: 信用卡卡类型-》原始
