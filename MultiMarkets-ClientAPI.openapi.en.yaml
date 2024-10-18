@@ -14960,7 +14960,7 @@ paths:
                             permissionDTOList:
                               type: array
                               description: List of permissions
-                              items: &ref_42
+                              items: &ref_43
                                 $ref: '#/components/schemas/CustomerApiPermissionDTO'
                             ipLimit:
                               type: boolean
@@ -29861,7 +29861,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_44
+            schema: &ref_46
               $ref: '#/components/schemas/FundsApplyExecuteInfoDto'
             example: ''
       responses:
@@ -32038,7 +32038,7 @@ paths:
                     description: >-
                       Placeholder parameter string in return description,
                       multiple parameters separated by commas
-                  data: &ref_54
+                  data: &ref_59
                     $ref: '#/components/schemas/ExchangeRateConvertDto'
                   ok:
                     type: string
@@ -32088,7 +32088,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_51
+            schema: &ref_56
               $ref: '#/components/schemas/QueryCustomerWithdrawExchangeRateDto'
             example: ''
       responses:
@@ -42184,7 +42184,7 @@ paths:
       security: []
 components:
   schemas:
-    BaseResultBasePageVoAmmSymbolInfoVo:
+    BaseResultBasePageVoAmmSymbolInfoVo: &ref_41
       type: object
       properties:
         bizCode:
@@ -42208,7 +42208,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: &ref_40
+        data:
           $ref: '#/components/schemas/BasePageVoAmmSymbolInfoVo'
         ok:
           type: boolean
@@ -42661,7 +42661,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: &ref_47
+        data: &ref_49
           $ref: '#/components/schemas/CustomerDepositProposalDto'
         ok:
           type: boolean
@@ -42875,7 +42875,7 @@ components:
         - symbolId
         - amount
         - accountId
-    ManualRepaymentDto:
+    ManualRepaymentDto: &ref_40
       type: object
       required:
         - accountCurrency
@@ -42927,23 +42927,7 @@ components:
         - priceInterval
         - amount
         - accountId
-    ManualLoanDto:
-      type: object
-      required:
-        - accountCurrency
-        - amount
-        - tradeType
-      properties:
-        tradeType:
-          type: integer
-          format: int64
-          description: Game type
-        accountCurrency:
-          type: string
-          description: Account currency
-        amount:
-          type: number
-          description: Amount
+    ManualLoanDto: *ref_40
     BaseResultAmmSymbolInfoVo:
       type: object
       properties:
@@ -43005,35 +42989,7 @@ components:
         - profitCurrency
         - symbolDigits
         - marketMaker
-    BaseResultBasePageVoMMBotConfVo:
-      type: object
-      properties:
-        bizCode:
-          type: string
-          description: Module identifier code
-        code:
-          type: string
-          description: Status return code
-        msg:
-          type: string
-          description: Status description
-        tm:
-          type: integer
-          format: int64
-          description: Processing time (milliseconds)
-        trace:
-          type: string
-          description: Tracking code
-        msgParams:
-          type: string
-          description: >-
-            Placeholder parameter string in return description, multiple
-            parameters separated by commas
-        data: *ref_40
-        ok:
-          type: boolean
-        fail:
-          type: boolean
+    BaseResultBasePageVoMMBotConfVo: *ref_41
     BaseResultQueryCoinPayStatusRespDto:
       type: object
       properties:
@@ -44235,7 +44191,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_41
+          items: &ref_42
             $ref: '#/components/schemas/OpenFundsVo'
         total:
           type: integer
@@ -44549,7 +44505,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_41
+        data: *ref_42
         ok:
           type: boolean
         fail:
@@ -44991,9 +44947,9 @@ components:
         configDtoList:
           type: array
           description: Order Execution Standard Configuration Array
-          items: &ref_43
+          items: &ref_44
             $ref: '#/components/schemas/OrderExecuteStandardConfigDto'
-    OrderExecuteStandardConfigDto:
+    OrderExecuteStandardConfigDto: &ref_45
       type: object
       required:
         - baseCurrency
@@ -45207,7 +45163,7 @@ components:
         permissionDTOList:
           type: array
           description: List of permissions
-          items: *ref_42
+          items: *ref_43
         ipLimit:
           type: boolean
           description: Whether IP restriction is enabled
@@ -45312,7 +45268,7 @@ components:
         data:
           type: array
           description: Data Body
-          items: *ref_43
+          items: *ref_44
         ok:
           type: boolean
         fail:
@@ -45433,7 +45389,7 @@ components:
         rechargeType:
           type: string
           description: Recharge method
-    FundMarketPerfQuoteChangeChartVo:
+    FundMarketPerfQuoteChangeChartVo: &ref_55
       type: object
       properties:
         symbolId:
@@ -45585,31 +45541,8 @@ components:
           type: boolean
         fail:
           type: boolean
-    OrderExecuteStandardConfigSymbolDto:
-      type: object
-      required:
-        - baseCurrency
-        - profitCurrency
-        - rate
-        - symbolId
-      properties:
-        baseCurrency:
-          type: string
-          description: Base Currency
-        profitCurrency:
-          type: string
-          description: Profit Currency
-        rate:
-          type: number
-          description: Order Percentage
-        symbolId:
-          type: integer
-          format: int64
-          description: Product ID
-        symbolName:
-          type: string
-          description: Product name
-    QueryOrderExecuteStandardConfigSymbolListReqDto:
+    OrderExecuteStandardConfigSymbolDto: *ref_45
+    QueryOrderExecuteStandardConfigSymbolListReqDto: &ref_52
       type: object
       properties: {}
     BaseResultCryptoBlockchainRespDto:
@@ -45703,7 +45636,7 @@ components:
               type: string
             value:
               type: array
-              items: &ref_50
+              items: &ref_54
                 $ref: '#/components/schemas/FundTrendChartDto'
           title: Data Body
           required:
@@ -45867,7 +45800,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_53
+          items: &ref_58
             $ref: '#/components/schemas/CustomerFundRedeemDto'
         total:
           type: integer
@@ -45971,7 +45904,7 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: &ref_45
+          items: &ref_47
             $ref: '#/components/schemas/FieldOrderDto'
         proposalNoList:
           type: array
@@ -46048,7 +45981,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_44
+        data: *ref_46
         ok:
           type: boolean
         fail:
@@ -46069,7 +46002,7 @@ components:
         fundsApplyExecuteRecordDetailDtoList:
           type: array
           description: Fund Product Subscription Execution Detail Record List
-          items: &ref_46
+          items: &ref_48
             $ref: '#/components/schemas/FundsApplyExecuteRecordDetailDto'
     FundsApplyExecuteRecordDetailDto:
       type: object
@@ -46380,7 +46313,7 @@ components:
           type: string
           title: Change in Weight from Previous Period
       title: ''
-    FundInvestCombChartVo:
+    FundInvestCombChartVo: &ref_50
       type: object
       properties:
         symbolId:
@@ -46977,7 +46910,7 @@ components:
         data:
           type: array
           description: Data Body
-          items: &ref_49
+          items: &ref_53
             $ref: '#/components/schemas/CustomerFundCurrencyDto'
         ok:
           type: boolean
@@ -47075,7 +47008,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_48
+          items: &ref_51
             $ref: '#/components/schemas/CustomerWithdrawProposalDto'
         total:
           type: integer
@@ -47256,7 +47189,7 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: *ref_45
+          items: *ref_47
         startTime:
           type: integer
           format: int64
@@ -47387,7 +47320,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_55
+          items: &ref_60
             $ref: '#/components/schemas/CustomerFundApplyDto'
         total:
           type: integer
@@ -47484,7 +47417,7 @@ components:
         executeList:
           type: array
           description: Execution Standard List
-          items: *ref_46
+          items: *ref_48
     FundApplyRecordDto:
       type: object
       required:
@@ -47575,7 +47508,7 @@ components:
         records:
           type: array
           description: Result list
-          items: *ref_47
+          items: *ref_49
         total:
           type: integer
           format: int64
@@ -47602,7 +47535,7 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: *ref_45
+          items: *ref_47
         startTime:
           type: integer
           format: int64
@@ -47798,20 +47731,7 @@ components:
         latestShare:
           type: string
       title: ''
-    FundNetValueChangeQuoteChartVo:
-      type: object
-      properties:
-        symbolId:
-          type: integer
-          format: int64
-          title: Product ID
-          description: Choose either fundId or symbolId
-        fundId:
-          type: integer
-          format: int64
-          title: Fund ID
-          description: Choose either symbolId or fundId
-      title: ''
+    FundNetValueChangeQuoteChartVo: *ref_50
     BaseResultListCustomerWithdrawBankVO:
       type: object
       properties:
@@ -48067,7 +47987,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_48
+        data: *ref_51
         ok:
           type: boolean
         fail:
@@ -48199,9 +48119,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    Void:
-      type: object
-      properties: {}
+    Void: *ref_52
     BaseResultFundApplyCalcDto:
       type: object
       properties:
@@ -48259,7 +48177,7 @@ components:
         list:
           type: array
           description: List of assets in a basket
-          items: *ref_49
+          items: *ref_53
     BaseResultBasePageVoCustomerAdjustProposalDto:
       type: object
       properties:
@@ -48415,7 +48333,7 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: *ref_45
+          items: *ref_47
         startTime:
           type: integer
           format: int64
@@ -48491,7 +48409,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_52
+          items: &ref_57
             $ref: '#/components/schemas/SpotQueryOrderVo'
         total:
           type: integer
@@ -48775,34 +48693,11 @@ components:
           description: '1: Market price 2: Net value'
         columnList:
           type: array
-          items: *ref_50
+          items: *ref_54
       required:
         - name
         - columnList
-    FundBatchMarketPerfChartVo:
-      type: object
-      properties:
-        symbolId:
-          type: integer
-          format: int64
-          title: Fund ID
-          description: Choose either symbolId or fundId
-        fundId:
-          type: integer
-          format: int64
-          description: Choose either fundId or symbolId
-          title: Product ID
-        days:
-          type: integer
-          title: Days
-        type:
-          type: integer
-          title: Type
-          description: ' 1-Statistical by day 2-Statistical by hour'
-      required:
-        - days
-        - type
-      title: ''
+    FundBatchMarketPerfChartVo: *ref_55
     ExchangeRateConvertDto:
       type: object
       properties:
@@ -48850,7 +48745,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_51
+        data: *ref_56
         ok:
           type: boolean
         fail:
@@ -48914,7 +48809,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_52
+        data: *ref_57
         ok:
           type: boolean
         fail:
@@ -49085,7 +48980,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_53
+        data: *ref_58
         ok:
           type: boolean
         fail:
@@ -49268,12 +49163,12 @@ components:
         data:
           type: array
           description: Data Body
-          items: *ref_54
+          items: *ref_59
         ok:
           type: boolean
         fail:
           type: boolean
-    BaseResult1:
+    BaseResult1: &ref_61
       type: object
       properties:
         bizCode:
@@ -49364,7 +49259,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_55
+        data: *ref_60
         ok:
           type: boolean
         fail:
@@ -49394,9 +49289,7 @@ components:
         fundId:
           type: integer
           title: Fund ID
-    FundBaseDto:
-      type: object
-      properties: {}
+    FundBaseDto: *ref_52
     BaseResultBoolean:
       type: object
       properties:
@@ -49738,38 +49631,7 @@ components:
       required:
         - statisticType
       title: ''
-    BaseResultObject:
-      type: object
-      properties:
-        bizCode:
-          type: string
-          description: Module identifier code
-        code:
-          type: string
-          description: Status return code
-        msg:
-          type: string
-          description: Status description
-        tm:
-          type: integer
-          format: int64
-          description: Processing time (milliseconds)
-        trace:
-          type: string
-          description: Tracking code
-        msgParams:
-          type: string
-          description: >-
-            Placeholder parameter string in return description, multiple
-            parameters separated by commas
-        data:
-          type: object
-          description: Data Body
-          properties: {}
-        ok:
-          type: boolean
-        fail:
-          type: boolean
+    BaseResultObject: *ref_61
     BaseResultSpotOrderAddVo:
       type: object
       properties:
