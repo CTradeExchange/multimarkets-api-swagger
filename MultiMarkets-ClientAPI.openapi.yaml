@@ -13953,7 +13953,7 @@ paths:
       security: []
   /global/customer.app.CustomerApiWebService.applyApi:
     post:
-      summary: 申请API
+      summary: 申请API Copy
       deprecated: false
       description: |-
         version=0.0.1
