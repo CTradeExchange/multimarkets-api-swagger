@@ -14145,9 +14145,13 @@ paths:
                 tag:
                   type: string
                   description: API标签
+                times:
+                  type: string
+                  description: 套餐时长类型。month－月；year－年；
               required:
                 - tag
                 - apiKey
+                - times
       responses:
         '200':
           description: ''
