@@ -45650,6 +45650,12 @@ components:
         nextTag:
           type: string
           description: 下期续费标签
+        times:
+          type: string
+          description: 套餐时长类型。month－月；year－年；
+        nextTimes:
+          type: string
+          description: 下期续费套餐时长类型。month－月；year－年；
     FundRedeemSharesCheckReqDto:
       type: object
       required:
