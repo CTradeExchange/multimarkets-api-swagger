@@ -45656,6 +45656,12 @@ components:
         nextTimes:
           type: string
           description: 下期续费套餐时长类型。month－月；year－年；
+        amountMonth:
+          type: string
+          description: 续费套餐月金额（单位USDT）
+        amountYear:
+          type: string
+          description: 续费套餐月金额（单位USDT）
     FundRedeemSharesCheckReqDto:
       type: object
       required:
