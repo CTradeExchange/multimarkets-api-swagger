@@ -9450,7 +9450,7 @@ paths:
             schema:
               type: object
               properties:
-                signature:
+                web3Signature:
                   type: string
                   title: Signature verification
                 address:
@@ -9460,7 +9460,7 @@ paths:
                   type: integer
                   title: Timestamp
               required:
-                - signature
+                - web3Signature
                 - address
                 - timestamp
             example: ''
@@ -14444,7 +14444,7 @@ paths:
       security: []
   /global/customer.app.CustomerApiWebService.applyApi:
     post:
-      summary: Apply API
+      summary: Apply API Copy
       deprecated: false
       description: |-
         version=0.0.1
