@@ -12416,7 +12416,7 @@ paths:
             schema:
               type: object
               properties:
-                signature:
+                web3Signature:
                   type: string
                   title: 校验签名
                 address:
@@ -12426,7 +12426,7 @@ paths:
                   type: integer
                   title: 时间戳
               required:
-                - signature
+                - web3Signature
                 - address
                 - timestamp
       responses:
