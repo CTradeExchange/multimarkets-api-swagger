@@ -14147,7 +14147,7 @@ paths:
                   description: API标签
                 times:
                   type: string
-                  description: 套餐时长类型。month－月；year－年；
+                  description: 套餐时长类型。month－月；year－年；quarter－一季；half－半年；
               required:
                 - tag
                 - apiKey
@@ -45652,10 +45652,10 @@ components:
           description: 下期续费标签
         times:
           type: string
-          description: 套餐时长类型。month－月；year－年；
+          description: 套餐时长类型。month－月；year－年；quarter－一季；half－半年；
         nextTimes:
           type: string
-          description: 下期续费套餐时长类型。month－月；year－年；
+          description: 下期续费套餐时长类型。month－月；year－年；quarter－一季；half－半年；
         amountMonth:
           type: string
           description: 续费套餐月金额（单位USDT）
