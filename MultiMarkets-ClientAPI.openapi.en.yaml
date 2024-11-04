@@ -14588,7 +14588,7 @@ paths:
       security: []
   /global/customer.app.CustomerApiWebService.downgrade:
     post:
-      summary: Apply API Copy
+      summary: Downgrade API
       deprecated: false
       description: |-
         version=0.0.1
@@ -14647,7 +14647,9 @@ paths:
                   description: API tags
                 times:
                   type: string
-                  description: Type of package duration. Month - month; Year year;
+                  description: >-
+                    Type of package duration. month－month; year－year;
+                    quarter－one season; half－six months;
               required:
                 - apiKey
                 - tag
