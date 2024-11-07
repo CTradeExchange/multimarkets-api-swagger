@@ -19,6 +19,7 @@ tags:
   - name: 客户接口/信用卡相关
   - name: 客户接口/代理相关
   - name: 消息接口
+  - name: 消息接口/AllTick
   - name: 资金接口
   - name: 资金接口/汇率查询
   - name: 资金接口/提案查询
@@ -16041,6 +16042,111 @@ paths:
                     tm: 87948437
                     msgParams: null
                     ok: true
+          headers: {}
+      security: []
+  /global/message.app.CustomerTgBindApiService.createTgQrCode:
+    post:
+      summary: 生成TG绑定地址
+      deprecated: false
+      description: |-
+        说明：登录客户请求获取TG绑定地址
+        ```
+        version=0.0.1
+        bizType=message.app.CustomerTgBindApiService.createTgQrCode
+        ```
+      tags:
+        - 消息接口/AllTick
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: zh-CN
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: integer
+                  format: long
+                  title: 公司Id
+                customerId:
+                  type: integer
+                  format: long
+                  title: 客户Id
+                customerNo:
+                  type: string
+                  title: 客户编码
+              required:
+                - companyId
+                - customerId
+                - customerNo
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bizCode:
+                    type: string
+                    title: 模块标识码
+                    description: 模块标识码
+                  code:
+                    type: string
+                    title: 状态返回码
+                    description: 状态返回码
+                  msg:
+                    type: string
+                    title: 状态描述
+                    description: 状态描述
+                  tm:
+                    type: integer
+                    format: int64
+                    title: 处理时长（毫秒）
+                    description: 处理时长（毫秒）
+                  trace:
+                    type: string
+                    title: 跟踪码
+                    description: 跟踪码
+                  msgParams:
+                    type: string
+                    title: 返回描述中占位符参数串，多个参数间以,分割
+                    description: 返回描述中占位符参数串，多个参数间以,分割
+                  ok:
+                    type: boolean
+                  fail:
+                    type: boolean
+                  data:
+                    type: string
+                    title: 绑定地址
+                    description: 绑定地址
           headers: {}
       security: []
   /global/getMsgPushToken:
