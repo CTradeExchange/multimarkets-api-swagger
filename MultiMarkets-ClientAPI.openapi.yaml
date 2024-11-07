@@ -16090,22 +16090,7 @@ paths:
           application/json:
             schema:
               type: object
-              properties:
-                companyId:
-                  type: integer
-                  format: long
-                  title: 公司Id
-                customerId:
-                  type: integer
-                  format: long
-                  title: 客户Id
-                customerNo:
-                  type: string
-                  title: 客户编码
-              required:
-                - companyId
-                - customerId
-                - customerNo
+              properties: {}
       responses:
         '200':
           description: ''
@@ -16195,22 +16180,7 @@ paths:
           application/json:
             schema:
               type: object
-              properties:
-                companyId:
-                  type: integer
-                  format: long
-                  title: 公司Id
-                customerId:
-                  type: integer
-                  format: long
-                  title: 客户Id
-                customerNo:
-                  type: string
-                  title: 客户编码
-              required:
-                - companyId
-                - customerId
-                - customerNo
+              properties: {}
       responses:
         '200':
           description: ''
@@ -16316,17 +16286,6 @@ paths:
             schema:
               type: object
               properties:
-                companyId:
-                  type: integer
-                  format: long
-                  title: 公司Id
-                customerId:
-                  type: integer
-                  format: long
-                  title: 客户Id
-                customerNo:
-                  type: string
-                  title: 客户编码
                 size:
                   type: integer
                   format: long
@@ -16337,10 +16296,6 @@ paths:
                   format: long
                   title: 当前页
                   description: 默认1
-              required:
-                - companyId
-                - customerId
-                - customerNo
       responses:
         '200':
           description: ''
@@ -16458,24 +16413,10 @@ paths:
             schema:
               type: object
               properties:
-                companyId:
-                  type: integer
-                  format: long
-                  title: 公司Id
-                customerId:
-                  type: integer
-                  format: long
-                  title: 客户Id
-                customerNo:
-                  type: string
-                  title: 客户编码
                 chatId:
                   type: string
                   title: TG账号Id
               required:
-                - companyId
-                - customerId
-                - customerNo
                 - chatId
       responses:
         '200':
