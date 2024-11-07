@@ -16380,8 +16380,35 @@ paths:
                     type: boolean
                   data:
                     type: object
-                    properties: {}
-                    title: 绑定TG账号分页列表
+                    properties:
+                      total:
+                        type: integer
+                        format: long
+                        title: 总数
+                      size:
+                        type: integer
+                        format: long
+                        title: 每页条数
+                      current:
+                        type: integer
+                        format: long
+                        title: 当前页
+                      records:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            chatId:
+                              type: string
+                              title: TG用户id
+                            firstName:
+                              type: string
+                              title: TG用户名
+                            lastName:
+                              type: string
+                              title: TG用户姓
+                        title: 绑定TG账号列表
+                    title: 分页信息
           headers: {}
       security: []
   /global/message.app.CustomerTgBindApiService.unbindTg:
