@@ -9505,7 +9505,7 @@ paths:
       security: []
   /quote-b-api/depth-tick:
     get:
-      summary: 最新盘口报价查询【数字币、外汇】
+      summary: 最新盘口报价查询【外汇、贵金属、加密货币】
       deprecated: false
       description: ''
       tags:
@@ -9753,7 +9753,7 @@ paths:
       security: []
   /quote-b-api/trade-tick:
     get:
-      summary: 最新成交报价查询【数字币、外汇】
+      summary: 最新成交报价查询【外汇、贵金属、加密货币】
       deprecated: false
       description: ''
       tags:
@@ -9973,7 +9973,7 @@ paths:
       security: []
   /quote-b-api/kline:
     get:
-      summary: K线查询【数字币、外汇】
+      summary: K线查询【外汇、贵金属、加密货币】
       deprecated: false
       description: ''
       tags:
@@ -10089,7 +10089,7 @@ paths:
       security: []
   /quote-b-api/batch-kline:
     get:
-      summary: K线批量查询【数字币、外汇】
+      summary: K线批量查询【外汇、贵金属、加密货币】
       deprecated: false
       description: ''
       tags:
