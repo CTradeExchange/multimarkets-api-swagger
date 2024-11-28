@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: MultiMarkets-BusinessAPI-EN
+  title: MultiMarkets-ManagerAPI-EN
   description: >-
     Providing API to TOB business side, which can provide various types of
     support such as customer information, fund management, activity push, etc.
