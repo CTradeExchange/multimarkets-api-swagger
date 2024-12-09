@@ -19923,6 +19923,108 @@ paths:
                 $ref: '#/components/schemas/BaseResultListFundPayChannelTypeDto'
           headers: {}
       security: []
+  /global/fund.app.DepositAppDubboService.supplementDepositProposal:
+    post:
+      summary: 补充存款提案信息
+      deprecated: false
+      description: |-
+        version: 0.0.1
+        bizType=fund.app.DepositAppDubboService.supplementDepositProposal
+        登录后方可访问
+      tags:
+        - 资金接口/客户存款接口
+      parameters:
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: zh-CN
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                proposalNo:
+                  type: string
+                  description: 提案号
+                txid:
+                  type: string
+                  description: 流水Id
+                receiptUrl:
+                  type: string
+                  description: 入金凭证地址
+              required:
+                - proposalNo
+                - txid
+                - receiptUrl
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bizCode:
+                    type: string
+                    description: 模块标识码
+                  code:
+                    type: string
+                    description: 状态返回码
+                  msg:
+                    type: string
+                    description: 状态描述
+                  tm:
+                    type: integer
+                    format: int64
+                    description: 处理时长（毫秒）
+                  trace:
+                    type: string
+                    description: 跟踪码
+                  msgParams:
+                    type: string
+                    description: 返回描述中占位符参数串，多个参数间以,分割
+                  data:
+                    type: object
+                    properties: {}
+                    description: 'null'
+                  ok:
+                    type: boolean
+                  fail:
+                    type: boolean
+          headers: {}
+      security: []
   /global/fund.app.WithdrawAppDubboService.computeWithdrawFee:
     post:
       summary: 获取取款手续费
