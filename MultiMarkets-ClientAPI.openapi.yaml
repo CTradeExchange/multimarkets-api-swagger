@@ -11482,6 +11482,166 @@ paths:
                     ok: true
           headers: {}
       security: []
+  /global/customer.app.CustomerWalletWebApiService.batchAddByChain:
+    post:
+      summary: 批量新增钱包
+      deprecated: false
+      description: |-
+        version=0.0.1
+        bizType=customer.app.CustomerWalletWebApiService.batchAddByChain
+        登录之后可以访问
+      tags:
+        - 客户接口/客户钱包管理
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addressList:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      chainName:
+                        type: string
+                        description: 链名称。Ethereum(ERC20)、Arbitrum(ERC20)、Tron(TRC20)
+                      address:
+                        type: string
+                        description: 钱包地址
+                      remark:
+                        type: string
+                        description: 钱包备注
+                    required:
+                      - chainName
+                      - address
+              required:
+                - addressList
+                - 01JEQY7FSKY7EM8F1TZ3D1M8VN
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema: *ref_8
+          headers: {}
+      security: []
+  /global/customer.app.CustomerWalletWebApiService.batchUpdateByChain:
+    post:
+      summary: 批量更新钱包
+      deprecated: false
+      description: |-
+        version=0.0.1
+        bizType=customer.app.CustomerWalletWebApiService.batchUpdateByChain
+        登录之后可以访问
+      tags:
+        - 客户接口/客户钱包管理
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addressList:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      chainName:
+                        type: string
+                        description: 链名称。Ethereum(ERC20)、Arbitrum(ERC20)、Tron(TRC20)
+                      address:
+                        type: string
+                        description: 钱包地址
+                      remark:
+                        type: string
+                        description: 钱包备注
+                    required:
+                      - chainName
+                      - address
+              required:
+                - addressList
+                - 01JEQY7FSKY7EM8F1TZ3D1M8VN
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema: *ref_8
+          headers: {}
+      security: []
   /global/customer.app.WithdrawBankWebApiService.add:
     post:
       summary: 新增国内银行卡
