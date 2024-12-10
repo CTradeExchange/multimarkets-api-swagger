@@ -50347,7 +50347,7 @@ components:
       properties:
         submitType:
           type: string
-          description: 数据提交方式 post_data,inner_browser_open,outer_browser_open
+          description: 数据提交方式 post_data,inner_browser_open,outer_browser_open,offline
         url:
           type: string
           description: 请求地址
@@ -50382,6 +50382,18 @@ components:
         paymentChannelCode:
           type: string
           description: 支付渠道编码，仅`paymentChannelCode`为`blockatm_qr`返回
+        bank:
+          type: string
+          description: 银行信息。仅`submitType`为`offline`返回
+        branch:
+          type: string
+          description: 支行信息。仅`submitType`为`offline`返回
+        accountName:
+          type: string
+          description: 账户名。仅`submitType`为`offline`返回
+        accountNo:
+          type: string
+          description: 银行账号。仅`submitType`为`offline`返回
     LoginPwdBindDTO:
       type: object
       required:
