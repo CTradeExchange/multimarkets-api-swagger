@@ -49182,6 +49182,18 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/CustomerGroupDepositLimitConfigVo'
+        bank:
+          type: string
+          description: 银行信息。仅`paymentCode`为`offline_bank`返回
+        branch:
+          type: string
+          description: 支行信息。仅`paymentCode`为`offline_bank`返回
+        accountName:
+          type: string
+          description: 账户名。仅`paymentCode`为`offline_bank`返回
+        accountNo:
+          type: string
+          description: 银行账号。仅`paymentCode`为`offline_bank`返回
     QueryCustomerPaymentChannelReqV2Dto:
       type: object
       required:
