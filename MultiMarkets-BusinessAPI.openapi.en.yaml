@@ -10865,206 +10865,6 @@ paths:
       security: []
 components:
   schemas:
-    SymbolGroup:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-          description: Primary key ID
-          title: Primary key ID
-        status:
-          type: integer
-          format: int32
-          description: 'Status: 1, 2, 3 (Enabled, Disabled, Deleted)'
-          title: 'Status: 1, 2, 3 (Enabled, Disabled, Deleted)'
-        createBy:
-          type: string
-          description: Created by
-          title: Created by
-        createTime:
-          type: integer
-          format: int64
-          description: Creation time
-          title: Creation time
-        updateBy:
-          type: string
-          description: Updated by
-          title: Updated by
-        updateTime:
-          type: integer
-          format: int64
-          description: Update time
-          title: Update time
-        name:
-          type: string
-          description: Product group name
-          title: Product group name
-    HolidayTime:
-      type: object
-      properties:
-        startTime:
-          type: integer
-          format: int64
-          description: Start time, 13-digit timestamp
-        endTime:
-          type: integer
-          format: int64
-          description: End time, 13-digit timestamp
-      description: Holiday time
-    TradeTime:
-      type: object
-      properties:
-        dayOfWeek:
-          type: integer
-          format: int32
-          description: Day of the week, 1-7 (Monday to Sunday)
-        startTime:
-          type: integer
-          format: int64
-          description: Start time, in seconds
-        endTime:
-          type: integer
-          format: int64
-          description: End time, in seconds
-      description: Trading time
-    ExchangeRateConvertDto:
-      type: object
-      properties:
-        rate:
-          type: string
-          description: Exchange Rate
-        formulaSymbol:
-          type: string
-          description: >-
-            Operation Rule: multiply or divide. Values can be 'multiply' or
-            'divide'
-        sourceDigits:
-          type: integer
-          format: int32
-          description: Source Currency Decimal Places
-        targetDigits:
-          type: integer
-          format: int32
-          description: Target Currency Decimal Places
-        sourceCurrency:
-          type: string
-          description: Source Currency Code
-        targetCurrency:
-          type: string
-          description: Target Currency Code
-    CustomerAdjustProposalDto:
-      type: object
-      required:
-        - tradeType
-      properties:
-        companyId:
-          type: integer
-          format: int64
-          description: Company ID
-        customerId:
-          type: integer
-          format: int64
-          description: Customer ID
-        customerNo:
-          type: string
-          description: Customer Number
-        accountId:
-          type: integer
-          format: int64
-          description: Account ID
-        id:
-          type: integer
-          format: int64
-          description: Primary Key ID
-        status:
-          type: integer
-          format: int32
-          description: 'Status: 1=Enabled, 2=Disabled, 3=Deleted'
-        createBy:
-          type: string
-          description: Created By
-        createTime:
-          type: integer
-          format: int64
-          description: Creation Time
-        updateBy:
-          type: string
-          description: Updated By
-        updateTime:
-          type: integer
-          format: int64
-          description: Update Time
-        tradeType:
-          type: integer
-          format: int64
-        proposalNo:
-          type: string
-          description: Proposal Number
-        businessType:
-          type: integer
-          format: int32
-          description: Business Type Code
-        accountCurrency:
-          type: string
-          description: Account Currency (Transaction Account Currency)
-        amount:
-          type: number
-          description: Proposal Amount
-        withdraw:
-          type: boolean
-          description: Withdrawable
-        operatorPassword:
-          type: string
-          description: Operator's Fund Password
-        checkBy:
-          type: string
-          description: Approver
-        checkStatus:
-          type: integer
-          format: int32
-          description: >-
-            Proposal Status: Waiting for Manual Approval: 1, Approval
-            Successful: 2, Approval Failed: 3
-        remark:
-          type: string
-          description: Remark
-        thirdOrderId:
-          type: string
-          description: Third Party Order ID
-        resetAccount:
-          type: boolean
-          description: Reset Account
-        businessTypeText:
-          type: string
-        thirdAccount:
-          type: string
-          description: Third Party Account
-    CustomerGroupBizVO:
-      type: object
-      properties:
-        name:
-          type: string
-          description: Group Name
-        id:
-          type: integer
-          format: int64
-          description: ID
-        type:
-          type: integer
-          format: int32
-          description: Group Type
-        openAccountType:
-          type: integer
-          format: int32
-          description: Account Opening Group Type, 1 Yes 2 No
-        tradeType:
-          type: integer
-          format: int64
-          description: Game Play ID
-        assets:
-          type: string
-          description: Asset Information
     QueryAccountVo:
       type: object
       properties:
@@ -11466,6 +11266,206 @@ components:
         - bizCode
         - code
         - tm
+    SymbolGroup:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Primary key ID
+          title: Primary key ID
+        status:
+          type: integer
+          format: int32
+          description: 'Status: 1, 2, 3 (Enabled, Disabled, Deleted)'
+          title: 'Status: 1, 2, 3 (Enabled, Disabled, Deleted)'
+        createBy:
+          type: string
+          description: Created by
+          title: Created by
+        createTime:
+          type: integer
+          format: int64
+          description: Creation time
+          title: Creation time
+        updateBy:
+          type: string
+          description: Updated by
+          title: Updated by
+        updateTime:
+          type: integer
+          format: int64
+          description: Update time
+          title: Update time
+        name:
+          type: string
+          description: Product group name
+          title: Product group name
+    HolidayTime:
+      type: object
+      properties:
+        startTime:
+          type: integer
+          format: int64
+          description: Start time, 13-digit timestamp
+        endTime:
+          type: integer
+          format: int64
+          description: End time, 13-digit timestamp
+      description: Holiday time
+    TradeTime:
+      type: object
+      properties:
+        dayOfWeek:
+          type: integer
+          format: int32
+          description: Day of the week, 1-7 (Monday to Sunday)
+        startTime:
+          type: integer
+          format: int64
+          description: Start time, in seconds
+        endTime:
+          type: integer
+          format: int64
+          description: End time, in seconds
+      description: Trading time
+    ExchangeRateConvertDto:
+      type: object
+      properties:
+        rate:
+          type: string
+          description: Exchange Rate
+        formulaSymbol:
+          type: string
+          description: >-
+            Operation Rule: multiply or divide. Values can be 'multiply' or
+            'divide'
+        sourceDigits:
+          type: integer
+          format: int32
+          description: Source Currency Decimal Places
+        targetDigits:
+          type: integer
+          format: int32
+          description: Target Currency Decimal Places
+        sourceCurrency:
+          type: string
+          description: Source Currency Code
+        targetCurrency:
+          type: string
+          description: Target Currency Code
+    CustomerAdjustProposalDto:
+      type: object
+      required:
+        - tradeType
+      properties:
+        companyId:
+          type: integer
+          format: int64
+          description: Company ID
+        customerId:
+          type: integer
+          format: int64
+          description: Customer ID
+        customerNo:
+          type: string
+          description: Customer Number
+        accountId:
+          type: integer
+          format: int64
+          description: Account ID
+        id:
+          type: integer
+          format: int64
+          description: Primary Key ID
+        status:
+          type: integer
+          format: int32
+          description: 'Status: 1=Enabled, 2=Disabled, 3=Deleted'
+        createBy:
+          type: string
+          description: Created By
+        createTime:
+          type: integer
+          format: int64
+          description: Creation Time
+        updateBy:
+          type: string
+          description: Updated By
+        updateTime:
+          type: integer
+          format: int64
+          description: Update Time
+        tradeType:
+          type: integer
+          format: int64
+        proposalNo:
+          type: string
+          description: Proposal Number
+        businessType:
+          type: integer
+          format: int32
+          description: Business Type Code
+        accountCurrency:
+          type: string
+          description: Account Currency (Transaction Account Currency)
+        amount:
+          type: number
+          description: Proposal Amount
+        withdraw:
+          type: boolean
+          description: Withdrawable
+        operatorPassword:
+          type: string
+          description: Operator's Fund Password
+        checkBy:
+          type: string
+          description: Approver
+        checkStatus:
+          type: integer
+          format: int32
+          description: >-
+            Proposal Status: Waiting for Manual Approval: 1, Approval
+            Successful: 2, Approval Failed: 3
+        remark:
+          type: string
+          description: Remark
+        thirdOrderId:
+          type: string
+          description: Third Party Order ID
+        resetAccount:
+          type: boolean
+          description: Reset Account
+        businessTypeText:
+          type: string
+        thirdAccount:
+          type: string
+          description: Third Party Account
+    CustomerGroupBizVO:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Group Name
+        id:
+          type: integer
+          format: int64
+          description: ID
+        type:
+          type: integer
+          format: int32
+          description: Group Type
+        openAccountType:
+          type: integer
+          format: int32
+          description: Account Opening Group Type, 1 Yes 2 No
+        tradeType:
+          type: integer
+          format: int64
+          description: Game Play ID
+        assets:
+          type: string
+          description: Asset Information
     BaseResult:
       type: object
       properties:
