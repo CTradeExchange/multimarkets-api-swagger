@@ -19957,7 +19957,7 @@ paths:
               schema: *ref_8
           headers: {}
       security: []
-  /global/fund.app.DepositAppDubboService/queryDepositProposal:
+  /global/fund.app.DepositAppDubboService.queryDepositProposal:
     post:
       summary: 查询存款提案
       deprecated: false
