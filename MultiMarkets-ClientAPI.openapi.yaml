@@ -18436,7 +18436,7 @@ paths:
                   msgParams:
                     type: string
                     description: 返回描述中占位符参数串，多个参数间以,分割
-                  data: &ref_59
+                  data: &ref_60
                     $ref: '#/components/schemas/ExchangeRateConvertDto'
                   ok:
                     type: string
@@ -21314,6 +21314,103 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryRemainWithdrawAmountRespDto
+          headers: {}
+      security: []
+  /global/fund.app.WithdrawAppDubboService.queryWithdrawProposal:
+    post:
+      summary: 查询取款提案
+      deprecated: false
+      description: |-
+        version: 0.0.1
+        bizType=fund.app.WithdrawAppDubboService.queryWithdrawProposal
+        查询取款提案
+        登录后方可访问
+      tags:
+        - 资金接口/客户取款接口
+      parameters:
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: zh-CN
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tradeType:
+                  type: integer
+                  format: int64
+                  description: 玩法类型
+                proposalNo:
+                  type: string
+                  description: 提案号
+              required:
+                - tradeType
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bizCode:
+                    type: string
+                    description: 模块标识码
+                  code:
+                    type: string
+                    description: 状态返回码
+                  msg:
+                    type: string
+                    description: 状态描述
+                  tm:
+                    type: integer
+                    format: int64
+                    description: 处理时长（毫秒）
+                  trace:
+                    type: string
+                    description: 跟踪码
+                  msgParams:
+                    type: string
+                    description: 返回描述中占位符参数串，多个参数间以,分割
+                  data: &ref_58
+                    $ref: '#/components/schemas/CustomerWithdrawProposalDto'
+                  ok:
+                    type: boolean
+                  fail:
+                    type: boolean
           headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.addMarketOrder:
@@ -48924,8 +49021,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_61
-          $ref: '#/components/schemas/CustomerWithdrawProposalDto'
+        data: *ref_58
         ok:
           type: boolean
         fail:
@@ -48966,7 +49062,7 @@ components:
         configDtoList:
           type: array
           description: 下单执行标准配置数组
-          items: &ref_58
+          items: &ref_59
             $ref: '#/components/schemas/OrderExecuteStandardConfigDto'
     QueryOrderExecuteStandardConfigReqDto:
       type: object
@@ -49002,7 +49098,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_58
+          items: *ref_59
         ok:
           type: boolean
         fail:
@@ -49505,7 +49601,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_59
+          items: *ref_60
         ok:
           type: boolean
         fail:
@@ -49784,7 +49880,7 @@ components:
         proposalNo:
           type: string
           description: 提案号
-    ManualRepaymentDto: &ref_60
+    ManualRepaymentDto: &ref_61
       type: object
       required:
         - accountCurrency
@@ -49829,7 +49925,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    ManualLoanDto: *ref_60
+    ManualLoanDto: *ref_61
     QueryCustomerPaymentChannelRespV3Dto:
       type: object
       required:
@@ -50354,7 +50450,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_61
+          items: *ref_58
         total:
           type: integer
           format: int64
