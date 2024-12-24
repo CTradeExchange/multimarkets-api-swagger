@@ -56772,6 +56772,88 @@ components:
           type: boolean
         fail:
           type: boolean
+    OrderResult:
+      type: object
+      properties:
+        orderId:
+          type: integer
+          title: 订单号
+          format: long
+          description: 订单号
+        positionId:
+          type: integer
+          title: 持仓单号
+          format: long
+          description: 持仓单号
+        tradeVolume:
+          type: string
+          title: 交易手数
+          description: 交易手数
+        openPrice:
+          type: string
+          title: 开仓价
+          description: 开仓价
+        executePrice:
+          type: string
+          title: 成交价
+          description: 成交价
+        openDirection:
+          type: integer
+          title: 开仓时买卖方向
+          description: 开仓时买卖方向，1-买；2-卖；
+          format: int32
+        direction:
+          type: integer
+          title: 本次下单买卖方向
+          description: 本次下单买卖方向，1-买；2-卖；
+          format: int32
+        openOrClose:
+          type: integer
+          title: 本次下单开平类型
+          description: 本次下单开平类型，1-开仓；2-平仓；
+          format: int32
+        symbolName:
+          type: string
+          title: 产品名称
+          description: 产品名称
+        symbolId:
+          type: integer
+          title: 产品Id
+          format: long
+          description: 产品Id
+        stopLoss:
+          type: string
+          title: 止损价
+          description: 止损价，与入参一致
+        takeProfit:
+          type: string
+          title: 止盈价
+          description: 止盈价，与入参一致
+        digits:
+          type: integer
+          title: 产品小数位
+          format: int32
+          description: 产品小数位
+        fee:
+          type: string
+          title: 下单手续费
+          description: 下单手续费
+        interest:
+          type: string
+          title: 利息
+          description: 利息，仅平仓是存在
+        profit:
+          type: string
+          title: 盈亏
+          description: 盈亏，仅平仓是存在
+        source:
+          type: string
+          title: 订单来源
+          description: H5、Android、IOS、MT5
+      title: 数据体
+      description: 数据体
+      required:
+        - source
     tradeTypeList:
       type: array
       items:
