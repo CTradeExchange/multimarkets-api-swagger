@@ -50036,3 +50036,4 @@ components:
 servers:
   - url: https://prewppc-3.cmfbl.com/api
     description: PRE测试公司439
+security: {}
