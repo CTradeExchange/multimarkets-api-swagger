@@ -236,12 +236,14 @@ paths:
                 - operationType
                 - orderId
                 - thirdServerCode
-            example:
-              tradeType: 81
-              accountId: 15
-              sortType: desc
-              sortFieldName: orderTime
-              accountCurrency: USDT
+            examples:
+              '1':
+                value:
+                  tradeType: 81
+                  accountId: 15
+                  sortType: desc
+                  sortFieldName: orderTime
+                  accountCurrency: USDT
       responses:
         '200':
           description: ''
@@ -523,7 +525,9 @@ paths:
                   description: >-
                     Asset type 0, all assets 1, common assets 2, fund assets
                     default 0
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -577,8 +581,10 @@ paths:
                   description: Parent ID
               required:
                 - parentId
-            example:
-              parentId: '1'
+            examples:
+              '1':
+                value:
+                  parentId: '1'
       responses:
         '200':
           description: ''
@@ -741,8 +747,10 @@ paths:
                   description: Dictionary code
               required:
                 - parentCode
-            example:
-              parentCode: USDT
+            examples:
+              '1':
+                value:
+                  parentCode: USDT
       responses:
         '200':
           description: ''
@@ -911,8 +919,10 @@ paths:
                   type: string
               required:
                 - parentCode
-            example:
-              parentId: '1'
+            examples:
+              '1':
+                value:
+                  parentId: '1'
       responses:
         '200':
           description: ''
@@ -1037,7 +1047,9 @@ paths:
                   description: Parent ID
               required:
                 - parentId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -1180,7 +1192,9 @@ paths:
                   description: Name, can be searched
               required:
                 - parentCode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -1338,7 +1352,9 @@ paths:
               required:
                 - tradeType
                 - customerGroupId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -1473,7 +1489,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SearchSymbolBaseDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -1706,7 +1724,9 @@ paths:
               required:
                 - tradeType
                 - symbolId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -2304,7 +2324,9 @@ paths:
                   type: integer
                   format: int64
                   description: Fund ID
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -2475,7 +2497,9 @@ paths:
                 name:
                   type: string
                   description: Search Name
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -2757,7 +2781,9 @@ paths:
                 name:
                   description: Product Name. Supports fuzzy matching
                   type: string
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -3058,7 +3084,9 @@ paths:
                 profitCurrency:
                   type: string
                   description: Target asset code
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -3768,7 +3796,9 @@ paths:
                   description: Client number
               required:
                 - customerNo
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -3851,7 +3881,9 @@ paths:
                   description: Google Verification Code
               required:
                 - pwd
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -3933,7 +3965,9 @@ paths:
                 - email
                 - sendToken
                 - emailArea
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4030,7 +4064,9 @@ paths:
                 - emailArea
                 - verifyCodeOld
                 - sendTokenOld
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4111,7 +4147,9 @@ paths:
                 - phone
                 - verifyCode
                 - sendToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4222,7 +4260,9 @@ paths:
                 - sendToken
                 - verifyCodeOld
                 - sendTokenOld
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4302,7 +4342,9 @@ paths:
               required:
                 - type
                 - loginName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4398,7 +4440,9 @@ paths:
                 remark:
                   type: string
                   description: Cancellation remarks
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4466,7 +4510,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/EnableOrForbidMFADTO'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4528,7 +4574,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -4880,13 +4928,15 @@ paths:
                 - verifyCode
                 - sendToken
                 - verifyCodeToken
-            example:
-              newPwd: Aa123456@
-              type: 1
-              loginName: 56234161@qq.com
-              verifyCode: '232123'
-              sendToken: asdsadasdasdsadsadsadsadad
-              verifyCodeToken: adczczxczczczxczczxczxczxc
+            examples:
+              '1':
+                value:
+                  newPwd: Aa123456@
+                  type: 1
+                  loginName: 56234161@qq.com
+                  verifyCode: '232123'
+                  sendToken: asdsadasdasdsadsadsadsadad
+                  verifyCodeToken: adczczxczczczxczczxczxczxc
       responses:
         '200':
           description: ''
@@ -4981,7 +5031,9 @@ paths:
                 - type
                 - verifyCode
                 - sendToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -5077,7 +5129,9 @@ paths:
                 - verifyCodeToken
                 - sendToken
                 - verifyCode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -5147,9 +5201,11 @@ paths:
                   description: Google Verification Code
               required:
                 - pwd
-            example:
-              pwd: sunt
-              googleCode: '44'
+            examples:
+              '1':
+                value:
+                  pwd: sunt
+                  googleCode: '44'
       responses:
         '200':
           description: ''
@@ -5246,7 +5302,9 @@ paths:
                 - email
                 - sendToken
                 - emailArea
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -5343,7 +5401,9 @@ paths:
                 - phone
                 - sendToken
                 - phoneArea
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -5423,7 +5483,9 @@ paths:
                   description: Language Information
               required:
                 - newLang
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -5498,7 +5560,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -5615,9 +5679,11 @@ paths:
               required:
                 - postalCode
                 - address
-            example:
-              postalCode: '90210'
-              address: Da Dong Men, Wuhan, Hubei, China
+            examples:
+              '1':
+                value:
+                  postalCode: '90210'
+                  address: Da Dong Men, Wuhan, Hubei, China
       responses:
         '200':
           description: ''
@@ -5764,14 +5830,16 @@ paths:
                 - sendTokenThirdType
                 - thirdSource
                 - phone
-            example:
-              verifyCode: '57'
-              phoneArea: '18127152839'
-              sendToken: occaecat exercitation
-              verifyCodeThirdType: '21'
-              sendTokenThirdType: ad pariatur ut
-              thirdSource: occaecat voluptate sit tempor
-              phone: '18190281711'
+            examples:
+              '1':
+                value:
+                  verifyCode: '57'
+                  phoneArea: '18127152839'
+                  sendToken: occaecat exercitation
+                  verifyCodeThirdType: '21'
+                  sendTokenThirdType: ad pariatur ut
+                  thirdSource: occaecat voluptate sit tempor
+                  phone: '18190281711'
       responses:
         '200':
           description: ''
@@ -5913,13 +5981,15 @@ paths:
                 - sendTokenThirdType
                 - thirdSource
                 - email
-            example:
-              verifyCode: '57'
-              sendToken: occaecat exercitation
-              verifyCodeThirdType: '21'
-              sendTokenThirdType: ad pariatur ut
-              thirdSource: occaecat voluptate sit tempor
-              email: 18190281711@qq.com
+            examples:
+              '1':
+                value:
+                  verifyCode: '57'
+                  sendToken: occaecat exercitation
+                  verifyCodeThirdType: '21'
+                  sendTokenThirdType: ad pariatur ut
+                  thirdSource: occaecat voluptate sit tempor
+                  email: 18190281711@qq.com
       responses:
         '200':
           description: ''
@@ -6035,8 +6105,10 @@ paths:
                   description: Google Verification Code
               required:
                 - newPwd
-            example:
-              newPwd: Aa123456@
+            examples:
+              '1':
+                value:
+                  newPwd: Aa123456@
       responses:
         '200':
           description: ''
@@ -6142,7 +6214,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: {}
+            examples:
+              '1':
+                value: {}
       responses:
         '200':
           description: ''
@@ -6284,7 +6358,9 @@ paths:
               required:
                 - type
                 - phoneArea
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -6408,7 +6484,9 @@ paths:
                   maximum: 3
               required:
                 - type
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -6501,7 +6579,9 @@ paths:
                   description: Account currency and accountCurrency must exist at least one
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -6577,7 +6657,9 @@ paths:
                   description: Opening currency, at least one of accountId must exist
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -6831,7 +6913,9 @@ paths:
                   type: integer
                   format: int64
                   description: Game ID
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -6975,7 +7059,9 @@ paths:
                     default
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7357,7 +7443,9 @@ paths:
                   description: Asset ID
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7569,7 +7657,9 @@ paths:
               required:
                 - newPwd
                 - oldPwd
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7665,7 +7755,9 @@ paths:
                 - verifyCode
                 - sendToken
                 - type
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7739,7 +7831,9 @@ paths:
               required:
                 - newPwd
                 - oldPwd
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7835,7 +7929,9 @@ paths:
                 - verifyCode
                 - sendToken
                 - type
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7910,7 +8006,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -8065,14 +8163,16 @@ paths:
                 - verifyCodeOld
                 - sendTokenOld
                 - type
-            example:
-              verifyCodeNew: '57'
-              email: k.uogz@qq.com
-              sendTokenNew: non
-              verifyCodeOld: '72'
-              sendTokenOld: velit ut officia minim non
-              type: 1
-              googleCode: '64'
+            examples:
+              '1':
+                value:
+                  verifyCodeNew: '57'
+                  email: k.uogz@qq.com
+                  sendTokenNew: non
+                  verifyCodeOld: '72'
+                  sendTokenOld: velit ut officia minim non
+                  type: 1
+                  googleCode: '64'
       responses:
         '200':
           description: ''
@@ -8200,15 +8300,17 @@ paths:
                 - sendTokenOld
                 - type
                 - phone
-            example:
-              verifyCodeNew: '12'
-              phoneArea: '19845120732'
-              sendTokenNew: laborum Ut
-              verifyCodeOld: '18'
-              sendTokenOld: enim aute dolor culpa
-              type: 1
-              phone: '18639656874'
-              googleCode: '97'
+            examples:
+              '1':
+                value:
+                  verifyCodeNew: '12'
+                  phoneArea: '19845120732'
+                  sendTokenNew: laborum Ut
+                  verifyCodeOld: '18'
+                  sendTokenOld: enim aute dolor culpa
+                  type: 1
+                  phone: '18639656874'
+                  googleCode: '97'
       responses:
         '200':
           description: ''
@@ -8295,7 +8397,9 @@ paths:
                   maxLength: 15
               required:
                 - newCountry
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -8398,11 +8502,13 @@ paths:
                 - type
                 - verifyCode
                 - sendToken6
-            example:
-              newPwd: eu Ut sint
-              type: 1
-              verifyCode: '712311'
-              sendToken: '{{sendToken}}'
+            examples:
+              '1':
+                value:
+                  newPwd: eu Ut sint
+                  type: 1
+                  verifyCode: '712311'
+                  sendToken: '{{sendToken}}'
       responses:
         '200':
           description: ''
@@ -8505,11 +8611,13 @@ paths:
                 - type
                 - verifyCode
                 - sendToken
-            example:
-              newPwd: eu Ut sint
-              type: 1
-              verifyCode: '712311'
-              sendToken: '{{sendToken}}'
+            examples:
+              '1':
+                value:
+                  newPwd: eu Ut sint
+                  type: 1
+                  verifyCode: '712311'
+                  sendToken: '{{sendToken}}'
       responses:
         '200':
           description: ''
@@ -8599,7 +8707,9 @@ paths:
               required:
                 - thirdLoginSource
                 - thirdUserId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -8699,7 +8809,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -8793,7 +8905,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -8901,7 +9015,9 @@ paths:
                   description: >-
                     Third-Party Sources: google, facebook, twitter, telegram,
                     apple, metamask
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -9004,7 +9120,9 @@ paths:
                   description: Required on web end
               required:
                 - companyId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -9099,7 +9217,9 @@ paths:
                 accessToken:
                   type: string
                   description: Verify accessToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -9197,7 +9317,9 @@ paths:
                 accessToken:
                   type: string
                   title: Token verification required for app
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -9340,7 +9462,9 @@ paths:
               required:
                 - userJsonStr
                 - channelSource
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -9463,7 +9587,9 @@ paths:
                 - web3Signature
                 - address
                 - timestamp
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -9607,7 +9733,9 @@ paths:
                 - screen_name
                 - user_id
                 - oauth_proxy
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -9746,7 +9874,9 @@ paths:
                 - userId
                 - email
                 - phone
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -10019,7 +10149,9 @@ paths:
                 - thirdSource
                 - userId
                 - authToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -10349,18 +10481,20 @@ paths:
                   description: Registered device model
               required:
                 - country
-            example:
-              customerGroupId: 1
-              userId: '5708954114'
-              phoneArea: '18163223782'
-              phone: '18631358776'
-              sendToken: reprehenderit veniam do sit minim
-              verifyCode: '23'
-              country: CN
-              thirdSource: telegram
-              registerSource: 2
-              thirdServerSource: test
-              thirdServerCode: '10'
+            examples:
+              '1':
+                value:
+                  customerGroupId: 1
+                  userId: '5708954114'
+                  phoneArea: '18163223782'
+                  phone: '18631358776'
+                  sendToken: reprehenderit veniam do sit minim
+                  verifyCode: '23'
+                  country: CN
+                  thirdSource: telegram
+                  registerSource: 2
+                  thirdServerSource: test
+                  thirdServerCode: '10'
       responses:
         '200':
           description: ''
@@ -10610,7 +10744,9 @@ paths:
                 - userId
                 - registerSource
                 - authToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -10832,14 +10968,16 @@ paths:
                 - device
                 - loginName
                 - isThird
-            example:
-              type: 2
-              device: 1
-              loginName: '13429837442'
-              isThird: false
-              thirdSource: ''
-              bindThirdUserId: ''
-              loginPwd: dc483e80a7a0bd9ef71d8cf973673924
+            examples:
+              '1':
+                value:
+                  type: 2
+                  device: 1
+                  loginName: '13429837442'
+                  isThird: false
+                  thirdSource: ''
+                  bindThirdUserId: ''
+                  loginPwd: dc483e80a7a0bd9ef71d8cf973673924
       responses:
         '200':
           description: ''
@@ -11211,7 +11349,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: {}
+            examples:
+              '1':
+                value: {}
       responses:
         '200':
           description: ''
@@ -11273,7 +11413,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: {}
+            examples:
+              '1':
+                value: {}
       responses:
         '200':
           description: ''
@@ -11432,7 +11574,9 @@ paths:
                 - loginName
                 - sendToken
                 - verifyCode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -11604,7 +11748,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: {}
+            examples:
+              '1':
+                value: {}
       responses:
         '200':
           description: ''
@@ -11773,7 +11919,9 @@ paths:
                 - firstName
                 - lastName
                 - country
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -11910,7 +12058,9 @@ paths:
                 - bankCode
                 - firstName
                 - lastName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -11978,7 +12128,9 @@ paths:
                 bankCardNumber:
                   type: string
                   description: Bank card number
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12011,7 +12163,9 @@ paths:
                   description: Bank card information record id
               required:
                 - id
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12080,7 +12234,9 @@ paths:
                   description: Expansion Type, 1=payRedeem
               required:
                 - type
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12178,7 +12334,9 @@ paths:
                   description: Extension Information
               required:
                 - type
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12284,11 +12442,13 @@ paths:
               required:
                 - tradeType
                 - symbolList
-            example:
-              symbolList:
-                - 2717
-                - 2718
-              tradeType: 1
+            examples:
+              '1':
+                value:
+                  symbolList:
+                    - 2717
+                    - 2718
+                  tradeType: 1
       responses:
         '200':
           description: ''
@@ -12380,7 +12540,9 @@ paths:
                   minimum: 1
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12479,9 +12641,11 @@ paths:
                   minItems: 1
               required:
                 - tradeTypeList
-            example:
-              tradeTypeList:
-                - 1
+            examples:
+              '1':
+                value:
+                  tradeTypeList:
+                    - 1
       responses:
         '200':
           description: ''
@@ -12628,7 +12792,9 @@ paths:
                 - phoneArea
                 - phone
                 - sendToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12731,7 +12897,9 @@ paths:
                 - remark
                 - verifyCode
                 - sendToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12798,7 +12966,9 @@ paths:
                   format: int64
                   description: Wallet Id
                   minimum: 1
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12830,7 +13000,9 @@ paths:
                   format: int64
                   description: Wallet Id
                   minimum: 1
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -12898,7 +13070,9 @@ paths:
                 chainName:
                   type: string
                   description: Chain Name
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13072,7 +13246,9 @@ paths:
                 - remark
                 - verifyCode
                 - sendToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13143,7 +13319,9 @@ paths:
               required:
                 - currency
                 - chainName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13287,7 +13465,9 @@ paths:
                 currency:
                   type: string
                   description: Currency
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13421,7 +13601,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13511,7 +13693,9 @@ paths:
                   description: Google Verification Code
               required:
                 - code
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13632,7 +13816,9 @@ paths:
                     card=apply_credit_card
               required:
                 - businessCode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13753,7 +13939,9 @@ paths:
                   description: 'Account type: 0. Individual 1. Enterprise'
               required:
                 - businessCode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13833,7 +14021,9 @@ paths:
                   type: integer
                   format: int32
                   description: 'Account type: 0. Individual 1. Enterprise '
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -13980,7 +14170,9 @@ paths:
                     card=apply_credit_card
               required:
                 - businessCode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -14063,8 +14255,10 @@ paths:
                 selectCompanyType:
                   type: string
                   description: Selected enterprise type
-            example:
-              levelCode: level_1
+            examples:
+              '1':
+                value:
+                  levelCode: level_1
       responses:
         '200':
           description: ''
@@ -14126,7 +14320,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -14284,7 +14480,9 @@ paths:
                   maxLength: 50
               required:
                 - elementList
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -14374,13 +14572,15 @@ paths:
                   description: Whether to submit, default submission
               required:
                 - elementList
-            example:
-              levelCode: level_1
-              elementList:
-                - elementCode: applyCurrency
-                  elementValue: HKD
-                - elementCode: type
-                  elementValue: '1'
+            examples:
+              '1':
+                value:
+                  levelCode: level_1
+                  elementList:
+                    - elementCode: applyCurrency
+                      elementValue: HKD
+                    - elementCode: type
+                      elementValue: '1'
       responses:
         '200':
           description: ''
@@ -14523,7 +14723,9 @@ paths:
                     be passed when not empty
               required:
                 - tag
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -14654,7 +14856,9 @@ paths:
                 - apiKey
                 - tag
                 - times
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -14774,7 +14978,9 @@ paths:
                   type: integer
                   format: int64
                   description: api id
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -14909,7 +15115,9 @@ paths:
                   description: >-
                     Send email verification code to return token, emailCode must
                     be passed when not empty
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -15007,7 +15215,9 @@ paths:
                 tag:
                   type: string
                   description: API tag
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -15229,7 +15439,9 @@ paths:
                   type: integer
                   format: int64
                   description: API Id
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -15452,9 +15664,11 @@ paths:
               required:
                 - size
                 - current
-            example:
-              size: 20
-              current: 1
+            examples:
+              '1':
+                value:
+                  size: 20
+                  current: 1
       responses:
         '200':
           description: ''
@@ -15709,14 +15923,16 @@ paths:
                 - country
                 - loginName
                 - thirdServerCode
-            example:
-              registerSource: 1
-              type: 2
-              country: CN
-              loginName: '18168114637'
-              thirdServerCode: '86021560'
-              pwd: magna reprehenderit in
-              customerGroupId: 1
+            examples:
+              '1':
+                value:
+                  registerSource: 1
+                  type: 2
+                  country: CN
+                  loginName: '18168114637'
+                  thirdServerCode: '86021560'
+                  pwd: magna reprehenderit in
+                  customerGroupId: 1
       responses:
         '200':
           description: ''
@@ -15952,17 +16168,19 @@ paths:
                   nullable: true
               required:
                 - companyId
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
-              cardId: 1614830250530730000
-              smsSendToken: incididunt eiusmod nulla voluptate
-              smsCode: '16'
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
+                  cardId: 1614830250530730000
+                  smsSendToken: incididunt eiusmod nulla voluptate
+                  smsCode: '16'
       responses:
         '200':
           description: ''
@@ -16103,17 +16321,19 @@ paths:
                 - smsVerifyCode
                 - smsSendToken
                 - checkToken
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
-              cardId: 1614830250530730000
-              smsSendToken: incididunt eiusmod nulla voluptate
-              smsCode: '16'
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
+                  cardId: 1614830250530730000
+                  smsSendToken: incididunt eiusmod nulla voluptate
+                  smsCode: '16'
       responses:
         '200':
           description: ''
@@ -16237,11 +16457,13 @@ paths:
                 - phoneArea
                 - smsVerifyCode
                 - smsSendToken
-            example:
-              phone: '13512331033'
-              phoneArea: '18163849750'
-              smsVerifyCode: '51'
-              smsSendToken: cillum
+            examples:
+              '1':
+                value:
+                  phone: '13512331033'
+                  phoneArea: '18163849750'
+                  smsVerifyCode: '51'
+                  smsSendToken: cillum
       responses:
         '200':
           description: ''
@@ -16353,17 +16575,19 @@ paths:
               required:
                 - newPwd
                 - validToken
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
-              cardId: 1614830250530730000
-              smsSendToken: incididunt eiusmod nulla voluptate
-              smsCode: '16'
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
+                  cardId: 1614830250530730000
+                  smsSendToken: incididunt eiusmod nulla voluptate
+                  smsCode: '16'
       responses:
         '200':
           description: ''
@@ -16490,17 +16714,19 @@ paths:
               required:
                 - newPwd
                 - device
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
-              cardId: 1614830250530730000
-              smsSendToken: incididunt eiusmod nulla voluptate
-              smsCode: '16'
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
+                  cardId: 1614830250530730000
+                  smsSendToken: incididunt eiusmod nulla voluptate
+                  smsCode: '16'
       responses:
         '200':
           description: ''
@@ -16710,11 +16936,13 @@ paths:
               required:
                 - companyId
                 - bizType
-            example:
-              companyId: 39
-              bizType: EMAIL_PASSWORD_VERIFICATION_CODE
-              toUser: 4632144@qq.com
-              customerId: 88
+            examples:
+              '1':
+                value:
+                  companyId: 39
+                  bizType: EMAIL_PASSWORD_VERIFICATION_CODE
+                  toUser: 4632144@qq.com
+                  customerId: 88
       responses:
         '200':
           description: ''
@@ -16840,7 +17068,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: {}
+            examples:
+              '1':
+                value: {}
       responses:
         '200':
           description: ''
@@ -17000,14 +17230,16 @@ paths:
                 - bizType
                 - toUser
                 - sendToken
-            example:
-              companyId: 12
-              bizType: sit sint ut sed occaecat
-              toUser: in
-              sendToken: fugiat ipsum occaecat
-              customerId: 49
-              code: '53'
-              verifyCodeToken: '95'
+            examples:
+              '1':
+                value:
+                  companyId: 12
+                  bizType: sit sint ut sed occaecat
+                  toUser: in
+                  sendToken: fugiat ipsum occaecat
+                  customerId: 49
+                  code: '53'
+                  verifyCodeToken: '95'
       responses:
         '200':
           description: ''
@@ -17136,7 +17368,9 @@ paths:
                   title: Company Id
               required:
                 - companyId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -17266,7 +17500,9 @@ paths:
                   title: Client ID
               required:
                 - companyId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -17450,7 +17686,9 @@ paths:
                   description: Current Page
               required:
                 - companyId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -17635,7 +17873,9 @@ paths:
                 - lang
                 - size
                 - current
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -17808,7 +18048,9 @@ paths:
                 - size
                 - current
                 - customerNo
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -17950,7 +18192,9 @@ paths:
                 - companyId
                 - customerNo
                 - id
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -18053,7 +18297,9 @@ paths:
               required:
                 - companyId
                 - customerNo
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -18158,7 +18404,9 @@ paths:
               required:
                 - companyId
                 - clientId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -18270,7 +18518,9 @@ paths:
                   description: Content
               required:
                 - companyId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -18485,7 +18735,9 @@ paths:
                 - requestNum
                 - accountCurrency
                 - accountDigits
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -18737,14 +18989,16 @@ paths:
               required:
                 - tradeType
                 - pboId
-            example:
-              tradeType: 22
-              pboId: '63'
-              requestPrice: 16
-              takeProfit: 57
-              accountId: 98
-              stopLoss: 18
-              requestNum: 35
+            examples:
+              '1':
+                value:
+                  tradeType: 22
+                  pboId: '63'
+                  requestPrice: 16
+                  takeProfit: 57
+                  accountId: 98
+                  stopLoss: 18
+                  requestNum: 35
       responses:
         '200':
           description: ''
@@ -18985,7 +19239,9 @@ paths:
                 - orderId
                 - positionId
                 - accountDigits
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -19283,7 +19539,9 @@ paths:
                 - tradeType
                 - sortFieldName
                 - sortType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -19556,7 +19814,9 @@ paths:
                 - requestTime
                 - companyId
                 - symbolId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -19753,7 +20013,9 @@ paths:
                 - requestNum
                 - accountCurrency
                 - accountDigits
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -19895,7 +20157,9 @@ paths:
               required:
                 - tradeType
                 - positionId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -20247,7 +20511,9 @@ paths:
                   title: Language
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -20649,7 +20915,9 @@ paths:
                 - accountCurrency
                 - accountDigits
                 - entryType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -20905,12 +21173,14 @@ paths:
                 - tradeType
                 - querySource
                 - thirdPartyOrder
-            example:
-              tradeType: 59
-              accountCurrency: aliqua fugiat laboris
-              accountId: 85
-              sortType: eu ut enim Ut consequat
-              sortFieldName: Shao Ke County De
+            examples:
+              '1':
+                value:
+                  tradeType: 59
+                  accountCurrency: aliqua fugiat laboris
+                  accountId: 85
+                  sortType: eu ut enim Ut consequat
+                  sortFieldName: Shao Ke County De
       responses:
         '200':
           description: ''
@@ -21183,7 +21453,9 @@ paths:
                 - orderId
                 - positionId
                 - accountDigits
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -21316,7 +21588,9 @@ paths:
               required:
                 - tradeType
                 - orderId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -21634,7 +21908,9 @@ paths:
                   type: string
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -21992,7 +22268,9 @@ paths:
                 - tradeType
                 - sortFieldName
                 - sortType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -22305,7 +22583,9 @@ paths:
                 - tradeType
                 - sortFieldName
                 - sortType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -22658,7 +22938,9 @@ paths:
                 - tradeType
                 - requestTime
                 - symbolId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -22833,7 +23115,9 @@ paths:
                 - occupyTheMargin
                 - orderId
                 - remark
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -23063,7 +23347,9 @@ paths:
                 - requestNum
                 - accountCurrency
                 - accountDigits
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -23252,7 +23538,9 @@ paths:
                 - tradeType
                 - adjustMargin
                 - positionId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -23412,7 +23700,9 @@ paths:
               required:
                 - tradeType
                 - positionId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -23803,7 +24093,9 @@ paths:
                   type: string
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -24171,7 +24463,9 @@ paths:
                     2-Decrease;
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -24484,7 +24778,9 @@ paths:
               required:
                 - tradeType
                 - orderId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -24645,7 +24941,9 @@ paths:
                 - tradeType
                 - orderId
                 - operatorType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -24855,7 +25153,9 @@ paths:
                 - accountDigits
                 - operationType
                 - expireType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -25093,7 +25393,9 @@ paths:
                 - stopLoss
                 - takeProfit
                 - remark
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -25266,7 +25568,9 @@ paths:
                 - tradeType
                 - sortFieldName
                 - sortType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -25565,7 +25869,9 @@ paths:
                 - requestTime
                 - remark
                 - sourceCurrency
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -25901,7 +26207,9 @@ paths:
                 - requestTime
                 - remark
                 - sourceCurrency
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26259,7 +26567,9 @@ paths:
                   title: Language
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26477,7 +26787,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SpotQueryWaterPageDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26504,7 +26816,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SpotOrderUpdateDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26572,7 +26886,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SpotQueryOrderPageDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26599,7 +26915,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SpotQueryOrderDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26625,7 +26943,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SpotQueryOrderRecordPageDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26712,7 +27032,9 @@ paths:
                 - requestTime
                 - requestPrice
                 - requestNum
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26799,7 +27121,9 @@ paths:
                 - tradeType
                 - bizType
                 - orderId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -26867,7 +27191,9 @@ paths:
               required:
                 - tradeType
                 - orderId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -27039,7 +27365,9 @@ paths:
                 - executeEndTime
                 - sortFieldName
                 - sortType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -27170,7 +27498,9 @@ paths:
                   description: Should be filled in as 6 for this gameplay
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -27343,7 +27673,9 @@ paths:
                 - requestTime
                 - requestPrice
                 - requestNum
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -27449,7 +27781,9 @@ paths:
                 - direction
                 - symbolId
                 - digits
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -27570,7 +27904,9 @@ paths:
                   description: desc-Descending order; asc-Ascending order; (default desc)
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -27725,7 +28061,9 @@ paths:
               required:
                 - tradeType
                 - positionId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -27861,7 +28199,9 @@ paths:
               required:
                 - tradeType
                 - positionId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -28139,7 +28479,9 @@ paths:
                   description: asc-Ascending Order; desc-Descending Order; (default desc)
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -28426,7 +28768,9 @@ paths:
                   title: Language
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -28655,7 +28999,9 @@ paths:
               required:
                 - tradeType
                 - currencyCode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -28882,12 +29228,14 @@ paths:
                 - remark
                 - ip
                 - amountDigist
-            example:
-              tradeType: 81
-              accountId: 15
-              sortType: desc
-              sortFieldName: orderTime
-              accountCurrency: USDT
+            examples:
+              '1':
+                value:
+                  tradeType: 81
+                  accountId: 15
+                  sortType: desc
+                  sortFieldName: orderTime
+                  accountCurrency: USDT
       responses:
         '200':
           description: ''
@@ -29056,12 +29404,14 @@ paths:
                 - bizType
                 - cancelRemark
                 - reverseRequestUniqueNo
-            example:
-              tradeType: 81
-              accountId: 15
-              sortType: desc
-              sortFieldName: orderTime
-              accountCurrency: USDT
+            examples:
+              '1':
+                value:
+                  tradeType: 81
+                  accountId: 15
+                  sortType: desc
+                  sortFieldName: orderTime
+                  accountCurrency: USDT
       responses:
         '200':
           description: ''
@@ -29247,12 +29597,14 @@ paths:
                 - operationType
                 - orderId
                 - thirdServerCode
-            example:
-              tradeType: 81
-              accountId: 15
-              sortType: desc
-              sortFieldName: orderTime
-              accountCurrency: USDT
+            examples:
+              '1':
+                value:
+                  tradeType: 81
+                  accountId: 15
+                  sortType: desc
+                  sortFieldName: orderTime
+                  accountCurrency: USDT
       responses:
         '200':
           description: ''
@@ -29436,12 +29788,14 @@ paths:
                 - cancelRemark
                 - reverseRequestUniqueNo
                 - thirdServerCode
-            example:
-              tradeType: 81
-              accountId: 15
-              sortType: desc
-              sortFieldName: orderTime
-              accountCurrency: USDT
+            examples:
+              '1':
+                value:
+                  tradeType: 81
+                  accountId: 15
+                  sortType: desc
+                  sortFieldName: orderTime
+                  accountCurrency: USDT
       responses:
         '200':
           description: ''
@@ -29529,7 +29883,9 @@ paths:
                   title: Index ID
               required:
                 - indexId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29558,7 +29914,9 @@ paths:
               $ref: '#/components/schemas/IndexChartDto'
               required:
                 - indexId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29587,7 +29945,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SingeAssetPerformanceChartVo'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29615,7 +29975,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundBatchMarketPerfChartVo'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29644,7 +30006,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundNetValueChangeQuoteChartVo'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29672,7 +30036,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundInvestCombChartVo'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29701,7 +30067,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundMarketPerfChartVo'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29729,7 +30097,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundMarketPerfQuoteChangeChartVo'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29755,7 +30125,9 @@ paths:
           application/json:
             schema: &ref_14
               $ref: '#/components/schemas/CreateFundApplyReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29781,7 +30153,9 @@ paths:
         content:
           application/json:
             schema: *ref_14
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29808,7 +30182,9 @@ paths:
           application/json:
             schema: &ref_15
               $ref: '#/components/schemas/FundApplyRecordDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29835,7 +30211,9 @@ paths:
           application/json:
             schema: &ref_23
               $ref: '#/components/schemas/FundCurrencyQueryReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29861,7 +30239,9 @@ paths:
         content:
           application/json:
             schema: *ref_15
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29887,7 +30267,9 @@ paths:
           application/json:
             schema: &ref_17
               $ref: '#/components/schemas/FundManagementFeesDeductDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29913,7 +30295,9 @@ paths:
         content:
           application/json:
             schema: *ref_17
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29941,7 +30325,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29967,7 +30353,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundManagementFeesRecordDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -29994,7 +30382,9 @@ paths:
           application/json:
             schema: &ref_46
               $ref: '#/components/schemas/FundsApplyExecuteInfoDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30020,7 +30410,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryFundsApplyExecuteRecordDetailReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30050,7 +30442,9 @@ paths:
             schema:
               $ref: >-
                 #/components/schemas/QueryOrderExecuteStandardConfigSymbolListReqDto
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30080,7 +30474,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryOrderExecuteStandardConfigReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30110,7 +30506,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SaveOrderExecuteStandardConfigReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30136,7 +30534,9 @@ paths:
           application/json:
             schema: &ref_27
               $ref: '#/components/schemas/FundInfoQueryReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30163,7 +30563,9 @@ paths:
           application/json:
             schema: &ref_22
               $ref: '#/components/schemas/CreateFundRedeemReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30190,7 +30592,9 @@ paths:
           application/json:
             schema: &ref_20
               $ref: '#/components/schemas/FundRedeemSharesCheckReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30216,7 +30620,9 @@ paths:
         content:
           application/json:
             schema: *ref_20
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30241,7 +30647,9 @@ paths:
         content:
           application/json:
             schema: *ref_22
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30266,7 +30674,9 @@ paths:
         content:
           application/json:
             schema: *ref_23
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30292,7 +30702,9 @@ paths:
           application/json:
             schema: &ref_25
               $ref: '#/components/schemas/FundRedeemQueryReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30318,7 +30730,9 @@ paths:
         content:
           application/json:
             schema: *ref_25
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30343,7 +30757,9 @@ paths:
         content:
           application/json:
             schema: *ref_27
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30405,7 +30821,9 @@ paths:
           application/json:
             schema: &ref_29
               $ref: '#/components/schemas/CustomerRechargeWalletAddrReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30450,7 +30868,9 @@ paths:
                 - depositRateSerialNo
                 - paymentCurrency
                 - blockchainName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30518,7 +30938,9 @@ paths:
                   description: Deposit order extended field information
               required:
                 - extend
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30623,7 +31045,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CapitalTransferReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30706,11 +31130,13 @@ paths:
                 - toCustomerNo
                 - amount
                 - currency
-            example:
-              tradeType: 7
-              toCustomerNo: '86021560'
-              amount: 100
-              currency: HKD
+            examples:
+              '1':
+                value:
+                  tradeType: 7
+                  toCustomerNo: '86021560'
+                  amount: 100
+                  currency: HKD
       responses:
         '200':
           description: ''
@@ -30771,7 +31197,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CapitalTransferRecordDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30833,7 +31261,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CapitalTransferDiffCurrReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30894,7 +31324,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CreateCustomerDepositReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -30955,7 +31387,9 @@ paths:
         content:
           application/json:
             schema: *ref_29
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31016,7 +31450,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CryptoBlockchainReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31083,7 +31519,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryDepositAccountCurrencyListDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31151,7 +31589,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryDepositAccountCurrencyListV2Dto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31214,7 +31654,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryDepositCoinListDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31276,7 +31718,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryCustomerDepositExchangeRateDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31347,7 +31791,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryCustomerPaymentChannelReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31413,7 +31859,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryCustomerPaymentChannelReqV2Dto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31479,7 +31927,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryCustomerPaymentChannelReqV3Dto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31542,7 +31992,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryCoinPayStatusReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31605,7 +32057,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31666,7 +32120,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ManualLoanDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31727,7 +32183,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ManualRepaymentDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31788,7 +32246,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryCustomerDepositProposalReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31850,7 +32310,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryPayChannelTypeDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31877,7 +32339,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundBaseDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31903,7 +32367,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryProposalPageReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31931,7 +32397,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryDepositProposalPageReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -31994,7 +32462,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryWithdrawProposalPageReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32058,7 +32528,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FundExchangeRateBatchQueryDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32143,7 +32615,9 @@ paths:
                 - sourceCurrency
                 - targetCurrency
                 - trace
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32194,7 +32668,9 @@ paths:
           application/json:
             schema: &ref_32
               $ref: '#/components/schemas/ComputeWithdrawReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32221,7 +32697,9 @@ paths:
           application/json:
             schema: &ref_56
               $ref: '#/components/schemas/QueryCustomerWithdrawExchangeRateDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32368,7 +32846,9 @@ paths:
                 - customerGroupId
                 - tradeType
                 - withdrawMethod
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32394,7 +32874,9 @@ paths:
         content:
           application/json:
             schema: *ref_32
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32456,7 +32938,9 @@ paths:
           application/json:
             schema: &ref_33
               $ref: '#/components/schemas/WithdrawMethodQueryDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32483,7 +32967,9 @@ paths:
         content:
           application/json:
             schema: *ref_33
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32509,7 +32995,9 @@ paths:
           application/json:
             schema: &ref_36
               $ref: '#/components/schemas/WithdrawCurrencyListReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32536,7 +33024,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/WithdrawAmountLimitReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32597,7 +33087,9 @@ paths:
         content:
           application/json:
             schema: *ref_33
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32657,7 +33149,9 @@ paths:
         content:
           application/json:
             schema: *ref_33
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32683,7 +33177,9 @@ paths:
         content:
           application/json:
             schema: *ref_32
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32710,7 +33206,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryWithdrawBankReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32737,7 +33235,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryWithdrawLimitConfigReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32763,7 +33263,9 @@ paths:
         content:
           application/json:
             schema: *ref_36
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32828,7 +33330,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -32901,7 +33405,9 @@ paths:
                   description: Withdrawal method
               required:
                 - customerGroupId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -33279,7 +33785,9 @@ paths:
                 - withdrawCurrency
                 - withdrawType
                 - withdrawMethod
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -33374,7 +33882,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/QueryRemainWithdrawAmountReqDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -33521,15 +34031,17 @@ paths:
                 - type
                 - address
                 - postalCode
-            example:
-              companyId: 72
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
-              type: 2
-              applyCurrency: HKD
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
+                  type: 2
+                  applyCurrency: HKD
       responses:
         '200':
           description: ''
@@ -33678,7 +34190,9 @@ paths:
                 - smsCode
                 - cardNumber
                 - activationCode
-            example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"emailSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"emailCode\": \"61\",\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
+            examples:
+              '1':
+                value: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"emailSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"emailCode\": \"61\",\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
       responses:
         '200':
           description: ''
@@ -33818,10 +34332,12 @@ paths:
                 - cardId
                 - smsSendToken
                 - smsCode
-            example:
-              cardId: 81
-              smsSendToken: '{{sendToken}}'
-              smsCode: '16'
+            examples:
+              '1':
+                value:
+                  cardId: 81
+                  smsSendToken: '{{sendToken}}'
+                  smsCode: '16'
       responses:
         '200':
           description: ''
@@ -33937,10 +34453,12 @@ paths:
                 - cardId
                 - smsSendToken
                 - smsCode
-            example:
-              cardId: 81
-              smsSendToken: '{{sendToken}}'
-              smsCode: '16'
+            examples:
+              '1':
+                value:
+                  cardId: 81
+                  smsSendToken: '{{sendToken}}'
+                  smsCode: '16'
       responses:
         '200':
           description: ''
@@ -34052,13 +34570,15 @@ paths:
                 - customerNo
                 - amount
                 - companyId
-            example:
-              companyId: 72
-              customerId: 58
-              customerNo: '86000001'
-              amount: '53'
-              currency: HKD
-              toCustomerNo: '86000002'
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  customerId: 58
+                  customerNo: '86000001'
+                  amount: '53'
+                  currency: HKD
+                  toCustomerNo: '86000002'
       responses:
         '200':
           description: ''
@@ -34191,7 +34711,9 @@ paths:
                 - smsCode
                 - customerId
                 - companyId
-            example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
+            examples:
+              '1':
+                value: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
       responses:
         '200':
           description: ''
@@ -34320,12 +34842,14 @@ paths:
                 - smsCode
                 - password
                 - checkPassword
-            example:
-              cardId: 21
-              smsSendToken: '{{sendToken}}'
-              smsCode: '44'
-              password: '123456'
-              checkPassword: '123456'
+            examples:
+              '1':
+                value:
+                  cardId: 21
+                  smsSendToken: '{{sendToken}}'
+                  smsCode: '44'
+                  password: '123456'
+                  checkPassword: '123456'
       responses:
         '200':
           description: ''
@@ -34456,7 +34980,9 @@ paths:
                 - customerId
                 - customerNo
                 - cardId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -34585,18 +35111,20 @@ paths:
                 - country
                 - customerGroupId
                 - cardId
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
-              bizType: 1
-              sendType: 1
-              customerGroupId: 1
-              cardId: 1
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
+                  bizType: 1
+                  sendType: 1
+                  customerGroupId: 1
+                  cardId: 1
       responses:
         '200':
           description: ''
@@ -34759,7 +35287,9 @@ paths:
                 - companyId
                 - customerId
                 - customerNo
-            example: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 93,\r\n    \"customerNo\": \"86000000\",\r\n    \"subscriptionType\": 2,\r\n    \"subscriptionTo\": \"+86 12345678901\",\r\n}"
+            examples:
+              '1':
+                value: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 93,\r\n    \"customerNo\": \"86000000\",\r\n    \"subscriptionType\": 2,\r\n    \"subscriptionTo\": \"+86 12345678901\",\r\n}"
       responses:
         '200':
           description: ''
@@ -34881,7 +35411,9 @@ paths:
                 - watsAppAccount
                 - country
                 - customerGroupId
-            example: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\"\r\n    \"customerGroupId\": 1,\r\n    \"country\": \"CN\",\r\n    \"watsAppAccount\": \"\"\r\n}"
+            examples:
+              '1':
+                value: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\"\r\n    \"customerGroupId\": 1,\r\n    \"country\": \"CN\",\r\n    \"watsAppAccount\": \"\"\r\n}"
       responses:
         '200':
           description: ''
@@ -35028,7 +35560,9 @@ paths:
                 - oldWatsAppCode
                 - newWatsAppSendToken
                 - newWatsAppCode
-            example: "{\r\n    \"watsAppAccount\": \"+123 321\",\r\n    \"oldWatsAppSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"oldWatsAppCode\": \"61\",\r\n    \"newWatsAppSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"newWatsAppCode\": \"16\",\r\n}"
+            examples:
+              '1':
+                value: "{\r\n    \"watsAppAccount\": \"+123 321\",\r\n    \"oldWatsAppSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"oldWatsAppCode\": \"61\",\r\n    \"newWatsAppSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"newWatsAppCode\": \"16\",\r\n}"
       responses:
         '200':
           description: ''
@@ -35200,14 +35734,16 @@ paths:
                 - companyId
                 - customerId
                 - customerNo
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
       responses:
         '200':
           description: ''
@@ -35476,17 +36012,19 @@ paths:
                 - customerNo
                 - cardId
                 - ip
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
-              cardId: 1614830250530730000
-              smsSendToken: incididunt eiusmod nulla voluptate
-              smsCode: '16'
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
+                  cardId: 1614830250530730000
+                  smsSendToken: incididunt eiusmod nulla voluptate
+                  smsCode: '16'
       responses:
         '200':
           description: ''
@@ -35633,14 +36171,16 @@ paths:
                 - companyId
                 - customerId
                 - customerNo
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
       responses:
         '200':
           description: ''
@@ -35915,9 +36455,11 @@ paths:
               required:
                 - size
                 - current
-            example:
-              size: 20
-              current: 1
+            examples:
+              '1':
+                value:
+                  size: 20
+                  current: 1
       responses:
         '200':
           description: ''
@@ -36184,14 +36726,16 @@ paths:
                 - customerId
                 - customerNo
                 - queryTypes
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
       responses:
         '200':
           description: ''
@@ -36504,7 +37048,9 @@ paths:
                 - companyId
                 - customerId
                 - customerNo
-            example: {}
+            examples:
+              '1':
+                value: {}
       responses:
         '200':
           description: ''
@@ -36701,7 +37247,9 @@ paths:
                 - country
                 - customerGroupId
                 - cardId
-            example: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"ip\": \"::1\",\r\n    \"lang\": \"zh-CN\",\r\n    \"trace\": \"ryder_test\",\r\n    \"bizType\": 1,\r\n    \"sendType\": 2,\r\n    \"country\": \"w\"\r\n    \"customerGroupId\": 1,\r\n    \"cardId\": 1\r\n}"
+            examples:
+              '1':
+                value: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"ip\": \"::1\",\r\n    \"lang\": \"zh-CN\",\r\n    \"trace\": \"ryder_test\",\r\n    \"bizType\": 1,\r\n    \"sendType\": 2,\r\n    \"country\": \"w\"\r\n    \"customerGroupId\": 1,\r\n    \"cardId\": 1\r\n}"
       responses:
         '200':
           description: ''
@@ -36892,14 +37440,16 @@ paths:
                 - customerId
                 - customerNo
                 - queryTypes
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
       responses:
         '200':
           description: ''
@@ -37255,14 +37805,16 @@ paths:
                 - customerId
                 - customerNo
                 - queryTypes
-            example:
-              companyId: 72
-              country: w
-              customerId: 11
-              customerNo: '86009002'
-              ip: '::1'
-              lang: zh-CN
-              trace: ryder_test
+            examples:
+              '1':
+                value:
+                  companyId: 72
+                  country: w
+                  customerId: 11
+                  customerNo: '86009002'
+                  ip: '::1'
+                  lang: zh-CN
+                  trace: ryder_test
       responses:
         '200':
           description: ''
@@ -37424,7 +37976,9 @@ paths:
               required:
                 - sourceCurrency
                 - targetCurrency
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -37552,7 +38106,9 @@ paths:
                 - type
                 - applyCurrency
                 - customerNo
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -37695,7 +38251,9 @@ paths:
                   description: Verify token. The previous token has expired.
               required:
                 - checkToken
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -37800,7 +38358,9 @@ paths:
               required:
                 - companyId
                 - cardType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -37955,11 +38515,13 @@ paths:
               required:
                 - companyId
                 - proposalId
-            example:
-              companyId: 75
-              proposalId: 71
-              ip: 165.224.93.180
-              trace: culpa fugiat
+            examples:
+              '1':
+                value:
+                  companyId: 75
+                  proposalId: 71
+                  ip: 165.224.93.180
+                  trace: culpa fugiat
       responses:
         '200':
           description: ''
@@ -38046,7 +38608,9 @@ paths:
               required:
                 - companyId
                 - watsAppAccount
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -38217,7 +38781,9 @@ paths:
                   type: integer
                   title: Current Page
                   description: Current Page
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -38470,7 +39036,9 @@ paths:
                 - companyId
                 - customerNo
                 - selectCustomerNo
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -38545,7 +39113,9 @@ paths:
                 cardFirstNameLastNameCustomerNo:
                   type: string
                   description: Cardholder last name, first name, customer number
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -38676,7 +39246,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -38788,7 +39360,9 @@ paths:
                 - dealId
                 - startTime
                 - endTime
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -38973,7 +39547,9 @@ paths:
                 - symbolId
                 - status
                 - symbolNames
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -39137,7 +39713,9 @@ paths:
                 - shortNetPosition
                 - longNetPosition
                 - waitingTime
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -39266,7 +39844,9 @@ paths:
                 - trace
                 - id
                 - status
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -39410,7 +39990,9 @@ paths:
                 - longNetPosition
                 - waitingTime
                 - status
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -39534,7 +40116,9 @@ paths:
               required:
                 - trace
                 - id
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -39654,19 +40238,21 @@ paths:
                 - counterpartyDealId
                 - startTime
                 - endTime
-            example:
-              accountType: 62
-              externalOrderId: '82'
-              black: false
-              symbolName: Ren Xu Law to oneself
-              direction: dolor amet ea
-              openClose: 8
-              bizType: 99
-              positionId: 1
-              dealId: 5
-              counterpartyDealId: '90'
-              startTime: 658704412528
-              endTime: 1115548412230
+            examples:
+              '1':
+                value:
+                  accountType: 62
+                  externalOrderId: '82'
+                  black: false
+                  symbolName: Ren Xu Law to oneself
+                  direction: dolor amet ea
+                  openClose: 8
+                  bizType: 99
+                  positionId: 1
+                  dealId: 5
+                  counterpartyDealId: '90'
+                  startTime: 658704412528
+                  endTime: 1115548412230
       responses:
         '200':
           description: ''
@@ -39848,7 +40434,9 @@ paths:
                 - bizType
                 - orderId
                 - numberStatisticMode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -40028,7 +40616,9 @@ paths:
                 - endTime
                 - numberStatisticMode
                 - lpDealId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -40232,7 +40822,9 @@ paths:
                 - endTime
                 - numberStatisticMode
                 - lpDealId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -40432,7 +41024,9 @@ paths:
                 - startTime
                 - endTime
                 - numberStatisticMode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -40599,7 +41193,9 @@ paths:
                 - startTime
                 - endTime
                 - numberStatisticMode
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -40712,7 +41308,9 @@ paths:
                 - startTime
                 - endTime
                 - regeneration
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -40779,7 +41377,9 @@ paths:
                   title: Trading Product
               required:
                 - symbolName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -40875,7 +41475,9 @@ paths:
                   description: Product Name or Code
               required:
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41007,7 +41609,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41182,7 +41786,9 @@ paths:
                 - startTime
                 - endTime
                 - lpDealId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41311,7 +41917,9 @@ paths:
               required:
                 - accountType
                 - date
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41473,19 +42081,21 @@ paths:
                 - amount
                 - currency
                 - digits
-            example:
-              symbolId: 86
-              lastPrice: '35'
-              lastPriceAsBid: true
-              strategy: fix_total_amount
-              maxLimitPrice: '45'
-              minLimitPrice: '25'
-              priceInterval: '1'
-              customerGroupId: 19
-              amount: '500000'
-              currency: USD
-              digits: 5
-              accountId: 33
+            examples:
+              '1':
+                value:
+                  symbolId: 86
+                  lastPrice: '35'
+                  lastPriceAsBid: true
+                  strategy: fix_total_amount
+                  maxLimitPrice: '45'
+                  minLimitPrice: '25'
+                  priceInterval: '1'
+                  customerGroupId: 19
+                  amount: '500000'
+                  currency: USD
+                  digits: 5
+                  accountId: 33
       responses:
         '200':
           description: ''
@@ -41554,9 +42164,11 @@ paths:
                   type: integer
                   format: int64
                   description: Current Page
-            example:
-              current: 1
-              size: 20
+            examples:
+              '1':
+                value:
+                  current: 1
+                  size: 20
       responses:
         '200':
           description: ''
@@ -41664,7 +42276,9 @@ paths:
                 - priceInterval
                 - amount
                 - accountId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41724,7 +42338,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AddAmmMakerDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41783,7 +42399,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AddAmmAmountDto'
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41824,7 +42442,9 @@ paths:
               required:
                 - symbolId
                 - accountId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41861,7 +42481,9 @@ paths:
               required:
                 - symbolId
                 - accountId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41914,7 +42536,9 @@ paths:
                 - current
                 - accountId
                 - symbolName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41938,7 +42562,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -41984,7 +42610,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -42009,7 +42637,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -42048,7 +42678,9 @@ paths:
                   title: Product name
               required:
                 - symbolName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -42091,7 +42723,9 @@ paths:
                   title: Product name
               required:
                 - symbolName
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -42158,7 +42792,9 @@ paths:
                 - direction
                 - endTime
                 - bizType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -42261,7 +42897,9 @@ paths:
                 - startTime
                 - regeneration
                 - endTime
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
