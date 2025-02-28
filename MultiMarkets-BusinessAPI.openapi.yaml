@@ -46,9 +46,11 @@ paths:
               required:
                 - appId
                 - appSecret
-            example:
-              appId: '{{app_id}}'
-              appSecret: '{{app_secret}}'
+            examples:
+              '1':
+                value:
+                  appId: '{{app_id}}'
+                  appSecret: '{{app_secret}}'
       responses:
         '200':
           description: ''
@@ -358,8 +360,10 @@ paths:
                   description: 字典code，区号：phone_code、注册来源：register_source、银行列表：bank_code
               required:
                 - parentCode
-            example:
-              parentCode: phone_code
+            examples:
+              '1':
+                value:
+                  parentCode: phone_code
       responses:
         '200':
           description: ''
@@ -515,8 +519,10 @@ paths:
                   type: string
                   title: ''
                   description: 公司ID
-            example:
-              companyId: '360'
+            examples:
+              '1':
+                value:
+                  companyId: '360'
       responses:
         '200':
           description: ''
@@ -2677,8 +2683,10 @@ paths:
                   description: 字典code，-1代表全部国家
               required:
                 - parentCode
-            example:
-              parentCode: '-1'
+            examples:
+              '1':
+                value:
+                  parentCode: '-1'
       responses:
         '200':
           description: ''
@@ -4381,8 +4389,10 @@ paths:
             schema:
               type: object
               properties: {}
-            example:
-              companyId: '360'
+            examples:
+              '1':
+                value:
+                  companyId: '360'
       responses:
         '200':
           description: ''
@@ -4543,10 +4553,12 @@ paths:
                 - companyId
                 - tradeType
                 - customerGroupId
-            example:
-              companyId: '{{company}}'
-              tradeType: 1
-              customerGroupId: 50
+            examples:
+              '1':
+                value:
+                  companyId: '{{company}}'
+                  tradeType: 1
+                  customerGroupId: 50
       responses:
         '200':
           description: ''
@@ -4686,9 +4698,11 @@ paths:
                   description: 客户组ID
               required:
                 - customerGroupId
-            example:
-              customerGroupId: 1
-              name: EURUSD
+            examples:
+              '1':
+                value:
+                  customerGroupId: 1
+                  name: EURUSD
       responses:
         '200':
           description: ''
@@ -4811,7 +4825,9 @@ paths:
             schema:
               type: object
               properties: {}
-            example: {}
+            examples:
+              '1':
+                value: {}
       responses:
         '200':
           description: ''
@@ -4928,8 +4944,10 @@ paths:
                   description: 跟踪码。最好有，方便定位问题
               required:
                 - companyId
-            example:
-              companyId: '{{company}}'
+            examples:
+              '1':
+                value:
+                  companyId: '{{company}}'
       responses:
         '200':
           description: ''
@@ -5136,8 +5154,10 @@ paths:
                   description: 跟踪码。最好有，方便定位问题
               required:
                 - companyId
-            example:
-              companyId: '{{company}}'
+            examples:
+              '1':
+                value:
+                  companyId: '{{company}}'
       responses:
         '200':
           description: ''
@@ -5338,7 +5358,9 @@ paths:
                 - businessType
                 - amount
                 - withdraw
-            example: "{\r\n    \"customerNo\": \"{{customerNo}}\",\r\n    \"accountId\": {{accountId}},\r\n    \"accountCurrency\": \"USDT\",\r\n    \"tradeType\": 1,\r\n    \"businessType\": 4,\r\n    \"amount\": 5,\r\n    \"withdraw\": true,\r\n    \"remark\": \"test\"\r\n}"
+            examples:
+              '1':
+                value: "{\r\n    \"customerNo\": \"{{customerNo}}\",\r\n    \"accountId\": {{accountId}},\r\n    \"accountCurrency\": \"USDT\",\r\n    \"tradeType\": 1,\r\n    \"businessType\": 4,\r\n    \"amount\": 5,\r\n    \"withdraw\": true,\r\n    \"remark\": \"test\"\r\n}"
       responses:
         '200':
           description: ''
@@ -5478,16 +5500,18 @@ paths:
                 - currencyBonus
                 - type
                 - tradeType
-            example:
-              customerNo: '{{customer}}'
-              companyId: '{{company}}'
-              activityId: '87'
-              activityCustomerNo: ''
-              bonus: 58
-              currencyBonus: ''
-              type: 52
-              tradeType: 5
-              accountId: '40'
+            examples:
+              '1':
+                value:
+                  customerNo: '{{customer}}'
+                  companyId: '{{company}}'
+                  activityId: '87'
+                  activityCustomerNo: ''
+                  bonus: 58
+                  currencyBonus: ''
+                  type: 52
+                  tradeType: 5
+                  accountId: '40'
       responses:
         '200':
           description: ''
@@ -5605,12 +5629,14 @@ paths:
                   description: 类型：1.充值 2.提现
               required:
                 - currencyMap
-            example:
-              companyId: '{{company}}'
-              type: 1
-              currencyMap:
-                BTC: USDT
-                BNB: USDT
+            examples:
+              '1':
+                value:
+                  companyId: '{{company}}'
+                  type: 1
+                  currencyMap:
+                    BTC: USDT
+                    BNB: USDT
       responses:
         '200':
           description: ''
@@ -5736,11 +5762,13 @@ paths:
                 - tradeType
                 - companyId
                 - type
-            example:
-              customerNo: proident
-              tradeType: 78
-              companyId: '{{company}}'
-              type: 24
+            examples:
+              '1':
+                value:
+                  customerNo: proident
+                  tradeType: 78
+                  companyId: '{{company}}'
+                  type: 24
       responses:
         '200':
           description: ''
@@ -5818,13 +5846,15 @@ paths:
                 - tradeType
                 - companyId
                 - type
-            example: |-
-              {
-                  "customerNo": "{{customerNo}}",
-                  "tradeType": 1,
-                  "companyId": {{company}},
-                  "type": 3
-              }
+            examples:
+              '1':
+                value: |-
+                  {
+                      "customerNo": "{{customerNo}}",
+                      "tradeType": 1,
+                      "companyId": {{company}},
+                      "type": 3
+                  }
       responses:
         '200':
           description: ''
@@ -5901,13 +5931,15 @@ paths:
                 - tradeType
                 - companyId
                 - type
-            example: |-
-              {
-                  "customerNo": "{{customerNo}}",
-                  "tradeType": 1,
-                  "companyId": {{company}},
-                  "type": 3
-              }
+            examples:
+              '1':
+                value: |-
+                  {
+                      "customerNo": "{{customerNo}}",
+                      "tradeType": 1,
+                      "companyId": {{company}},
+                      "type": 3
+                  }
       responses:
         '200':
           description: ''
@@ -5967,11 +5999,13 @@ paths:
               required:
                 - proposalNo
                 - companyId
-            example:
-              customerNo: '86000020'
-              tradeType: 5
-              companyId: '{{company}}'
-              type: 1
+            examples:
+              '1':
+                value:
+                  customerNo: '86000020'
+                  tradeType: 5
+                  companyId: '{{company}}'
+                  type: 1
       responses:
         '200':
           description: ''
@@ -6064,12 +6098,14 @@ paths:
                 - customerNo
                 - tradeType
                 - companyId
-            example: |-
-              {
-                  "customerNo": "{{customerNo}}",
-                  "tradeType": 1,
-                  "companyId": {{company}}
-              }
+            examples:
+              '1':
+                value: |-
+                  {
+                      "customerNo": "{{customerNo}}",
+                      "tradeType": 1,
+                      "companyId": {{company}}
+                  }
       responses:
         '200':
           description: ''
@@ -6182,12 +6218,14 @@ paths:
               required:
                 - type
                 - loginName
-            example:
-              type: 2
-              loginName: '{{mock_phone}}'
-              protocol: 'true'
-              emailArea: '+86'
-              phoneArea: '+86'
+            examples:
+              '1':
+                value:
+                  type: 2
+                  loginName: '{{mock_phone}}'
+                  protocol: 'true'
+                  emailArea: '+86'
+                  phoneArea: '+86'
       responses:
         '200':
           description: ''
@@ -6404,16 +6442,18 @@ paths:
                 - registerSource
                 - tradeTypeCurrencyList
                 - pwd
-            example:
-              email: test439@chixi88.com
-              emailArea: '+86'
-              pwd: dc483e80a7a0bd9ef71d8cf973673924
-              country: CN
-              customerGroupId: 1
-              registerSource: 1
-              tradeTypeCurrencyList:
-                - allCurrency: USDT
-                  tradeType: '1'
+            examples:
+              '1':
+                value:
+                  email: test439@chixi88.com
+                  emailArea: '+86'
+                  pwd: dc483e80a7a0bd9ef71d8cf973673924
+                  country: CN
+                  customerGroupId: 1
+                  registerSource: 1
+                  tradeTypeCurrencyList:
+                    - allCurrency: USDT
+                      tradeType: '1'
       responses:
         '200':
           description: ''
@@ -6522,10 +6562,12 @@ paths:
                   description: 当前页，默认1
               required:
                 - customerNo
-            example:
-              customerNo: '86002678'
-              size: 20
-              current: 1
+            examples:
+              '1':
+                value:
+                  customerNo: '86002678'
+                  size: 20
+                  current: 1
       responses:
         '200':
           description: ''
@@ -6774,10 +6816,12 @@ paths:
                 - type
                 - id
                 - customerNo
-            example:
-              type: tradeAccount
-              id: '{{customerId}}'
-              customerNo: '{{customer}}'
+            examples:
+              '1':
+                value:
+                  type: tradeAccount
+                  id: '{{customerId}}'
+                  customerNo: '{{customer}}'
       responses:
         '200':
           description: ''
@@ -7160,9 +7204,11 @@ paths:
               required:
                 - customerNo
                 - tradeType
-            example:
-              customerNo: '{{customerNo}}'
-              tradeType: 1
+            examples:
+              '1':
+                value:
+                  customerNo: '{{customerNo}}'
+                  tradeType: 1
       responses:
         '200':
           description: ''
@@ -7274,9 +7320,11 @@ paths:
             schema:
               type: object
               properties: {}
-            example:
-              tradeType: 5
-              customerNo: '86000020'
+            examples:
+              '1':
+                value:
+                  tradeType: 5
+                  customerNo: '86000020'
       responses:
         '200':
           description: ''
@@ -7532,18 +7580,20 @@ paths:
                 - language
                 - companyId
                 - customerId
-            example: |-
-              {
-                  "customerNo": "{{customerNo}}",
-                  "tradeType": 1,
-                  "language": "en-US",
-                  "content": "HHAHHAHHAHHAHHAHHAHHA",
-                  "title": "CESHTEST",
-                  "showType": 0,
-                  "refreshType": 1,
-                  "customerId": {{customerId}},
-                  "companyId": {{company}}
-              }
+            examples:
+              '1':
+                value: |-
+                  {
+                      "customerNo": "{{customerNo}}",
+                      "tradeType": 1,
+                      "language": "en-US",
+                      "content": "HHAHHAHHAHHAHHAHHAHHA",
+                      "title": "CESHTEST",
+                      "showType": 0,
+                      "refreshType": 1,
+                      "customerId": {{customerId}},
+                      "companyId": {{company}}
+                  }
       responses:
         '200':
           description: ''
@@ -7668,7 +7718,9 @@ paths:
                   format: uint64
               required:
                 - dealId
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7832,7 +7884,9 @@ paths:
               required:
                 - orderId
                 - tradeType
-            example: ''
+            examples:
+              '1':
+                value: ''
       responses:
         '200':
           description: ''
@@ -7995,11 +8049,13 @@ paths:
                 - customerNo
                 - customerId
                 - customerGroupId
-            example:
-              tradeType: 1
-              customerNo: '86000020'
-              customerId: 21
-              customerGroupId: 1
+            examples:
+              '1':
+                value:
+                  tradeType: 1
+                  customerNo: '86000020'
+                  customerId: 21
+                  customerGroupId: 1
       responses:
         '200':
           description: ''
@@ -8093,11 +8149,13 @@ paths:
                 - customerNo
                 - customerId
                 - customerGroupId
-            example:
-              tradeType: 1
-              customerNo: '86000020'
-              customerId: 21
-              customerGroupId: 1
+            examples:
+              '1':
+                value:
+                  tradeType: 1
+                  customerNo: '86000020'
+                  customerId: 21
+                  customerGroupId: 1
       responses:
         '200':
           description: ''
@@ -8227,15 +8285,17 @@ paths:
                 - customerNo
                 - customerGroupId
                 - customerId
-            example:
-              tradeType: 5
-              customerNo: '86000020'
-              customerGroupId: '1'
-              customerId: '21'
-              current: 1
-              size: 20
-              startTime: 1668528000000
-              endTime: 1669219199999
+            examples:
+              '1':
+                value:
+                  tradeType: 5
+                  customerNo: '86000020'
+                  customerGroupId: '1'
+                  customerId: '21'
+                  current: 1
+                  size: 20
+                  startTime: 1668528000000
+                  endTime: 1669219199999
       responses:
         '200':
           description: ''
@@ -8489,14 +8549,16 @@ paths:
                 - tradeType
                 - customerId
                 - customerGroupId
-            example:
-              tradeType: 1
-              customerId: '22441'
-              customerGroupId: '1'
-              customerNo: '86022441'
-              accountId: 1291816
-              sortType: desc
-              sortFieldName: openTime
+            examples:
+              '1':
+                value:
+                  tradeType: 1
+                  customerId: '22441'
+                  customerGroupId: '1'
+                  customerNo: '86022441'
+                  accountId: 1291816
+                  sortType: desc
+                  sortFieldName: openTime
       responses:
         '200':
           description: ''
@@ -10139,20 +10201,22 @@ paths:
               required:
                 - trace
                 - data
-            example:
-              trace: '{{mock_trace}}'
-              data:
-                data_list:
-                  - code: EURJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
-                  - code: EURJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
+            examples:
+              '1':
+                value:
+                  trace: '{{mock_trace}}'
+                  data:
+                    data_list:
+                      - code: EURJPY
+                        kline_type: 1
+                        kline_timestamp_end: 0
+                        query_kline_num: 2
+                        adjust_type: 0
+                      - code: EURJPY
+                        kline_type: 1
+                        kline_timestamp_end: 0
+                        query_kline_num: 2
+                        adjust_type: 0
       responses:
         '200':
           description: ''
@@ -10415,20 +10479,22 @@ paths:
               required:
                 - trace
                 - data
-            example:
-              trace: '{{mock_trace}}'
-              data:
-                data_list:
-                  - code: EURJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
-                  - code: USDJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
+            examples:
+              '1':
+                value:
+                  trace: '{{mock_trace}}'
+                  data:
+                    data_list:
+                      - code: EURJPY
+                        kline_type: 1
+                        kline_timestamp_end: 0
+                        query_kline_num: 2
+                        adjust_type: 0
+                      - code: USDJPY
+                        kline_type: 1
+                        kline_timestamp_end: 0
+                        query_kline_num: 2
+                        adjust_type: 0
       responses:
         '200':
           description: ''
