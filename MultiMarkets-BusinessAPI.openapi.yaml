@@ -51,6 +51,7 @@ paths:
                 value:
                   appId: '{{app_id}}'
                   appSecret: '{{app_secret}}'
+                description: ''
       responses:
         '200':
           description: ''
@@ -364,6 +365,7 @@ paths:
               '1':
                 value:
                   parentCode: phone_code
+                description: ''
       responses:
         '200':
           description: ''
@@ -523,6 +525,7 @@ paths:
               '1':
                 value:
                   companyId: '360'
+                description: ''
       responses:
         '200':
           description: ''
@@ -2687,6 +2690,7 @@ paths:
               '1':
                 value:
                   parentCode: '-1'
+                description: ''
       responses:
         '200':
           description: ''
@@ -4393,6 +4397,7 @@ paths:
               '1':
                 value:
                   companyId: '360'
+                description: ''
       responses:
         '200':
           description: ''
@@ -4559,6 +4564,7 @@ paths:
                   companyId: '{{company}}'
                   tradeType: 1
                   customerGroupId: 50
+                description: ''
       responses:
         '200':
           description: ''
@@ -4703,6 +4709,7 @@ paths:
                 value:
                   customerGroupId: 1
                   name: EURUSD
+                description: ''
       responses:
         '200':
           description: ''
@@ -4828,6 +4835,7 @@ paths:
             examples:
               '1':
                 value: {}
+                description: ''
       responses:
         '200':
           description: ''
@@ -4948,6 +4956,7 @@ paths:
               '1':
                 value:
                   companyId: '{{company}}'
+                description: ''
       responses:
         '200':
           description: ''
@@ -5158,6 +5167,7 @@ paths:
               '1':
                 value:
                   companyId: '{{company}}'
+                description: ''
       responses:
         '200':
           description: ''
@@ -5361,6 +5371,7 @@ paths:
             examples:
               '1':
                 value: "{\r\n    \"customerNo\": \"{{customerNo}}\",\r\n    \"accountId\": {{accountId}},\r\n    \"accountCurrency\": \"USDT\",\r\n    \"tradeType\": 1,\r\n    \"businessType\": 4,\r\n    \"amount\": 5,\r\n    \"withdraw\": true,\r\n    \"remark\": \"test\"\r\n}"
+                description: ''
       responses:
         '200':
           description: ''
@@ -5512,6 +5523,7 @@ paths:
                   type: 52
                   tradeType: 5
                   accountId: '40'
+                description: ''
       responses:
         '200':
           description: ''
@@ -5637,6 +5649,7 @@ paths:
                   currencyMap:
                     BTC: USDT
                     BNB: USDT
+                description: ''
       responses:
         '200':
           description: ''
@@ -5769,6 +5782,7 @@ paths:
                   tradeType: 78
                   companyId: '{{company}}'
                   type: 24
+                description: ''
       responses:
         '200':
           description: ''
@@ -5855,6 +5869,7 @@ paths:
                       "companyId": {{company}},
                       "type": 3
                   }
+                description: ''
       responses:
         '200':
           description: ''
@@ -5940,6 +5955,7 @@ paths:
                       "companyId": {{company}},
                       "type": 3
                   }
+                description: ''
       responses:
         '200':
           description: ''
@@ -6006,6 +6022,7 @@ paths:
                   tradeType: 5
                   companyId: '{{company}}'
                   type: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -6106,6 +6123,7 @@ paths:
                       "tradeType": 1,
                       "companyId": {{company}}
                   }
+                description: ''
       responses:
         '200':
           description: ''
@@ -6226,6 +6244,7 @@ paths:
                   protocol: 'true'
                   emailArea: '+86'
                   phoneArea: '+86'
+                description: ''
       responses:
         '200':
           description: ''
@@ -6454,6 +6473,7 @@ paths:
                   tradeTypeCurrencyList:
                     - allCurrency: USDT
                       tradeType: '1'
+                description: ''
       responses:
         '200':
           description: ''
@@ -6568,6 +6588,7 @@ paths:
                   customerNo: '86002678'
                   size: 20
                   current: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -6822,6 +6843,7 @@ paths:
                   type: tradeAccount
                   id: '{{customerId}}'
                   customerNo: '{{customer}}'
+                description: ''
       responses:
         '200':
           description: ''
@@ -7209,6 +7231,7 @@ paths:
                 value:
                   customerNo: '{{customerNo}}'
                   tradeType: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -7325,6 +7348,7 @@ paths:
                 value:
                   tradeType: 5
                   customerNo: '86000020'
+                description: ''
       responses:
         '200':
           description: ''
@@ -7594,6 +7618,7 @@ paths:
                       "customerId": {{customerId}},
                       "companyId": {{company}}
                   }
+                description: ''
       responses:
         '200':
           description: ''
@@ -7721,6 +7746,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -7887,6 +7913,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -8056,6 +8083,7 @@ paths:
                   customerNo: '86000020'
                   customerId: 21
                   customerGroupId: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -8156,6 +8184,7 @@ paths:
                   customerNo: '86000020'
                   customerId: 21
                   customerGroupId: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -8296,6 +8325,7 @@ paths:
                   size: 20
                   startTime: 1668528000000
                   endTime: 1669219199999
+                description: ''
       responses:
         '200':
           description: ''
@@ -8559,6 +8589,7 @@ paths:
                   accountId: 1291816
                   sortType: desc
                   sortFieldName: openTime
+                description: ''
       responses:
         '200':
           description: ''
@@ -10217,6 +10248,7 @@ paths:
                         kline_timestamp_end: 0
                         query_kline_num: 2
                         adjust_type: 0
+                description: ''
       responses:
         '200':
           description: ''
@@ -10495,6 +10527,7 @@ paths:
                         kline_timestamp_end: 0
                         query_kline_num: 2
                         adjust_type: 0
+                description: ''
       responses:
         '200':
           description: ''
