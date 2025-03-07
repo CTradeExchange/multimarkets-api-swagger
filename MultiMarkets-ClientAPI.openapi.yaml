@@ -224,6 +224,7 @@ paths:
                   sortType: desc
                   sortFieldName: orderTime
                   accountCurrency: USDT
+                description: ''
       responses:
         '200':
           description: ''
@@ -549,6 +550,7 @@ paths:
               '1':
                 value:
                   parentId: '1'
+                description: ''
       responses:
         '200':
           description: ''
@@ -713,6 +715,7 @@ paths:
               '1':
                 value:
                   parentCode: USDT
+                description: ''
       responses:
         '200':
           description: ''
@@ -883,6 +886,7 @@ paths:
               '1':
                 value:
                   parentId: '1'
+                description: ''
       responses:
         '200':
           description: ''
@@ -3816,6 +3820,7 @@ paths:
                   thirdSource: ''
                   bindThirdUserId: ''
                   loginPwd: dc483e80a7a0bd9ef71d8cf973673924
+                description: ''
       responses:
         '200':
           description: ''
@@ -4202,6 +4207,7 @@ paths:
             examples:
               '1':
                 value: {}
+                description: ''
       responses:
         '200':
           description: ''
@@ -4266,6 +4272,7 @@ paths:
             examples:
               '1':
                 value: {}
+                description: ''
       responses:
         '200':
           description: ''
@@ -4580,6 +4587,7 @@ paths:
             examples:
               '1':
                 value: {}
+                description: ''
       responses:
         '200':
           description: ''
@@ -5675,6 +5683,7 @@ paths:
                   verifyCode: '232123'
                   sendToken: asdsadasdasdsadsadsadsadad
                   verifyCodeToken: adczczxczczczxczczxczxczxc
+                description: ''
       responses:
         '200':
           description: ''
@@ -5933,6 +5942,7 @@ paths:
                 value:
                   pwd: sunt
                   googleCode: '44'
+                description: ''
       responses:
         '200':
           description: ''
@@ -6397,6 +6407,7 @@ paths:
                 value:
                   postalCode: '90210'
                   address: 中國湖北省武汉市大东门
+                description: ''
       responses:
         '200':
           description: ''
@@ -6544,6 +6555,7 @@ paths:
                   sendTokenThirdType: ad pariatur ut
                   thirdSource: occaecat voluptate sit tempor
                   phone: '18190281711'
+                description: ''
       responses:
         '200':
           description: ''
@@ -6685,6 +6697,7 @@ paths:
                   sendTokenThirdType: ad pariatur ut
                   thirdSource: occaecat voluptate sit tempor
                   email: 18190281711@qq.com
+                description: ''
       responses:
         '200':
           description: ''
@@ -6802,6 +6815,7 @@ paths:
               '1':
                 value:
                   newPwd: Aa123456@
+                description: ''
       responses:
         '200':
           description: ''
@@ -6908,6 +6922,7 @@ paths:
             examples:
               '1':
                 value: {}
+                description: ''
       responses:
         '200':
           description: ''
@@ -8756,6 +8771,7 @@ paths:
                   sendTokenOld: velit ut officia minim non
                   type: 1
                   googleCode: '64'
+                description: ''
       responses:
         '200':
           description: ''
@@ -8883,6 +8899,7 @@ paths:
                   type: 1
                   phone: '18639656874'
                   googleCode: '97'
+                description: ''
       responses:
         '200':
           description: ''
@@ -9072,6 +9089,7 @@ paths:
                   type: 1
                   verifyCode: '712311'
                   sendToken: '{{sendToken}}'
+                description: ''
       responses:
         '200':
           description: ''
@@ -9179,6 +9197,7 @@ paths:
                   type: 1
                   verifyCode: '712311'
                   sendToken: '{{sendToken}}'
+                description: ''
       responses:
         '200':
           description: ''
@@ -10354,6 +10373,7 @@ paths:
               '1':
                 value:
                   levelCode: level_1
+                description: ''
       responses:
         '200':
           description: ''
@@ -10656,6 +10676,7 @@ paths:
                       elementValue: HKD
                     - elementCode: type
                       elementValue: '1'
+                description: ''
       responses:
         '200':
           description: ''
@@ -13482,6 +13503,7 @@ paths:
                   registerSource: 2
                   thirdServerSource: test
                   thirdServerCode: '10'
+                description: ''
       responses:
         '200':
           description: ''
@@ -13912,6 +13934,7 @@ paths:
                     - 2717
                     - 2718
                   tradeType: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -14102,6 +14125,7 @@ paths:
                 value:
                   tradeTypeList:
                     - 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -15158,6 +15182,7 @@ paths:
                   cardId: 1614830250530730000
                   smsSendToken: incididunt eiusmod nulla voluptate
                   smsCode: '16'
+                description: ''
       responses:
         '200':
           description: ''
@@ -15307,6 +15332,7 @@ paths:
                   cardId: 1614830250530730000
                   smsSendToken: incididunt eiusmod nulla voluptate
                   smsCode: '16'
+                description: ''
       responses:
         '200':
           description: ''
@@ -15433,6 +15459,7 @@ paths:
                   phoneArea: '18163849750'
                   smsVerifyCode: '51'
                   smsSendToken: cillum
+                description: ''
       responses:
         '200':
           description: ''
@@ -15553,6 +15580,7 @@ paths:
                   cardId: 1614830250530730000
                   smsSendToken: incididunt eiusmod nulla voluptate
                   smsCode: '16'
+                description: ''
       responses:
         '200':
           description: ''
@@ -15686,6 +15714,7 @@ paths:
                   cardId: 1614830250530730000
                   smsSendToken: incididunt eiusmod nulla voluptate
                   smsCode: '16'
+                description: ''
       responses:
         '200':
           description: ''
@@ -15851,6 +15880,7 @@ paths:
                 value:
                   size: 20
                   current: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -16103,6 +16133,7 @@ paths:
                   thirdServerCode: '86021560'
                   pwd: magna reprehenderit in
                   customerGroupId: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -16741,6 +16772,7 @@ paths:
             examples:
               '1':
                 value: {}
+                description: ''
       responses:
         '200':
           description: ''
@@ -16894,6 +16926,7 @@ paths:
                   bizType: EMAIL_PASSWORD_VERIFICATION_CODE
                   toUser: 4632144@qq.com
                   customerId: 88
+                description: ''
       responses:
         '200':
           description: ''
@@ -17058,6 +17091,7 @@ paths:
                   customerId: 49
                   code: '53'
                   verifyCodeToken: '95'
+                description: ''
       responses:
         '200':
           description: ''
@@ -18563,6 +18597,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -18594,6 +18629,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -18660,6 +18696,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -18929,6 +18966,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19017,6 +19055,7 @@ paths:
                   toCustomerNo: '86021560'
                   amount: 100
                   currency: HKD
+                description: ''
       responses:
         '200':
           description: ''
@@ -19081,6 +19120,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19146,6 +19186,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19210,6 +19251,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19274,6 +19316,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19338,6 +19381,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19403,6 +19447,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19469,6 +19514,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19535,6 +19581,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19600,6 +19647,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19668,6 +19716,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19735,6 +19784,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19799,6 +19849,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19865,6 +19916,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19931,6 +19983,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -19995,6 +20048,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20059,6 +20113,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20123,6 +20178,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20188,6 +20244,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20282,6 +20339,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20424,6 +20482,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20453,6 +20512,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20518,6 +20578,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20548,6 +20609,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20577,6 +20639,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20607,6 +20670,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20671,6 +20735,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20734,6 +20799,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20763,6 +20829,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20793,6 +20860,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20823,6 +20891,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20852,6 +20921,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20921,6 +20991,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -20998,6 +21069,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -21363,6 +21435,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -21454,6 +21527,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -22842,6 +22916,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -24318,6 +24393,7 @@ paths:
                   requestPrice: 19
                   takeProfit: 35
                   requestNum: 47
+                description: ''
       responses:
         '200':
           description: ''
@@ -24550,6 +24626,7 @@ paths:
                   sortType: desc
                   sortFieldName: orderTime
                   accountCurrency: USDT
+                description: ''
       responses:
         '200':
           description: ''
@@ -25021,6 +25098,7 @@ paths:
                   accountId: 85
                   sortType: eu ut enim Ut consequat
                   sortFieldName: 少可县得
+                description: ''
       responses:
         '200':
           description: ''
@@ -27676,6 +27754,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -29134,6 +29213,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -29168,6 +29248,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -29243,6 +29324,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -29277,6 +29359,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31345,6 +31428,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31373,6 +31457,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31402,6 +31487,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31431,6 +31517,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31459,6 +31546,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31487,6 +31575,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31516,6 +31605,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31544,6 +31634,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31571,6 +31662,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31599,6 +31691,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31627,6 +31720,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31655,6 +31749,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31683,6 +31778,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31711,6 +31807,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31740,6 +31837,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31768,6 +31866,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31797,6 +31896,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31825,6 +31925,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31854,6 +31955,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31882,6 +31984,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31914,6 +32017,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31946,6 +32050,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -31978,6 +32083,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32015,6 +32121,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32048,6 +32155,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32080,6 +32188,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32111,6 +32220,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32143,6 +32253,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32174,6 +32285,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32206,6 +32318,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32237,6 +32350,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -32391,6 +32505,7 @@ paths:
                   trace: ryder_test
                   type: 2
                   applyCurrency: HKD
+                description: ''
       responses:
         '200':
           description: ''
@@ -32541,6 +32656,7 @@ paths:
             examples:
               '1':
                 value: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"emailSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"emailCode\": \"61\",\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
+                description: ''
       responses:
         '200':
           description: ''
@@ -32687,6 +32803,7 @@ paths:
                   cardId: 81
                   smsSendToken: '{{sendToken}}'
                   smsCode: '16'
+                description: ''
       responses:
         '200':
           description: ''
@@ -32809,6 +32926,7 @@ paths:
                   cardId: 81
                   smsSendToken: '{{sendToken}}'
                   smsCode: '16'
+                description: ''
       responses:
         '200':
           description: ''
@@ -32925,6 +33043,7 @@ paths:
                   amount: '53'
                   currency: HKD
                   toCustomerNo: '86000002'
+                description: ''
       responses:
         '200':
           description: ''
@@ -33061,6 +33180,7 @@ paths:
             examples:
               '1':
                 value: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"trace\": \"ryder_test\",\r\n    \"cardId\": 81,\r\n    \"smsSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"smsCode\": \"16\",\r\n}"
+                description: ''
       responses:
         '200':
           description: ''
@@ -33198,6 +33318,7 @@ paths:
                   smsCode: '44'
                   password: '123456'
                   checkPassword: '123456'
+                description: ''
       responses:
         '200':
           description: ''
@@ -33469,6 +33590,7 @@ paths:
                   sendType: 1
                   customerGroupId: 1
                   cardId: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -33625,6 +33747,7 @@ paths:
             examples:
               '1':
                 value: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 93,\r\n    \"customerNo\": \"86000000\",\r\n    \"subscriptionType\": 2,\r\n    \"subscriptionTo\": \"+86 12345678901\",\r\n}"
+                description: ''
       responses:
         '200':
           description: ''
@@ -33747,6 +33870,7 @@ paths:
             examples:
               '1':
                 value: "{\r\n    \"companyId\": 72,\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\"\r\n    \"customerGroupId\": 1,\r\n    \"country\": \"CN\",\r\n    \"watsAppAccount\": \"\"\r\n}"
+                description: ''
       responses:
         '200':
           description: ''
@@ -33897,6 +34021,7 @@ paths:
             examples:
               '1':
                 value: "{\r\n    \"watsAppAccount\": \"+123 321\",\r\n    \"oldWatsAppSendToken\": \"p.kttwucwkwd@qq.com\",\r\n    \"oldWatsAppCode\": \"61\",\r\n    \"newWatsAppSendToken\": \"incididunt eiusmod nulla voluptate\",\r\n    \"newWatsAppCode\": \"16\",\r\n}"
+                description: ''
       responses:
         '200':
           description: ''
@@ -34073,6 +34198,7 @@ paths:
                   ip: '::1'
                   lang: zh-CN
                   trace: ryder_test
+                description: ''
       responses:
         '200':
           description: ''
@@ -34351,6 +34477,7 @@ paths:
                   cardId: 1614830250530730000
                   smsSendToken: incididunt eiusmod nulla voluptate
                   smsCode: '16'
+                description: ''
       responses:
         '200':
           description: ''
@@ -34505,6 +34632,7 @@ paths:
                   ip: '::1'
                   lang: zh-CN
                   trace: ryder_test
+                description: ''
       responses:
         '200':
           description: ''
@@ -34770,6 +34898,7 @@ paths:
                 value:
                   size: 20
                   current: 1
+                description: ''
       responses:
         '200':
           description: ''
@@ -35032,6 +35161,7 @@ paths:
                   ip: '::1'
                   lang: zh-CN
                   trace: ryder_test
+                description: ''
       responses:
         '200':
           description: ''
@@ -35340,6 +35470,7 @@ paths:
             examples:
               '1':
                 value: {}
+                description: ''
       responses:
         '200':
           description: ''
@@ -35521,6 +35652,7 @@ paths:
             examples:
               '1':
                 value: "{\r\n    \"companyId\": 72,\r\n    \"country\": \"w\",\r\n    \"customerId\": 11,\r\n    \"customerNo\": \"86009002\",\r\n    \"ip\": \"::1\",\r\n    \"lang\": \"zh-CN\",\r\n    \"trace\": \"ryder_test\",\r\n    \"bizType\": 1,\r\n    \"sendType\": 2,\r\n    \"country\": \"w\"\r\n    \"customerGroupId\": 1,\r\n    \"cardId\": 1\r\n}"
+                description: ''
       responses:
         '200':
           description: ''
@@ -35713,6 +35845,7 @@ paths:
                   ip: '::1'
                   lang: zh-CN
                   trace: ryder_test
+                description: ''
       responses:
         '200':
           description: ''
@@ -36064,6 +36197,7 @@ paths:
                   ip: '::1'
                   lang: zh-CN
                   trace: ryder_test
+                description: ''
       responses:
         '200':
           description: ''
@@ -36228,6 +36362,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -36740,6 +36875,7 @@ paths:
                   proposalId: 71
                   ip: 165.224.93.180
                   trace: culpa fugiat
+                description: ''
       responses:
         '200':
           description: ''
@@ -37581,6 +37717,7 @@ paths:
                   sortType: desc
                   sortFieldName: orderTime
                   accountCurrency: USDT
+                description: ''
       responses:
         '200':
           description: ''
@@ -38545,6 +38682,7 @@ paths:
                   counterpartyDealId: '90'
                   startTime: 658704412528
                   endTime: 1115548412230
+                description: ''
       responses:
         '200':
           description: ''
@@ -40312,6 +40450,7 @@ paths:
                   currency: USD
                   digits: 5
                   accountId: 33
+                description: ''
       responses:
         '200':
           description: ''
@@ -40385,6 +40524,7 @@ paths:
                 value:
                   current: 1
                   size: 20
+                description: ''
       responses:
         '200':
           description: ''
@@ -40741,6 +40881,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -40789,6 +40930,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -40816,6 +40958,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -40857,6 +41000,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -40902,6 +41046,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -40971,6 +41116,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
@@ -41076,6 +41222,7 @@ paths:
             examples:
               '1':
                 value: ''
+                description: ''
       responses:
         '200':
           description: ''
