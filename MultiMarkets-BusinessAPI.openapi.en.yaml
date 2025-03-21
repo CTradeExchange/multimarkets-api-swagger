@@ -51,6 +51,25 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: Company ID
+                  title: Company ID
+                tradeType:
+                  type: string
+                  description: Trade mode ID
+                  title: Trade mode ID
+                customerGroupId:
+                  type: string
+                  description: Customer group ID
+                  title: Customer group ID
+              required:
+                - companyId
+                - tradeType
+                - customerGroupId
             example:
               companyId: '{{company}}'
               tradeType: 1
@@ -182,6 +201,19 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: >-
+                    Product name, search, do not pass to check all products
+                    under the customer group
+                customerGroupId:
+                  type: number
+                  description: Customer Group ID
+              required:
+                - customerGroupId
             example:
               customerGroupId: 1
               name: EURUSD
@@ -303,6 +335,9 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties: {}
             example: {}
       responses:
         '200':
@@ -405,6 +440,20 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: Company ID
+                tradeType:
+                  type: integer
+                  description: Game type
+                trace:
+                  type: string
+                  description: Tracking code. Preferably included for easy issue tracking
+              required:
+                - companyId
             example:
               companyId: '{{company}}'
       responses:
@@ -603,6 +652,17 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: Company ID
+                trace:
+                  type: string
+                  description: Tracking code. Preferably included for easy issue tracking
+              required:
+                - companyId
             example:
               companyId: '{{company}}'
       responses:
@@ -706,6 +766,18 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                appId:
+                  type: string
+                  description: B-end company authorization ID
+                appSecret:
+                  type: string
+                  description: B-end company authorization key
+              required:
+                - appId
+                - appSecret
             example:
               appId: '{{app_id}}'
               appSecret: '{{app_secret}}'
@@ -1015,6 +1087,26 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: integer
+                  description: >-
+                    Registration login method: 1 email, 2 phone number, 3
+                    customer account
+                loginName:
+                  type: string
+                  description: 'Account: email/phone number'
+                phoneArea:
+                  type: string
+                  description: Mobile area code, default area code is +86
+                emailArea:
+                  type: string
+                  description: Email area code, default area code is +86
+              required:
+                - type
+                - loginName
             example:
               type: 2
               loginName: '{{mock_phone}}'
@@ -1111,6 +1203,72 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: Mobile phone number
+                email:
+                  type: string
+                  description: Email
+                phoneArea:
+                  type: string
+                  description: Mobile phone area code, the default area code is +86
+                emailArea:
+                  type: string
+                  description: Mailbox area code, the default area code is +86
+                pwd:
+                  type: string
+                  description: Login password, MD5 encryption, a123456
+                country:
+                  type: string
+                  description: 'Country: US=United States'
+                registerSource:
+                  type: integer
+                  description: >-
+                    Registration source: 1=Mobile web: H5, 2=pcweb: PC_Web,
+                    3=System & background liquidation: System, 4=Android native
+                    app: Android, 5=Apple native app: iOS, 6=Hongmeng OS: HOS,
+                    7=pc windows client: PC_Win, 8=pc mac client: PC_Mac, 9=not
+                    belonging to the above: other
+                customerGroupId:
+                  type: number
+                  description: >-
+                    Customer group ID: 1 = default customer group;
+                    customerFroupId and tradeTypeCurrencyList correspond to each
+                    other
+                remark:
+                  type: string
+                  description: Remark
+                registerDevice:
+                  type: string
+                  description: Registered device model
+                utmSource:
+                  type: string
+                  description: Advertising source (account opening link parameter source)
+                utmMedium:
+                  type: string
+                  description: Advertising medium (account opening link parameter medium)
+                utmCampaign:
+                  type: string
+                  description: Campaign (account opening link parameter campaign)
+                utmContent:
+                  type: string
+                  description: Ad group (account opening link parameter content)
+                utmTerm:
+                  type: string
+                  description: Keywords (account opening link parameter term)
+                thirdServerCode:
+                  type: string
+                  maxLength: 50
+                  description: Third-party system customer unique identifier.
+              required:
+                - phone
+                - country
+                - customerGroupId
+                - registerSource
+                - pwd
             example:
               phone: '{{mock_phone}}'
               pwd: dc483e80a7a0bd9ef71d8cf973673924
@@ -1212,6 +1370,20 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                size:
+                  type: number
+                  description: Number of rows displayed per page, default is 20
+                current:
+                  type: number
+                  description: Current page, default is 1
+              required:
+                - customerNo
             example:
               customerNo: null
               size: 20
@@ -1448,6 +1620,26 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: >-
+                    Type information, baseInfo= basic information, tradeAccount=
+                    trading account, kyc= kyc information, allKyc= detailed kyc
+                    information on the page, bankList= bank card list,
+                    walletList= wallet address, otherInfo= other
+                id:
+                  type: string
+                  description: Customer ID
+                customerNo:
+                  type: string
+                  description: Customer Number
+              required:
+                - type
+                - id
+                - customerNo
             example:
               type: tradeAccount
               id: '{{customerId}}'
@@ -1848,6 +2040,9 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties: {}
             example:
               tradeType: 5
               customerNo: '86000020'
@@ -1971,6 +2166,14 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                dealId:
+                  type: integer
+                  format: uint64
+              required:
+                - dealId
             example: ''
       responses:
         '200':
@@ -2120,6 +2323,20 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                orderId:
+                  type: integer
+                  format: uint64
+                  description: Order ID
+                tradeType:
+                  type: integer
+                  format: uint64
+                  description: Game type
+              required:
+                - orderId
+                - tradeType
             example: ''
       responses:
         '200':
@@ -2260,6 +2477,81 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerId:
+                  type: string
+                customerGroupId:
+                  type: string
+                customerNo:
+                  type: string
+                tradeType:
+                  type: integer
+                  description: Game ID
+                accountId:
+                  type: number
+                  description: Account ID
+                accountCurrency:
+                  type: string
+                  description: Account currency
+                size:
+                  type: integer
+                  description: Number of items per page
+                current:
+                  type: integer
+                  description: Current page
+                businessType:
+                  type: number
+                  description: >-
+                    Business type. 0-unrestricted; CFD-full position: 1-deposit;
+                    2-withdrawal; 3-system reset; 4-limit adjustment; 5-freeze;
+                    6-trade; 36-transfer; 42-reward; CFD-margin: 7-deposit;
+                    8-withdrawal; 9-system reset; 10-limit adjustment;
+                    11-freeze; 12-trade; 13-margin adjustment; 37-transfer;
+                    43-reward; Leverage: 14-deposit; 15-withdrawal; 16-limit
+                    adjustment; 17-freeze; 18-trade; 19-auto loan; 20-manual
+                    loan; 21-auto repayment; 22-manual repayment; 23-loan
+                    interest; 35-back-end repayment; 38-transfer; 40-force
+                    liquidation repayment; 44-reward; ABCC: 24-deposit;
+                    25-withdrawal; 26-limit adjustment; 27-freeze; 28-trade;
+                    29-auto loan; 30-manual loan; 31-auto repayment; 32-manual
+                    repayment; 33-loan interest; 34-back-end repayment;
+                    39-transfer; 41-force liquidation repayment; 45-reward; Spot
+                    leverage matching: 50-deposit; 51-withdrawal; 52-limit
+                    adjustment; 53-freeze; 54-trade; 55-transfer; 59-reward;
+                    Stocks: 601-deposit; 602-withdrawal; 603-limit adjustment;
+                    604-freeze; 605-collateral; 606-trade; 607-loan;
+                    608-repayment; 609-transfer; 610-interest calculation;
+                    611-interest settlement; 612-reward; 613-system reset;
+                    614-company action
+                status:
+                  type: integer
+                  description: >-
+                    Status. 0-Unrestricted; 1-Initialized; 2-Processed
+                    successfully; 3-Processing failed;
+                startTime:
+                  type: number
+                  description: Start time. 13-digit timestamp; 7 days before today
+                endTime:
+                  type: number
+                  description: End time. 13-digit timestamp; usually today
+                operate:
+                  type: integer
+                  description: Flow direction. 0-Unrestricted; 1. Increase, 2. Decrease;
+                assetsId:
+                  type: number
+                  description: Asset Id;
+                lang:
+                  type: string
+                  description: >-
+                    Language (zh_CN-Chinese; en_US-English. Default to Chinese
+                    if not filled or filled incorrectly);
+              required:
+                - tradeType
+                - customerNo
+                - customerGroupId
+                - customerId
             example:
               tradeType: 5
               customerNo: '86000020'
@@ -2507,6 +2799,61 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                tradeType:
+                  type: integer
+                  description: Game ID; Only game 1, 2, 6 have positions
+                customerGroupId:
+                  type: integer
+                  format: long
+                  description: Customer group Id
+                customerId:
+                  type: integer
+                  description: Customer ID
+                  format: long
+                customerNo:
+                  type: string
+                  description: Customer Number
+                accountId:
+                  type: number
+                  description: Account ID
+                symbolId:
+                  type: number
+                  description: Product ID
+                sortFieldName:
+                  type: string
+                  description: >-
+                    Sorting field name. orderId-Order Id; openTime-Execution
+                    time; symbolId-Product Id; pnl-Profit and loss;
+                sortType:
+                  type: string
+                  description: >-
+                    Sorting method. asc-Ascending; desc-Descending; (default
+                    desc)
+                size:
+                  type: integer
+                  format: long
+                  description: Number of data per page. Default 20
+                current:
+                  type: integer
+                  format: long
+                  description: Current page. Default 1
+                querySource:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
+              required:
+                - tradeType
+                - customerId
+                - customerGroupId
             example:
               tradeType: 1
               customerId: '22441'
@@ -2838,6 +3185,79 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                tradeType:
+                  type: integer
+                  description: Gameplay ID. 1-Whole contract; 2-Isolated contract;
+                customerGroupId:
+                  type: integer
+                  format: long
+                  description: Customer group Id
+                customerId:
+                  type: integer
+                  description: Customer ID
+                  format: long
+                customerNo:
+                  type: string
+                  description: Customer Number
+                accountId:
+                  type: integer
+                  description: Account ID
+                  format: long
+                symbolId:
+                  type: integer
+                  description: Product ID
+                  format: long
+                orderId:
+                  type: integer
+                  format: long
+                  description: Order ID
+                direction:
+                  type: integer
+                  format: int32
+                  description: >-
+                    Buy/sell direction. 1-Buy; 2-Sell; When not passed, all will
+                    be queried, passing other values will result in no data
+                startTime:
+                  type: integer
+                  format: long
+                  description: Opening time - start. (13-digit timestamp, including itself)
+                endTime:
+                  type: integer
+                  format: long
+                  description: Opening time - end. (13-digit timestamp, including itself)
+                sortFieldName:
+                  type: string
+                  description: >-
+                    Sorting field name. id-Position number; orderId-Order ID;
+                    openTime-Execution time; symbolId-Product ID; (default id)
+                sortType:
+                  type: string
+                  description: >-
+                    Sorting method. asc-Ascending; desc-Descending; (default
+                    desc)
+                size:
+                  type: integer
+                  format: long
+                  description: Number of data per page. Default 20
+                current:
+                  type: integer
+                  format: long
+                  description: Current page. Default 1
+                querySource:
+                  type: string
+                  description: >-
+                    H5: mobile web; PC_Web: pcweb; System: system; Android:
+                    Android native app; iOS: Apple native app; HOS: Hongmeng OS;
+                    PC_Win: pcwindows client; PC_Mac: pcmac client; default is
+                    the same as login source. (The enumeration is for reference
+                    only)
+                thirdPartyOrder:
+                  type: string
+              required:
+                - tradeType
             example: ''
       responses:
         '200':
@@ -3529,6 +3949,27 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                tradeType:
+                  description: 'Trading method: contract full position is 1'
+                  type: integer
+                customerNo:
+                  type: string
+                  description: Customer Number
+                customerId:
+                  description: Customer Id
+                  type: integer
+                customerGroupId:
+                  description: Customer group Id
+                  type: integer
+              required:
+                - tradeType
+                - customerNo
+                - customerId
+                - customerGroupId
             example:
               tradeType: 1
               customerNo: '86000188'
@@ -3593,6 +4034,27 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                tradeType:
+                  description: Trading gameplay
+                  type: integer
+                customerNo:
+                  type: string
+                  description: Customer Number
+                customerId:
+                  description: Customer ID
+                  type: integer
+                customerGroupId:
+                  description: Customer group number
+                  type: integer
+              required:
+                - tradeType
+                - customerNo
+                - customerId
+                - customerGroupId
             example:
               tradeType: 1
               customerNo: '86000188'
@@ -3664,6 +4126,39 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                bizType:
+                  type: string
+                  title: Business type
+                  description: >-
+                    EMAIL_COMMON_VERIFICATION_CODE - Email common verification
+                    code; EMAIL_LOGIN_VERIFICATION_CODE - Email login
+                    verification code; EMAIL_REGISTER_VERIFICATION_CODE - Email
+                    registration verification code;
+                    EMAIL_PASSWORD_VERIFICATION_CODE - Email forgot password
+                    verification code; SMS_COMMON_VERIFICATION_CODE - SMS common
+                    verification code; SMS_LOGIN_VERIFICATION_CODE - SMS login
+                    verification code; SMS_REGISTER_VERIFICATION_CODE - SMS
+                    registration verification code;
+                    SMS_PASSWORD_VERIFICATION_CODE - SMS forgot password
+                    verification code
+                toUser:
+                  type: string
+                  title: Recipient
+                code:
+                  type: string
+                  title: Verification code
+                sendToken:
+                  type: string
+                  title: Send receipt
+                  description: Token returned by C-end verification code sending interface
+              required:
+                - bizType
+                - toUser
+                - code
+                - sendToken
             example: ''
       responses:
         '200':
@@ -3786,6 +4281,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                parentCode:
+                  type: string
+                  description: >-
+                    Dictionary code, area code: phone_code, registration source:
+                    register_source, bank list: bank_code
+              required:
+                - parentCode
             example:
               parentCode: phone_code
       responses:
@@ -3935,6 +4440,13 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  title: ''
+                  description: Company ID
             example:
               companyId: '360'
       responses:
@@ -6086,6 +6598,14 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                parentCode:
+                  type: string
+                  description: Dictionary code, -1 represents all countries
+              required:
+                - parentCode
             example:
               parentCode: '-1'
       responses:
@@ -7786,6 +8306,9 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties: {}
             example:
               companyId: '360'
       responses:
@@ -7938,6 +8461,45 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                tradeType:
+                  type: integer
+                  description: Game type; currently only supports spot game type
+                accountId:
+                  type: string
+                  description: Account ID
+                companyId:
+                  type: string
+                  description: Company ID
+                activityId:
+                  type: string
+                  description: Activity record ID
+                currencyBonus:
+                  type: string
+                  description: Bonus currency
+                bonus:
+                  type: number
+                  description: Bonus amount
+                activityCustomerNo:
+                  type: string
+                  description: Activity account
+                type:
+                  type: integer
+                  description: Type, 1. issuance, 2. recovery
+              required:
+                - customerNo
+                - companyId
+                - activityId
+                - activityCustomerNo
+                - bonus
+                - currencyBonus
+                - type
+                - tradeType
             example:
               customerNo: '{{customer}}'
               companyId: '{{company}}'
@@ -8047,6 +8609,28 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: Company ID
+                currencyMap:
+                  type: object
+                  properties:
+                    BTC:
+                      type: string
+                    BNB:
+                      type: string
+                  description: 'key: source currency value: exchange currency'
+                  required:
+                    - BTC
+                    - BNB
+                type:
+                  type: integer
+                  description: 'Type: 1. Recharge 2. Withdrawal'
+              required:
+                - currencyMap
             example:
               companyId: '{{company}}'
               type: 1
@@ -8163,6 +8747,37 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                tradeType:
+                  type: integer
+                  description: Game ID
+                companyId:
+                  type: string
+                  description: Company ID
+                type:
+                  type: integer
+                  description: 'Type: 1=Transfer in, 2=Transfer out, 3=Transfer in and out'
+                lockTime:
+                  type: number
+                  description: >-
+                    Locking duration, in seconds, if not passed, platform
+                    default value will be used
+                lockEndTime:
+                  type: number
+                  description: >-
+                    Lock end time - timestamp (milliseconds), if not passed,
+                    platform default value will be used: priority to use
+                    lockEndTime
+              required:
+                - customerNo
+                - tradeType
+                - companyId
+                - type
             example:
               customerNo: '86000020'
               tradeType: 5
@@ -8231,6 +8846,26 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                tradeType:
+                  type: integer
+                  description: Game ID
+                companyId:
+                  type: string
+                  description: Company ID
+                type:
+                  type: integer
+                  description: 'Type: 1=Transfer in, 2=Transfer out, 3=Transfer in and out'
+              required:
+                - customerNo
+                - type
+                - companyId
+                - tradeType
             example:
               customerNo: '86000020'
               type: 1
@@ -8298,6 +8933,26 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                tradeType:
+                  type: integer
+                  description: Game ID
+                companyId:
+                  type: string
+                  description: Company ID
+                type:
+                  type: integer
+                  description: 'Type: 1=Transfer in, 2=Transfer out, 3=Transfer in and out'
+              required:
+                - customerNo
+                - tradeType
+                - companyId
+                - type
             example:
               customerNo: '86000020'
               tradeType: 5
@@ -8399,6 +9054,18 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                proposalNo:
+                  type: string
+                  description: Credit adjustment proposal number
+                companyId:
+                  type: string
+                  description: Company ID
+              required:
+                - proposalNo
+                - companyId
             example:
               customerNo: '86000020'
               tradeType: 5
@@ -8503,6 +9170,22 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                tradeType:
+                  type: integer
+                  description: Game ID
+                companyId:
+                  type: string
+                  description: Company ID
+              required:
+                - customerNo
+                - tradeType
+                - companyId
             example:
               customerNo: '86000020'
               tradeType: 5
@@ -8626,6 +9309,49 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                tradeType:
+                  description: Trading gameplay
+                  type: integer
+                language:
+                  type: string
+                  description: Language (zh-HK, en-US, zh-CN), fill in as needed
+                content:
+                  type: string
+                  description: Content, no length limit
+                title:
+                  type: string
+                  description: Title, length of 100 characters
+                showType:
+                  type: integer
+                  description: 'Popup type EnumShowType: 0 no action, 1 popup'
+                refreshType:
+                  type: integer
+                  description: >-
+                    Refresh type EnumRefreshType: 0 no action, 1 position, 2
+                    pending order, 3 funds, 4 kick out, 5 pending order
+                    position, 6 pending order funds
+                customerId:
+                  type: integer
+                  description: Customer ID
+                companyId:
+                  type: integer
+                  description: Company ID
+              required:
+                - customerNo
+                - tradeType
+                - showType
+                - title
+                - content
+                - language
+                - companyId
+                - customerId
             example: |-
               {
                   "customerNo": "{{customerNo}}",
@@ -8731,6 +9457,43 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                accountId:
+                  description: Account ID
+                  type: integer
+                accountCurrency:
+                  type: string
+                  description: Currency for sending bonuses
+                tradeType:
+                  description: 'Game type: 1 is contract full position'
+                  type: integer
+                businessType:
+                  description: Fixed value 4
+                  type: integer
+                amount:
+                  description: >-
+                    Number of bonuses issued, positive for bonus issuance,
+                    negative for rebate bonuses
+                  type: number
+                withdraw:
+                  type: boolean
+                  description: Fixed true
+                remark:
+                  description: Optional
+                  type: string
+              required:
+                - customerNo
+                - accountCurrency
+                - tradeType
+                - businessType
+                - amount
+                - withdraw
             example:
               customerNo: '86000020'
               accountId: 1000450
@@ -8837,6 +9600,19 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: Customer Number
+                tradeType:
+                  description: Trading gameplay
+                  type: integer
+              required:
+                - customerNo
+                - tradeType
             example:
               customerNo: '86000020'
               tradeType: 1
@@ -9563,6 +10339,40 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                trace:
+                  type: string
+                data:
+                  type: object
+                  properties:
+                    data_list:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                          kline_type:
+                            type: integer
+                          kline_timestamp_end:
+                            type: integer
+                          query_kline_num:
+                            type: integer
+                          adjust_type:
+                            type: integer
+                        required:
+                          - code
+                          - kline_type
+                          - kline_timestamp_end
+                          - query_kline_num
+                          - adjust_type
+                  required:
+                    - data_list
+              required:
+                - trace
+                - data
             example:
               trace: '{{mock_trace}}'
               data:
@@ -9809,6 +10619,40 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                trace:
+                  type: string
+                data:
+                  type: object
+                  properties:
+                    data_list:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                          kline_type:
+                            type: integer
+                          kline_timestamp_end:
+                            type: integer
+                          query_kline_num:
+                            type: integer
+                          adjust_type:
+                            type: integer
+                        required:
+                          - code
+                          - kline_type
+                          - kline_timestamp_end
+                          - query_kline_num
+                          - adjust_type
+                  required:
+                    - data_list
+              required:
+                - trace
+                - data
             example:
               trace: '{{mock_trace}}'
               data:
