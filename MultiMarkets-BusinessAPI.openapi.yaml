@@ -34,6 +34,18 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                appId:
+                  type: string
+                  description: B端公司授权ID
+                appSecret:
+                  type: string
+                  description: B端公司授权密钥
+              required:
+                - appId
+                - appSecret
             example:
               appId: '{{app_id}}'
               appSecret: '{{app_secret}}'
@@ -335,6 +347,14 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                parentCode:
+                  type: string
+                  description: 字典code，区号：phone_code、注册来源：register_source、银行列表：bank_code
+              required:
+                - parentCode
             example:
               parentCode: phone_code
       responses:
@@ -482,6 +502,13 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  title: ''
+                  description: 公司ID
             example:
               companyId: '360'
       responses:
@@ -2633,6 +2660,14 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                parentCode:
+                  type: string
+                  description: 字典code，-1代表全部国家
+              required:
+                - parentCode
             example:
               parentCode: '-1'
       responses:
@@ -4331,6 +4366,9 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties: {}
             example:
               companyId: '360'
       responses:
@@ -4471,6 +4509,25 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: 公司Id
+                  title: 公司Id
+                tradeType:
+                  type: string
+                  description: 交易模式ID
+                  title: 交易模式ID
+                customerGroupId:
+                  type: string
+                  description: 客户组ID
+                  title: 客户组ID
+              required:
+                - companyId
+                - tradeType
+                - customerGroupId
             example:
               companyId: '{{company}}'
               tradeType: 1
@@ -4600,6 +4657,17 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 产品名称，进行搜索， 不传查客户组下所有产品
+                customerGroupId:
+                  type: number
+                  description: 客户组ID
+              required:
+                - customerGroupId
             example:
               customerGroupId: 1
               name: EURUSD
@@ -4719,6 +4787,9 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties: {}
             example: {}
       responses:
         '200':
@@ -4819,6 +4890,20 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: 公司Id
+                tradeType:
+                  type: integer
+                  description: 玩法类型
+                trace:
+                  type: string
+                  description: 跟踪码。最好有，方便定位问题
+              required:
+                - companyId
             example:
               companyId: '{{company}}'
       responses:
@@ -5013,6 +5098,17 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: 公司Id
+                trace:
+                  type: string
+                  description: 跟踪码。最好有，方便定位问题
+              required:
+                - companyId
             example:
               companyId: '{{company}}'
       responses:
@@ -5173,6 +5269,41 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                accountId:
+                  description: 账户id
+                  type: integer
+                accountCurrency:
+                  type: string
+                  description: 发送赠金的币种
+                tradeType:
+                  description: 玩法类型：1是合约全仓
+                  type: integer
+                businessType:
+                  description: 固定值4
+                  type: integer
+                amount:
+                  description: 发放赠金数量，正数是发放赠金，负数是回扣赠金
+                  type: number
+                withdraw:
+                  type: boolean
+                  description: 固定true
+                remark:
+                  description: 选填
+                  type: string
+              required:
+                - customerNo
+                - accountCurrency
+                - tradeType
+                - businessType
+                - amount
+                - withdraw
             example: "{\r\n    \"customerNo\": \"{{customerNo}}\",\r\n    \"accountId\": {{accountId}},\r\n    \"accountCurrency\": \"USDT\",\r\n    \"tradeType\": 1,\r\n    \"businessType\": 4,\r\n    \"amount\": 5,\r\n    \"withdraw\": true,\r\n    \"remark\": \"test\"\r\n}"
       responses:
         '200':
@@ -5271,6 +5402,45 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                tradeType:
+                  type: integer
+                  description: 玩法类型；目前只支持现货玩法
+                accountId:
+                  type: string
+                  description: 帐户ID
+                companyId:
+                  type: string
+                  description: 公司id
+                activityId:
+                  type: string
+                  description: 活动记录ID
+                currencyBonus:
+                  type: string
+                  description: 赠金币种
+                bonus:
+                  type: number
+                  description: 赠金金额
+                activityCustomerNo:
+                  type: string
+                  description: 活动帐户
+                type:
+                  type: integer
+                  description: 类型，1.发放，2.扣回
+              required:
+                - customerNo
+                - companyId
+                - activityId
+                - activityCustomerNo
+                - bonus
+                - currencyBonus
+                - type
+                - tradeType
             example:
               customerNo: '{{customer}}'
               companyId: '{{company}}'
@@ -5376,6 +5546,28 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                companyId:
+                  type: string
+                  description: 公司ID
+                currencyMap:
+                  type: object
+                  properties:
+                    BTC:
+                      type: string
+                    BNB:
+                      type: string
+                  description: key:来源货币 value:兑换货币
+                  required:
+                    - BTC
+                    - BNB
+                type:
+                  type: integer
+                  description: 类型：1.充值 2.提现
+              required:
+                - currencyMap
             example:
               companyId: '{{company}}'
               type: 1
@@ -5477,6 +5669,33 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                tradeType:
+                  description: 交易玩法
+                  type: integer
+                companyId:
+                  type: integer
+                  description: 公司id
+                type:
+                  description: 类型:1=转入,2=转出,3=转入转出
+                  type: integer
+                lockTime:
+                  type: integer
+                  description: 锁定时长，单位秒，不传则使用平台默认值
+                lockEndTime:
+                  type: integer
+                  description: 锁定截至时间-时间戳，不传则使用平台默认值：优先使用lockEndTime
+              required:
+                - customerNo
+                - tradeType
+                - companyId
+                - type
             example:
               customerNo: proident
               tradeType: 78
@@ -5535,6 +5754,27 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                tradeType:
+                  description: 交易玩法
+                  type: integer
+                companyId:
+                  description: 公司id
+                  type: integer
+                type:
+                  description: 类型:1=转入,2=转出,3=转入转出
+                  type: integer
+              required:
+                - customerNo
+                - tradeType
+                - companyId
+                - type
             example: |-
               {
                   "customerNo": "{{customerNo}}",
@@ -5594,6 +5834,27 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                tradeType:
+                  description: 交易玩法
+                  type: integer
+                companyId:
+                  description: 公司id
+                  type: integer
+                type:
+                  description: 类型:1=转入,2=转出,3=转入转出
+                  type: integer
+              required:
+                - customerNo
+                - tradeType
+                - companyId
+                - type
             example: |-
               {
                   "customerNo": "{{customerNo}}",
@@ -5648,6 +5909,18 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                proposalNo:
+                  type: string
+                  description: 额度调整提案编号
+                companyId:
+                  type: string
+                  description: 公司id
+              required:
+                - proposalNo
+                - companyId
             example:
               customerNo: '86000020'
               tradeType: 5
@@ -5728,6 +6001,23 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                tradeType:
+                  description: 交易玩法
+                  type: integer
+                companyId:
+                  description: 公司id
+                  type: integer
+              required:
+                - customerNo
+                - tradeType
+                - companyId
             example: |-
               {
                   "customerNo": "{{customerNo}}",
@@ -5825,6 +6115,24 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: integer
+                  description: 注册登录方式：1邮箱，2手机号码，3客户账号
+                loginName:
+                  type: string
+                  description: 账号：邮箱/手机号码
+                phoneArea:
+                  type: string
+                  description: 手机区号，区号默认为+86
+                emailArea:
+                  type: string
+                  description: 邮箱区号，区号默认为+86
+              required:
+                - type
+                - loginName
             example:
               type: 2
               loginName: '{{mock_phone}}'
@@ -5975,6 +6283,78 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: 账号：手机号码
+                email:
+                  type: string
+                  description: 账号：邮箱
+                phoneArea:
+                  type: string
+                  description: 手机区号，区号默认为+86
+                emailArea:
+                  type: string
+                  description: 邮箱区号，区号默认为+86
+                pwd:
+                  type: string
+                  description: 登录密码，MD5加密、a123456
+                country:
+                  type: string
+                  description: 国家:CN=中国
+                registerSource:
+                  type: integer
+                  description: >-
+                    注册来源:1=移动端web：H5，2=pcweb：PC_Web，3=系统&后台平仓：System，4=安卓原生app：Android，5=苹果原生app：iOS，6=鸿蒙OS：HOS，7=pc
+                    windows客户端：PC_Win,8=pc mac客户端：PC_Mac，9=不属于以上的：其他
+                customerGroupId:
+                  type: number
+                  description: 客户组ID:1=默认客户组; customerFroupId与tradeTypeCurrencyList相互对应
+                remark:
+                  type: string
+                  description: 备注
+                registerDevice:
+                  type: string
+                  description: 注册的设备型号
+                utmSource:
+                  type: string
+                  description: 广告来源(开户链接参数source)
+                utmMedium:
+                  type: string
+                  description: 广告媒介(开户链接参数medium)
+                utmCampaign:
+                  type: string
+                  description: 广告系列(开户链接参数campaign)
+                utmContent:
+                  type: string
+                  description: 广告组(开户链接参数content)
+                utmTerm:
+                  type: string
+                  description: 关键词(开户链接参数term)
+                tradeTypeCurrencyList:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      allCurrency:
+                        type: string
+                        description: 资产币种，多个资产以,拼接
+                      tradeType:
+                        type: string
+                        description: 玩法类型
+                    required:
+                      - allCurrency
+                      - tradeType
+                  description: 玩法币种集合
+              required:
+                - phone
+                - country
+                - customerGroupId
+                - registerSource
+                - tradeTypeCurrencyList
+                - pwd
             example:
               email: test439@chixi88.com
               emailArea: '+86'
@@ -6076,6 +6456,20 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                size:
+                  type: number
+                  description: 每页显示多少行，默认20
+                current:
+                  type: number
+                  description: 当前页，默认1
+              required:
+                - customerNo
             example:
               customerNo: '86002678'
               size: 20
@@ -6308,6 +6702,23 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: >-
+                    类型信息，baseInfo=基础信息，tradeAccount=交易账户，kyc=kyc信息，allKyc=详情页面kyc信息，bankList=银行卡列表,walletList=钱包地址，otherInfo=其他
+                id:
+                  type: string
+                  description: 客户id
+                customerNo:
+                  type: string
+                  description: 客户编号
+              required:
+                - type
+                - id
+                - customerNo
             example:
               type: tradeAccount
               id: '{{customerId}}'
@@ -6678,6 +7089,19 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                tradeType:
+                  description: 交易玩法
+                  type: integer
+              required:
+                - customerNo
+                - tradeType
             example:
               customerNo: '{{customerNo}}'
               tradeType: 1
@@ -6786,6 +7210,9 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties: {}
             example:
               tradeType: 5
               customerNo: '86000020'
@@ -6858,7 +7285,37 @@ paths:
             type: string
       requestBody:
         content:
-          application/json: {}
+          application/json:
+            schema:
+              type: object
+              properties:
+                bizType:
+                  type: string
+                  title: 业务类型
+                  description: >-
+                    EMAIL_COMMON_VERIFICATION_CODE-邮件通用验证码；
+                    EMAIL_LOGIN_VERIFICATION_CODE-邮件登录验证码；
+                    EMAIL_REGISTER_VERIFICATION_CODE-邮件注册验证码
+                    EMAIL_PASSWORD_VERIFICATION_CODE-邮件忘记密码验证码 
+                    SMS_COMMON_VERIFICATION_CODE-短信通用验证码；
+                    SMS_LOGIN_VERIFICATION_CODE-短信登录验证码；
+                    SMS_REGISTER_VERIFICATION_CODE-短信注册验证码
+                    SMS_PASSWORD_VERIFICATION_CODE-短信忘记密码验证码
+                toUser:
+                  type: string
+                  title: 接收人
+                code:
+                  type: string
+                  title: 验证码
+                sendToken:
+                  type: string
+                  title: 发送票据
+                  description: C端发送验证码接口返回token
+              required:
+                - bizType
+                - toUser
+                - code
+                - sendToken
       responses:
         '200':
           description: ''
@@ -6974,6 +7431,46 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                customerNo:
+                  type: string
+                  description: 客户编号
+                tradeType:
+                  description: 交易玩法
+                  type: integer
+                language:
+                  type: string
+                  description: 语种（zh-HK，en-US，zh-CN），根据实际填写即可
+                content:
+                  type: string
+                  description: 内容，长度未限制
+                title:
+                  type: string
+                  description: 标题，长度为100个字符
+                showType:
+                  type: integer
+                  description: 弹窗类型EnumShowType:0无动作,1弹窗
+                refreshType:
+                  type: integer
+                  description: 刷新类型EnumRefreshType:0无动作,1仓位,2挂单,3资金,4踢出,5挂单仓位,6挂单资金
+                customerId:
+                  type: integer
+                  description: 客户ID
+                companyId:
+                  type: integer
+                  description: 公司ID
+              required:
+                - customerNo
+                - tradeType
+                - showType
+                - title
+                - content
+                - language
+                - companyId
+                - customerId
             example: |-
               {
                   "customerNo": "{{customerNo}}",
@@ -7099,6 +7596,14 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                dealId:
+                  type: integer
+                  format: uint64
+              required:
+                - dealId
             example: ''
       responses:
         '200':
@@ -7249,6 +7754,20 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                orderId:
+                  type: integer
+                  format: uint64
+                  description: 订单id
+                tradeType:
+                  type: integer
+                  format: uint64
+                  description: 玩法类型
+              required:
+                - orderId
+                - tradeType
             example: ''
       responses:
         '200':
@@ -7389,6 +7908,29 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                tradeType:
+                  type: integer
+                  description: 交易玩法
+                customerNo:
+                  type: string
+                  description: 客户编号
+                customerId:
+                  type: integer
+                  description: 客户Id
+                customerGroupId:
+                  type: integer
+                  description: 客户组Id
+                trace:
+                  type: string
+                  description: 全局链路唯一标志
+              required:
+                - tradeType
+                - customerNo
+                - customerId
+                - customerGroupId
             example:
               tradeType: 1
               customerNo: '86000020'
@@ -7461,6 +8003,29 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                tradeType:
+                  type: integer
+                  description: 交易玩法
+                customerNo:
+                  type: string
+                  description: 客户编号
+                customerId:
+                  type: integer
+                  description: 客户Id
+                customerGroupId:
+                  type: integer
+                  description: 客户组Id
+                trace:
+                  type: string
+                  description: 全局链路唯一标志
+              required:
+                - tradeType
+                - customerNo
+                - customerId
+                - customerGroupId
             example:
               tradeType: 1
               customerNo: '86000020'
@@ -7533,6 +8098,65 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                customerId:
+                  type: string
+                customerGroupId:
+                  type: string
+                customerNo:
+                  type: string
+                tradeType:
+                  type: integer
+                  description: 玩法ID
+                accountId:
+                  type: number
+                  description: 账户ID
+                accountCurrency:
+                  type: string
+                  description: 账户货币
+                size:
+                  type: integer
+                  description: 每页条数
+                current:
+                  type: integer
+                  description: 当前页
+                businessType:
+                  type: number
+                  description: >-
+                    业务类型。0-不限制； CFD-全仓：
+                    1-存款；2-取款；3-系统清零；4-额度调整；5-冻结；6-交易；36-划转；42-奖励； CFD-逐仓：
+                    7-存款；8-取款；9-系统清零；10-额度调整；11-冻结；12-交易；13-调整保证金；37-划转；43-奖励；
+                    杠杆：
+                    14-存款；15-取款；16-额度调整；17-冻结；18-交易；19-自动借款；20-手动借款；21-自动还款；22-手动还款；23-借款利息；35-后台还款；38-划转；40-强平还款；44-奖励；
+                    ABCC：
+                    24-存款；25-取款；26-额度调整；27-冻结；28-交易；29-自动借款；30-手动借款；31-自动还款；32-手动还款；33-借款利息；34-后台还款；39-划转；41-强平还款；45-奖励；
+                    现货杠杆撮合： 50-存款；51-取款；52-额度调整；53-冻结；54-交易；55-划转；59-奖励； 股票：
+                    601-存款；602-取款；603-额度调整；604-冻结；605-担保品；606-交易；607-借款；608-还款；609-划转；610-利息计算；611-利息结算；612-奖励；613-系统清零；614-公司行动
+                status:
+                  type: integer
+                  description: 状态。0-不限制；1-初始化；2-处理成功；3-处理失败；
+                startTime:
+                  type: number
+                  description: 开始时间。13位时间戳；以当天往前推7天
+                endTime:
+                  type: number
+                  description: 结束时间。13位时间戳；一般为当天
+                operate:
+                  type: integer
+                  description: 流向。0-不限制；1.增加，2.减少；
+                assetsId:
+                  type: number
+                  description: 资产Id；
+                lang:
+                  type: string
+                  description: 语种（zh_CN-中文；en_US-英文。不填或者填错默认中文）；
+              required:
+                - tradeType
+                - customerNo
+                - customerGroupId
+                - customerId
             example:
               tradeType: 5
               customerNo: '86000020'
@@ -7746,6 +8370,55 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                tradeType:
+                  type: integer
+                  description: 玩法ID;只有玩法1、2、6才有持仓
+                customerGroupId:
+                  type: integer
+                  format: long
+                  description: 客户组Id
+                customerId:
+                  type: integer
+                  description: 客户ID
+                  format: long
+                customerNo:
+                  type: string
+                  description: 客户编号
+                accountId:
+                  type: number
+                  description: 账户ID
+                symbolId:
+                  type: number
+                  description: 产品ID
+                sortFieldName:
+                  type: string
+                  description: 排序字段名。orderId-订单Id；openTime-执行时间；symbolId-产品Id；pnl-盈亏；
+                sortType:
+                  type: string
+                  description: 排序方式。asc-升序；desc-降序；（默认desc）
+                size:
+                  type: integer
+                  format: long
+                  description: 每页数据数。默认20
+                current:
+                  type: integer
+                  format: long
+                  description: 当前页。默认1
+                querySource:
+                  type: string
+                  title: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
+              required:
+                - tradeType
+                - customerId
+                - customerGroupId
             example:
               tradeType: 1
               customerId: '22441'
@@ -8064,7 +8737,73 @@ paths:
             type: string
       requestBody:
         content:
-          application/json: {}
+          application/json:
+            schema:
+              type: object
+              properties:
+                tradeType:
+                  type: integer
+                  description: 玩法ID。1-全仓合约；2-逐仓合约；
+                customerGroupId:
+                  type: integer
+                  format: long
+                  description: 客户组Id
+                customerId:
+                  type: integer
+                  description: 客户ID
+                  format: long
+                customerNo:
+                  type: string
+                  description: 客户编号
+                accountId:
+                  type: integer
+                  description: 账户ID
+                  format: long
+                symbolId:
+                  type: integer
+                  description: 产品ID
+                  format: long
+                orderId:
+                  type: integer
+                  format: long
+                  description: 订单ID
+                direction:
+                  type: integer
+                  format: int32
+                  description: 买卖方向。1-买；2-卖；不传时查全部，传其他值无数据
+                startTime:
+                  type: integer
+                  format: long
+                  description: 开仓时间-起始。（13位时间戳，包含本身）
+                endTime:
+                  type: integer
+                  format: long
+                  description: 开仓时间-结束。（13位时间戳，包含本身）
+                sortFieldName:
+                  type: string
+                  description: >-
+                    排序字段名。id-持仓单号；orderId-订单Id；openTime-执行时间；symbolId-产品Id；（默认id）
+                sortType:
+                  type: string
+                  description: 排序方式。asc-升序；desc-降序；（默认desc）
+                size:
+                  type: integer
+                  format: long
+                  description: 每页数据数。默认20
+                current:
+                  type: integer
+                  format: long
+                  description: 当前页。默认1
+                querySource:
+                  type: string
+                  title: 订单来源
+                  description: >-
+                    H5：移动端web；PC_Web：pcweb；System：系统；Android：安卓原生app；iOS：苹果原生app；HOS：鸿蒙OS；PC_Win：pcwindows客户端；PC_Mac：pcmac客户端；默认同登录来源。（枚举仅供参考）
+                thirdPartyOrder:
+                  type: string
+                  title: 三方订单标识
+              required:
+                - tradeType
       responses:
         '200':
           description: ''
@@ -9275,6 +10014,40 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                trace:
+                  type: string
+                data:
+                  type: object
+                  properties:
+                    data_list:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                          kline_type:
+                            type: integer
+                          kline_timestamp_end:
+                            type: integer
+                          query_kline_num:
+                            type: integer
+                          adjust_type:
+                            type: integer
+                        required:
+                          - code
+                          - kline_type
+                          - kline_timestamp_end
+                          - query_kline_num
+                          - adjust_type
+                  required:
+                    - data_list
+              required:
+                - trace
+                - data
             example:
               trace: '{{mock_trace}}'
               data:
@@ -9511,6 +10284,40 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+              properties:
+                trace:
+                  type: string
+                data:
+                  type: object
+                  properties:
+                    data_list:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                          kline_type:
+                            type: integer
+                          kline_timestamp_end:
+                            type: integer
+                          query_kline_num:
+                            type: integer
+                          adjust_type:
+                            type: integer
+                        required:
+                          - code
+                          - kline_type
+                          - kline_timestamp_end
+                          - query_kline_num
+                          - adjust_type
+                  required:
+                    - data_list
+              required:
+                - trace
+                - data
             example:
               trace: '{{mock_trace}}'
               data:
