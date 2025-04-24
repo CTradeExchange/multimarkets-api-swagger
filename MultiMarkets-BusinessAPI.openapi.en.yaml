@@ -2428,6 +2428,190 @@ paths:
                     ok: true
           headers: {}
       security: []
+  /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
+    post:
+      summary: Single Customer Cancel pending order
+      deprecated: false
+      description: bizType=tradeapi.admin.OrderAdminApiService.cancelPboOrder
+      tags:
+        - Trade
+      parameters:
+        - name: token
+          in: header
+          description: ''
+          required: true
+          example: '{{auto_token}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: true
+          example: 0.0.1
+          schema:
+            type: string
+        - name: group
+          in: header
+          description: ''
+          required: true
+          example: tradeApi
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: true
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                tradeType:
+                  description: 'Trading method: contract full position is 1'
+                  type: integer
+                customerNo:
+                  type: string
+                  description: Customer Number
+                customerId:
+                  description: Customer Id
+                  type: integer
+                customerGroupId:
+                  description: Customer group Id
+                  type: integer
+              required:
+                - tradeType
+                - customerNo
+                - customerId
+                - customerGroupId
+            example:
+              tradeType: 1
+              customerNo: '86000188'
+              customerId: 189
+              customerGroupId: 1
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema: &ref_0
+                $ref: '#/components/schemas/BaseResult'
+              example:
+                msg: Success
+                fail: false
+                trace: t-jgl2h-s5ndh-338f8-5bdi0al-1660127057
+                code: '0'
+                data:
+                  - CATS:PROORDER:1_1557311743581831168
+                bizCode: ''
+                tm: 349
+                msgParams: null
+                ok: true
+          headers: {}
+      security: []
+  /tradeapi.admin.OrderAdminApiService.forcedOrder:
+    post:
+      summary: Single Customer closing position
+      deprecated: false
+      description: bizType=tradeapi.admin.OrderAdminApiService.forcedOrder
+      tags:
+        - Trade
+      parameters:
+        - name: token
+          in: header
+          description: ''
+          required: true
+          example: '{{auto_token}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: true
+          example: 0.0.1
+          schema:
+            type: string
+        - name: group
+          in: header
+          description: ''
+          required: true
+          example: tradeApi
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: true
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: ''
+              type: object
+              properties:
+                tradeType:
+                  description: Trading gameplay
+                  type: integer
+                customerNo:
+                  type: string
+                  description: Customer Number
+                customerId:
+                  description: Customer ID
+                  type: integer
+                customerGroupId:
+                  description: Customer group number
+                  type: integer
+              required:
+                - tradeType
+                - customerNo
+                - customerId
+                - customerGroupId
+            example:
+              tradeType: 1
+              customerNo: '86000188'
+              customerId: 189
+              customerGroupId: 1
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema: *ref_0
+              example:
+                msg: Success
+                fail: false
+                trace: t-s5h66nh-c4727g1-hbkt0rxn-189w-1660127124
+                code: '0'
+                data:
+                  tradeVolume: '1.0'
+                  symbolId: 2
+                  orderId: 116130
+                  fee: '-16.980600'
+                  openOrClose: 2
+                  openPrice: '1697.01'
+                  takeProfit: null
+                  positionId: 2022081000376
+                  interest: '0.000000'
+                  openDirection: 1
+                  stopLoss: null
+                  executePrice: '1698.06'
+                  digits: 2
+                  symbolName: ETH/USDT
+                  profit: '-1.050000'
+                  direction: 1
+                bizCode: ''
+                tm: 295
+                msgParams: null
+                ok: true
+          headers: {}
+      security: []
   /tradeapi.admin.OrderAdminApiService.queryCapitalFlowList:
     post:
       summary: Funds detail query
@@ -3906,190 +4090,6 @@ paths:
                       status: '1'
                 bizCode: C
                 tm: 414
-                msgParams: null
-                ok: true
-          headers: {}
-      security: []
-  /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
-    post:
-      summary: Single Customer Cancel pending order
-      deprecated: false
-      description: bizType=tradeapi.admin.OrderAdminApiService.cancelPboOrder
-      tags:
-        - Trade
-      parameters:
-        - name: token
-          in: header
-          description: ''
-          required: true
-          example: '{{auto_token}}'
-          schema:
-            type: string
-        - name: version
-          in: header
-          description: ''
-          required: true
-          example: 0.0.1
-          schema:
-            type: string
-        - name: group
-          in: header
-          description: ''
-          required: true
-          example: tradeApi
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: true
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              title: ''
-              type: object
-              properties:
-                tradeType:
-                  description: 'Trading method: contract full position is 1'
-                  type: integer
-                customerNo:
-                  type: string
-                  description: Customer Number
-                customerId:
-                  description: Customer Id
-                  type: integer
-                customerGroupId:
-                  description: Customer group Id
-                  type: integer
-              required:
-                - tradeType
-                - customerNo
-                - customerId
-                - customerGroupId
-            example:
-              tradeType: 1
-              customerNo: '86000188'
-              customerId: 189
-              customerGroupId: 1
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema: &ref_0
-                $ref: '#/components/schemas/BaseResult'
-              example:
-                msg: Success
-                fail: false
-                trace: t-jgl2h-s5ndh-338f8-5bdi0al-1660127057
-                code: '0'
-                data:
-                  - CATS:PROORDER:1_1557311743581831168
-                bizCode: ''
-                tm: 349
-                msgParams: null
-                ok: true
-          headers: {}
-      security: []
-  /tradeapi.admin.OrderAdminApiService.forcedOrder:
-    post:
-      summary: Single Customer closing position
-      deprecated: false
-      description: bizType=tradeapi.admin.OrderAdminApiService.forcedOrder
-      tags:
-        - Trade
-      parameters:
-        - name: token
-          in: header
-          description: ''
-          required: true
-          example: '{{auto_token}}'
-          schema:
-            type: string
-        - name: version
-          in: header
-          description: ''
-          required: true
-          example: 0.0.1
-          schema:
-            type: string
-        - name: group
-          in: header
-          description: ''
-          required: true
-          example: tradeApi
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: true
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              title: ''
-              type: object
-              properties:
-                tradeType:
-                  description: Trading gameplay
-                  type: integer
-                customerNo:
-                  type: string
-                  description: Customer Number
-                customerId:
-                  description: Customer ID
-                  type: integer
-                customerGroupId:
-                  description: Customer group number
-                  type: integer
-              required:
-                - tradeType
-                - customerNo
-                - customerId
-                - customerGroupId
-            example:
-              tradeType: 1
-              customerNo: '86000188'
-              customerId: 189
-              customerGroupId: 1
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema: *ref_0
-              example:
-                msg: Success
-                fail: false
-                trace: t-s5h66nh-c4727g1-hbkt0rxn-189w-1660127124
-                code: '0'
-                data:
-                  tradeVolume: '1.0'
-                  symbolId: 2
-                  orderId: 116130
-                  fee: '-16.980600'
-                  openOrClose: 2
-                  openPrice: '1697.01'
-                  takeProfit: null
-                  positionId: 2022081000376
-                  interest: '0.000000'
-                  openDirection: 1
-                  stopLoss: null
-                  executePrice: '1698.06'
-                  digits: 2
-                  symbolName: ETH/USDT
-                  profit: '-1.050000'
-                  direction: 1
-                bizCode: ''
-                tm: 295
                 msgParams: null
                 ok: true
           headers: {}
