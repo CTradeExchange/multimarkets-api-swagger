@@ -14316,6 +14316,134 @@ paths:
                     ok: false
           headers: {}
       security: []
+  /global/customer.app.CustomerApiWebService.downgrade:
+    post:
+      summary: Downgrade API
+      deprecated: false
+      description: |-
+        version=0.0.1
+        bizType=customer.app.CustomerApiWebService.downgrade
+        Accessible after login
+      operationId: applyApi
+      tags:
+        - Customer/Open API
+      parameters:
+        - name: companyId
+          in: header
+          description: ''
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: ''
+          required: false
+          example: '{{LoginResult.data.token}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: ''
+          required: false
+          example: en-US
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: ''
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: ''
+          required: false
+          example: 0.0.1
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                apiKey:
+                  type: string
+                  description: Customer ApiKey
+                tag:
+                  type: string
+                  description: API tags
+                times:
+                  type: string
+                  description: >-
+                    Type of package duration. month－month; year－year;
+                    quarter－one season; half－six months;
+              required:
+                - apiKey
+                - tag
+                - times
+            example: ''
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema: *ref_8
+              example:
+                msg: Success
+                fail: false
+                trace: x-8e544ed3-057a-48ed-ade2-27d3998f7411-1677654224398
+                code: '0'
+                data:
+                  customerGroupId: null
+                  sources: null
+                  apiKey: 47b471e57c394e8fbc18535805e04016
+                  updateTime: 1677654224184
+                  expiredTime: 1685430224184
+                  privateKey: >-
+                    MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKvivs7OSD2kYMGjDoOQ6ATsnLV7GMZgJUtDW5N4RS+ZEG/unVSgbBxfVRYvJ3TQ7/bmf24Brs+dqEhWrlXHgdxe2ieQ4IBZb94jScUW2GWBlpz1ULCB1UIYF0sp6fzfadgeCkJrEdtC5xcp0dbg6KzAJOT2Qg6fuELt6M6PQsQlAgMBAAECgYA96ixfJDEjey2bMpgMzkq1U2HTgWbYNlPYu4emJEGPtqwUFbi4fhzTT4e/uPaWfpihsD+gqZyFjr3KaObdYUMmPX2gNVn1qtcTICF4Y0MPFhaGIb8hUzi/xJpOUYinOFzZpE3bt1EUvIlIvDzdqDKD6gEs6kh2ana2JPXzZAZiwQJBAOZ3PbrqDNM239/TvD2yzG6Z35thInH1P4ziShn3saOwU5vNYRt4ArfgNYUnjrlSFOYxAtkxr2GCOIUdfiYwd1UCQQC+7fu1FMWFEKnyg2DR0nkaj461EWNgEUD1nCUDP4d71ccUcf6399faatc3XAqzG7+XApxQpVp+eQIS3QefyHmRAkAJGdRaOTvga15T3GymkxT3mSP3YtKVZXXo/lamx90/9YqXsHiROSACWtxCMdm0/8TLgkv2f7vJQfcxaoS8xVUxAkAQbNzImT7c0bAtIsxDgL3WYR8/yH0qGJHkD0jH3MFFEAEOazgkj3fMXICjTJHHEs4KqbjU30THuJVLFiS/xDlhAkA4L4sl3aFVDFo0CUFjSMxFquaYe8QeS8t1eBpUR7PSJcKS80jKrHk4s8SOSf9/yuU/Kbnki4rUTXpR5fSscOqC
+                  whiteIps: null
+                  companyId: 368
+                  createTime: 1677654224184
+                  customerId: 117
+                  ipLimit: false
+                  tag: '2343'
+                  withdrawTime: 1677827024184
+                  secretKeyMd5: 95cfcea9ef853cd519d65858ddc01dfe
+                  id: 3
+                  permissionDTOList:
+                    - code: ready_only
+                      paths: null
+                      canEdit: false
+                      name: Read
+                      status: 1
+                    - code: trade
+                      paths: null
+                      canEdit: true
+                      name: Spot Trade
+                      status: 2
+                    - code: contract_trade
+                      paths: null
+                      canEdit: true
+                      name: Contract Trade
+                      status: 2
+                    - code: captial_out
+                      paths: null
+                      canEdit: true
+                      name: Withdraw
+                      status: 2
+                  customerNo: '86000116'
+                  validityDays: 90
+                  pubKey: >-
+                    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr4r7Ozkg9pGDBow6DkOgE7Jy1exjGYCVLQ1uTeEUvmRBv7p1UoGwcX1UWLyd00O/25n9uAa7PnahIVq5Vx4HcXtonkOCAWW/eI0nFFthlgZac9VCwgdVCGBdLKen832nYHgpCaxHbQucXKdHW4OiswCTk9kIOn7hC7ejOj0LEJQIDAQAB
+                bizCode: ''
+                tm: 87948437
+                msgParams: null
+                ok: true
+          headers: {}
+      security: []
   /global/customer.app.CustomerApiWebService.applyApi:
     post:
       summary: Apply API
@@ -14397,134 +14525,6 @@ paths:
                     be passed when not empty
               required:
                 - tag
-            example: ''
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema: *ref_8
-              example:
-                msg: Success
-                fail: false
-                trace: x-8e544ed3-057a-48ed-ade2-27d3998f7411-1677654224398
-                code: '0'
-                data:
-                  customerGroupId: null
-                  sources: null
-                  apiKey: 47b471e57c394e8fbc18535805e04016
-                  updateTime: 1677654224184
-                  expiredTime: 1685430224184
-                  privateKey: >-
-                    MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKvivs7OSD2kYMGjDoOQ6ATsnLV7GMZgJUtDW5N4RS+ZEG/unVSgbBxfVRYvJ3TQ7/bmf24Brs+dqEhWrlXHgdxe2ieQ4IBZb94jScUW2GWBlpz1ULCB1UIYF0sp6fzfadgeCkJrEdtC5xcp0dbg6KzAJOT2Qg6fuELt6M6PQsQlAgMBAAECgYA96ixfJDEjey2bMpgMzkq1U2HTgWbYNlPYu4emJEGPtqwUFbi4fhzTT4e/uPaWfpihsD+gqZyFjr3KaObdYUMmPX2gNVn1qtcTICF4Y0MPFhaGIb8hUzi/xJpOUYinOFzZpE3bt1EUvIlIvDzdqDKD6gEs6kh2ana2JPXzZAZiwQJBAOZ3PbrqDNM239/TvD2yzG6Z35thInH1P4ziShn3saOwU5vNYRt4ArfgNYUnjrlSFOYxAtkxr2GCOIUdfiYwd1UCQQC+7fu1FMWFEKnyg2DR0nkaj461EWNgEUD1nCUDP4d71ccUcf6399faatc3XAqzG7+XApxQpVp+eQIS3QefyHmRAkAJGdRaOTvga15T3GymkxT3mSP3YtKVZXXo/lamx90/9YqXsHiROSACWtxCMdm0/8TLgkv2f7vJQfcxaoS8xVUxAkAQbNzImT7c0bAtIsxDgL3WYR8/yH0qGJHkD0jH3MFFEAEOazgkj3fMXICjTJHHEs4KqbjU30THuJVLFiS/xDlhAkA4L4sl3aFVDFo0CUFjSMxFquaYe8QeS8t1eBpUR7PSJcKS80jKrHk4s8SOSf9/yuU/Kbnki4rUTXpR5fSscOqC
-                  whiteIps: null
-                  companyId: 368
-                  createTime: 1677654224184
-                  customerId: 117
-                  ipLimit: false
-                  tag: '2343'
-                  withdrawTime: 1677827024184
-                  secretKeyMd5: 95cfcea9ef853cd519d65858ddc01dfe
-                  id: 3
-                  permissionDTOList:
-                    - code: ready_only
-                      paths: null
-                      canEdit: false
-                      name: Read
-                      status: 1
-                    - code: trade
-                      paths: null
-                      canEdit: true
-                      name: Spot Trade
-                      status: 2
-                    - code: contract_trade
-                      paths: null
-                      canEdit: true
-                      name: Contract Trade
-                      status: 2
-                    - code: captial_out
-                      paths: null
-                      canEdit: true
-                      name: Withdraw
-                      status: 2
-                  customerNo: '86000116'
-                  validityDays: 90
-                  pubKey: >-
-                    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr4r7Ozkg9pGDBow6DkOgE7Jy1exjGYCVLQ1uTeEUvmRBv7p1UoGwcX1UWLyd00O/25n9uAa7PnahIVq5Vx4HcXtonkOCAWW/eI0nFFthlgZac9VCwgdVCGBdLKen832nYHgpCaxHbQucXKdHW4OiswCTk9kIOn7hC7ejOj0LEJQIDAQAB
-                bizCode: ''
-                tm: 87948437
-                msgParams: null
-                ok: true
-          headers: {}
-      security: []
-  /global/customer.app.CustomerApiWebService.downgrade:
-    post:
-      summary: Downgrade API
-      deprecated: false
-      description: |-
-        version=0.0.1
-        bizType=customer.app.CustomerApiWebService.downgrade
-        Accessible after login
-      operationId: applyApi
-      tags:
-        - Customer/Open API
-      parameters:
-        - name: companyId
-          in: header
-          description: ''
-          required: false
-          example: '{{company}}'
-          schema:
-            type: string
-        - name: token
-          in: header
-          description: ''
-          required: false
-          example: '{{LoginResult.data.token}}'
-          schema:
-            type: string
-        - name: lang
-          in: header
-          description: ''
-          required: false
-          example: en-US
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: ''
-          required: false
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-        - name: version
-          in: header
-          description: ''
-          required: false
-          example: 0.0.1
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                apiKey:
-                  type: string
-                  description: Customer ApiKey
-                tag:
-                  type: string
-                  description: API tags
-                times:
-                  type: string
-                  description: >-
-                    Type of package duration. month－month; year－year;
-                    quarter－one season; half－six months;
-              required:
-                - apiKey
-                - tag
-                - times
             example: ''
       responses:
         '200':
@@ -16613,111 +16613,6 @@ paths:
                 ok: true
           headers: {}
       security: []
-  /global/getMsgPushToken:
-    post:
-      summary: get Msg Token
-      deprecated: false
-      description: >-
-        This interface is used by customers to access OpenAPI and apply for the
-        authentication token for message subscription when they need to
-        subscribe to account, position, and transaction push messages.
-      tags:
-        - Message
-      parameters:
-        - name: companyId
-          in: header
-          description: company id
-          required: false
-          example: '{{company}}'
-          schema:
-            type: string
-        - name: trace
-          in: header
-          description: Trace
-          required: false
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-        - name: lang
-          in: header
-          description: language
-          required: false
-          example: zh-CN
-          schema:
-            type: string
-        - name: recvWindow
-          in: header
-          description: Time window
-          required: false
-          example: '5000'
-          schema:
-            type: string
-        - name: apiKey
-          in: header
-          description: apiKey
-          required: false
-          example: '{{apikey}}'
-          schema:
-            type: string
-        - name: signature
-          in: header
-          description: signature
-          required: false
-          example: '{{sign}}'
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-            example: {}
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  bizCode:
-                    type: string
-                    title: Module identifier code
-                    description: Module identifier code
-                  code:
-                    type: string
-                    title: Status return code
-                    description: Status return code
-                  msg:
-                    type: string
-                    title: Status description
-                    description: Status description
-                  tm:
-                    type: integer
-                    format: int64
-                    title: Processing time (milliseconds)
-                    description: Processing time (milliseconds)
-                  trace:
-                    type: string
-                    title: Tracking code
-                    description: Tracking code
-                  data:
-                    type: string
-                    description: Msg Token
-                required:
-                  - data
-              example:
-                msg: Success
-                fail: false
-                trace: ''
-                code: '0'
-                data: 6230de2c-281a-47fe-9d5d-b5f6ac60f482push
-                bizCode: ''
-                tm: 0
-                ok: true
-          headers: {}
-      security: []
   /global/message.app.VerificationApiService.verifyCodeCheck:
     post:
       summary: Verify verification code
@@ -18126,6 +18021,111 @@ paths:
                     type: string
                     title: Tracking code
                     description: Tracking code
+          headers: {}
+      security: []
+  /global/getMsgPushToken:
+    post:
+      summary: get Msg Token
+      deprecated: false
+      description: >-
+        This interface is used by customers to access OpenAPI and apply for the
+        authentication token for message subscription when they need to
+        subscribe to account, position, and transaction push messages.
+      tags:
+        - Message
+      parameters:
+        - name: companyId
+          in: header
+          description: company id
+          required: false
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: trace
+          in: header
+          description: Trace
+          required: false
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: lang
+          in: header
+          description: language
+          required: false
+          example: zh-CN
+          schema:
+            type: string
+        - name: recvWindow
+          in: header
+          description: Time window
+          required: false
+          example: '5000'
+          schema:
+            type: string
+        - name: apiKey
+          in: header
+          description: apiKey
+          required: false
+          example: '{{apikey}}'
+          schema:
+            type: string
+        - name: signature
+          in: header
+          description: signature
+          required: false
+          example: '{{sign}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bizCode:
+                    type: string
+                    title: Module identifier code
+                    description: Module identifier code
+                  code:
+                    type: string
+                    title: Status return code
+                    description: Status return code
+                  msg:
+                    type: string
+                    title: Status description
+                    description: Status description
+                  tm:
+                    type: integer
+                    format: int64
+                    title: Processing time (milliseconds)
+                    description: Processing time (milliseconds)
+                  trace:
+                    type: string
+                    title: Tracking code
+                    description: Tracking code
+                  data:
+                    type: string
+                    description: Msg Token
+                required:
+                  - data
+              example:
+                msg: Success
+                fail: false
+                trace: ''
+                code: '0'
+                data: 6230de2c-281a-47fe-9d5d-b5f6ac60f482push
+                bizCode: ''
+                tm: 0
+                ok: true
           headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.addMarketOrder:
