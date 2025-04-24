@@ -470,6 +470,1712 @@ paths:
                 ok: true
           headers: {}
       security: []
+  /config.admin.AdminDictDubboService.getCountryListByParentCode:
+    post:
+      summary: 获取国家字典列表
+      deprecated: false
+      description: bizType=config.admin.AdminDictDubboService.getListByParentCode
+      tags:
+        - 基础数据相关
+      parameters:
+        - name: trace
+          in: header
+          description: 全局链路唯一标志
+          required: true
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: companyId
+          in: header
+          description: 公司ID
+          required: true
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: B端认证鉴权返回token
+          required: false
+          example: '{{auto_token}}'
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                parentCode:
+                  type: string
+                  description: 字典code，-1代表全部国家
+              required:
+                - parentCode
+            example:
+              parentCode: '-1'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bizCode:
+                    type: string
+                    description: 模块标识码
+                  code:
+                    type: string
+                    description: 状态返回码
+                  msg:
+                    type: string
+                    description: 状态描述
+                  tm:
+                    type: integer
+                    format: int64
+                    description: 处理时长（毫秒）
+                  trace:
+                    type: string
+                    description: 跟踪码
+                  msgParams:
+                    type: string
+                    description: 返回描述中占位符参数串，多个参数间以,分割
+                  data:
+                    type: array
+                    description: 数据体
+                    items:
+                      type: object
+                      properties:
+                        parentId:
+                          type: integer
+                          format: int64
+                          description: 上级ID
+                        id:
+                          type: integer
+                          format: int64
+                          description: 主键id
+                        name:
+                          type: string
+                          description: 国家地区名称
+                        displayName:
+                          type: string
+                          description: 显示名称（前端显示）
+                        code:
+                          type: string
+                          description: 国家代码
+                        parentCode:
+                          type: string
+                          description: 上级代码
+                        nationalCode:
+                          type: string
+                          description: 国家简称
+                        countryCode:
+                          type: string
+                          description: 国家区号
+                        extend:
+                          type: string
+                          description: 扩展属性
+                        sort:
+                          type: integer
+                          format: int32
+                          description: 排序
+                        status:
+                          type: integer
+                          format: int32
+                          description: 状态 1、2、3、启用、禁用、删除
+                        createTime:
+                          type: integer
+                          format: int64
+                          description: 创建时间
+                        updateTime:
+                          type: integer
+                          format: int64
+                          description: 更新时间
+                        hasLeaf:
+                          type: integer
+                          format: int32
+                          description: 是否有子节点
+                        childs:
+                          type: array
+                          description: 子节点数据
+                          items:
+                            type: object
+                            properties: {}
+                  ok:
+                    type: boolean
+                  fail:
+                    type: boolean
+              example:
+                msg: Success
+                fail: false
+                trace: t-05hj-knr4r-4w37wl-w1gpg83-1668756938
+                code: '0'
+                data:
+                  - nationalCode: AF
+                    code: AF
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Afghanistan
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 阿富汗
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+93'
+                    name: 阿富汗
+                    id: 2
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: AR
+                    code: AR
+                    displayName: null
+                    updateTime: 1618881547738
+                    sort: 1
+                    nameEn: Argentina
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 阿根廷
+                    createBy: admin
+                    createTime: 1618881547738
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+54'
+                    name: 阿根廷
+                    id: 9
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: AU
+                    code: AU
+                    displayName: null
+                    updateTime: 1618881547743
+                    sort: 1
+                    nameEn: Australia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 澳大利亚
+                    createBy: admin
+                    createTime: 1618881547743
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+61'
+                    name: 澳大利亚
+                    id: 14
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: BE
+                    code: BE
+                    displayName: null
+                    updateTime: 1618881547747
+                    sort: 1
+                    nameEn: Belgium
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 比利时
+                    createBy: admin
+                    createTime: 1618881547747
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+32'
+                    name: 比利时
+                    id: 18
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: BG
+                    code: BG
+                    displayName: null
+                    updateTime: 1618881547752
+                    sort: 1
+                    nameEn: Bulgaria
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 保加利亚
+                    createBy: admin
+                    createTime: 1618881547752
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+359'
+                    name: 保加利亚
+                    id: 23
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: BR
+                    code: BR
+                    displayName: null
+                    updateTime: 1618881547761
+                    sort: 1
+                    nameEn: Brazil
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 巴西
+                    createBy: admin
+                    createTime: 1618881547761
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+55'
+                    name: 巴西
+                    id: 32
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CA
+                    code: CA
+                    displayName: null
+                    updateTime: 1618881547768
+                    sort: 1
+                    nameEn: Canada
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 加拿大
+                    createBy: admin
+                    createTime: 1618881547768
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+1'
+                    name: 加拿大
+                    id: 39
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CH
+                    code: CH
+                    displayName: null
+                    updateTime: 1618881547770
+                    sort: 1
+                    nameEn: Switzerland
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 瑞士
+                    createBy: admin
+                    createTime: 1618881547770
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+41'
+                    name: 瑞士
+                    id: 41
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CL
+                    code: CL
+                    displayName: null
+                    updateTime: 1618881547771
+                    sort: 1
+                    nameEn: Chile
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 智利
+                    createBy: admin
+                    createTime: 1618881547771
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+56'
+                    name: 智利
+                    id: 42
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CN
+                    code: CN
+                    displayName: null
+                    updateTime: 1660182621760
+                    sort: 1
+                    nameEn: Côte dIvoire
+                    childs: null
+                    parentId: 0
+                    revision: 7
+                    extend: ^[1]([3-9])[0-9]{9}$
+                    nameTw: 中國
+                    createBy: admin
+                    createTime: 1618881547772
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+86'
+                    name: 中国
+                    id: 43
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CG
+                    code: CG
+                    displayName: null
+                    updateTime: 1618881547776
+                    sort: 1
+                    nameEn: Republic of the Congo
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 刚果共和国
+                    createBy: admin
+                    createTime: 1618881547776
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+242'
+                    name: 刚果共和国
+                    id: 47
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CO
+                    code: CO
+                    displayName: null
+                    updateTime: 1618881547778
+                    sort: 1
+                    nameEn: Colombia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 哥伦比亚
+                    createBy: admin
+                    createTime: 1618881547778
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+57'
+                    name: 哥伦比亚
+                    id: 49
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CR
+                    code: CR
+                    displayName: null
+                    updateTime: 1618881547781
+                    sort: 1
+                    nameEn: Costa Rica
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 哥斯达黎加
+                    createBy: admin
+                    createTime: 1618881547781
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+506'
+                    name: 哥斯达黎加
+                    id: 52
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: CU
+                    code: CU
+                    displayName: null
+                    updateTime: 1618881547782
+                    sort: 1
+                    nameEn: Cuba
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 古巴
+                    createBy: admin
+                    createTime: 1618881547782
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+53'
+                    name: 古巴
+                    id: 53
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: IN
+                    code: IN
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: India
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 印度
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+91'
+                    name: 印度
+                    id: 43710
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: JP
+                    code: JP
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Japan
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 日本
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+81'
+                    name: 日本
+                    id: 43711
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: SA
+                    code: SA
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Saudi Arabia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 沙特阿拉伯
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+966'
+                    name: 沙特阿拉伯
+                    id: 43712
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: KR
+                    code: KR
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Korea
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 韩国
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+82'
+                    name: 韩国
+                    id: 43713
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: KP
+                    code: KP
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: North Korea
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 朝鲜
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+850'
+                    name: 朝鲜
+                    id: 43714
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: PH
+                    code: PH
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Philippines
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 菲律宾
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+63'
+                    name: 菲律宾
+                    id: 43715
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: SG
+                    code: SG
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Singapore
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 新加坡
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+65'
+                    name: 新加坡
+                    id: 43716
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: KZ
+                    code: KZ
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Kazakstan
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 哈萨克斯坦
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+327'
+                    name: 哈萨克斯坦
+                    id: 43717
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: ID
+                    code: ID
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Indonesia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 印度尼西亚
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+62'
+                    name: 印度尼西亚
+                    id: 43718
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: IQ
+                    code: IQ
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Iraq
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 伊拉克
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+964'
+                    name: 伊拉克
+                    id: 43719
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: PK
+                    code: PK
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Pakistan
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 巴基斯坦
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+92'
+                    name: 巴基斯坦
+                    id: 43720
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: TR
+                    code: TR
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Turkey
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 土耳其
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+90'
+                    name: 土耳其
+                    id: 43721
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: RU
+                    code: RU
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Russia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 俄罗斯
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+7'
+                    name: 俄罗斯
+                    id: 43722
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: GB
+                    code: GB
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: United Kingdom
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 英国
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+44'
+                    name: 英国
+                    id: 43723
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: FR
+                    code: FR
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: France
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 法国
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+33'
+                    name: 法国
+                    id: 43724
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: DE
+                    code: DE
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Germany
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 德国
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+49'
+                    name: 德国
+                    id: 43725
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: IT
+                    code: IT
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Italy
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 意大利
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+39'
+                    name: 意大利
+                    id: 43726
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: 'NO'
+                    code: 'NO'
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Norway
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 挪威
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+47'
+                    name: 挪威
+                    id: 43727
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: IS
+                    code: IS
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Iceland
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 冰岛
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+354'
+                    name: 冰岛
+                    id: 43728
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: DK
+                    code: DK
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Denmark
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 丹麦
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+45'
+                    name: 丹麦
+                    id: 43729
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: UA
+                    code: UA
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Ukraine
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 乌克兰
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+380'
+                    name: 乌克兰
+                    id: 43730
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: PL
+                    code: PL
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Poland
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 波兰
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+48'
+                    name: 波兰
+                    id: 43731
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: NL
+                    code: NL
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Netherlands
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 荷兰
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+31'
+                    name: 荷兰
+                    id: 43732
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: GR
+                    code: GR
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Greece
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 希腊
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+30'
+                    name: 希腊
+                    id: 43733
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: ES
+                    code: ES
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Spain
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 西班牙
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+34'
+                    name: 西班牙
+                    id: 43734
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: PT
+                    code: PT
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Portugal
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 葡萄牙
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+351'
+                    name: 葡萄牙
+                    id: 43735
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: EG
+                    code: EG
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Egypt
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 埃及
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+20'
+                    name: 埃及
+                    id: 43736
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: ZA
+                    code: ZA
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: South Africa
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 南非
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+27'
+                    name: 南非
+                    id: 43737
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: ET
+                    code: ET
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Ethiopia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 埃塞俄比亚
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+251'
+                    name: 埃塞俄比亚
+                    id: 43738
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: ZW
+                    code: ZW
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Zimbabwe
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 津巴布韦
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+263'
+                    name: 津巴布韦
+                    id: 43739
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: MG
+                    code: MG
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Madagascar
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 马达加斯加
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+261'
+                    name: 马达加斯加
+                    id: 43740
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: NZ
+                    code: NZ
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: New Zealand
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 新西兰
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+64'
+                    name: 新西兰
+                    id: 43741
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: PG
+                    code: PG
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Papua New Cuinea
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 巴布亚新几内亚
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+675'
+                    name: 巴布亚新几内亚
+                    id: 43742
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: US
+                    code: US
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: United States of America
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 美国
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+1'
+                    name: 美国
+                    id: 43743
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: MX
+                    code: MX
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Mexico
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 墨西哥
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+52'
+                    name: 墨西哥
+                    id: 43744
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: JM
+                    code: JM
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Jamaica
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 牙买加
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+1876'
+                    name: 牙买加
+                    id: 43745
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: PE
+                    code: PE
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Peru
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 秘鲁
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+51'
+                    name: 秘鲁
+                    id: 43746
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: TH
+                    code: TH
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Thailand
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 泰国
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+66'
+                    name: 泰国
+                    id: 43747
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: SE
+                    code: SE
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Sweden
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 瑞典
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+46'
+                    name: 瑞典
+                    id: 43748
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: NP
+                    code: NP
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Nepal
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 尼泊尔
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+977'
+                    name: 尼泊尔
+                    id: 43749
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: NG
+                    code: NG
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Nigeria
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 尼日利亚
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+234'
+                    name: 尼日利亚
+                    id: 43750
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: SK
+                    code: SK
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Slovakia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 斯洛伐克
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+421'
+                    name: 斯洛伐克
+                    id: 43751
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: VN
+                    code: VN
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Vietnam
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 越南
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+84'
+                    name: 越南
+                    id: 43752
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: HK
+                    code: HK
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Hongkong
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 中国香港
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+852'
+                    name: 中国香港
+                    id: 43753
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: TW
+                    code: TW
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Taiwan
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 中国台湾
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+886'
+                    name: 中国台湾
+                    id: 43754
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: MO
+                    code: MO
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Macao
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 中国澳门
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+853'
+                    name: 中国澳门
+                    id: 43755
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: FI
+                    code: FI
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Finland
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 芬兰
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+358'
+                    name: 芬兰
+                    id: 43756
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: HU
+                    code: HU
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Hungary
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 匈牙利
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+36'
+                    name: 匈牙利
+                    id: 43757
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: IR
+                    code: IR
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Iran
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 伊朗
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+98'
+                    name: 伊朗
+                    id: 43758
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: IE
+                    code: IE
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Ireland
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 爱尔兰
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+353'
+                    name: 爱尔兰
+                    id: 43759
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: IL
+                    code: IL
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Israel
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 以色列
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+972'
+                    name: 以色列
+                    id: 43760
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: KH
+                    code: KH
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Kampuchea(Cambodia)
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 柬埔寨
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+855'
+                    name: 柬埔寨
+                    id: 43761
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: MY
+                    code: MY
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Malaysia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 马来西亚
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+60'
+                    name: 马来西亚
+                    id: 43762
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: MC
+                    code: MC
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Monaco
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 摩纳哥
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+377'
+                    name: 摩纳哥
+                    id: 43763
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: MN
+                    code: MN
+                    displayName: null
+                    updateTime: 1618881547731
+                    sort: 1
+                    nameEn: Mongolia
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 蒙古
+                    createBy: admin
+                    createTime: 1618881547731
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+976'
+                    name: 蒙古
+                    id: 43764
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: other
+                    code: other
+                    displayName: null
+                    updateTime: 1639036328159
+                    sort: 1
+                    nameEn: other
+                    childs: null
+                    parentId: 0
+                    revision: 0
+                    extend: null
+                    nameTw: 其他
+                    createBy: admin
+                    createTime: 1639036328159
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: null
+                    name: 其他
+                    id: 43765
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: Philippines
+                    code: Philippines
+                    displayName: null
+                    updateTime: 20220311035247
+                    sort: 1
+                    nameEn: Philippines
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: ''
+                    nameTw: 菲律賓
+                    createBy: admin
+                    createTime: 20220311035247
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+63'
+                    name: 菲律賓
+                    id: 43766
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: anda
+                    code: anda
+                    displayName: null
+                    updateTime: 1649819891979
+                    sort: 1
+                    nameEn: anda
+                    childs: null
+                    parentId: 0
+                    revision: 0
+                    extend: null
+                    nameTw: anda
+                    createBy: admin
+                    createTime: 1649819891979
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '+667'
+                    name: 安达一列
+                    id: 43767
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: freedom
+                    code: '12345'
+                    displayName: null
+                    updateTime: 1657004156536
+                    sort: 2
+                    nameEn: freedom
+                    childs: null
+                    parentId: 0
+                    revision: 0
+                    extend: null
+                    nameTw: 自由王国
+                    createBy: admin
+                    createTime: 1657004156536
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '38'
+                    name: 自由王国
+                    id: 43768
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: test001
+                    code: test001
+                    displayName: null
+                    updateTime: 1660120913853
+                    sort: 74
+                    nameEn: test001
+                    childs: null
+                    parentId: 0
+                    revision: 0
+                    extend: null
+                    nameTw: '222'
+                    createBy: admin
+                    createTime: 1660120913853
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '1'
+                    name: test001
+                    id: 43769
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: test005
+                    code: test005
+                    displayName: null
+                    updateTime: 1660120928245
+                    sort: 75
+                    nameEn: test005
+                    childs: null
+                    parentId: 0
+                    revision: 0
+                    extend: null
+                    nameTw: test005
+                    createBy: admin
+                    createTime: 1660120928245
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '2'
+                    name: test005
+                    id: 43770
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: test006
+                    code: test006
+                    displayName: null
+                    updateTime: 1660120946036
+                    sort: 76
+                    nameEn: test006
+                    childs: null
+                    parentId: 0
+                    revision: 0
+                    extend: null
+                    nameTw: test006
+                    createBy: admin
+                    createTime: 1660120946036
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '2'
+                    name: test006
+                    id: 43771
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: test007
+                    code: test007
+                    displayName: null
+                    updateTime: 1660181680702
+                    sort: 76
+                    nameEn: '007'
+                    childs: null
+                    parentId: 0
+                    revision: 2
+                    extend: null
+                    nameTw: test007
+                    createBy: admin
+                    createTime: 1660120967347
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: '3'
+                    name: test007
+                    id: 43772
+                    hasLeaf: null
+                    status: 1
+                  - nationalCode: test008
+                    code: test008
+                    displayName: null
+                    updateTime: 1660184213856
+                    sort: 79
+                    nameEn: test008
+                    childs: null
+                    parentId: 0
+                    revision: 1
+                    extend: null
+                    nameTw: test008
+                    createBy: admin
+                    createTime: 1660184179162
+                    updateBy: admin
+                    parentCode: '-1'
+                    countryCode: 809，808，807
+                    name: test008
+                    id: 43773
+                    hasLeaf: null
+                    status: 1
+                bizCode: ''
+                tm: 7
+                msgParams: null
+                ok: true
+          headers: {}
+      security: []
   /config.admin.AdminAssetsDubboService.getAssetsList:
     post:
       summary: 获取公司币种权限
@@ -2628,1712 +4334,6 @@ paths:
                 ok: true
           headers: {}
       security: []
-  /config.admin.AdminDictDubboService.getCountryListByParentCode:
-    post:
-      summary: 获取国家字典列表
-      deprecated: false
-      description: bizType=config.admin.AdminDictDubboService.getListByParentCode
-      tags:
-        - 基础数据相关
-      parameters:
-        - name: trace
-          in: header
-          description: 全局链路唯一标志
-          required: true
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-        - name: companyId
-          in: header
-          description: 公司ID
-          required: true
-          example: '{{company}}'
-          schema:
-            type: string
-        - name: token
-          in: header
-          description: B端认证鉴权返回token
-          required: false
-          example: '{{auto_token}}'
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                parentCode:
-                  type: string
-                  description: 字典code，-1代表全部国家
-              required:
-                - parentCode
-            example:
-              parentCode: '-1'
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  bizCode:
-                    type: string
-                    description: 模块标识码
-                  code:
-                    type: string
-                    description: 状态返回码
-                  msg:
-                    type: string
-                    description: 状态描述
-                  tm:
-                    type: integer
-                    format: int64
-                    description: 处理时长（毫秒）
-                  trace:
-                    type: string
-                    description: 跟踪码
-                  msgParams:
-                    type: string
-                    description: 返回描述中占位符参数串，多个参数间以,分割
-                  data:
-                    type: array
-                    description: 数据体
-                    items:
-                      type: object
-                      properties:
-                        parentId:
-                          type: integer
-                          format: int64
-                          description: 上级ID
-                        id:
-                          type: integer
-                          format: int64
-                          description: 主键id
-                        name:
-                          type: string
-                          description: 国家地区名称
-                        displayName:
-                          type: string
-                          description: 显示名称（前端显示）
-                        code:
-                          type: string
-                          description: 国家代码
-                        parentCode:
-                          type: string
-                          description: 上级代码
-                        nationalCode:
-                          type: string
-                          description: 国家简称
-                        countryCode:
-                          type: string
-                          description: 国家区号
-                        extend:
-                          type: string
-                          description: 扩展属性
-                        sort:
-                          type: integer
-                          format: int32
-                          description: 排序
-                        status:
-                          type: integer
-                          format: int32
-                          description: 状态 1、2、3、启用、禁用、删除
-                        createTime:
-                          type: integer
-                          format: int64
-                          description: 创建时间
-                        updateTime:
-                          type: integer
-                          format: int64
-                          description: 更新时间
-                        hasLeaf:
-                          type: integer
-                          format: int32
-                          description: 是否有子节点
-                        childs:
-                          type: array
-                          description: 子节点数据
-                          items:
-                            type: object
-                            properties: {}
-                  ok:
-                    type: boolean
-                  fail:
-                    type: boolean
-              example:
-                msg: Success
-                fail: false
-                trace: t-05hj-knr4r-4w37wl-w1gpg83-1668756938
-                code: '0'
-                data:
-                  - nationalCode: AF
-                    code: AF
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Afghanistan
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 阿富汗
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+93'
-                    name: 阿富汗
-                    id: 2
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: AR
-                    code: AR
-                    displayName: null
-                    updateTime: 1618881547738
-                    sort: 1
-                    nameEn: Argentina
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 阿根廷
-                    createBy: admin
-                    createTime: 1618881547738
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+54'
-                    name: 阿根廷
-                    id: 9
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: AU
-                    code: AU
-                    displayName: null
-                    updateTime: 1618881547743
-                    sort: 1
-                    nameEn: Australia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 澳大利亚
-                    createBy: admin
-                    createTime: 1618881547743
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+61'
-                    name: 澳大利亚
-                    id: 14
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: BE
-                    code: BE
-                    displayName: null
-                    updateTime: 1618881547747
-                    sort: 1
-                    nameEn: Belgium
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 比利时
-                    createBy: admin
-                    createTime: 1618881547747
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+32'
-                    name: 比利时
-                    id: 18
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: BG
-                    code: BG
-                    displayName: null
-                    updateTime: 1618881547752
-                    sort: 1
-                    nameEn: Bulgaria
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 保加利亚
-                    createBy: admin
-                    createTime: 1618881547752
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+359'
-                    name: 保加利亚
-                    id: 23
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: BR
-                    code: BR
-                    displayName: null
-                    updateTime: 1618881547761
-                    sort: 1
-                    nameEn: Brazil
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 巴西
-                    createBy: admin
-                    createTime: 1618881547761
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+55'
-                    name: 巴西
-                    id: 32
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CA
-                    code: CA
-                    displayName: null
-                    updateTime: 1618881547768
-                    sort: 1
-                    nameEn: Canada
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 加拿大
-                    createBy: admin
-                    createTime: 1618881547768
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+1'
-                    name: 加拿大
-                    id: 39
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CH
-                    code: CH
-                    displayName: null
-                    updateTime: 1618881547770
-                    sort: 1
-                    nameEn: Switzerland
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 瑞士
-                    createBy: admin
-                    createTime: 1618881547770
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+41'
-                    name: 瑞士
-                    id: 41
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CL
-                    code: CL
-                    displayName: null
-                    updateTime: 1618881547771
-                    sort: 1
-                    nameEn: Chile
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 智利
-                    createBy: admin
-                    createTime: 1618881547771
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+56'
-                    name: 智利
-                    id: 42
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CN
-                    code: CN
-                    displayName: null
-                    updateTime: 1660182621760
-                    sort: 1
-                    nameEn: Côte dIvoire
-                    childs: null
-                    parentId: 0
-                    revision: 7
-                    extend: ^[1]([3-9])[0-9]{9}$
-                    nameTw: 中國
-                    createBy: admin
-                    createTime: 1618881547772
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+86'
-                    name: 中国
-                    id: 43
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CG
-                    code: CG
-                    displayName: null
-                    updateTime: 1618881547776
-                    sort: 1
-                    nameEn: Republic of the Congo
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 刚果共和国
-                    createBy: admin
-                    createTime: 1618881547776
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+242'
-                    name: 刚果共和国
-                    id: 47
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CO
-                    code: CO
-                    displayName: null
-                    updateTime: 1618881547778
-                    sort: 1
-                    nameEn: Colombia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 哥伦比亚
-                    createBy: admin
-                    createTime: 1618881547778
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+57'
-                    name: 哥伦比亚
-                    id: 49
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CR
-                    code: CR
-                    displayName: null
-                    updateTime: 1618881547781
-                    sort: 1
-                    nameEn: Costa Rica
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 哥斯达黎加
-                    createBy: admin
-                    createTime: 1618881547781
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+506'
-                    name: 哥斯达黎加
-                    id: 52
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: CU
-                    code: CU
-                    displayName: null
-                    updateTime: 1618881547782
-                    sort: 1
-                    nameEn: Cuba
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 古巴
-                    createBy: admin
-                    createTime: 1618881547782
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+53'
-                    name: 古巴
-                    id: 53
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: IN
-                    code: IN
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: India
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 印度
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+91'
-                    name: 印度
-                    id: 43710
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: JP
-                    code: JP
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Japan
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 日本
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+81'
-                    name: 日本
-                    id: 43711
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: SA
-                    code: SA
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Saudi Arabia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 沙特阿拉伯
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+966'
-                    name: 沙特阿拉伯
-                    id: 43712
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: KR
-                    code: KR
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Korea
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 韩国
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+82'
-                    name: 韩国
-                    id: 43713
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: KP
-                    code: KP
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: North Korea
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 朝鲜
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+850'
-                    name: 朝鲜
-                    id: 43714
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: PH
-                    code: PH
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Philippines
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 菲律宾
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+63'
-                    name: 菲律宾
-                    id: 43715
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: SG
-                    code: SG
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Singapore
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 新加坡
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+65'
-                    name: 新加坡
-                    id: 43716
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: KZ
-                    code: KZ
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Kazakstan
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 哈萨克斯坦
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+327'
-                    name: 哈萨克斯坦
-                    id: 43717
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: ID
-                    code: ID
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Indonesia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 印度尼西亚
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+62'
-                    name: 印度尼西亚
-                    id: 43718
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: IQ
-                    code: IQ
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Iraq
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 伊拉克
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+964'
-                    name: 伊拉克
-                    id: 43719
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: PK
-                    code: PK
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Pakistan
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 巴基斯坦
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+92'
-                    name: 巴基斯坦
-                    id: 43720
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: TR
-                    code: TR
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Turkey
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 土耳其
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+90'
-                    name: 土耳其
-                    id: 43721
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: RU
-                    code: RU
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Russia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 俄罗斯
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+7'
-                    name: 俄罗斯
-                    id: 43722
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: GB
-                    code: GB
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: United Kingdom
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 英国
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+44'
-                    name: 英国
-                    id: 43723
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: FR
-                    code: FR
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: France
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 法国
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+33'
-                    name: 法国
-                    id: 43724
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: DE
-                    code: DE
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Germany
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 德国
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+49'
-                    name: 德国
-                    id: 43725
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: IT
-                    code: IT
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Italy
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 意大利
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+39'
-                    name: 意大利
-                    id: 43726
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: 'NO'
-                    code: 'NO'
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Norway
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 挪威
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+47'
-                    name: 挪威
-                    id: 43727
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: IS
-                    code: IS
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Iceland
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 冰岛
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+354'
-                    name: 冰岛
-                    id: 43728
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: DK
-                    code: DK
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Denmark
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 丹麦
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+45'
-                    name: 丹麦
-                    id: 43729
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: UA
-                    code: UA
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Ukraine
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 乌克兰
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+380'
-                    name: 乌克兰
-                    id: 43730
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: PL
-                    code: PL
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Poland
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 波兰
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+48'
-                    name: 波兰
-                    id: 43731
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: NL
-                    code: NL
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Netherlands
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 荷兰
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+31'
-                    name: 荷兰
-                    id: 43732
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: GR
-                    code: GR
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Greece
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 希腊
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+30'
-                    name: 希腊
-                    id: 43733
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: ES
-                    code: ES
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Spain
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 西班牙
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+34'
-                    name: 西班牙
-                    id: 43734
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: PT
-                    code: PT
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Portugal
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 葡萄牙
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+351'
-                    name: 葡萄牙
-                    id: 43735
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: EG
-                    code: EG
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Egypt
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 埃及
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+20'
-                    name: 埃及
-                    id: 43736
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: ZA
-                    code: ZA
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: South Africa
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 南非
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+27'
-                    name: 南非
-                    id: 43737
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: ET
-                    code: ET
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Ethiopia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 埃塞俄比亚
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+251'
-                    name: 埃塞俄比亚
-                    id: 43738
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: ZW
-                    code: ZW
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Zimbabwe
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 津巴布韦
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+263'
-                    name: 津巴布韦
-                    id: 43739
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: MG
-                    code: MG
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Madagascar
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 马达加斯加
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+261'
-                    name: 马达加斯加
-                    id: 43740
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: NZ
-                    code: NZ
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: New Zealand
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 新西兰
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+64'
-                    name: 新西兰
-                    id: 43741
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: PG
-                    code: PG
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Papua New Cuinea
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 巴布亚新几内亚
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+675'
-                    name: 巴布亚新几内亚
-                    id: 43742
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: US
-                    code: US
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: United States of America
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 美国
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+1'
-                    name: 美国
-                    id: 43743
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: MX
-                    code: MX
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Mexico
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 墨西哥
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+52'
-                    name: 墨西哥
-                    id: 43744
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: JM
-                    code: JM
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Jamaica
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 牙买加
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+1876'
-                    name: 牙买加
-                    id: 43745
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: PE
-                    code: PE
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Peru
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 秘鲁
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+51'
-                    name: 秘鲁
-                    id: 43746
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: TH
-                    code: TH
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Thailand
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 泰国
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+66'
-                    name: 泰国
-                    id: 43747
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: SE
-                    code: SE
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Sweden
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 瑞典
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+46'
-                    name: 瑞典
-                    id: 43748
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: NP
-                    code: NP
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Nepal
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 尼泊尔
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+977'
-                    name: 尼泊尔
-                    id: 43749
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: NG
-                    code: NG
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Nigeria
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 尼日利亚
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+234'
-                    name: 尼日利亚
-                    id: 43750
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: SK
-                    code: SK
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Slovakia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 斯洛伐克
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+421'
-                    name: 斯洛伐克
-                    id: 43751
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: VN
-                    code: VN
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Vietnam
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 越南
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+84'
-                    name: 越南
-                    id: 43752
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: HK
-                    code: HK
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Hongkong
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 中国香港
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+852'
-                    name: 中国香港
-                    id: 43753
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: TW
-                    code: TW
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Taiwan
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 中国台湾
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+886'
-                    name: 中国台湾
-                    id: 43754
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: MO
-                    code: MO
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Macao
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 中国澳门
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+853'
-                    name: 中国澳门
-                    id: 43755
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: FI
-                    code: FI
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Finland
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 芬兰
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+358'
-                    name: 芬兰
-                    id: 43756
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: HU
-                    code: HU
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Hungary
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 匈牙利
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+36'
-                    name: 匈牙利
-                    id: 43757
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: IR
-                    code: IR
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Iran
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 伊朗
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+98'
-                    name: 伊朗
-                    id: 43758
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: IE
-                    code: IE
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Ireland
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 爱尔兰
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+353'
-                    name: 爱尔兰
-                    id: 43759
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: IL
-                    code: IL
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Israel
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 以色列
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+972'
-                    name: 以色列
-                    id: 43760
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: KH
-                    code: KH
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Kampuchea(Cambodia)
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 柬埔寨
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+855'
-                    name: 柬埔寨
-                    id: 43761
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: MY
-                    code: MY
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Malaysia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 马来西亚
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+60'
-                    name: 马来西亚
-                    id: 43762
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: MC
-                    code: MC
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Monaco
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 摩纳哥
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+377'
-                    name: 摩纳哥
-                    id: 43763
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: MN
-                    code: MN
-                    displayName: null
-                    updateTime: 1618881547731
-                    sort: 1
-                    nameEn: Mongolia
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 蒙古
-                    createBy: admin
-                    createTime: 1618881547731
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+976'
-                    name: 蒙古
-                    id: 43764
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: other
-                    code: other
-                    displayName: null
-                    updateTime: 1639036328159
-                    sort: 1
-                    nameEn: other
-                    childs: null
-                    parentId: 0
-                    revision: 0
-                    extend: null
-                    nameTw: 其他
-                    createBy: admin
-                    createTime: 1639036328159
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: null
-                    name: 其他
-                    id: 43765
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: Philippines
-                    code: Philippines
-                    displayName: null
-                    updateTime: 20220311035247
-                    sort: 1
-                    nameEn: Philippines
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: ''
-                    nameTw: 菲律賓
-                    createBy: admin
-                    createTime: 20220311035247
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+63'
-                    name: 菲律賓
-                    id: 43766
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: anda
-                    code: anda
-                    displayName: null
-                    updateTime: 1649819891979
-                    sort: 1
-                    nameEn: anda
-                    childs: null
-                    parentId: 0
-                    revision: 0
-                    extend: null
-                    nameTw: anda
-                    createBy: admin
-                    createTime: 1649819891979
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '+667'
-                    name: 安达一列
-                    id: 43767
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: freedom
-                    code: '12345'
-                    displayName: null
-                    updateTime: 1657004156536
-                    sort: 2
-                    nameEn: freedom
-                    childs: null
-                    parentId: 0
-                    revision: 0
-                    extend: null
-                    nameTw: 自由王国
-                    createBy: admin
-                    createTime: 1657004156536
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '38'
-                    name: 自由王国
-                    id: 43768
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: test001
-                    code: test001
-                    displayName: null
-                    updateTime: 1660120913853
-                    sort: 74
-                    nameEn: test001
-                    childs: null
-                    parentId: 0
-                    revision: 0
-                    extend: null
-                    nameTw: '222'
-                    createBy: admin
-                    createTime: 1660120913853
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '1'
-                    name: test001
-                    id: 43769
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: test005
-                    code: test005
-                    displayName: null
-                    updateTime: 1660120928245
-                    sort: 75
-                    nameEn: test005
-                    childs: null
-                    parentId: 0
-                    revision: 0
-                    extend: null
-                    nameTw: test005
-                    createBy: admin
-                    createTime: 1660120928245
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '2'
-                    name: test005
-                    id: 43770
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: test006
-                    code: test006
-                    displayName: null
-                    updateTime: 1660120946036
-                    sort: 76
-                    nameEn: test006
-                    childs: null
-                    parentId: 0
-                    revision: 0
-                    extend: null
-                    nameTw: test006
-                    createBy: admin
-                    createTime: 1660120946036
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '2'
-                    name: test006
-                    id: 43771
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: test007
-                    code: test007
-                    displayName: null
-                    updateTime: 1660181680702
-                    sort: 76
-                    nameEn: '007'
-                    childs: null
-                    parentId: 0
-                    revision: 2
-                    extend: null
-                    nameTw: test007
-                    createBy: admin
-                    createTime: 1660120967347
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: '3'
-                    name: test007
-                    id: 43772
-                    hasLeaf: null
-                    status: 1
-                  - nationalCode: test008
-                    code: test008
-                    displayName: null
-                    updateTime: 1660184213856
-                    sort: 79
-                    nameEn: test008
-                    childs: null
-                    parentId: 0
-                    revision: 1
-                    extend: null
-                    nameTw: test008
-                    createBy: admin
-                    createTime: 1660184179162
-                    updateBy: admin
-                    parentCode: '-1'
-                    countryCode: 809，808，807
-                    name: test008
-                    id: 43773
-                    hasLeaf: null
-                    status: 1
-                bizCode: ''
-                tm: 7
-                msgParams: null
-                ok: true
-          headers: {}
-      security: []
   /config.admin.AdminAssetsDubboService.getTradeTypeList:
     post:
       summary: 获取公司客户组资产权限
@@ -5870,104 +5870,6 @@ paths:
               schema: *ref_1
           headers: {}
       security: []
-  /fund.admin.CustomerAdjustProposalAdminDubboService.getCustomerAdjustProposalById:
-    post:
-      summary: 根据提案编号查询额度调整详情
-      deprecated: false
-      description: ''
-      tags:
-        - 资金服务相关
-      parameters:
-        - name: trace
-          in: header
-          description: 全局链路唯一标志
-          required: true
-          example: '{{mock_trace}}'
-          schema:
-            type: string
-        - name: companyId
-          in: header
-          description: 公司ID
-          required: true
-          example: '{{company}}'
-          schema:
-            type: string
-        - name: token
-          in: header
-          description: B端鉴权后token
-          required: true
-          example: '{{auto_token}}'
-          schema:
-            type: string
-        - name: version
-          in: header
-          description: 接口版本号
-          required: true
-          example: 0.0.1
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                proposalNo:
-                  type: string
-                  description: 额度调整提案编号
-                companyId:
-                  type: string
-                  description: 公司id
-              required:
-                - proposalNo
-                - companyId
-            example:
-              customerNo: '86000020'
-              tradeType: 5
-              companyId: '{{company}}'
-              type: 1
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  bizCode:
-                    type: string
-                    title: 模块标识码
-                    description: 模块标识码
-                  code:
-                    type: string
-                    title: 状态返回码
-                    description: 状态返回码
-                  msg:
-                    type: string
-                    title: 状态描述
-                    description: 状态描述
-                  tm:
-                    type: string
-                    title: 处理时长（毫秒）
-                    description: 处理时长（毫秒）
-                  trace:
-                    type: string
-                    title: 跟踪码
-                    description: 跟踪码
-                  msgParams:
-                    type: string
-                    title: 返回描述中占位符参数串，多个参数间以,分割
-                    description: 返回描述中占位符参数串，多个参数间以,分割
-                  data:
-                    title: 数据体
-                    description: 数据体
-                    $ref: '#/components/schemas/CustomerAdjustProposalDto'
-                required:
-                  - bizCode
-                  - code
-                  - tm
-          headers: {}
-      security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryTradeTypeLockTradeAccount:
     post:
       summary: 锁定状态查询
@@ -6079,6 +5981,104 @@ paths:
                   - code
                   - tm
               example: "lockStatus：是否被锁定，true被锁定\r\n{\r\n    \"msg\": \"Success\",\r\n    \"fail\": false,\r\n    \"trace\": \"t-c88b6-no22of4-2je3o88-t6o3s5-1660556892\",\r\n    \"code\": \"0\",\r\n    \"data\": [\r\n        {\r\n            \"lockStatus\": false,\r\n            \"type\": 1,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        },\r\n        {\r\n            \"lockStatus\": false,\r\n            \"type\": 2,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        },\r\n        {\r\n            \"lockStatus\": true,\r\n            \"type\": 3,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        }\r\n    ],\r\n    \"bizCode\": \"\",\r\n    \"tm\": 54,\r\n    \"msgParams\": null,\r\n    \"ok\": true,\r\n    \"class\": \"com.cats.common.core.base.vo.BaseResult\"\r\n}"
+          headers: {}
+      security: []
+  /fund.admin.CustomerAdjustProposalAdminDubboService.getCustomerAdjustProposalById:
+    post:
+      summary: 根据提案编号查询额度调整详情
+      deprecated: false
+      description: ''
+      tags:
+        - 资金服务相关
+      parameters:
+        - name: trace
+          in: header
+          description: 全局链路唯一标志
+          required: true
+          example: '{{mock_trace}}'
+          schema:
+            type: string
+        - name: companyId
+          in: header
+          description: 公司ID
+          required: true
+          example: '{{company}}'
+          schema:
+            type: string
+        - name: token
+          in: header
+          description: B端鉴权后token
+          required: true
+          example: '{{auto_token}}'
+          schema:
+            type: string
+        - name: version
+          in: header
+          description: 接口版本号
+          required: true
+          example: 0.0.1
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                proposalNo:
+                  type: string
+                  description: 额度调整提案编号
+                companyId:
+                  type: string
+                  description: 公司id
+              required:
+                - proposalNo
+                - companyId
+            example:
+              customerNo: '86000020'
+              tradeType: 5
+              companyId: '{{company}}'
+              type: 1
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bizCode:
+                    type: string
+                    title: 模块标识码
+                    description: 模块标识码
+                  code:
+                    type: string
+                    title: 状态返回码
+                    description: 状态返回码
+                  msg:
+                    type: string
+                    title: 状态描述
+                    description: 状态描述
+                  tm:
+                    type: string
+                    title: 处理时长（毫秒）
+                    description: 处理时长（毫秒）
+                  trace:
+                    type: string
+                    title: 跟踪码
+                    description: 跟踪码
+                  msgParams:
+                    type: string
+                    title: 返回描述中占位符参数串，多个参数间以,分割
+                    description: 返回描述中占位符参数串，多个参数间以,分割
+                  data:
+                    title: 数据体
+                    description: 数据体
+                    $ref: '#/components/schemas/CustomerAdjustProposalDto'
+                required:
+                  - bizCode
+                  - code
+                  - tm
           headers: {}
       security: []
   /customer.app.CustomerWebApiService.checkCustomerExist:
@@ -9427,6 +9427,546 @@ paths:
                 ok: true
           headers: {}
       security: []
+  /quote-b-api/kline:
+    get:
+      summary: K线查询【外汇、贵金属、加密货币】
+      deprecated: false
+      description: ''
+      tags:
+        - 行情订阅相关/http请求接口
+      parameters:
+        - name: token
+          in: query
+          description: 如果不知道你的token，请联系相关人员索要
+          required: true
+          example: 65b31e26-312c-4e71-89ae-f5e33073d1c8-1676446387481
+          schema:
+            type: string
+        - name: query
+          in: query
+          description: "请对如下字段进行encode，后台服务收到之后会decode\n{\n    \"trace\": \"culpa cillum ea reprehenderit occaecat\",\n    \"data\": {\n        \"code\": \"GBPJPY\",\n        \"kline_type\": 1,\n        \"kline_timestamp_end\": 0,\n        \"query_kline_num\": 2,\n\t\"adjust_type\": 0\n    }\n}\ntrace：追踪码，用来查询日志使用，请保证每次请求时唯一\ncode：请查看code列表，选择你要查询的code\nkline_type：k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K\nkline_timestamp_end：从那个时间点往前查，为0表示从当前时间，非股票类的code才有效\nquery_kline_num：查询多少根K线，最多1000根\nadjust_type: 复权类型,对于股票类的code才有效，例如：0:除权,1:前复权"
+          required: true
+          example: "{% '{\"trace\": \"culpa cillum ea reprehenderit occaecat\",\"data\": {\"code\": \"GBPJPY\",\r\n\"kline_type\": 1,\"kline_timestamp_end\": 0,\"query_kline_num\": 2,\"adjust_type\": 0}}'|encodeURIComponent %}"
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ret:
+                    type: integer
+                  msg:
+                    type: string
+                  trace:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                        description: 代码
+                      kline_type:
+                        type: integer
+                        description: >-
+                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
+                      kline_list:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            timestamp:
+                              type: string
+                              description: 该K线时间戳
+                            open_price:
+                              type: string
+                              description: 该K线开盘价
+                            close_price:
+                              type: string
+                              description: 该K线收盘价
+                            high_price:
+                              type: string
+                              description: 该K线最高价
+                            low_price:
+                              type: string
+                              description: 该K线最低价
+                            volume:
+                              type: string
+                              description: 该K线成交数量
+                            turnover:
+                              type: string
+                              description: 该K线成交金额
+                          required:
+                            - timestamp
+                            - open_price
+                            - close_price
+                            - high_price
+                            - low_price
+                            - volume
+                            - turnover
+                    required:
+                      - code
+                      - kline_type
+                      - kline_list
+                required:
+                  - ret
+                  - msg
+                  - trace
+                  - data
+              example:
+                ret: 200
+                msg: ok
+                trace: asdfsdfa
+                data:
+                  code: 857.HK
+                  kline_type: 1
+                  kline_list:
+                    - timestamp: '1677829200'
+                      open_price: '136.421'
+                      close_price: '136.412'
+                      high_price: '136.422'
+                      low_price: '136.407'
+                      volume: '0'
+                      turnover: '0'
+                    - timestamp: '1677829260'
+                      open_price: '136.412'
+                      close_price: '136.401'
+                      high_price: '136.415'
+                      low_price: '136.397'
+                      volume: '0'
+                      turnover: '0'
+          headers: {}
+      security: []
+  /quote-stock-b-api/kline:
+    get:
+      summary: 'K线查询【股票】 '
+      deprecated: false
+      description: ''
+      tags:
+        - 行情订阅相关/http请求接口
+      parameters:
+        - name: token
+          in: query
+          description: 如果不知道你的token，请联系相关人员索要
+          required: true
+          example: e945d7d9-9e6e-4721-922a-7251a9d311d0-1678159756806
+          schema:
+            type: string
+        - name: query
+          in: query
+          description: "请对如下字段进行encode，后台服务收到之后会decode\n{\n    \"trace\": \"culpa cillum ea reprehenderit occaecat\",\n    \"data\": {\n        \"code\": \"GBPJPY\",\n        \"kline_type\": 1,\n        \"kline_timestamp_end\": 0,\n        \"query_kline_num\": 2,\n\t\"adjust_type\": 0\n    }\n}\ntrace：追踪码，用来查询日志使用，请保证每次请求时唯一\ncode：请查看code列表，选择你要查询的code\nkline_type：k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K\nkline_timestamp_end：从那个时间点往前查，为0表示从当前时间，非股票类的code才有效\nquery_kline_num：查询多少根K线，最多1000根\nadjust_type: 复权类型,对于股票类的code才有效，例如：0:除权,1:前复权"
+          required: true
+          example: "{% '{\"trace\": \"culpa cillum ea reprehenderit occaecat\",\"data\": {\"code\": \"GBPJPY\",\r\n\"kline_type\": 1,\"kline_timestamp_end\": 0,\"query_kline_num\": 2,\"adjust_type\": 0}}'|encodeURIComponent %}"
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ret:
+                    type: integer
+                  msg:
+                    type: string
+                  trace:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                        description: 代码
+                      kline_type:
+                        type: integer
+                        description: >-
+                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
+                      kline_list:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            timestamp:
+                              type: string
+                              description: 该K线时间戳
+                            open_price:
+                              type: string
+                              description: 该K线开盘价
+                            close_price:
+                              type: string
+                              description: 该K线收盘价
+                            high_price:
+                              type: string
+                              description: 该K线最高价
+                            low_price:
+                              type: string
+                              description: 该K线最低价
+                            volume:
+                              type: string
+                              description: 该K线成交数量
+                            turnover:
+                              type: string
+                              description: 该K线成交金额
+                          required:
+                            - timestamp
+                            - open_price
+                            - close_price
+                            - high_price
+                            - low_price
+                            - volume
+                            - turnover
+                    required:
+                      - code
+                      - kline_type
+                      - kline_list
+                required:
+                  - ret
+                  - msg
+                  - trace
+                  - data
+              example:
+                ret: 200
+                msg: ok
+                trace: asdfsdfa
+                data:
+                  code: 857.HK
+                  kline_type: 1
+                  kline_list:
+                    - timestamp: '1677829200'
+                      open_price: '136.421'
+                      close_price: '136.412'
+                      high_price: '136.422'
+                      low_price: '136.407'
+                      volume: '0'
+                      turnover: '0'
+                    - timestamp: '1677829260'
+                      open_price: '136.412'
+                      close_price: '136.401'
+                      high_price: '136.415'
+                      low_price: '136.397'
+                      volume: '0'
+                      turnover: '0'
+          headers: {}
+      security: []
+  /quote-b-api/batch-kline:
+    get:
+      summary: K线批量查询【外汇、贵金属、加密货币】
+      deprecated: false
+      description: ''
+      tags:
+        - 行情订阅相关/http请求接口
+      parameters:
+        - name: token
+          in: query
+          description: 如果不知道你的token，请联系相关人员索要
+          required: true
+          example: 65b31e26-312c-4e71-89ae-f5e33073d1c8-1676446387481
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trace:
+                  type: string
+                data:
+                  type: object
+                  properties:
+                    data_list:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                          kline_type:
+                            type: integer
+                          kline_timestamp_end:
+                            type: integer
+                          query_kline_num:
+                            type: integer
+                          adjust_type:
+                            type: integer
+                        required:
+                          - code
+                          - kline_type
+                          - kline_timestamp_end
+                          - query_kline_num
+                          - adjust_type
+                  required:
+                    - data_list
+              required:
+                - trace
+                - data
+            example:
+              trace: '{{mock_trace}}'
+              data:
+                data_list:
+                  - code: EURJPY
+                    kline_type: 1
+                    kline_timestamp_end: 0
+                    query_kline_num: 2
+                    adjust_type: 0
+                  - code: EURJPY
+                    kline_type: 1
+                    kline_timestamp_end: 0
+                    query_kline_num: 2
+                    adjust_type: 0
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ret:
+                    type: integer
+                  msg:
+                    type: string
+                  trace:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                        description: 代码
+                      kline_type:
+                        type: integer
+                        description: >-
+                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
+                      kline_list:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            timestamp:
+                              type: string
+                              description: 该K线时间戳
+                            open_price:
+                              type: string
+                              description: 该K线开盘价
+                            close_price:
+                              type: string
+                              description: 该K线收盘价
+                            high_price:
+                              type: string
+                              description: 该K线最高价
+                            low_price:
+                              type: string
+                              description: 该K线最低价
+                            volume:
+                              type: string
+                              description: 该K线成交数量
+                            turnover:
+                              type: string
+                              description: 该K线成交金额
+                          required:
+                            - timestamp
+                            - open_price
+                            - close_price
+                            - high_price
+                            - low_price
+                            - volume
+                            - turnover
+                    required:
+                      - code
+                      - kline_type
+                      - kline_list
+                required:
+                  - ret
+                  - msg
+                  - trace
+                  - data
+              example:
+                ret: 200
+                msg: ok
+                trace: asdfsdfa
+                data:
+                  code: 857.HK
+                  kline_type: 1
+                  kline_list:
+                    - timestamp: '1677829200'
+                      open_price: '136.421'
+                      close_price: '136.412'
+                      high_price: '136.422'
+                      low_price: '136.407'
+                      volume: '0'
+                      turnover: '0'
+                    - timestamp: '1677829260'
+                      open_price: '136.412'
+                      close_price: '136.401'
+                      high_price: '136.415'
+                      low_price: '136.397'
+                      volume: '0'
+                      turnover: '0'
+          headers: {}
+      security: []
+  /quote-stock-b-api/batch-kline:
+    get:
+      summary: K线批量查询【股票】
+      deprecated: false
+      description: ''
+      tags:
+        - 行情订阅相关/http请求接口
+      parameters:
+        - name: token
+          in: query
+          description: 如果不知道你的token，请联系相关人员索要
+          required: true
+          example: e945d7d9-9e6e-4721-922a-7251a9d311d0-1678159756806
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trace:
+                  type: string
+                data:
+                  type: object
+                  properties:
+                    data_list:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                          kline_type:
+                            type: integer
+                          kline_timestamp_end:
+                            type: integer
+                          query_kline_num:
+                            type: integer
+                          adjust_type:
+                            type: integer
+                        required:
+                          - code
+                          - kline_type
+                          - kline_timestamp_end
+                          - query_kline_num
+                          - adjust_type
+                  required:
+                    - data_list
+              required:
+                - trace
+                - data
+            example:
+              trace: '{{mock_trace}}'
+              data:
+                data_list:
+                  - code: EURJPY
+                    kline_type: 1
+                    kline_timestamp_end: 0
+                    query_kline_num: 2
+                    adjust_type: 0
+                  - code: USDJPY
+                    kline_type: 1
+                    kline_timestamp_end: 0
+                    query_kline_num: 2
+                    adjust_type: 0
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ret:
+                    type: integer
+                  msg:
+                    type: string
+                  trace:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                        description: 代码
+                      kline_type:
+                        type: integer
+                        description: >-
+                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
+                      kline_list:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            timestamp:
+                              type: string
+                              description: 该K线时间戳
+                            open_price:
+                              type: string
+                              description: 该K线开盘价
+                            close_price:
+                              type: string
+                              description: 该K线收盘价
+                            high_price:
+                              type: string
+                              description: 该K线最高价
+                            low_price:
+                              type: string
+                              description: 该K线最低价
+                            volume:
+                              type: string
+                              description: 该K线成交数量
+                            turnover:
+                              type: string
+                              description: 该K线成交金额
+                          required:
+                            - timestamp
+                            - open_price
+                            - close_price
+                            - high_price
+                            - low_price
+                            - volume
+                            - turnover
+                    required:
+                      - code
+                      - kline_type
+                      - kline_list
+                required:
+                  - ret
+                  - msg
+                  - trace
+                  - data
+              example:
+                ret: 200
+                msg: ok
+                trace: asdfsdfa
+                data:
+                  code: 857.HK
+                  kline_type: 1
+                  kline_list:
+                    - timestamp: '1677829200'
+                      open_price: '136.421'
+                      close_price: '136.412'
+                      high_price: '136.422'
+                      low_price: '136.407'
+                      volume: '0'
+                      turnover: '0'
+                    - timestamp: '1677829260'
+                      open_price: '136.412'
+                      close_price: '136.401'
+                      high_price: '136.415'
+                      low_price: '136.397'
+                      volume: '0'
+                      turnover: '0'
+          headers: {}
+      security: []
   /quote-b-api/depth-tick:
     get:
       summary: 最新盘口报价查询【外汇、贵金属、加密货币】
@@ -9881,546 +10421,6 @@ paths:
                       volume: '0'
                       turnover: '0'
                       trade_direction: 0
-          headers: {}
-      security: []
-  /quote-b-api/kline:
-    get:
-      summary: K线查询【外汇、贵金属、加密货币】
-      deprecated: false
-      description: ''
-      tags:
-        - 行情订阅相关/http请求接口
-      parameters:
-        - name: token
-          in: query
-          description: 如果不知道你的token，请联系相关人员索要
-          required: true
-          example: 65b31e26-312c-4e71-89ae-f5e33073d1c8-1676446387481
-          schema:
-            type: string
-        - name: query
-          in: query
-          description: "请对如下字段进行encode，后台服务收到之后会decode\n{\n    \"trace\": \"culpa cillum ea reprehenderit occaecat\",\n    \"data\": {\n        \"code\": \"GBPJPY\",\n        \"kline_type\": 1,\n        \"kline_timestamp_end\": 0,\n        \"query_kline_num\": 2,\n\t\"adjust_type\": 0\n    }\n}\ntrace：追踪码，用来查询日志使用，请保证每次请求时唯一\ncode：请查看code列表，选择你要查询的code\nkline_type：k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K\nkline_timestamp_end：从那个时间点往前查，为0表示从当前时间，非股票类的code才有效\nquery_kline_num：查询多少根K线，最多1000根\nadjust_type: 复权类型,对于股票类的code才有效，例如：0:除权,1:前复权"
-          required: true
-          example: "{% '{\"trace\": \"culpa cillum ea reprehenderit occaecat\",\"data\": {\"code\": \"GBPJPY\",\r\n\"kline_type\": 1,\"kline_timestamp_end\": 0,\"query_kline_num\": 2,\"adjust_type\": 0}}'|encodeURIComponent %}"
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  ret:
-                    type: integer
-                  msg:
-                    type: string
-                  trace:
-                    type: string
-                  data:
-                    type: object
-                    properties:
-                      code:
-                        type: string
-                        description: 代码
-                      kline_type:
-                        type: integer
-                        description: >-
-                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
-                      kline_list:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            timestamp:
-                              type: string
-                              description: 该K线时间戳
-                            open_price:
-                              type: string
-                              description: 该K线开盘价
-                            close_price:
-                              type: string
-                              description: 该K线收盘价
-                            high_price:
-                              type: string
-                              description: 该K线最高价
-                            low_price:
-                              type: string
-                              description: 该K线最低价
-                            volume:
-                              type: string
-                              description: 该K线成交数量
-                            turnover:
-                              type: string
-                              description: 该K线成交金额
-                          required:
-                            - timestamp
-                            - open_price
-                            - close_price
-                            - high_price
-                            - low_price
-                            - volume
-                            - turnover
-                    required:
-                      - code
-                      - kline_type
-                      - kline_list
-                required:
-                  - ret
-                  - msg
-                  - trace
-                  - data
-              example:
-                ret: 200
-                msg: ok
-                trace: asdfsdfa
-                data:
-                  code: 857.HK
-                  kline_type: 1
-                  kline_list:
-                    - timestamp: '1677829200'
-                      open_price: '136.421'
-                      close_price: '136.412'
-                      high_price: '136.422'
-                      low_price: '136.407'
-                      volume: '0'
-                      turnover: '0'
-                    - timestamp: '1677829260'
-                      open_price: '136.412'
-                      close_price: '136.401'
-                      high_price: '136.415'
-                      low_price: '136.397'
-                      volume: '0'
-                      turnover: '0'
-          headers: {}
-      security: []
-  /quote-b-api/batch-kline:
-    get:
-      summary: K线批量查询【外汇、贵金属、加密货币】
-      deprecated: false
-      description: ''
-      tags:
-        - 行情订阅相关/http请求接口
-      parameters:
-        - name: token
-          in: query
-          description: 如果不知道你的token，请联系相关人员索要
-          required: true
-          example: 65b31e26-312c-4e71-89ae-f5e33073d1c8-1676446387481
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                trace:
-                  type: string
-                data:
-                  type: object
-                  properties:
-                    data_list:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          code:
-                            type: string
-                          kline_type:
-                            type: integer
-                          kline_timestamp_end:
-                            type: integer
-                          query_kline_num:
-                            type: integer
-                          adjust_type:
-                            type: integer
-                        required:
-                          - code
-                          - kline_type
-                          - kline_timestamp_end
-                          - query_kline_num
-                          - adjust_type
-                  required:
-                    - data_list
-              required:
-                - trace
-                - data
-            example:
-              trace: '{{mock_trace}}'
-              data:
-                data_list:
-                  - code: EURJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
-                  - code: EURJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  ret:
-                    type: integer
-                  msg:
-                    type: string
-                  trace:
-                    type: string
-                  data:
-                    type: object
-                    properties:
-                      code:
-                        type: string
-                        description: 代码
-                      kline_type:
-                        type: integer
-                        description: >-
-                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
-                      kline_list:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            timestamp:
-                              type: string
-                              description: 该K线时间戳
-                            open_price:
-                              type: string
-                              description: 该K线开盘价
-                            close_price:
-                              type: string
-                              description: 该K线收盘价
-                            high_price:
-                              type: string
-                              description: 该K线最高价
-                            low_price:
-                              type: string
-                              description: 该K线最低价
-                            volume:
-                              type: string
-                              description: 该K线成交数量
-                            turnover:
-                              type: string
-                              description: 该K线成交金额
-                          required:
-                            - timestamp
-                            - open_price
-                            - close_price
-                            - high_price
-                            - low_price
-                            - volume
-                            - turnover
-                    required:
-                      - code
-                      - kline_type
-                      - kline_list
-                required:
-                  - ret
-                  - msg
-                  - trace
-                  - data
-              example:
-                ret: 200
-                msg: ok
-                trace: asdfsdfa
-                data:
-                  code: 857.HK
-                  kline_type: 1
-                  kline_list:
-                    - timestamp: '1677829200'
-                      open_price: '136.421'
-                      close_price: '136.412'
-                      high_price: '136.422'
-                      low_price: '136.407'
-                      volume: '0'
-                      turnover: '0'
-                    - timestamp: '1677829260'
-                      open_price: '136.412'
-                      close_price: '136.401'
-                      high_price: '136.415'
-                      low_price: '136.397'
-                      volume: '0'
-                      turnover: '0'
-          headers: {}
-      security: []
-  /quote-stock-b-api/kline:
-    get:
-      summary: 'K线查询【股票】 '
-      deprecated: false
-      description: ''
-      tags:
-        - 行情订阅相关/http请求接口
-      parameters:
-        - name: token
-          in: query
-          description: 如果不知道你的token，请联系相关人员索要
-          required: true
-          example: e945d7d9-9e6e-4721-922a-7251a9d311d0-1678159756806
-          schema:
-            type: string
-        - name: query
-          in: query
-          description: "请对如下字段进行encode，后台服务收到之后会decode\n{\n    \"trace\": \"culpa cillum ea reprehenderit occaecat\",\n    \"data\": {\n        \"code\": \"GBPJPY\",\n        \"kline_type\": 1,\n        \"kline_timestamp_end\": 0,\n        \"query_kline_num\": 2,\n\t\"adjust_type\": 0\n    }\n}\ntrace：追踪码，用来查询日志使用，请保证每次请求时唯一\ncode：请查看code列表，选择你要查询的code\nkline_type：k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K\nkline_timestamp_end：从那个时间点往前查，为0表示从当前时间，非股票类的code才有效\nquery_kline_num：查询多少根K线，最多1000根\nadjust_type: 复权类型,对于股票类的code才有效，例如：0:除权,1:前复权"
-          required: true
-          example: "{% '{\"trace\": \"culpa cillum ea reprehenderit occaecat\",\"data\": {\"code\": \"GBPJPY\",\r\n\"kline_type\": 1,\"kline_timestamp_end\": 0,\"query_kline_num\": 2,\"adjust_type\": 0}}'|encodeURIComponent %}"
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  ret:
-                    type: integer
-                  msg:
-                    type: string
-                  trace:
-                    type: string
-                  data:
-                    type: object
-                    properties:
-                      code:
-                        type: string
-                        description: 代码
-                      kline_type:
-                        type: integer
-                        description: >-
-                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
-                      kline_list:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            timestamp:
-                              type: string
-                              description: 该K线时间戳
-                            open_price:
-                              type: string
-                              description: 该K线开盘价
-                            close_price:
-                              type: string
-                              description: 该K线收盘价
-                            high_price:
-                              type: string
-                              description: 该K线最高价
-                            low_price:
-                              type: string
-                              description: 该K线最低价
-                            volume:
-                              type: string
-                              description: 该K线成交数量
-                            turnover:
-                              type: string
-                              description: 该K线成交金额
-                          required:
-                            - timestamp
-                            - open_price
-                            - close_price
-                            - high_price
-                            - low_price
-                            - volume
-                            - turnover
-                    required:
-                      - code
-                      - kline_type
-                      - kline_list
-                required:
-                  - ret
-                  - msg
-                  - trace
-                  - data
-              example:
-                ret: 200
-                msg: ok
-                trace: asdfsdfa
-                data:
-                  code: 857.HK
-                  kline_type: 1
-                  kline_list:
-                    - timestamp: '1677829200'
-                      open_price: '136.421'
-                      close_price: '136.412'
-                      high_price: '136.422'
-                      low_price: '136.407'
-                      volume: '0'
-                      turnover: '0'
-                    - timestamp: '1677829260'
-                      open_price: '136.412'
-                      close_price: '136.401'
-                      high_price: '136.415'
-                      low_price: '136.397'
-                      volume: '0'
-                      turnover: '0'
-          headers: {}
-      security: []
-  /quote-stock-b-api/batch-kline:
-    get:
-      summary: K线批量查询【股票】
-      deprecated: false
-      description: ''
-      tags:
-        - 行情订阅相关/http请求接口
-      parameters:
-        - name: token
-          in: query
-          description: 如果不知道你的token，请联系相关人员索要
-          required: true
-          example: e945d7d9-9e6e-4721-922a-7251a9d311d0-1678159756806
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                trace:
-                  type: string
-                data:
-                  type: object
-                  properties:
-                    data_list:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          code:
-                            type: string
-                          kline_type:
-                            type: integer
-                          kline_timestamp_end:
-                            type: integer
-                          query_kline_num:
-                            type: integer
-                          adjust_type:
-                            type: integer
-                        required:
-                          - code
-                          - kline_type
-                          - kline_timestamp_end
-                          - query_kline_num
-                          - adjust_type
-                  required:
-                    - data_list
-              required:
-                - trace
-                - data
-            example:
-              trace: '{{mock_trace}}'
-              data:
-                data_list:
-                  - code: EURJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
-                  - code: USDJPY
-                    kline_type: 1
-                    kline_timestamp_end: 0
-                    query_kline_num: 2
-                    adjust_type: 0
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  ret:
-                    type: integer
-                  msg:
-                    type: string
-                  trace:
-                    type: string
-                  data:
-                    type: object
-                    properties:
-                      code:
-                        type: string
-                        description: 代码
-                      kline_type:
-                        type: integer
-                        description: >-
-                          k线类型，1分钟K，2为5分钟K，3为15分钟K，4为30分钟K，5为小时K，6为2小时K，7为4小时K，8为日K，9为周K，10为月K
-                      kline_list:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            timestamp:
-                              type: string
-                              description: 该K线时间戳
-                            open_price:
-                              type: string
-                              description: 该K线开盘价
-                            close_price:
-                              type: string
-                              description: 该K线收盘价
-                            high_price:
-                              type: string
-                              description: 该K线最高价
-                            low_price:
-                              type: string
-                              description: 该K线最低价
-                            volume:
-                              type: string
-                              description: 该K线成交数量
-                            turnover:
-                              type: string
-                              description: 该K线成交金额
-                          required:
-                            - timestamp
-                            - open_price
-                            - close_price
-                            - high_price
-                            - low_price
-                            - volume
-                            - turnover
-                    required:
-                      - code
-                      - kline_type
-                      - kline_list
-                required:
-                  - ret
-                  - msg
-                  - trace
-                  - data
-              example:
-                ret: 200
-                msg: ok
-                trace: asdfsdfa
-                data:
-                  code: 857.HK
-                  kline_type: 1
-                  kline_list:
-                    - timestamp: '1677829200'
-                      open_price: '136.421'
-                      close_price: '136.412'
-                      high_price: '136.422'
-                      low_price: '136.407'
-                      volume: '0'
-                      turnover: '0'
-                    - timestamp: '1677829260'
-                      open_price: '136.412'
-                      close_price: '136.401'
-                      high_price: '136.415'
-                      low_price: '136.397'
-                      volume: '0'
-                      turnover: '0'
           headers: {}
       security: []
 components:
