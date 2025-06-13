@@ -935,7 +935,7 @@ paths:
                     properties:
                       code:
                         type: array
-                        items: &ref_4
+                        items:
                           $ref: '#/components/schemas/DictVO'
                           description: Dictionary item list
                         description: Dictionary code
@@ -1110,7 +1110,7 @@ paths:
                         childs:
                           type: array
                           description: Subnode data
-                          items: &ref_0
+                          items:
                             $ref: '#/components/schemas/CountryDictVo'
                   ok:
                     type: boolean
@@ -1253,7 +1253,8 @@ paths:
                         childs:
                           type: array
                           description: Subnode data
-                          items: *ref_0
+                          items:
+                            $ref: '#/components/schemas/CountryDictVo'
                   ok:
                     type: boolean
                   fail:
@@ -1573,12 +1574,12 @@ paths:
                             Trading Hours
                         holidayTimeList:
                           type: array
-                          items: &ref_3
+                          items:
                             $ref: '#/components/schemas/HolidayTime'
                           description: Holiday Time
                         tradeTimeList:
                           type: array
-                          items: &ref_2
+                          items:
                             $ref: '#/components/schemas/TradeTime'
                           description: Trading Time
                       required:
@@ -1805,32 +1806,38 @@ paths:
                                   description: Per Mille
                       dailyMarginSet:
                         type: array
-                        items: &ref_1
+                        items:
                           $ref: '#/components/schemas/MarginSet'
                         description: Weekday Margin Level
                       holidayMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: Holiday Margin Level
                       weekendMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: Weekend Margin Level
                       beforeHolidayMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: Margin ratio before the holiday
                       beforeWeekendMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: Margin ratio before the weekend
                       usedMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: Current margin ratio in use
                       tradeTimeList:
                         type: array
-                        items: *ref_2
+                        items:
+                          $ref: '#/components/schemas/TradeTime'
                         description: Trading Time
                       quoteTimeList:
                         type: array
@@ -1839,7 +1846,8 @@ paths:
                         description: Market time
                       holidayTimeList:
                         type: array
-                        items: *ref_3
+                        items:
+                          $ref: '#/components/schemas/HolidayTime'
                         description: Holiday Time
                       weekendLeadTime:
                         type: integer
@@ -1962,7 +1970,9 @@ paths:
                         description: Tag
                       labelList:
                         type: array
-                        items: *ref_4
+                        items:
+                          $ref: '#/components/schemas/DictVO'
+                          description: Dictionary item list
                         description: Tag list
                       minTradeUnit:
                         type: integer
@@ -2013,18 +2023,30 @@ paths:
                       maxFee:
                         type: number
                         description: Maximum commission fee amount
-                      daytimeBuyInitMarginRatio: *ref_1
-                      daytimeBuyRemainingMarginRatio: *ref_1
-                      daytimeBuyAlarmMarginRatio: *ref_1
-                      daytimeSellInitMarginRatio: *ref_1
-                      daytimeSellRemainingMarginRatio: *ref_1
-                      daytimeSellAlarmMarginRatio: *ref_1
-                      overnightBuyInitMarginRatio: *ref_1
-                      overnightBuyRemainingMarginRatio: *ref_1
-                      overnightBuyAlarmMarginRatio: *ref_1
-                      overnightSellInitMarginRatio: *ref_1
-                      overnightSellRemainingMarginRatio: *ref_1
-                      overnightSellAlarmMarginRatio: *ref_1
+                      daytimeBuyInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      daytimeBuyRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      daytimeBuyAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      daytimeSellInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      daytimeSellRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      daytimeSellAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      overnightBuyInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      overnightBuyRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      overnightBuyAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      overnightSellInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      overnightSellRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                      overnightSellAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
                       overnightInAdvance:
                         type: integer
                         format: int64
@@ -2063,12 +2085,13 @@ paths:
                         description: Company action temporary code
                       dividendFutureInfos:
                         type: array
-                        items: &ref_5
+                        items:
                           $ref: '#/components/schemas/DividendInfo'
                         description: Company future action
                       dividendPastInfos:
                         type: array
-                        items: *ref_5
+                        items:
+                          $ref: '#/components/schemas/DividendInfo'
                         description: Company past action
                       stockStatus:
                         type: string
@@ -2286,7 +2309,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_7
+              schema:
                 $ref: '#/components/schemas/BaseResultOpenFundsVo'
               examples:
                 '1':
@@ -2457,7 +2480,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_6
+              schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoOpenFundsVo'
               examples:
                 '1':
@@ -2739,7 +2762,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_6
+              schema:
+                $ref: '#/components/schemas/BaseResultBasePageVoOpenFundsVo'
               examples:
                 '1':
                   summary: Success example
@@ -3750,7 +3774,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_7
+              schema:
+                $ref: '#/components/schemas/BaseResultOpenFundsVo'
               example:
                 msg: System error
                 fail: true
@@ -3830,7 +3855,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_8
+              schema:
                 $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
@@ -3912,7 +3937,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailV1v1v2:
@@ -4009,7 +4035,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changePhone:
@@ -4090,7 +4117,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Verification code is not correct
                 fail: true
@@ -4198,7 +4226,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkCustomerExist:
@@ -4374,7 +4403,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.enableOrForbidMFA:
@@ -4442,7 +4472,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerInfo:
@@ -4862,7 +4893,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdV1v1v2:
@@ -4957,7 +4989,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetLoginPwd:
@@ -5053,7 +5086,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwd:
@@ -5125,7 +5159,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Fund password has been set
                 fail: true
@@ -5219,7 +5254,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Verification code is not correct
                 fail: true
@@ -5313,7 +5349,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Verification code is not correct
                 fail: true
@@ -5390,7 +5427,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -6441,7 +6479,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountById:
@@ -7503,7 +7542,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwdMFA:
@@ -7599,7 +7639,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwd:
@@ -7673,7 +7714,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwdMFA:
@@ -7769,7 +7811,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -8003,7 +8046,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -8136,7 +8180,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -8220,7 +8265,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -8324,7 +8370,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Fund password has been set
                 fail: true
@@ -8428,7 +8475,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Fund password has been set
                 fail: true
@@ -10306,7 +10354,7 @@ paths:
                       list:
                         type: array
                         description: KYC authentication list information
-                        items: &ref_9
+                        items:
                           $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
@@ -10556,7 +10604,8 @@ paths:
                       list:
                         type: array
                         description: KYC authentication list information
-                        items: *ref_9
+                        items:
+                          $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
                         format: int64
@@ -11375,7 +11424,8 @@ paths:
                       list:
                         type: array
                         description: KYC authentication list information
-                        items: *ref_9
+                        items:
+                          $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
                         format: int64
@@ -11680,7 +11730,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: Success-Add bank card successfully
@@ -11817,7 +11868,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.WithdrawBankWebApiService.bankList:
@@ -12085,7 +12137,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: Success example
@@ -12195,7 +12248,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -12284,7 +12338,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: Success example
@@ -12529,7 +12584,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.addV1v1v2:
@@ -12632,7 +12688,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.delete:
@@ -12699,7 +12756,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.updateWallet:
@@ -12731,7 +12789,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.walletList:
@@ -12970,7 +13029,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressList:
@@ -13313,7 +13373,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_19
+              schema:
                 $ref: '#/components/schemas/BaseResultBoolean'
               example:
                 msg: Success
@@ -13639,7 +13699,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_10
+              schema:
                 $ref: '#/components/schemas/BaseResultListKycAuthVO'
               example:
                 msg: Success
@@ -13863,7 +13923,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_10
+              schema:
+                $ref: '#/components/schemas/BaseResultListKycAuthVO'
           headers: {}
       security: []
   /global/customer.app.KycWebApiService.findAllLevelKyc:
@@ -13947,7 +14008,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_10
+              schema:
+                $ref: '#/components/schemas/BaseResultListKycAuthVO'
           headers: {}
       security: []
   /global/customer.app.KycWebApiService.findCompanyCountry:
@@ -14135,7 +14197,7 @@ paths:
                 elementList:
                   type: array
                   description: KYC element collection
-                  items: &ref_11
+                  items:
                     $ref: '#/components/schemas/KycWebAddInnerDTO'
                   maxItems: 2147483647
                   minItems: 1
@@ -14164,7 +14226,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.KycWebApiService.kycLevelApply:
@@ -14230,7 +14293,8 @@ paths:
                 elementList:
                   type: array
                   description: KYC element collection
-                  items: *ref_11
+                  items:
+                    $ref: '#/components/schemas/KycWebAddInnerDTO'
                   maxItems: 2147483647
                   minItems: 1
                 selectCountry:
@@ -14390,7 +14454,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -14531,7 +14596,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -14648,7 +14714,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: Success example
@@ -14783,7 +14850,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: Success example
@@ -14959,7 +15027,7 @@ paths:
                             permissionDTOList:
                               type: array
                               description: List of permissions
-                              items: &ref_43
+                              items:
                                 $ref: '#/components/schemas/CustomerApiPermissionDTO'
                             ipLimit:
                               type: boolean
@@ -15608,7 +15676,8 @@ paths:
                       list:
                         type: array
                         description: KYC authentication list information
-                        items: *ref_9
+                        items:
+                          $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
                         format: int64
@@ -26291,7 +26360,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_12
+              schema:
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
           headers: {}
       security: []
@@ -26386,7 +26455,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_12
+              schema:
+                $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
           headers: {}
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryTradeRecordPage:
@@ -29476,7 +29546,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_13
+              schema:
                 $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
           headers: {}
       security: []
@@ -29504,7 +29574,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_13
+              schema:
+                $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
           headers: {}
       security: []
   /global/fund.app.FundApplyAppDubboService.apply:
@@ -29522,7 +29593,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_14
+            schema:
               $ref: '#/components/schemas/CreateFundApplyReqDto'
             example: ''
       responses:
@@ -29549,7 +29620,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_14
+            schema:
+              $ref: '#/components/schemas/CreateFundApplyReqDto'
             example: ''
       responses:
         '200':
@@ -29575,7 +29647,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_15
+            schema:
               $ref: '#/components/schemas/FundApplyRecordDto'
             example: ''
       responses:
@@ -29583,7 +29655,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_16
+              schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
           headers: {}
       security: []
@@ -29602,7 +29674,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_23
+            schema:
               $ref: '#/components/schemas/FundCurrencyQueryReqDto'
             example: ''
       responses:
@@ -29610,7 +29682,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_24
+              schema:
                 $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
           headers: {}
       security: []
@@ -29629,14 +29701,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_15
+            schema:
+              $ref: '#/components/schemas/FundApplyRecordDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_16
+              schema:
+                $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
           headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.calcDeduct:
@@ -29654,7 +29728,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_17
+            schema:
               $ref: '#/components/schemas/FundManagementFeesDeductDto'
             example: ''
       responses:
@@ -29681,14 +29755,15 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_17
+            schema:
+              $ref: '#/components/schemas/FundManagementFeesDeductDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: &ref_18
+              schema:
                 $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
       security: []
@@ -29716,7 +29791,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_18
+              schema:
+                $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.page:
@@ -29761,7 +29837,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_46
+            schema:
               $ref: '#/components/schemas/FundsApplyExecuteInfoDto'
             example: ''
       responses:
@@ -29769,7 +29845,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_19
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
   /global/fund.app.FundsApplyExecuteService.getFundsApplyExecuteInfo:
@@ -29885,7 +29962,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_19
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
   /global/fund.app.FundOperationInfoAppDubboService.queryFundInfo:
@@ -29903,7 +29981,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_27
+            schema:
               $ref: '#/components/schemas/FundInfoQueryReqDto'
             example: ''
       responses:
@@ -29930,7 +30008,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_22
+            schema:
               $ref: '#/components/schemas/CreateFundRedeemReqDto'
             example: ''
       responses:
@@ -29957,7 +30035,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_20
+            schema:
               $ref: '#/components/schemas/FundRedeemSharesCheckReqDto'
             example: ''
       responses:
@@ -29965,7 +30043,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_21
+              schema:
                 $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
           headers: {}
       security: []
@@ -29984,14 +30062,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_20
+            schema:
+              $ref: '#/components/schemas/FundRedeemSharesCheckReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_21
+              schema:
+                $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.createFundRedeem:
@@ -30009,14 +30089,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_22
+            schema:
+              $ref: '#/components/schemas/CreateFundRedeemReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_18
+              schema:
+                $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.getFundRedeemCurrencyList:
@@ -30034,14 +30116,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_23
+            schema:
+              $ref: '#/components/schemas/FundCurrencyQueryReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_24
+              schema:
+                $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.page:
@@ -30059,7 +30143,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_25
+            schema:
               $ref: '#/components/schemas/FundRedeemQueryReqDto'
             example: ''
       responses:
@@ -30067,7 +30151,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_26
+              schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
           headers: {}
       security: []
@@ -30086,14 +30170,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_25
+            schema:
+              $ref: '#/components/schemas/FundRedeemQueryReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_26
+              schema:
+                $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryNotConfirmedRecs:
@@ -30111,7 +30197,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_27
+            schema:
+              $ref: '#/components/schemas/FundInfoQueryReqDto'
             example: ''
       responses:
         '200':
@@ -30172,7 +30259,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_29
+            schema:
               $ref: '#/components/schemas/CustomerRechargeWalletAddrReqDto'
             example: ''
       responses:
@@ -30180,7 +30267,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_30
+              schema:
                 $ref: >-
                   #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
           headers: {}
@@ -30398,7 +30485,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_28
+              schema:
                 $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
       security: []
@@ -30485,7 +30572,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_28
+              schema:
+                $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferRecord:
@@ -30608,7 +30696,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_28
+              schema:
+                $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.createDepositProposal:
@@ -30723,14 +30812,17 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_29
+            schema:
+              $ref: '#/components/schemas/CustomerRechargeWalletAddrReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_30
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getCryptoBlockchainInfo:
@@ -30989,7 +31081,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_35
+              schema:
                 $ref: '#/components/schemas/BaseResultSetString'
           headers: {}
       security: []
@@ -31122,7 +31214,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_31
+              schema:
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
           headers: {}
@@ -31188,7 +31280,9 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_31
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV3:
@@ -31380,7 +31474,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_19
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.manualLoan:
@@ -31441,7 +31536,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.manualRepayment:
@@ -31502,7 +31598,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService/queryDepositProposal:
@@ -31652,7 +31749,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_19
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
   /global/fund.app.CustomerProposalQueryService.queryDepositAdjustPageList:
@@ -31938,7 +32036,7 @@ paths:
                     description: >-
                       Placeholder parameter string in return description,
                       multiple parameters separated by commas
-                  data: &ref_59
+                  data:
                     $ref: '#/components/schemas/ExchangeRateConvertDto'
                   ok:
                     type: string
@@ -31961,7 +32059,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_32
+            schema:
               $ref: '#/components/schemas/ComputeWithdrawReqDto'
             example: ''
       responses:
@@ -31988,7 +32086,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_56
+            schema:
               $ref: '#/components/schemas/QueryCustomerWithdrawExchangeRateDto'
             example: ''
       responses:
@@ -32162,7 +32260,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_32
+            schema:
+              $ref: '#/components/schemas/ComputeWithdrawReqDto'
             example: ''
       responses:
         '200':
@@ -32223,7 +32322,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_33
+            schema:
               $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
@@ -32231,7 +32330,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_34
+              schema:
                 $ref: >-
                   #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
@@ -32251,14 +32350,17 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_33
+            schema:
+              $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_34
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAccountCurrencyList:
@@ -32276,7 +32378,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_36
+            schema:
               $ref: '#/components/schemas/WithdrawCurrencyListReqDto'
             example: ''
       responses:
@@ -32284,7 +32386,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_35
+              schema:
+                $ref: '#/components/schemas/BaseResultSetString'
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAmountLimitInfo:
@@ -32365,14 +32468,17 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_33
+            schema:
+              $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_34
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawMethodList:
@@ -32425,14 +32531,15 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_33
+            schema:
+              $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: &ref_37
+              schema:
                 $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
           headers: {}
       security: []
@@ -32451,7 +32558,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_32
+            schema:
+              $ref: '#/components/schemas/ComputeWithdrawReqDto'
             example: ''
       responses:
         '200':
@@ -32531,7 +32639,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_36
+            schema:
+              $ref: '#/components/schemas/WithdrawCurrencyListReqDto'
             example: ''
       responses:
         '200':
@@ -32603,7 +32712,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_37
+              schema:
+                $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.queryCustomerGroupWithdrawRiskConfig:
@@ -41394,7 +41504,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_38
+              schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
@@ -41454,7 +41564,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_38
+              schema:
+                $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
   /global/makerbot.app.MMBotService.addAmmAmount:
@@ -41513,7 +41624,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_38
+              schema:
+                $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolInfo:
@@ -41554,7 +41666,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_38
+              schema:
+                $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
   /global/makerbot.app.MMBotService.getAmmSymbolAmount:
@@ -42039,7 +42152,7 @@ paths:
       security: []
 components:
   schemas:
-    BaseResultBasePageVoAmmSymbolInfoVo: &ref_41
+    BaseResultBasePageVoAmmSymbolInfoVo: &ref_1
       type: object
       properties:
         bizCode:
@@ -42075,7 +42188,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_39
+          items:
             $ref: '#/components/schemas/AmmSymbolAmountVo'
         total:
           type: integer
@@ -42381,7 +42494,8 @@ components:
           type: boolean
         fail:
           type: boolean
-        data: *ref_39
+        data:
+          $ref: '#/components/schemas/AmmSymbolAmountVo'
       title: ''
     BaseResultListFundPayChannelTypeDto:
       type: object
@@ -42516,7 +42630,7 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: &ref_49
+        data:
           $ref: '#/components/schemas/CustomerDepositProposalDto'
         ok:
           type: boolean
@@ -42730,7 +42844,7 @@ components:
         - symbolId
         - amount
         - accountId
-    ManualRepaymentDto: &ref_40
+    ManualRepaymentDto: &ref_0
       type: object
       required:
         - accountCurrency
@@ -42782,7 +42896,7 @@ components:
         - priceInterval
         - amount
         - accountId
-    ManualLoanDto: *ref_40
+    ManualLoanDto: *ref_0
     BaseResultAmmSymbolInfoVo:
       type: object
       properties:
@@ -42844,7 +42958,7 @@ components:
         - profitCurrency
         - symbolDigits
         - marketMaker
-    BaseResultBasePageVoMMBotConfVo: *ref_41
+    BaseResultBasePageVoMMBotConfVo: *ref_1
     BaseResultQueryCoinPayStatusRespDto:
       type: object
       properties:
@@ -44046,7 +44160,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_42
+          items:
             $ref: '#/components/schemas/OpenFundsVo'
         total:
           type: integer
@@ -44360,7 +44474,8 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_42
+        data:
+          $ref: '#/components/schemas/OpenFundsVo'
         ok:
           type: boolean
         fail:
@@ -44392,7 +44507,8 @@ components:
         data:
           type: array
           description: Data Body
-          items: *ref_33
+          items:
+            $ref: '#/components/schemas/WithdrawMethodQueryDto'
         ok:
           type: boolean
         fail:
@@ -44802,9 +44918,9 @@ components:
         configDtoList:
           type: array
           description: Order Execution Standard Configuration Array
-          items: &ref_44
+          items:
             $ref: '#/components/schemas/OrderExecuteStandardConfigDto'
-    OrderExecuteStandardConfigDto: &ref_45
+    OrderExecuteStandardConfigDto: &ref_2
       type: object
       required:
         - baseCurrency
@@ -45018,7 +45134,8 @@ components:
         permissionDTOList:
           type: array
           description: List of permissions
-          items: *ref_43
+          items:
+            $ref: '#/components/schemas/CustomerApiPermissionDTO'
         ipLimit:
           type: boolean
           description: Whether IP restriction is enabled
@@ -45123,7 +45240,8 @@ components:
         data:
           type: array
           description: Data Body
-          items: *ref_44
+          items:
+            $ref: '#/components/schemas/OrderExecuteStandardConfigDto'
         ok:
           type: boolean
         fail:
@@ -45244,7 +45362,7 @@ components:
         rechargeType:
           type: string
           description: Recharge method
-    FundMarketPerfQuoteChangeChartVo: &ref_55
+    FundMarketPerfQuoteChangeChartVo: &ref_5
       type: object
       properties:
         symbolId:
@@ -45396,8 +45514,8 @@ components:
           type: boolean
         fail:
           type: boolean
-    OrderExecuteStandardConfigSymbolDto: *ref_45
-    QueryOrderExecuteStandardConfigSymbolListReqDto: &ref_52
+    OrderExecuteStandardConfigSymbolDto: *ref_2
+    QueryOrderExecuteStandardConfigSymbolListReqDto: &ref_4
       type: object
       properties: {}
     BaseResultCryptoBlockchainRespDto:
@@ -45491,7 +45609,7 @@ components:
               type: string
             value:
               type: array
-              items: &ref_54
+              items:
                 $ref: '#/components/schemas/FundTrendChartDto'
           title: Data Body
           required:
@@ -45655,7 +45773,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_58
+          items:
             $ref: '#/components/schemas/CustomerFundRedeemDto'
         total:
           type: integer
@@ -45759,7 +45877,7 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: &ref_47
+          items:
             $ref: '#/components/schemas/FieldOrderDto'
         proposalNoList:
           type: array
@@ -45836,7 +45954,8 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_46
+        data:
+          $ref: '#/components/schemas/FundsApplyExecuteInfoDto'
         ok:
           type: boolean
         fail:
@@ -45857,7 +45976,7 @@ components:
         fundsApplyExecuteRecordDetailDtoList:
           type: array
           description: Fund Product Subscription Execution Detail Record List
-          items: &ref_48
+          items:
             $ref: '#/components/schemas/FundsApplyExecuteRecordDetailDto'
     FundsApplyExecuteRecordDetailDto:
       type: object
@@ -46168,7 +46287,7 @@ components:
           type: string
           title: Change in Weight from Previous Period
       title: ''
-    FundInvestCombChartVo: &ref_50
+    FundInvestCombChartVo: &ref_3
       type: object
       properties:
         symbolId:
@@ -46253,7 +46372,8 @@ components:
         childs:
           type: array
           description: Subnode data
-          items: *ref_0
+          items:
+            $ref: '#/components/schemas/CountryDictVo'
     SpotQueryOrderDto:
       type: object
       properties:
@@ -46765,7 +46885,7 @@ components:
         data:
           type: array
           description: Data Body
-          items: &ref_53
+          items:
             $ref: '#/components/schemas/CustomerFundCurrencyDto'
         ok:
           type: boolean
@@ -46863,7 +46983,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_51
+          items:
             $ref: '#/components/schemas/CustomerWithdrawProposalDto'
         total:
           type: integer
@@ -47044,7 +47164,8 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: *ref_47
+          items:
+            $ref: '#/components/schemas/FieldOrderDto'
         startTime:
           type: integer
           format: int64
@@ -47175,7 +47296,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_60
+          items:
             $ref: '#/components/schemas/CustomerFundApplyDto'
         total:
           type: integer
@@ -47272,7 +47393,8 @@ components:
         executeList:
           type: array
           description: Execution Standard List
-          items: *ref_48
+          items:
+            $ref: '#/components/schemas/FundsApplyExecuteRecordDetailDto'
     FundApplyRecordDto:
       type: object
       required:
@@ -47363,7 +47485,8 @@ components:
         records:
           type: array
           description: Result list
-          items: *ref_49
+          items:
+            $ref: '#/components/schemas/CustomerDepositProposalDto'
         total:
           type: integer
           format: int64
@@ -47390,7 +47513,8 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: *ref_47
+          items:
+            $ref: '#/components/schemas/FieldOrderDto'
         startTime:
           type: integer
           format: int64
@@ -47586,7 +47710,7 @@ components:
         latestShare:
           type: string
       title: ''
-    FundNetValueChangeQuoteChartVo: *ref_50
+    FundNetValueChangeQuoteChartVo: *ref_3
     BaseResultListCustomerWithdrawBankVO:
       type: object
       properties:
@@ -47842,7 +47966,8 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_51
+        data:
+          $ref: '#/components/schemas/CustomerWithdrawProposalDto'
         ok:
           type: boolean
         fail:
@@ -47939,7 +48064,8 @@ components:
         data:
           type: array
           description: Data Body
-          items: *ref_9
+          items:
+            $ref: '#/components/schemas/KycAuthVO'
         ok:
           type: boolean
         fail:
@@ -47974,7 +48100,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    Void: *ref_52
+    Void: *ref_4
     BaseResultFundApplyCalcDto:
       type: object
       properties:
@@ -48032,7 +48158,8 @@ components:
         list:
           type: array
           description: List of assets in a basket
-          items: *ref_53
+          items:
+            $ref: '#/components/schemas/CustomerFundCurrencyDto'
     BaseResultBasePageVoCustomerAdjustProposalDto:
       type: object
       properties:
@@ -48188,7 +48315,8 @@ components:
         orders:
           type: array
           description: Sorting field list
-          items: *ref_47
+          items:
+            $ref: '#/components/schemas/FieldOrderDto'
         startTime:
           type: integer
           format: int64
@@ -48264,7 +48392,7 @@ components:
         records:
           type: array
           description: Result list
-          items: &ref_57
+          items:
             $ref: '#/components/schemas/SpotQueryOrderVo'
         total:
           type: integer
@@ -48548,11 +48676,12 @@ components:
           description: '1: Market price 2: Net value'
         columnList:
           type: array
-          items: *ref_54
+          items:
+            $ref: '#/components/schemas/FundTrendChartDto'
       required:
         - name
         - columnList
-    FundBatchMarketPerfChartVo: *ref_55
+    FundBatchMarketPerfChartVo: *ref_5
     ExchangeRateConvertDto:
       type: object
       properties:
@@ -48600,7 +48729,8 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_56
+        data:
+          $ref: '#/components/schemas/QueryCustomerWithdrawExchangeRateDto'
         ok:
           type: boolean
         fail:
@@ -48664,7 +48794,8 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_57
+        data:
+          $ref: '#/components/schemas/SpotQueryOrderVo'
         ok:
           type: boolean
         fail:
@@ -48835,7 +48966,8 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_58
+        data:
+          $ref: '#/components/schemas/CustomerFundRedeemDto'
         ok:
           type: boolean
         fail:
@@ -49018,12 +49150,13 @@ components:
         data:
           type: array
           description: Data Body
-          items: *ref_59
+          items:
+            $ref: '#/components/schemas/ExchangeRateConvertDto'
         ok:
           type: boolean
         fail:
           type: boolean
-    BaseResult1: &ref_61
+    BaseResult1: &ref_6
       type: object
       properties:
         bizCode:
@@ -49114,7 +49247,8 @@ components:
           description: >-
             Placeholder parameter string in return description, multiple
             parameters separated by commas
-        data: *ref_60
+        data:
+          $ref: '#/components/schemas/CustomerFundApplyDto'
         ok:
           type: boolean
         fail:
@@ -49144,7 +49278,7 @@ components:
         fundId:
           type: integer
           title: Fund ID
-    FundBaseDto: *ref_52
+    FundBaseDto: *ref_4
     BaseResultBoolean:
       type: object
       properties:
@@ -49486,7 +49620,7 @@ components:
       required:
         - statisticType
       title: ''
-    BaseResultObject: *ref_61
+    BaseResultObject: *ref_6
     BaseResultSpotOrderAddVo:
       type: object
       properties:
