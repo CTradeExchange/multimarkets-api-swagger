@@ -2498,7 +2498,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_0
+              schema:
                 $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
@@ -2583,7 +2583,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_0
+              schema:
+                $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
                 fail: false
@@ -4478,7 +4479,7 @@ paths:
                     nullable: true
                   data:
                     type: array
-                    items: &ref_1
+                    items:
                       $ref: '#/components/schemas/AssetsVo'
                       description: Asset list
                     description: return data，customer no
@@ -8364,7 +8365,8 @@ paths:
                                 description: Customer group name
                               assetsVoList:
                                 type: array
-                                items: *ref_1
+                                items:
+                                  $ref: '#/components/schemas/AssetsVo'
                                 description: List of asset permissions
                             required:
                               - customerGroupId
@@ -8788,7 +8790,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_0
+              schema:
+                $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
                 fail: false
@@ -8876,7 +8879,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_0
+              schema:
+                $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
                 fail: false
@@ -11210,7 +11214,7 @@ components:
             commas
         data:
           type: array
-          items: &ref_2
+          items:
             $ref: '#/components/schemas/TradeDeal'
           title: Data body
           description: Data Body
@@ -11358,7 +11362,9 @@ components:
           description: >-
             Placeholder Parameter String in Return Description, separated by
             commas
-        data: *ref_2
+        data:
+          $ref: '#/components/schemas/TradeDeal'
+          description: Data Body
       title: ''
       required:
         - bizCode
