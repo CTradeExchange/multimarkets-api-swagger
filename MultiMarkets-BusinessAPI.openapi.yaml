@@ -2246,7 +2246,7 @@ paths:
                     nullable: true
                   data:
                     type: array
-                    items: &ref_0
+                    items:
                       $ref: '#/components/schemas/AssetsVo'
                       description: 资产列表
                     description: return data，customer no
@@ -4422,7 +4422,8 @@ paths:
                                 description: 客户组名称
                               assetsVoList:
                                 type: array
-                                items: *ref_0
+                                items:
+                                  $ref: '#/components/schemas/AssetsVo'
                                 description: 资产权限列表
                             required:
                               - customerGroupId
@@ -5706,7 +5707,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_1
+              schema:
                 $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
@@ -5787,7 +5788,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_1
+              schema:
+                $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
                 fail: false
@@ -5867,7 +5869,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_1
+              schema:
+                $ref: '#/components/schemas/BaseResult'
           headers: {}
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryTradeTypeLockTradeAccount:
@@ -7941,7 +7944,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_1
+              schema:
+                $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
                 fail: false
@@ -8036,7 +8040,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_1
+              schema:
+                $ref: '#/components/schemas/BaseResult'
               example:
                 msg: Success
                 fail: false
@@ -10977,7 +10982,7 @@ components:
           title: 返回描述中占位符参数串，多个参数间以,分割
         data:
           type: array
-          items: &ref_2
+          items:
             $ref: '#/components/schemas/TradeDeal'
           title: 数据体
       title: ''
@@ -11285,7 +11290,8 @@ components:
         msgParams:
           type: string
           title: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_2
+        data:
+          $ref: '#/components/schemas/TradeDeal'
       title: ''
       required:
         - bizCode
@@ -11474,7 +11480,7 @@ components:
         marginDtoList:
           type: array
           description: 明细
-          items: &ref_3
+          items:
             $ref: '#/components/schemas/MarginDto'
         type:
           type: integer
@@ -11595,7 +11601,8 @@ components:
         marginDtoList:
           type: array
           description: 明细
-          items: *ref_3
+          items:
+            $ref: '#/components/schemas/MarginDto'
         type:
           type: integer
           format: int32
@@ -11676,7 +11683,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: &ref_4
+          items:
             $ref: '#/components/schemas/SpotQueryOrderVo'
         total:
           type: integer
@@ -11749,7 +11756,8 @@ components:
         marginDtoList:
           type: array
           description: 明细
-          items: *ref_3
+          items:
+            $ref: '#/components/schemas/MarginDto'
         type:
           type: integer
           format: int32
@@ -11862,7 +11870,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_4
+        data:
+          $ref: '#/components/schemas/SpotQueryOrderVo'
         ok:
           type: boolean
         fail:
