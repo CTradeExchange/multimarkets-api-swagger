@@ -895,8 +895,9 @@ paths:
                     properties:
                       code:
                         type: array
-                        items: &ref_4
+                        items:
                           $ref: '#/components/schemas/DictVO'
+                          description: 字典项列表
                         description: 字典代码
                     required:
                       - code
@@ -1066,7 +1067,7 @@ paths:
                         childs:
                           type: array
                           description: 子节点数据
-                          items: &ref_0
+                          items:
                             $ref: '#/components/schemas/CountryDictVo'
                   ok:
                     type: boolean
@@ -1206,7 +1207,8 @@ paths:
                         childs:
                           type: array
                           description: 子节点数据
-                          items: *ref_0
+                          items:
+                            $ref: '#/components/schemas/CountryDictVo'
                   ok:
                     type: boolean
                   fail:
@@ -1513,12 +1515,12 @@ paths:
                           description: 是否交易时间中，0:不在交易时间，1:在交易时间
                         holidayTimeList:
                           type: array
-                          items: &ref_3
+                          items:
                             $ref: '#/components/schemas/HolidayTime'
                           description: 假期时间
                         tradeTimeList:
                           type: array
-                          items: &ref_2
+                          items:
                             $ref: '#/components/schemas/TradeTime'
                           description: 交易时间
                       required:
@@ -1740,41 +1742,48 @@ paths:
                                   description: 万分比
                       dailyMarginSet:
                         type: array
-                        items: &ref_1
+                        items:
                           $ref: '#/components/schemas/MarginSet'
                         description: 平日保证金层级
                       holidayMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: 假期保证金层级
                       weekendMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: 周末保证金层级
                       beforeHolidayMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: 假期前保证金比例
                       beforeWeekendMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: 周末前保证金比例
                       usedMarginSet:
                         type: array
-                        items: *ref_1
+                        items:
+                          $ref: '#/components/schemas/MarginSet'
                         description: 当前使用保证金比例
                       tradeTimeList:
                         type: array
-                        items: *ref_2
+                        items:
+                          $ref: '#/components/schemas/TradeTime'
                         description: 交易时间
                       quoteTimeList:
                         type: array
-                        items: &ref_82
+                        items:
                           $ref: '#/components/schemas/QuoteTime'
                         description: 行情时间
                       holidayTimeList:
                         type: array
-                        items: *ref_3
+                        items:
+                          $ref: '#/components/schemas/HolidayTime'
                         description: 假期时间
                       weekendLeadTime:
                         type: integer
@@ -1858,17 +1867,17 @@ paths:
                         description: 限制划出资产比例
                       borrowInterestList:
                         type: array
-                        items: &ref_83
+                        items:
                           $ref: '#/components/schemas/BorrowInterest'
                         description: 借款利息
                       borrowLimitList:
                         type: array
-                        items: &ref_84
+                        items:
                           $ref: '#/components/schemas/BorrowLimit'
                         description: 借款限额
                       borrowStatusList:
                         type: array
-                        items: &ref_85
+                        items:
                           $ref: '#/components/schemas/BorrowStatus'
                         description: 借款产品
                       totalCredit:
@@ -1897,7 +1906,8 @@ paths:
                         description: 标签
                       labelList:
                         type: array
-                        items: *ref_4
+                        items:
+                          $ref: '#/components/schemas/DictVO'
                         description: 标签列表
                       minTradeUnit:
                         type: integer
@@ -1948,25 +1958,49 @@ paths:
                       maxFee:
                         type: number
                         description: 最高手续费金额
-                      daytimeBuyInitMarginRatio: *ref_1
-                      daytimeBuyRemainingMarginRatio: *ref_1
-                      daytimeBuyAlarmMarginRatio: *ref_1
-                      daytimeSellInitMarginRatio: *ref_1
-                      daytimeSellRemainingMarginRatio: *ref_1
-                      daytimeSellAlarmMarginRatio: *ref_1
-                      overnightBuyInitMarginRatio: *ref_1
-                      overnightBuyRemainingMarginRatio: *ref_1
-                      overnightBuyAlarmMarginRatio: *ref_1
-                      overnightSellInitMarginRatio: *ref_1
-                      overnightSellRemainingMarginRatio: *ref_1
-                      overnightSellAlarmMarginRatio: *ref_1
+                      daytimeBuyInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 日内买入初始保证金比例
+                      daytimeBuyRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 日内买入维持保证金比例
+                      daytimeBuyAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 日内买入预警保证金比例
+                      daytimeSellInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 日内卖出初始保证金比例
+                      daytimeSellRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 日内卖出维持保证金比例
+                      daytimeSellAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 日内卖出预警保证金比例
+                      overnightBuyInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 隔夜买入初始保证金比例
+                      overnightBuyRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 隔夜买入维持保证金比例
+                      overnightBuyAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 隔夜买入预警保证金比例
+                      overnightSellInitMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 隔夜卖出初始保证金比例
+                      overnightSellRemainingMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 隔夜卖出维持保证金比例
+                      overnightSellAlarmMarginRatio:
+                        $ref: '#/components/schemas/MarginSet'
+                        description: 隔夜卖出预警保证金比例
                       overnightInAdvance:
                         type: integer
                         format: int64
                         description: 隔夜提前时间（分）
                       longLoanYearRatio:
                         type: array
-                        items: &ref_86
+                        items:
                           $ref: '#/components/schemas/BorrowAssetsInterest'
                         description: 融资年利息率
                       shortLoanYearRatio:
@@ -1996,12 +2030,13 @@ paths:
                         description: 公司行动临时代码
                       dividendFutureInfos:
                         type: array
-                        items: &ref_5
+                        items:
                           $ref: '#/components/schemas/DividendInfo'
                         description: 公司未来行动
                       dividendPastInfos:
                         type: array
-                        items: *ref_5
+                        items:
+                          $ref: '#/components/schemas/DividendInfo'
                         description: 公司过去行动
                       stockStatus:
                         type: string
@@ -2216,7 +2251,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_7
+              schema:
                 $ref: '#/components/schemas/BaseResultOpenFundsVo'
               examples:
                 '1':
@@ -2386,7 +2421,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_6
+              schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoOpenFundsVo'
               examples:
                 '1':
@@ -2667,7 +2702,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_6
+              schema:
+                $ref: '#/components/schemas/BaseResultBasePageVoOpenFundsVo'
               examples:
                 '1':
                   summary: 成功示例
@@ -3673,7 +3709,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_7
+              schema:
+                $ref: '#/components/schemas/BaseResultOpenFundsVo'
               example:
                 msg: System error
                 fail: true
@@ -4293,7 +4330,7 @@ paths:
                       list:
                         type: array
                         description: KYC认证列表信息
-                        items: &ref_11
+                        items:
                           $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
@@ -4650,7 +4687,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_8
+              schema:
                 $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
@@ -4733,7 +4770,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailV1v1v2:
@@ -4825,7 +4863,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changePhone:
@@ -4905,7 +4944,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Verification code is not correct
                 fail: true
@@ -5007,7 +5047,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkCustomerExist:
@@ -5179,7 +5220,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.enableOrForbidMFA:
@@ -5244,7 +5286,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerInfo:
@@ -5626,7 +5669,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdV1v1v2:
@@ -5715,7 +5759,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetLoginPwd:
@@ -5810,7 +5855,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwd:
@@ -5882,7 +5928,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Fund password has been set
                 fail: true
@@ -5975,7 +6022,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Verification code is not correct
                 fail: true
@@ -6068,7 +6116,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Verification code is not correct
                 fail: true
@@ -6144,7 +6193,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -6431,7 +6481,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountById:
@@ -7451,7 +7502,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwdMFA:
@@ -7544,7 +7596,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwd:
@@ -7617,7 +7670,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwdMFA:
@@ -7710,7 +7764,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -7928,7 +7983,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -8050,7 +8106,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -8129,7 +8186,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -8231,7 +8289,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Fund password has been set
                 fail: true
@@ -8333,7 +8392,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Fund password has been set
                 fail: true
@@ -9526,7 +9586,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: 成功示例
@@ -9613,7 +9674,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_13
+              schema:
                 $ref: '#/components/schemas/BaseResultBoolean'
               example:
                 msg: Success
@@ -9915,7 +9976,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_9
+              schema:
                 $ref: '#/components/schemas/BaseResultListKycAuthVO'
               example:
                 msg: Success
@@ -10129,7 +10190,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_9
+              schema:
+                $ref: '#/components/schemas/BaseResultListKycAuthVO'
           headers: {}
       security: []
   /global/customer.app.KycWebApiService.findAllLevelKyc:
@@ -10211,7 +10273,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_9
+              schema:
+                $ref: '#/components/schemas/BaseResultListKycAuthVO'
           headers: {}
       security: []
   /global/customer.app.KycWebApiService.findCompanyCountry:
@@ -10392,7 +10455,7 @@ paths:
                 elementList:
                   type: array
                   description: KYC元素集合
-                  items: &ref_10
+                  items:
                     $ref: '#/components/schemas/KycWebAddInnerDTO'
                   maxItems: 2147483647
                   minItems: 1
@@ -10416,7 +10479,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.KycWebApiService.kycLevelApply:
@@ -10482,7 +10546,8 @@ paths:
                 elementList:
                   type: array
                   description: KYC元素集合
-                  items: *ref_10
+                  items:
+                    $ref: '#/components/schemas/KycWebAddInnerDTO'
                   maxItems: 2147483647
                   minItems: 1
                 selectCountry:
@@ -10659,7 +10724,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
       x-docstype: TS.Clientapi.Customer
@@ -10756,7 +10822,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.delete:
@@ -10822,7 +10889,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.updateWallet:
@@ -10853,7 +10921,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.walletList:
@@ -11086,7 +11155,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressList:
@@ -11439,7 +11509,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.batchUpdateByChain:
@@ -11519,7 +11590,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.WithdrawBankWebApiService.delete:
@@ -11672,7 +11744,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: 成功-添加银行卡成功
@@ -11808,7 +11881,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/customer.app.WithdrawBankWebApiService.bankList:
@@ -13099,7 +13173,8 @@ paths:
                       list:
                         type: array
                         description: KYC认证列表信息
-                        items: *ref_11
+                        items:
+                          $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
                         format: int64
@@ -13587,7 +13662,8 @@ paths:
                       list:
                         type: array
                         description: KYC认证列表信息
-                        items: *ref_11
+                        items:
+                          $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
                         format: int64
@@ -13751,7 +13827,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -13837,7 +13914,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: 成功示例
@@ -14064,7 +14142,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               example:
                 msg: Success
                 fail: false
@@ -14180,7 +14259,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: 成功示例
@@ -14306,7 +14386,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
               examples:
                 '1':
                   summary: 成功示例
@@ -14479,7 +14560,7 @@ paths:
                             permissionDTOList:
                               type: array
                               description: 权限列表
-                              items: &ref_40
+                              items:
                                 $ref: '#/components/schemas/CustomerApiPermissionDTO'
                             ipLimit:
                               type: boolean
@@ -14617,7 +14698,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_12
+              schema:
                 $ref: '#/components/schemas/BaseResultCustomerApiVO'
               example:
                 msg: Success
@@ -14831,7 +14912,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_12
+              schema:
+                $ref: '#/components/schemas/BaseResultCustomerApiVO'
               example:
                 msg: Success
                 fail: false
@@ -15915,7 +15997,8 @@ paths:
                       list:
                         type: array
                         description: KYC认证列表信息
-                        items: *ref_11
+                        items:
+                          $ref: '#/components/schemas/KycAuthVO'
                       companyId:
                         type: integer
                         format: int64
@@ -18198,7 +18281,8 @@ paths:
                   msgParams:
                     type: string
                     description: 返回描述中占位符参数串，多个参数间以,分割
-                  data: &ref_60
+                  data:
+                    description: 数据体
                     $ref: '#/components/schemas/ExchangeRateConvertDto'
                   ok:
                     type: string
@@ -18295,7 +18379,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_13
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
       x-docstype: TS.Clientapi.Fund
@@ -18473,7 +18558,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_14
+            schema:
               $ref: '#/components/schemas/CustomerRechargeWalletAddrReqDto'
             example: ''
       responses:
@@ -18481,7 +18566,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_15
+              schema:
                 $ref: >-
                   #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
           headers: {}
@@ -18537,13 +18622,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_14
+            schema:
+              $ref: '#/components/schemas/CustomerRechargeWalletAddrReqDto'
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_15
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
           headers: {}
       security: []
       x-docstype: TS.Clientapi.Fund
@@ -18607,7 +18695,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_16
+              schema:
                 $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
       security: []
@@ -18733,7 +18821,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_16
+              schema:
+                $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.createDepositProposal:
@@ -19049,7 +19138,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_21
+              schema:
                 $ref: '#/components/schemas/BaseResultSetString'
           headers: {}
       security: []
@@ -19178,7 +19267,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_17
+              schema:
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
           headers: {}
@@ -19243,7 +19332,9 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_17
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV3:
@@ -19433,7 +19524,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_13
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.manualLoan:
@@ -19495,7 +19587,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.manualRepayment:
@@ -19557,7 +19650,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_8
+              schema:
+                $ref: '#/components/schemas/BaseResult1'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.queryDepositProposal:
@@ -19768,7 +19862,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_16
+              schema:
+                $ref: '#/components/schemas/BaseResultAmountTransferVo'
           headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.markOpenCardDepositRate:
@@ -19925,7 +20020,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_18
+            schema:
               $ref: '#/components/schemas/ComputeWithdrawReqDto'
       responses:
         '200':
@@ -19989,7 +20084,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_57
+            schema:
               $ref: '#/components/schemas/QueryCustomerWithdrawExchangeRateDto'
             example: ''
       responses:
@@ -20157,7 +20252,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_18
+            schema:
+              $ref: '#/components/schemas/ComputeWithdrawReqDto'
             example: ''
       responses:
         '200':
@@ -20219,7 +20315,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_19
+            schema:
               $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
@@ -20227,7 +20323,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_20
+              schema:
                 $ref: >-
                   #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
@@ -20248,14 +20344,17 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_19
+            schema:
+              $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_20
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAccountCurrencyList:
@@ -20274,7 +20373,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_22
+            schema:
               $ref: '#/components/schemas/WithdrawCurrencyListReqDto'
             example: ''
       responses:
@@ -20282,7 +20381,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_21
+              schema:
+                $ref: '#/components/schemas/BaseResultSetString'
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAmountLimitInfo:
@@ -20365,14 +20465,17 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_19
+            schema:
+              $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_20
+              schema:
+                $ref: >-
+                  #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawMethodList:
@@ -20426,14 +20529,15 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_19
+            schema:
+              $ref: '#/components/schemas/WithdrawMethodQueryDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: &ref_23
+              schema:
                 $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
           headers: {}
       security: []
@@ -20453,7 +20557,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_18
+            schema:
+              $ref: '#/components/schemas/ComputeWithdrawReqDto'
             example: ''
       responses:
         '200':
@@ -20536,7 +20641,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_22
+            schema:
+              $ref: '#/components/schemas/WithdrawCurrencyListReqDto'
             example: ''
       responses:
         '200':
@@ -20610,7 +20716,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_23
+              schema:
+                $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
           headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.queryCustomerGroupWithdrawRiskConfig:
@@ -21228,7 +21335,7 @@ paths:
                   msgParams:
                     type: string
                     description: 返回描述中占位符参数串，多个参数间以,分割
-                  data: &ref_58
+                  data:
                     $ref: '#/components/schemas/CustomerWithdrawProposalDto'
                   ok:
                     type: boolean
@@ -28795,7 +28902,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_24
+              schema:
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
           headers: {}
       security: []
@@ -28900,7 +29007,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_24
+              schema:
+                $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
           headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.placeOrder:
@@ -30978,7 +31086,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_25
+            schema:
               $ref: '#/components/schemas/CreateFundApplyReqDto'
             example: ''
       responses:
@@ -31005,7 +31113,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_25
+            schema:
+              $ref: '#/components/schemas/CreateFundApplyReqDto'
             example: ''
       responses:
         '200':
@@ -31031,7 +31140,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_26
+            schema:
               $ref: '#/components/schemas/FundApplyRecordDto'
             example: ''
       responses:
@@ -31039,7 +31148,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_27
+              schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
           headers: {}
       security: []
@@ -31058,7 +31167,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_31
+            schema:
               $ref: '#/components/schemas/FundCurrencyQueryReqDto'
             example: ''
       responses:
@@ -31066,7 +31175,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_32
+              schema:
                 $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
           headers: {}
       security: []
@@ -31085,14 +31194,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_26
+            schema:
+              $ref: '#/components/schemas/FundApplyRecordDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_27
+              schema:
+                $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.calFundRedeem:
@@ -31110,7 +31221,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_30
+            schema:
               $ref: '#/components/schemas/CreateFundRedeemReqDto'
             example: ''
       responses:
@@ -31137,7 +31248,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_28
+            schema:
               $ref: '#/components/schemas/FundRedeemSharesCheckReqDto'
             example: ''
       responses:
@@ -31145,7 +31256,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_29
+              schema:
                 $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
           headers: {}
       security: []
@@ -31164,14 +31275,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_28
+            schema:
+              $ref: '#/components/schemas/FundRedeemSharesCheckReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_29
+              schema:
+                $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.createFundRedeem:
@@ -31189,14 +31302,15 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_30
+            schema:
+              $ref: '#/components/schemas/CreateFundRedeemReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: &ref_37
+              schema:
                 $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
       security: []
@@ -31215,14 +31329,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_31
+            schema:
+              $ref: '#/components/schemas/FundCurrencyQueryReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_32
+              schema:
+                $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.page:
@@ -31240,7 +31356,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_33
+            schema:
               $ref: '#/components/schemas/FundRedeemQueryReqDto'
             example: ''
       responses:
@@ -31248,7 +31364,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_34
+              schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
           headers: {}
       security: []
@@ -31267,14 +31383,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_33
+            schema:
+              $ref: '#/components/schemas/FundRedeemQueryReqDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_34
+              schema:
+                $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
           headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryNotConfirmedRecs:
@@ -31292,7 +31410,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_35
+            schema:
               $ref: '#/components/schemas/FundInfoQueryReqDto'
             example: ''
       responses:
@@ -31319,7 +31437,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_35
+            schema:
+              $ref: '#/components/schemas/FundInfoQueryReqDto'
             example: ''
       responses:
         '200':
@@ -31345,7 +31464,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_36
+            schema:
               $ref: '#/components/schemas/FundManagementFeesDeductDto'
             example: ''
       responses:
@@ -31372,14 +31491,16 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: *ref_36
+            schema:
+              $ref: '#/components/schemas/FundManagementFeesDeductDto'
             example: ''
       responses:
         '200':
           description: ''
           content:
             application/json:
-              schema: *ref_37
+              schema:
+                $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.excute:
@@ -31406,7 +31527,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_37
+              schema:
+                $ref: '#/components/schemas/BaseResultVoid'
           headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.page:
@@ -31451,7 +31573,7 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: &ref_64
+            schema:
               $ref: '#/components/schemas/FundsApplyExecuteInfoDto'
             example: ''
       responses:
@@ -31459,7 +31581,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_13
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
   /global/fund.app.FundsApplyExecuteService.getFundsApplyExecuteInfo:
@@ -31575,7 +31698,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_13
+              schema:
+                $ref: '#/components/schemas/BaseResultBoolean'
           headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.indexSample:
@@ -31789,7 +31913,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_38
+              schema:
                 $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
           headers: {}
       security: []
@@ -31818,7 +31942,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_38
+              schema:
+                $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
           headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.batchSettingSubscriptionType:
@@ -39672,7 +39797,7 @@ paths:
           description: ''
           content:
             application/json:
-              schema: &ref_39
+              schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
@@ -39729,7 +39854,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_39
+              schema:
+                $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
   /global/makerbot.app.MMBotService.addAmmAmount:
@@ -39785,7 +39911,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_39
+              schema:
+                $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolInfo:
@@ -39821,7 +39948,8 @@ paths:
           description: ''
           content:
             application/json:
-              schema: *ref_39
+              schema:
+                $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
           headers: {}
       security: []
   /global/makerbot.app.MMBotService.getAmmSymbolAmount:
@@ -40625,7 +40753,7 @@ components:
           properties: {}
           title: 数据体
       title: BaseResult
-    UpdateDTO: &ref_46
+    UpdateDTO: &ref_0
       type: object
       properties:
         lang:
@@ -40920,7 +41048,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_55
+        data:
           $ref: '#/components/schemas/CustomerSimpleVO'
         ok:
           type: boolean
@@ -40951,7 +41079,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_11
+          items:
+            $ref: '#/components/schemas/KycAuthVO'
         ok:
           type: boolean
         fail:
@@ -41137,7 +41266,8 @@ components:
         permissionDTOList:
           type: array
           description: 权限列表
-          items: *ref_40
+          items:
+            $ref: '#/components/schemas/CustomerApiPermissionDTO'
         ipLimit:
           type: boolean
           description: 是否开启了IP限制
@@ -41344,7 +41474,7 @@ components:
           type: integer
           format: int32
           description: 可划转,1可划转
-    QueryGroupDTO: &ref_50
+    QueryGroupDTO: &ref_2
       type: object
       properties:
         lang:
@@ -41531,7 +41661,7 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: &ref_41
+          items:
             $ref: '#/components/schemas/InnerTradeAssetsDTO'
           maxItems: 2147483647
           minItems: 1
@@ -41588,7 +41718,8 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_41
+          items:
+            $ref: '#/components/schemas/InnerTradeAssetsDTO'
           maxItems: 2147483647
           minItems: 1
         transfer:
@@ -42518,7 +42649,8 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_41
+          items:
+            $ref: '#/components/schemas/InnerTradeAssetsDTO'
           maxItems: 2147483647
           minItems: 1
     QueryCustomerAssetsInfoDTO:
@@ -42613,7 +42745,7 @@ components:
         code:
           type: string
           description: google验证码
-    GoogleUpdateStatusCodeDTO: &ref_53
+    GoogleUpdateStatusCodeDTO: &ref_3
       type: object
       properties:
         lang:
@@ -42661,7 +42793,7 @@ components:
         kycElementList:
           type: array
           description: 路径与元素关系
-          items: &ref_42
+          items:
             $ref: '#/components/schemas/KycSettingAddInnerDTO'
           maxItems: 2147483647
           minItems: 1
@@ -42747,7 +42879,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: &ref_54
+          items:
             $ref: '#/components/schemas/KycCompanyChannelConfigDTO'
         ok:
           type: boolean
@@ -42959,7 +43091,8 @@ components:
         kycElementList:
           type: array
           description: 路径与元素关系
-          items: *ref_42
+          items:
+            $ref: '#/components/schemas/KycSettingAddInnerDTO'
           maxItems: 2147483647
           minItems: 1
     UpdateKycChannelStatusDTO:
@@ -43074,7 +43207,8 @@ components:
         elementList:
           type: array
           description: KYC元素集合
-          items: *ref_10
+          items:
+            $ref: '#/components/schemas/KycWebAddInnerDTO'
           maxItems: 2147483647
           minItems: 1
         selectCompanyType:
@@ -43114,7 +43248,8 @@ components:
         elementList:
           type: array
           description: KYC元素集合
-          items: *ref_10
+          items:
+            $ref: '#/components/schemas/KycWebAddInnerDTO'
           maxItems: 2147483647
           minItems: 1
         selectCountry:
@@ -43579,11 +43714,12 @@ components:
         elementList:
           type: array
           description: KYC元素集合
-          items: *ref_10
+          items:
+            $ref: '#/components/schemas/KycWebAddInnerDTO'
         withdrawBankList:
           type: array
           description: 银行卡集合
-          items: &ref_44
+          items:
             $ref: '#/components/schemas/CusWithdrawBankAddDTO'
         bankCardNumber:
           type: string
@@ -43600,11 +43736,12 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_41
+          items:
+            $ref: '#/components/schemas/InnerTradeAssetsDTO'
         walletList:
           type: array
           description: 钱包集合
-          items: &ref_45
+          items:
             $ref: '#/components/schemas/AdminAddWalletDTO'
         firstName:
           type: string
@@ -43721,11 +43858,12 @@ components:
             type: string
         right:
           type: array
-          items: &ref_43
+          items:
             $ref: '#/components/schemas/WhiteCustomerAdminPageExcelVO'
         value:
           type: array
-          items: *ref_43
+          items:
+            $ref: '#/components/schemas/WhiteCustomerAdminPageExcelVO'
         key:
           type: array
           items:
@@ -43831,7 +43969,7 @@ components:
           type: integer
           format: int64
           description: 交易账号首次激活时间
-    CustomerBaseDTO: &ref_48
+    CustomerBaseDTO: &ref_1
       type: object
       properties:
         lang:
@@ -44124,11 +44262,13 @@ components:
         elementList:
           type: array
           description: KYC元素集合
-          items: *ref_10
+          items:
+            $ref: '#/components/schemas/KycWebAddInnerDTO'
         withdrawBankList:
           type: array
           description: 银行卡集合
-          items: *ref_44
+          items:
+            $ref: '#/components/schemas/CusWithdrawBankAddDTO'
         bankCardNumber:
           type: string
           description: 银行卡号
@@ -44144,7 +44284,8 @@ components:
         walletList:
           type: array
           description: 钱包集合
-          items: *ref_45
+          items:
+            $ref: '#/components/schemas/AdminAddWalletDTO'
         firstName:
           type: string
           description: 名
@@ -44583,7 +44724,7 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: &ref_56
+          items:
             $ref: '#/components/schemas/KycShowInnerDTO'
         ext3:
           type: string
@@ -44728,13 +44869,13 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_47
+        data:
           $ref: '#/components/schemas/BlackCustomerAdminVO'
         ok:
           type: boolean
         fail:
           type: boolean
-    DetailDTO: *ref_46
+    DetailDTO: *ref_0
     BaseResult1:
       type: object
       properties:
@@ -44929,7 +45070,8 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_47
+          items:
+            $ref: '#/components/schemas/BlackCustomerAdminVO'
         total:
           type: integer
           format: int64
@@ -45191,7 +45333,7 @@ components:
         lastName:
           type: string
           description: 姓
-    QueryCustomerDTO: *ref_48
+    QueryCustomerDTO: *ref_1
     UpdateThirdAccountNoDTO:
       type: object
       properties:
@@ -45448,7 +45590,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_49
+        data:
           $ref: '#/components/schemas/CustomerApiVO'
         ok:
           type: boolean
@@ -45539,7 +45681,8 @@ components:
         permissionList:
           type: array
           description: 开启权限
-          items: *ref_40
+          items:
+            $ref: '#/components/schemas/CustomerApiPermissionDTO'
         whiteIps:
           type: string
           description: 白名单IP
@@ -45589,7 +45732,8 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_49
+          items:
+            $ref: '#/components/schemas/CustomerApiVO'
         total:
           type: integer
           format: int64
@@ -45602,7 +45746,7 @@ components:
           type: integer
           format: int64
           description: 当前页
-    ComCustomerDTO: *ref_50
+    ComCustomerDTO: *ref_2
     AddCustomerExtendDTO:
       type: object
       required:
@@ -45678,7 +45822,7 @@ components:
         data:
           type: array
           description: 数据体
-          items: &ref_51
+          items:
             $ref: '#/components/schemas/CustomerGroupVO'
         ok:
           type: boolean
@@ -45723,7 +45867,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_51
+        data:
+          $ref: '#/components/schemas/CustomerGroupVO'
         ok:
           type: boolean
         fail:
@@ -46035,7 +46180,7 @@ components:
           description: 数据体
           additionalProperties:
             type: array
-            items: &ref_52
+            items:
               $ref: '#/components/schemas/CustomerOptionalVO'
           properties: {}
         ok:
@@ -46090,7 +46235,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_52
+          items:
+            $ref: '#/components/schemas/CustomerOptionalVO'
         ok:
           type: boolean
         fail:
@@ -46257,7 +46403,8 @@ components:
         list:
           type: array
           description: KYC认证列表信息
-          items: *ref_11
+          items:
+            $ref: '#/components/schemas/KycAuthVO'
         companyId:
           type: integer
           format: int64
@@ -46949,7 +47096,8 @@ components:
         tradeTypeCurrencyList:
           type: array
           description: 玩法币种信息
-          items: *ref_41
+          items:
+            $ref: '#/components/schemas/InnerTradeAssetsDTO'
           maxItems: 2147483647
           minItems: 1
         thirdServerCode:
@@ -47099,7 +47247,7 @@ components:
         qrcode:
           type: string
           description: 二维码信息
-    GoogleQueryCodeDTO: *ref_53
+    GoogleQueryCodeDTO: *ref_3
     InitDbDTO:
       type: object
       required:
@@ -47226,7 +47374,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_54
+        data:
+          $ref: '#/components/schemas/KycCompanyChannelConfigDTO'
         ok:
           type: boolean
         fail:
@@ -47875,7 +48024,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    CommonCustomerNODTO: *ref_48
+    CommonCustomerNODTO: *ref_1
     BaseResultListCustomerSimpleVO:
       type: object
       properties:
@@ -47901,7 +48050,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_55
+          items:
+            $ref: '#/components/schemas/CustomerSimpleVO'
         ok:
           type: boolean
         fail:
@@ -48242,7 +48392,8 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: *ref_56
+          items:
+            $ref: '#/components/schemas/KycShowInnerDTO'
         ext3:
           type: string
           description: 信用卡卡类型-》原始
@@ -48308,7 +48459,8 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: *ref_56
+          items:
+            $ref: '#/components/schemas/KycShowInnerDTO'
         ext3:
           type: string
           description: 信用卡卡类型-》原始
@@ -48340,7 +48492,7 @@ components:
         remark:
           type: string
           description: 审批备注
-    KycExternalValidationDTO: *ref_46
+    KycExternalValidationDTO: *ref_0
     KycUserVO:
       type: object
       properties:
@@ -48385,7 +48537,8 @@ components:
         elementList:
           type: array
           description: 用户KYC信息
-          items: *ref_56
+          items:
+            $ref: '#/components/schemas/KycShowInnerDTO'
         ext3:
           type: string
           description: 信用卡卡类型-》原始
@@ -48504,19 +48657,19 @@ components:
         digit:
           type: integer
           format: int32
-        withdrawConditionConfig: &ref_76
+        withdrawConditionConfig:
           $ref: '#/components/schemas/CustomerGroupWithdrawConditionConfigDto'
         withdrawTimeConfigList:
           type: array
           description: 取款时间限制配置
-          items: &ref_77
+          items:
             $ref: '#/components/schemas/CustomerGroupWithdrawTimeConfigDto'
-        withdrawAmountConfig: &ref_78
+        withdrawAmountConfig:
           $ref: '#/components/schemas/CustomerGroupWithdrawAmountConfigDto'
         withdrawFeeConfigList:
           type: array
           description: 取款手续费配置
-          items: &ref_79
+          items:
             $ref: '#/components/schemas/CustomerGroupWithdrawFeeConfigDto'
         customerGroupEnable:
           type: boolean
@@ -48592,7 +48745,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_57
+        data:
+          $ref: '#/components/schemas/QueryCustomerWithdrawExchangeRateDto'
         ok:
           type: boolean
         fail:
@@ -48780,7 +48934,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_58
+        data:
+          $ref: '#/components/schemas/CustomerWithdrawProposalDto'
         ok:
           type: boolean
         fail:
@@ -48821,7 +48976,7 @@ components:
         configDtoList:
           type: array
           description: 下单执行标准配置数组
-          items: &ref_59
+          items:
             $ref: '#/components/schemas/OrderExecuteStandardConfigDto'
     QueryOrderExecuteStandardConfigReqDto:
       type: object
@@ -48857,12 +49012,13 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_59
+          items:
+            $ref: '#/components/schemas/OrderExecuteStandardConfigDto'
         ok:
           type: boolean
         fail:
           type: boolean
-    OrderExecuteStandardConfigSymbolDto: &ref_63
+    OrderExecuteStandardConfigSymbolDto: &ref_5
       type: object
       required:
         - baseCurrency
@@ -48957,7 +49113,7 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: &ref_62
+          items:
             $ref: '#/components/schemas/FieldOrderDto'
         proposalNoList:
           type: array
@@ -49162,7 +49318,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_65
+        data:
           $ref: '#/components/schemas/CustomerFundRedeemDto'
         ok:
           type: boolean
@@ -49360,7 +49516,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_60
+          items:
+            $ref: '#/components/schemas/ExchangeRateConvertDto'
         ok:
           type: boolean
         fail:
@@ -49522,7 +49679,7 @@ components:
         list:
           type: array
           description: 一篮子资产列表
-          items: &ref_66
+          items:
             $ref: '#/components/schemas/CustomerFundCurrencyDto'
     FundsApplyExecuteRecordDetailDto:
       type: object
@@ -49590,7 +49747,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_67
+        data:
           $ref: '#/components/schemas/CustomerFundApplyDto'
         ok:
           type: boolean
@@ -49639,7 +49796,7 @@ components:
         proposalNo:
           type: string
           description: 提案号
-    ManualRepaymentDto: &ref_61
+    ManualRepaymentDto: &ref_4
       type: object
       required:
         - accountCurrency
@@ -49684,7 +49841,7 @@ components:
           type: boolean
         fail:
           type: boolean
-    ManualLoanDto: *ref_61
+    ManualLoanDto: *ref_4
     QueryCustomerPaymentChannelRespV3Dto:
       type: object
       required:
@@ -50209,7 +50366,8 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_58
+          items:
+            $ref: '#/components/schemas/CustomerWithdrawProposalDto'
         total:
           type: integer
           format: int64
@@ -50228,7 +50386,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: &ref_69
+          items:
             $ref: '#/components/schemas/CustomerDepositProposalDto'
         total:
           type: integer
@@ -50446,7 +50604,8 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: *ref_62
+          items:
+            $ref: '#/components/schemas/FieldOrderDto'
         startTime:
           type: integer
           format: int64
@@ -50866,7 +51025,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_19
+          items:
+            $ref: '#/components/schemas/WithdrawMethodQueryDto'
         ok:
           type: boolean
         fail:
@@ -51081,8 +51241,8 @@ components:
           type: boolean
         fail:
           type: boolean
-    OrderExecuteStandardConfigDto: *ref_63
-    QueryOrderExecuteStandardConfigSymbolListReqDto: &ref_74
+    OrderExecuteStandardConfigDto: *ref_5
+    QueryOrderExecuteStandardConfigSymbolListReqDto: &ref_8
       type: object
       properties: {}
     BaseResultFundsApplyExecuteInfoDto:
@@ -51107,7 +51267,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_64
+        data:
+          $ref: '#/components/schemas/FundsApplyExecuteInfoDto'
         ok:
           type: boolean
         fail:
@@ -51128,7 +51289,7 @@ components:
         fundsApplyExecuteRecordDetailDtoList:
           type: array
           description: 基金产品申购执行明细记录列表
-          items: &ref_68
+          items:
             $ref: '#/components/schemas/FundsApplyExecuteRecordDetailDto'
     BaseResultLong:
       type: object
@@ -51166,7 +51327,8 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_65
+          items:
+            $ref: '#/components/schemas/CustomerFundRedeemDto'
         total:
           type: integer
           format: int64
@@ -51413,7 +51575,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_66
+          items:
+            $ref: '#/components/schemas/CustomerFundCurrencyDto'
         ok:
           type: boolean
         fail:
@@ -51449,7 +51612,8 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_67
+          items:
+            $ref: '#/components/schemas/CustomerFundApplyDto'
         total:
           type: integer
           format: int64
@@ -51569,7 +51733,8 @@ components:
         executeList:
           type: array
           description: 执行标准列表
-          items: *ref_68
+          items:
+            $ref: '#/components/schemas/FundsApplyExecuteRecordDetailDto'
     FundPayChannelTypeDto:
       type: object
       properties:
@@ -51601,7 +51766,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_69
+        data:
+          $ref: '#/components/schemas/CustomerDepositProposalDto'
         ok:
           type: boolean
         fail:
@@ -52814,7 +52980,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: &ref_70
+          items:
             $ref: '#/components/schemas/SpotQueryOrderVo'
         total:
           type: integer
@@ -53005,7 +53171,8 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: *ref_70
+        data:
+          $ref: '#/components/schemas/SpotQueryOrderVo'
         ok:
           type: boolean
         fail:
@@ -53186,12 +53353,12 @@ components:
           description: 1:市场价 2:净值
         columnList:
           type: array
-          items: &ref_73
+          items:
             $ref: '#/components/schemas/FundTrendChartDto'
       required:
         - name
         - columnList
-    FundInvestCombChartVo: &ref_72
+    FundInvestCombChartVo: &ref_7
       type: object
       properties:
         symbolId:
@@ -53269,7 +53436,7 @@ components:
           type: string
           title: 较上期权重变化
       title: ''
-    FundMarketPerfQuoteChangeChartVo: &ref_71
+    FundMarketPerfQuoteChangeChartVo: &ref_6
       type: object
       properties:
         symbolId:
@@ -53372,8 +53539,8 @@ components:
       required:
         - time
         - value
-    FundBatchMarketPerfChartVo: *ref_71
-    FundNetValueChangeQuoteChartVo: *ref_72
+    FundBatchMarketPerfChartVo: *ref_6
+    FundNetValueChangeQuoteChartVo: *ref_7
     BaseResultMapStringListFundTrendChartDto:
       type: object
       properties:
@@ -53405,7 +53572,8 @@ components:
               type: string
             value:
               type: array
-              items: *ref_73
+              items:
+                $ref: '#/components/schemas/FundTrendChartDto'
           title: 数据体
           required:
             - key
@@ -53627,7 +53795,7 @@ components:
       required:
         - statisticType
       title: ''
-    FundBaseDto: *ref_74
+    FundBaseDto: *ref_8
     QueryWithdrawBankReqDto:
       type: object
       properties:
@@ -53821,7 +53989,7 @@ components:
         - paymentChannelType
         - paymentMerchantNo
         - paymentChannelClientType
-    CustGroupWithdrawMethodQueryReqDto: *ref_74
+    CustGroupWithdrawMethodQueryReqDto: *ref_8
     QueryWithdrawRiskConfigReqDto:
       type: object
       properties:
@@ -53889,7 +54057,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_75
+        data:
           description: 数据体
           $ref: '#/components/schemas/WithdrawRiskConfigDto'
         ok:
@@ -53954,19 +54122,24 @@ components:
         enableWithdraw:
           type: boolean
           description: 是否允许取款
-        withdrawRiskConfig: *ref_75
-        withdrawConditionConfig: *ref_76
+        withdrawRiskConfig:
+          $ref: '#/components/schemas/WithdrawRiskConfigDto'
+        withdrawConditionConfig:
+          $ref: '#/components/schemas/CustomerGroupWithdrawConditionConfigDto'
         withdrawTimeConfigList:
           type: array
           description: 取款时间限制配置
-          items: *ref_77
+          items:
+            $ref: '#/components/schemas/CustomerGroupWithdrawTimeConfigDto'
         withdrawAmountConfigList:
           type: array
-          items: *ref_78
+          items:
+            $ref: '#/components/schemas/CustomerGroupWithdrawAmountConfigDto'
         withdrawFeeConfigList:
           type: array
           description: 取款手续费配置
-          items: *ref_79
+          items:
+            $ref: '#/components/schemas/CustomerGroupWithdrawFeeConfigDto'
         customerGroupEnable:
           type: boolean
           description: 客户组是否允许取款
@@ -54090,7 +54263,8 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: *ref_62
+          items:
+            $ref: '#/components/schemas/FieldOrderDto'
         startTime:
           type: integer
           format: int64
@@ -54129,7 +54303,8 @@ components:
         orders:
           type: array
           description: 排序字段列表
-          items: *ref_62
+          items:
+            $ref: '#/components/schemas/FieldOrderDto'
         startTime:
           type: integer
           format: int64
@@ -54403,8 +54578,10 @@ components:
           type: integer
           format: int64
           description: 当前页
-        orderIds: *ref_62
-    BaseResultBasePageVoMMBotConfVo: &ref_81
+        orderIds:
+          description: 排序字段列表
+          $ref: '#/components/schemas/FieldOrderDto'
+    BaseResultBasePageVoMMBotConfVo: &ref_9
       type: object
       properties:
         bizCode:
@@ -54438,7 +54615,7 @@ components:
         records:
           type: array
           description: 结果列表
-          items: &ref_80
+          items:
             $ref: '#/components/schemas/AmmSymbolAmountVo'
         total:
           type: integer
@@ -54890,9 +55067,11 @@ components:
           type: boolean
         fail:
           type: boolean
-        data: *ref_80
+        data:
+          title: 数据体
+          $ref: '#/components/schemas/AmmSymbolAmountVo'
       title: ''
-    BaseResultBasePageVoAmmSymbolInfoVo: *ref_81
+    BaseResultBasePageVoAmmSymbolInfoVo: *ref_9
     BaseResultListSymbolVO:
       type: object
       properties:
@@ -55123,39 +55302,48 @@ components:
           description: 保证金信息
         dailyMarginSet:
           type: array
-          items: *ref_1
+          items:
+            $ref: '#/components/schemas/MarginSet'
           description: 平日保证金层级
         holidayMarginSet:
           type: array
-          items: *ref_1
+          items:
+            $ref: '#/components/schemas/MarginSet'
           description: 假期保证金层级
         weekendMarginSet:
           type: array
-          items: *ref_1
+          items:
+            $ref: '#/components/schemas/MarginSet'
           description: 周末保证金层级
         beforeHolidayMarginSet:
           type: array
-          items: *ref_1
+          items:
+            $ref: '#/components/schemas/MarginSet'
           description: 假期前保证金比例
         beforeWeekendMarginSet:
           type: array
-          items: *ref_1
+          items:
+            $ref: '#/components/schemas/MarginSet'
           description: 周末前保证金比例
         usedMarginSet:
           type: array
-          items: *ref_1
+          items:
+            $ref: '#/components/schemas/MarginSet'
           description: 当前使用保证金比例
         tradeTimeList:
           type: array
-          items: *ref_2
+          items:
+            $ref: '#/components/schemas/TradeTime'
           description: 交易时间
         quoteTimeList:
           type: array
-          items: *ref_82
+          items:
+            $ref: '#/components/schemas/QuoteTime'
           description: 行情时间
         holidayTimeList:
           type: array
-          items: *ref_3
+          items:
+            $ref: '#/components/schemas/HolidayTime'
           description: 假期时间
         weekendLeadTime:
           type: integer
@@ -55239,15 +55427,18 @@ components:
           description: 限制划出资产比例
         borrowInterestList:
           type: array
-          items: *ref_83
+          items:
+            $ref: '#/components/schemas/BorrowInterest'
           description: 借款利息
         borrowLimitList:
           type: array
-          items: *ref_84
+          items:
+            $ref: '#/components/schemas/BorrowLimit'
           description: 借款限额
         borrowStatusList:
           type: array
-          items: *ref_85
+          items:
+            $ref: '#/components/schemas/BorrowStatus'
           description: 借款产品
         totalCredit:
           type: number
@@ -55275,7 +55466,8 @@ components:
           description: 标签
         labelList:
           type: array
-          items: *ref_4
+          items:
+            $ref: '#/components/schemas/DictVO'
           description: 标签列表
         minTradeUnit:
           type: integer
@@ -55326,25 +55518,50 @@ components:
         maxFee:
           type: number
           description: 最高手续费金额
-        daytimeBuyInitMarginRatio: *ref_1
-        daytimeBuyRemainingMarginRatio: *ref_1
-        daytimeBuyAlarmMarginRatio: *ref_1
-        daytimeSellInitMarginRatio: *ref_1
-        daytimeSellRemainingMarginRatio: *ref_1
-        daytimeSellAlarmMarginRatio: *ref_1
-        overnightBuyInitMarginRatio: *ref_1
-        overnightBuyRemainingMarginRatio: *ref_1
-        overnightBuyAlarmMarginRatio: *ref_1
-        overnightSellInitMarginRatio: *ref_1
-        overnightSellRemainingMarginRatio: *ref_1
-        overnightSellAlarmMarginRatio: *ref_1
+        daytimeBuyInitMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 日内买入初始保证金比例
+        daytimeBuyRemainingMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 日内买入维持保证金比例
+        daytimeBuyAlarmMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 日内买入预警保证金比例
+        daytimeSellInitMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 日内卖出初始保证金比例
+        daytimeSellRemainingMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 日内卖出维持保证金比例
+        daytimeSellAlarmMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 日内卖出预警保证金比例
+        overnightBuyInitMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 隔夜买入初始保证金比例
+        overnightBuyRemainingMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 隔夜买入维持保证金比例
+        overnightBuyAlarmMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 隔夜买入预警保证金比例
+        overnightSellInitMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 隔夜卖出初始保证金比例
+        overnightSellRemainingMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 隔夜卖出维持保证金比例
+        overnightSellAlarmMarginRatio:
+          $ref: '#/components/schemas/MarginSet'
+          description: 隔夜卖出预警保证金比例
         overnightInAdvance:
           type: integer
           format: int64
           description: 隔夜提前时间（分）
         longLoanYearRatio:
           type: array
-          items: *ref_86
+          items:
+            $ref: '#/components/schemas/BorrowAssetsInterest'
           description: 融资年利息率
         shortLoanYearRatio:
           type: number
@@ -55373,11 +55590,13 @@ components:
           description: 公司行动临时代码
         dividendFutureInfos:
           type: array
-          items: *ref_5
+          items:
+            $ref: '#/components/schemas/DividendInfo'
           description: 公司未来行动
         dividendPastInfos:
           type: array
-          items: *ref_5
+          items:
+            $ref: '#/components/schemas/DividendInfo'
           description: 公司过去行动
         stockStatus:
           type: string
@@ -55789,8 +56008,12 @@ components:
         inTradeTime:
           type: integer
           description: 是否交易时间中
-        holidayTimeList: *ref_3
-        tradeTimeList: *ref_2
+        holidayTimeList:
+          $ref: '#/components/schemas/HolidayTime'
+          description: 假期时间
+        tradeTimeList:
+          $ref: '#/components/schemas/TradeTime'
+          description: 交易时间
       required:
         - inHolidayTime
         - inTradeTime
@@ -55836,7 +56059,7 @@ components:
         msgParams:
           type: string
           description: 返回描述中占位符参数串，多个参数间以,分割
-        data: &ref_87
+        data:
           $ref: '#/components/schemas/OpenFundsVo'
         ok:
           type: boolean
@@ -56196,7 +56419,8 @@ components:
         records:
           type: array
           description: 结果列表
-          items: *ref_87
+          items:
+            $ref: '#/components/schemas/OpenFundsVo'
         total:
           type: integer
           format: int64
@@ -56269,7 +56493,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_4
+          items:
+            $ref: '#/components/schemas/DictVO'
         ok:
           type: boolean
         fail:
@@ -56299,7 +56524,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_0
+          items:
+            $ref: '#/components/schemas/CountryDictVo'
         ok:
           type: boolean
         fail:
@@ -56375,7 +56601,8 @@ components:
         childs:
           type: array
           description: 子节点数据
-          items: *ref_0
+          items:
+            $ref: '#/components/schemas/CountryDictVo'
     QueryDictDto:
       type: object
       properties:
@@ -56445,7 +56672,7 @@ components:
         assetsVoList:
           type: array
           description: 资产列表
-          items: &ref_88
+          items:
             $ref: '#/components/schemas/Assets'
     Assets:
       type: object
@@ -56526,7 +56753,8 @@ components:
         data:
           type: array
           description: 数据体
-          items: *ref_88
+          items:
+            $ref: '#/components/schemas/Assets'
         ok:
           type: boolean
         fail:
