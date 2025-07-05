@@ -597,7 +597,9 @@ paths:
                         childs:
                           type: array
                           description: 子节点数据
-                          items: {}
+                          items:
+                            type: object
+                            properties: {}
                   ok:
                     type: boolean
                   fail:
