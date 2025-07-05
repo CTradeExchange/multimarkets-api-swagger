@@ -6696,7 +6696,9 @@ paths:
                         childs:
                           type: array
                           description: Child node data
-                          items: {}
+                          items:
+                            type: object
+                            properties: {}
                   ok:
                     type: boolean
                   fail:
