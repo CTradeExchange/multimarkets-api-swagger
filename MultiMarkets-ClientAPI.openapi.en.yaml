@@ -34955,11 +34955,17 @@ paths:
                 object:
                   type: string
                   format: binary
+                  examples:
+                    - >-
+                      file://C:\Users\admin\Pictures\Saved
+                      Pictures\51e7ce01-11b1-49a0-b42f-33130c966cd4IMG_6054.HEIC
                   example: >-
                     file://C:\Users\admin\Pictures\Saved
                     Pictures\51e7ce01-11b1-49a0-b42f-33130c966cd4IMG_6054.HEIC
                 userPhone:
                   type: string
+                  examples:
+                    - '{% mock ''phone'' %}'
                   example: '{% mock ''phone'' %}'
               required:
                 - userPhone
