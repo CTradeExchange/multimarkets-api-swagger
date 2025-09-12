@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: MultiMarkets-ManagerAPI
-  description: 给TOB业务端提供API，可以提供客户资料、资金管理、活动推送等多类型支持
+  title: 默认模块
+  description: ''
   version: 1.0.0
 tags:
   - name: 接口认证鉴权
