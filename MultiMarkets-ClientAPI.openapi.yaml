@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: MultiMarkets-ClientAPI
-  description: 客户端H5/PCUI接入API，此API可以实现业务的自定义交易客户端
+  title: 默认模块
+  description: ''
   version: 1.0.0
 tags:
   - name: 基础数据
