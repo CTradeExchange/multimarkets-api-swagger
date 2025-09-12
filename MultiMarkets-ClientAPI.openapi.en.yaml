@@ -1,9 +1,7 @@
 openapi: 3.0.1
 info:
-  title: MultiMarkets-ClientAPI-EN
-  description: >-
-    Client H5/PCUI access API, this API can realize the business's custom
-    transaction client
+  title: Default module
+  description: ''
   version: 1.0.0
 tags:
   - name: Basic
