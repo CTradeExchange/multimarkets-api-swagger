@@ -115,7 +115,6 @@ paths:
             application/json:
               schema:
                 type: string
-          headers: {}
       security: []
     post:
       summary: External system adjustment
@@ -298,7 +297,6 @@ paths:
                 code: '100'
                 fail: false
                 ok: true
-          headers: {}
       security: []
   /geoip/country:
     get:
@@ -382,7 +380,6 @@ paths:
                   - trace
                   - msgParams
                   - data
-          headers: {}
       security: []
   /thirdExt/now:
     post:
@@ -462,7 +459,6 @@ paths:
                 data: 1678426706212
                 ok: true
                 fail: false
-          headers: {}
       security: []
   /global/config.app.AppAssetsDubboService.getAssetsList:
     post:
@@ -523,7 +519,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListAssets'
-          headers: {}
       security: []
   /global/config.app.AppDictDubboService.getListByParentId:
     post:
@@ -684,7 +679,6 @@ paths:
                 tm: 5
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/config.app.AppDictDubboService.getListByParentCode:
     post:
@@ -845,7 +839,6 @@ paths:
                 tm: 3
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/config.app.AppDictDubboService.getMapByParentCodes:
     post:
@@ -974,7 +967,6 @@ paths:
                 tm: 5
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/config.app.AppDictDubboService.getCountryListByParentId:
     post:
@@ -1114,7 +1106,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/config.app.AppDictDubboService.getCountryListByParentCode:
     post:
@@ -1257,7 +1248,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolList:
     post:
@@ -1407,7 +1397,6 @@ paths:
                 tm: 4
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolBaseList:
     post:
@@ -1619,7 +1608,6 @@ paths:
                 tm: 955
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.getSymbolDetail:
     post:
@@ -2259,7 +2247,6 @@ paths:
                 tm: 27
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.getFundInfo:
     post:
@@ -2425,7 +2412,6 @@ paths:
                     tm: 4
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.findFundPage:
     post:
@@ -2705,7 +2691,6 @@ paths:
                     tm: 1
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.findFundPageWithRealTimeInfo:
     post:
@@ -3004,7 +2989,6 @@ paths:
                     tm: 1
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.getEquityPremiumRate:
     post:
@@ -3716,7 +3700,6 @@ paths:
                     tm: 2
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/config.app.AppSymbolDubboService.getFundInfoByCustomerNo:
     post:
@@ -3784,7 +3767,6 @@ paths:
                 tm: 6
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindLoginPwd:
     post:
@@ -3855,7 +3837,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeEmail:
     post:
@@ -3937,7 +3918,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailV1v1v2:
     post:
@@ -4035,7 +4015,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changePhone:
     post:
@@ -4127,7 +4106,6 @@ paths:
                 tm: 15861690
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changePhoneV1v1v2:
     post:
@@ -4226,7 +4204,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkCustomerExist:
     post:
@@ -4337,7 +4314,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.destroy:
     post:
@@ -4403,7 +4379,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.enableOrForbidMFA:
     post:
@@ -4472,7 +4447,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerInfo:
     post:
@@ -4783,7 +4757,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwd:
     post:
@@ -4893,7 +4866,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdV1v1v2:
     post:
@@ -4989,7 +4961,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetLoginPwd:
     post:
@@ -5086,7 +5057,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwd:
     post:
@@ -5169,7 +5139,6 @@ paths:
                 tm: 3851542
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindEmail:
     post:
@@ -5264,7 +5233,6 @@ paths:
                 tm: 19770126
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindPhone:
     post:
@@ -5359,7 +5327,6 @@ paths:
                 tm: 15425229
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeLang:
     post:
@@ -5437,7 +5404,6 @@ paths:
                 tm: 3818289
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.findCustomerLang:
     post:
@@ -5540,7 +5506,6 @@ paths:
                 tm: 3818289
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeCustomerAddressAndPostalCode:
     post:
@@ -5656,7 +5621,6 @@ paths:
                 tm: 3818289
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.firstSetPhone:
     post:
@@ -5807,7 +5771,6 @@ paths:
                 tm: 3818289
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.firstSetEmail:
     post:
@@ -5952,7 +5915,6 @@ paths:
                 tm: 3818289
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.firstTimeSettingLoginPassword:
     post:
@@ -6066,7 +6028,6 @@ paths:
                 tm: 3818289
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.findThirdAccountInfo:
     post:
@@ -6190,7 +6151,6 @@ paths:
                 tm: 3818289
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkGoogleMFAStatus:
     post:
@@ -6310,7 +6270,6 @@ paths:
                 tm: 19151998
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkStatus:
     post:
@@ -6402,7 +6361,6 @@ paths:
                 tm: 17093534
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountAssetsInfo:
     post:
@@ -6479,7 +6437,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryAccountById:
     post:
@@ -6743,7 +6700,6 @@ paths:
                     type: boolean
                 required:
                   - data
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerAssets:
     post:
@@ -6873,7 +6829,6 @@ paths:
                 tm: 209517656
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerAssetsInfo:
     post:
@@ -7232,7 +7187,6 @@ paths:
                 tm: 171612280
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryLiabilitiesWaterByPage:
     post:
@@ -7467,7 +7421,6 @@ paths:
                     type: boolean
                 required:
                   - data
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwd:
     post:
@@ -7542,7 +7495,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateAssertsPwdMFA:
     post:
@@ -7639,7 +7591,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwd:
     post:
@@ -7714,7 +7665,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.updateLoginPwdMFA:
     post:
@@ -7821,7 +7771,6 @@ paths:
                 tm: 29515800
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.groupList:
     post:
@@ -7928,7 +7877,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeEmailMFA:
     post:
@@ -8056,7 +8004,6 @@ paths:
                 tm: 29515800
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changePhoneMFA:
     post:
@@ -8190,7 +8137,6 @@ paths:
                 tm: 29515800
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.changeCountry:
     post:
@@ -8275,7 +8221,6 @@ paths:
                 tm: 29515800
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindAssertsPwdMFA:
     post:
@@ -8380,7 +8325,6 @@ paths:
                 tm: 3851542
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.forgetAssertsPwdMFA:
     post:
@@ -8485,7 +8429,6 @@ paths:
                 tm: 3851542
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.bindThirdAccount:
     post:
@@ -8603,7 +8546,6 @@ paths:
                 tm: 46426649
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryLatestBalanceOfUserAccountInExternalSystem:
     post:
@@ -8699,7 +8641,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.findPhoneAndEmail:
     post:
@@ -8795,7 +8736,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/customer.app.CustomerThirdLoginService.config:
     post:
@@ -8913,7 +8853,6 @@ paths:
                   - tm
                   - bizCode
                   - msg
-          headers: {}
       security: []
   /h/com.cats.customer.api.app.CustomerThirdLoginService/appleVerify:
     post:
@@ -9029,7 +8968,6 @@ paths:
                   - tm
                   - bizCode
                   - msg
-          headers: {}
       security: []
   /third/login/customer.app.CustomerThirdLoginService.facebookVerify:
     post:
@@ -9124,7 +9062,6 @@ paths:
                   - tm
                   - bizCode
                   - msg
-          headers: {}
       security: []
   /h/com.cats.customer.api.app.CustomerThirdLoginService/googleVerify:
     post:
@@ -9227,7 +9164,6 @@ paths:
                   - trace
                   - data
                   - msgParams
-          headers: {}
       security: []
   /third/login/customer.app.CustomerThirdLoginService.telegramVerify:
     post:
@@ -9383,7 +9319,6 @@ paths:
                   - tm
                   - bizCode
                   - msg
-          headers: {}
       security: []
   /third/login/customer.app.CustomerThirdLoginService.metaMaskVerify:
     post:
@@ -9632,7 +9567,6 @@ paths:
                   - tm
                   - bizCode
                   - msg
-          headers: {}
       security: []
   /third/login/customer.app.CustomerThirdLoginService.login:
     post:
@@ -9909,7 +9843,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /third/login/customer.app.CustomerThirdLoginService.socialLogin:
     post:
@@ -10182,7 +10115,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /third/login/customer.app.CustomerThirdLoginService.register:
     post:
@@ -10448,7 +10380,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /third/login/customer.app.CustomerThirdLoginService.socialRegister:
     post:
@@ -10695,7 +10626,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /login/customer.app.CustomerWebApiService.login:
     post:
@@ -11118,7 +11048,6 @@ paths:
                 tm: 82650853
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /thirdExt/switchAccount:
     post:
@@ -11171,7 +11100,6 @@ paths:
               schema:
                 type: object
                 properties: {}
-          headers: {}
       security: []
   /global/customer.app.CustomerDubboApiService.resetAccount:
     post:
@@ -11233,7 +11161,6 @@ paths:
               schema:
                 type: object
                 properties: {}
-          headers: {}
       security: []
   /register/customer.app.CustomerWebApiService.register:
     post:
@@ -11509,7 +11436,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/thirdExt/randomKey:
     post:
@@ -11607,7 +11533,6 @@ paths:
                 tm: 955
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.WithdrawBankWebApiService.add:
     post:
@@ -11755,7 +11680,6 @@ paths:
                     tm: 3477734
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.WithdrawBankWebApiService.addV1v2v8:
     post:
@@ -11868,7 +11792,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.WithdrawBankWebApiService.bankList:
     post:
@@ -11937,7 +11860,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListCustomerWithdrawBankVO'
-          headers: {}
       security: []
   /global/customer.app.WithdrawBankWebApiService.delete:
     post:
@@ -11970,7 +11892,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult'
-          headers: {}
       security: []
   /global/customer.app.CustomerExtendWebApiService.findCustomerExtend:
     post:
@@ -12065,7 +11986,6 @@ paths:
                     tm: 48792747
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerExtendWebApiService.saveCustomerExtend:
     post:
@@ -12163,7 +12083,6 @@ paths:
                     tm: 735197
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerOptionalWebApiService.add:
     post:
@@ -12258,7 +12177,6 @@ paths:
                 tm: 46426649
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerOptionalWebApiService.delete:
     post:
@@ -12363,7 +12281,6 @@ paths:
                     tm: 7386547
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerOptionalWebApiService.optionalList:
     post:
@@ -12486,7 +12403,6 @@ paths:
                 tm: 39231170
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.add:
     post:
@@ -12584,7 +12500,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.addV1v1v2:
     post:
@@ -12688,7 +12603,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.delete:
     post:
@@ -12756,7 +12670,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.updateWallet:
     post:
@@ -12789,7 +12702,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.walletList:
     post:
@@ -12926,7 +12838,6 @@ paths:
                 tm: 3021714
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.addWithdrawalAddressMFA:
     post:
@@ -13029,7 +12940,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressList:
     post:
@@ -13174,7 +13084,6 @@ paths:
                 tm: 3021714
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWalletWebApiService.withdrawalAddressGroupList:
     post:
@@ -13310,7 +13219,6 @@ paths:
                 tm: 3021714
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.GoogleVerifyApiService.generateGoogleAccount:
     post:
@@ -13392,7 +13300,6 @@ paths:
                 tm: 22789118
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.GoogleVerifyApiService.checkGoogleCode:
     post:
@@ -13506,7 +13413,6 @@ paths:
                     tm: 6344724
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.checkKycApply:
     post:
@@ -13624,7 +13530,6 @@ paths:
                      "msgParams": "CUSTOMER_API_0000602",
                      "ok": true
                  }
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.findAllBizKyc:
     post:
@@ -13709,7 +13614,6 @@ paths:
                 tm: 4315987
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.findAllBizKycList:
     post:
@@ -13852,7 +13756,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.findAllCusKycListByBiz:
     post:
@@ -13923,7 +13826,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListKycAuthVO'
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.findAllLevelKyc:
     post:
@@ -14008,7 +13910,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListKycAuthVO'
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.findCompanyCountry:
     post:
@@ -14124,7 +14025,6 @@ paths:
                 tm: 3817612
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.kycApply:
     post:
@@ -14226,7 +14126,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/customer.app.KycWebApiService.kycLevelApply:
     post:
@@ -14376,7 +14275,6 @@ paths:
                     tm: 5871580
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerApiWebService.downgrade:
     post:
@@ -14647,7 +14545,6 @@ paths:
                 tm: 87948437
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerApiWebService.delApi:
     post:
@@ -14739,7 +14636,6 @@ paths:
                     tm: 2142467
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerApiWebService.editApiPermission:
     post:
@@ -14875,7 +14771,6 @@ paths:
                     tm: 96624858
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/customer.app.CustomerApiWebService.page:
     post:
@@ -15101,7 +14996,6 @@ paths:
                 tm: 7721022
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerApiWebService.queryApi:
     post:
@@ -15307,7 +15201,6 @@ paths:
                 tm: 11271064
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.queryCustomerOfAgentPage:
     post:
@@ -15512,7 +15405,6 @@ paths:
                   - data
                   - fail
                   - ok
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.registerOfAgentShareLink:
     post:
@@ -15803,7 +15695,6 @@ paths:
                 tm: 87948437
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkToken:
     post:
@@ -15941,7 +15832,6 @@ paths:
                 data: {}
                 fail: true
                 trace: nisi eu pariatur
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkPhone:
     post:
@@ -16077,7 +15967,6 @@ paths:
                 data: {}
                 fail: true
                 trace: nisi eu pariatur
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.checkPhoneForRetriedLoginPwd:
     post:
@@ -16202,7 +16091,6 @@ paths:
                 data: {}
                 fail: true
                 trace: nisi eu pariatur
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.retrieveLoginPwd:
     post:
@@ -16321,7 +16209,6 @@ paths:
                 data: {}
                 fail: true
                 trace: nisi eu pariatur
-          headers: {}
       security: []
   /global/customer.app.CustomerWebApiService.firstSetLoginPwd:
     post:
@@ -16501,7 +16388,6 @@ paths:
                 ok: false
                 trace: cillum
                 tm: 29
-          headers: {}
       security: []
   /global/message.app.VerificationApiService.verifyCodeSend:
     post:
@@ -16678,7 +16564,6 @@ paths:
                 tm: 34
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/message.app.VerificationApiService.verifyCodeCheck:
     post:
@@ -16860,7 +16745,6 @@ paths:
                 tm: 10
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/message.app.PlatFormMessageTempApiService.getPlatformTempParentTypeList:
     post:
@@ -16972,7 +16856,6 @@ paths:
                       required:
                         - desc
                     title: Data Body
-          headers: {}
       security: []
   /global/message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogList:
     post:
@@ -17118,7 +17001,6 @@ paths:
                           type: string
                           title: Creator
                     title: Data Body
-          headers: {}
       security: []
   /global/message.app.PlatFormMessageLogApiService.queryPlatFormMessageLogByPage:
     post:
@@ -17330,7 +17212,6 @@ paths:
                           description: Client number
                     title: Data Body
                     description: Data Body
-          headers: {}
       security: []
   /global/message.app.CompanyNoticeApiService.customerViewNoticePage:
     post:
@@ -17507,7 +17388,6 @@ paths:
                           description: Client number
                     title: Data Body
                     description: Data Body
-          headers: {}
       security: []
   /global/message.app.CompanyNoticeApiService.customerViewMsgPage:
     post:
@@ -17668,7 +17548,6 @@ paths:
                           title: Read status
                           description: 1-Unread; 2-Read;
                     title: Data Body
-          headers: {}
       security: []
   /global/message.app.CompanyNoticeApiService.msgRead:
     post:
@@ -17776,7 +17655,6 @@ paths:
                     type: object
                     properties: {}
                     title: Data Body
-          headers: {}
       security: []
   /global/message.app.CompanyNoticeApiService.msgAllRead:
     post:
@@ -17879,7 +17757,6 @@ paths:
                     type: object
                     properties: {}
                     title: Data Body
-          headers: {}
       security: []
   /global/messagepush.app.OfflinePushService.clientIdBindCustomer:
     post:
@@ -17984,7 +17861,6 @@ paths:
                     type: boolean
                     title: Data Body
                     description: true-success; false-failure;
-          headers: {}
       security: []
   /global/message.app.CompanyNoticeApiService.sendContactUsMsg:
     post:
@@ -18088,7 +17964,6 @@ paths:
                     type: string
                     title: Tracking code
                     description: Tracking code
-          headers: {}
       security: []
   /global/getMsgPushToken:
     post:
@@ -18193,7 +18068,6 @@ paths:
                 bizCode: ''
                 tm: 0
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.addMarketOrder:
     post:
@@ -18760,7 +18634,6 @@ paths:
                 tm: 162
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.updateOrder:
     post:
@@ -19036,7 +18909,6 @@ paths:
                 tm: 7
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.queryHistoryCloseOrderList:
     post:
@@ -19330,7 +19202,6 @@ paths:
                 tm: 6
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.setCrossLevelNum:
     post:
@@ -19490,7 +19361,6 @@ paths:
                 tm: 17
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.calculateMarketOrder:
     post:
@@ -19691,7 +19561,6 @@ paths:
                 tm: 31
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CfdMMPositionApiService.queryPositionDetail:
     post:
@@ -20003,7 +19872,6 @@ paths:
                 tm: 27
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CfdMMOrderApiService.queryCapitalFlowList:
     post:
@@ -20316,7 +20184,6 @@ paths:
                 tm: 0
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.addMarketOrder:
     post:
@@ -20934,7 +20801,6 @@ paths:
                 tm: 162
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.updateOrder:
     post:
@@ -21095,7 +20961,6 @@ paths:
                 tm: 7
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.queryOrderDetail:
     post:
@@ -21356,7 +21221,6 @@ paths:
                       thirdPartyOrder:
                         type: string
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.queryOrderPage:
     post:
@@ -21716,7 +21580,6 @@ paths:
                     tm: 0
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.CfdWBWOrderApiService.queryHistoryCloseOrderList:
     post:
@@ -22031,7 +21894,6 @@ paths:
                     tm: 13
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.queryTradeRecordPage:
     post:
@@ -22436,7 +22298,6 @@ paths:
                     tm: 3
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.PositionApiService.updateCrossLevelNum:
     post:
@@ -22590,7 +22451,6 @@ paths:
                     tm: 3
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.PositionApiService.updateOccupyTheMargin:
     post:
@@ -22765,7 +22625,6 @@ paths:
                     tm: 3
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.calculateMarketOrder:
     post:
@@ -23020,7 +22879,6 @@ paths:
                 tm: 31
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.calculationBurstPrice:
     post:
@@ -23182,7 +23040,6 @@ paths:
                 tm: 31
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.PositionApiService.queryPositionDetail:
     post:
@@ -23518,7 +23375,6 @@ paths:
                     tm: 93
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.PositionApiService.queryPositionPage:
     post:
@@ -23911,7 +23767,6 @@ paths:
                     tm: 1
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.queryCapitalFlowList:
     post:
@@ -24263,7 +24118,6 @@ paths:
                     tm: 0
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.closeTradePboOrder:
     post:
@@ -24414,7 +24268,6 @@ paths:
                     tm: 0
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.checkOrderStatus:
     post:
@@ -24574,7 +24427,6 @@ paths:
                     tm: 0
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.addOrder:
     post:
@@ -24835,7 +24687,6 @@ paths:
                 tm: 162
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.updateOrder:
     post:
@@ -24993,7 +24844,6 @@ paths:
                 tm: 7
                 msgParams: null
                 ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.queryTradeRecordPage:
     post:
@@ -25319,7 +25169,6 @@ paths:
                     tm: 3
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.previewOrder:
     post:
@@ -25655,7 +25504,6 @@ paths:
                     tm: 93
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.addRepaymentOrder:
     post:
@@ -25991,7 +25839,6 @@ paths:
                     tm: 93
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.CrossLeverOrderApiService.queryCapitalFlowList:
     post:
@@ -26306,7 +26153,6 @@ paths:
                     tm: 0
                     msgParams: null
                     ok: false
-          headers: {}
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryCapitalFlowList:
     post:
@@ -26333,7 +26179,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoSpotSubjectWaterVo'
-          headers: {}
       security: []
   /global/tradeapi.app.SpotOrderApiService.closeTradePboOrder:
     post:
@@ -26360,7 +26205,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
-          headers: {}
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryOrderPage:
     post:
@@ -26428,7 +26272,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderPageVo'
-          headers: {}
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryOrderDetail:
     post:
@@ -26455,7 +26298,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotQueryOrderVo'
-          headers: {}
       security: []
   /global/tradeapi.app.SpotOrderApiService.queryTradeRecordPage:
     post:
@@ -26482,7 +26324,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSpotTradeRecordVo'
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.placeOrder:
     post:
@@ -26603,7 +26444,6 @@ paths:
                         title: Order number
                         format: long
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.cancelOrder:
     post:
@@ -26682,7 +26522,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.queryOrderDetail:
     post:
@@ -26803,7 +26642,6 @@ paths:
                         type: string
                         title: Filled quantity
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.queryOrderPage:
     post:
@@ -26994,7 +26832,6 @@ paths:
                               title: Filled quantity
                           title: Data Body
                         title: Entrust list
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.queryPendingOrderList:
     post:
@@ -27109,7 +26946,6 @@ paths:
                         executeNum:
                           type: string
                           title: Filled quantity
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.checkOrder:
     post:
@@ -27248,7 +27084,6 @@ paths:
                         type: string
                         title: Amount of loan required for this transaction
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.calculateOrder:
     post:
@@ -27348,7 +27183,6 @@ paths:
                         type: string
                         title: Number of shares that can be bought with a loan
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.queryDealPage:
     post:
@@ -27540,7 +27374,6 @@ paths:
                               description: 13-digit timestamp
                         title: Deal list collection
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.getPositionDealDetailList:
     post:
@@ -27631,7 +27464,6 @@ paths:
                         type: string
                         title: Deal amount
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockPositionApiService.queryPositionDetail:
     post:
@@ -27877,7 +27709,6 @@ paths:
                         title: Margin type
                         description: 1-Ratio; 2-Range;
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockPositionApiService.queryPositionPage:
     post:
@@ -28157,7 +27988,6 @@ paths:
                           title: Margin type
                           description: 1-Ratio; 2-Range;
                     title: Data Body
-          headers: {}
       security: []
   /global/tradeapi.app.StockOrderApiService.queryCapitalFlowList:
     post:
@@ -28429,7 +28259,6 @@ paths:
                               format: long
                           title: Data Body
                         title: Transaction Collection
-          headers: {}
       security: []
   /global/tradeapi.app.StockAccountApiService.queryAccountAssetsInfo:
     post:
@@ -28624,7 +28453,6 @@ paths:
                       crossLevel:
                         type: string
                         title: Leverage ratio
-          headers: {}
       security: []
   /global/tradeapi.app.OrderApiService.queryPBOOrderPage:
     post:
@@ -28786,7 +28614,6 @@ paths:
                 code: '100'
                 fail: false
                 ok: true
-          headers: {}
       security: []
   /get-user-amount:
     post:
@@ -28966,7 +28793,6 @@ paths:
                 code: '100'
                 fail: false
                 ok: true
-          headers: {}
       security: []
   /external-system-credit-limit-adjustment:
     post:
@@ -29156,7 +28982,6 @@ paths:
                 code: '100'
                 fail: false
                 ok: true
-          headers: {}
       security: []
   /cancel-external-system-credit-limit-adjustment:
     post:
@@ -29341,7 +29166,6 @@ paths:
                 code: '100'
                 fail: false
                 ok: true
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.indexSample:
     post:
@@ -29374,7 +29198,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListIndexSymbolCombinationVo'
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.indexSimplePerformance:
     post:
@@ -29404,7 +29227,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListIndexSingleAssetPerformanceVo
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.assetPerformance:
     post:
@@ -29432,7 +29254,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListSingleAssetPerformanceDto'
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.batchMarketPerformance:
     post:
@@ -29461,7 +29282,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultMapLongListFundTrendChartTypeDto
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.fundNetValueChangeQuote:
     post:
@@ -29489,7 +29309,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundNetValueCompareDto'
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.investCombination:
     post:
@@ -29518,7 +29337,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListRealTimeInvestCombinationDto
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.marketPerformance:
     post:
@@ -29546,7 +29364,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
-          headers: {}
       security: []
   /global/report.app.ReportDatadDubboService.marketPerformanceQuoteChange:
     post:
@@ -29574,7 +29391,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultMapStringListFundTrendChartDto'
-          headers: {}
       security: []
   /global/fund.app.FundApplyAppDubboService.apply:
     post:
@@ -29601,7 +29417,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerFundApplyDto'
-          headers: {}
       security: []
   /global/fund.app.FundApplyAppDubboService.calcApplyShares:
     post:
@@ -29628,7 +29443,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundApplyCalcDto'
-          headers: {}
       security: []
   /global/fund.app.FundApplyAppDubboService.customerPage:
     post:
@@ -29655,7 +29469,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
-          headers: {}
       security: []
   /global/fund.app.FundApplyAppDubboService.getFundCurrencyList:
     post:
@@ -29682,7 +29495,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
-          headers: {}
       security: []
   /global/fund.app.FundApplyAppDubboService.page:
     post:
@@ -29709,7 +29521,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundApplyDto'
-          headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.calcDeduct:
     post:
@@ -29736,7 +29547,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundManagementFeesCalcDto'
-          headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.deduct:
     post:
@@ -29763,7 +29573,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultVoid'
-          headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.excute:
     post:
@@ -29791,7 +29600,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultVoid'
-          headers: {}
       security: []
   /global/fund.app.FundManagementFeesAppDubboService.page:
     post:
@@ -29818,7 +29626,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoFundManagementFeesDto'
-          headers: {}
       security: []
   /global/fund.app.FundsApplyExecuteService.confirmFundsApplyExecuteInfo:
     post:
@@ -29845,7 +29652,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBoolean'
-          headers: {}
       security: []
   /global/fund.app.FundsApplyExecuteService.getFundsApplyExecuteInfo:
     post:
@@ -29872,7 +29678,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundsApplyExecuteInfoDto'
-          headers: {}
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.getOrderExecuteStandardConfigSymbolList:
     post:
@@ -29903,7 +29708,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListOrderExecuteStandardConfigSymbolDto
-          headers: {}
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.getOrderExecuteStandardConfigs:
     post:
@@ -29933,7 +29737,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListOrderExecuteStandardConfigDto
-          headers: {}
       security: []
   /global/fund.app.FundsOrderExecuteStandardService.saveOrderExecuteStandardConfigs:
     post:
@@ -29962,7 +29765,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBoolean'
-          headers: {}
       security: []
   /global/fund.app.FundOperationInfoAppDubboService.queryFundInfo:
     post:
@@ -29989,7 +29791,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundOperationInfoDto'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.calFundRedeem:
     post:
@@ -30016,7 +29817,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerFundRedeemDto'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.calShares:
     post:
@@ -30043,7 +29843,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.checkShares:
     post:
@@ -30070,7 +29869,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultFundRedeemSharesCheckRespDto'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.createFundRedeem:
     post:
@@ -30097,7 +29895,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultVoid'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.getFundRedeemCurrencyList:
     post:
@@ -30124,7 +29921,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListCustomerFundCurrencyDto'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.page:
     post:
@@ -30151,7 +29947,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryManagerPage:
     post:
@@ -30178,7 +29973,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoCustomerFundRedeemDto'
-          headers: {}
       security: []
   /global/fund.app.FundRedeemAppDubboService.queryNotConfirmedRecs:
     post:
@@ -30205,7 +29999,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultLong'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.applyRechargeBindAddress:
     post:
@@ -30268,7 +30061,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.markOpenCardDepositRate:
     post:
@@ -30341,7 +30133,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.prePaymentOrder:
     post:
@@ -30422,7 +30213,6 @@ paths:
                   fail:
                     type: boolean
                     description: Operation failure, true=success, false=failure
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransfer:
     post:
@@ -30485,7 +30275,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmountTransferVo'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferForAgent:
     post:
@@ -30572,7 +30361,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmountTransferVo'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferRecord:
     post:
@@ -30634,7 +30422,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCapitalTransferRecordResDto'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.capitalTransferSupportDiffCurr:
     post:
@@ -30696,7 +30483,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmountTransferVo'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.createDepositProposal:
     post:
@@ -30758,7 +30544,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCreateCustomerDepositRespDto'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getBindRechargeAddress:
     post:
@@ -30821,7 +30606,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultCustomerRechargeWalletAddrRespDto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getCryptoBlockchainInfo:
     post:
@@ -30883,7 +30667,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCryptoBlockchainRespDto'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getDepositAccountCurrencyList:
     post:
@@ -30951,7 +30734,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultSetDepositAccountCurrencyRespDto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getDepositAccountCurrencyListV2:
     post:
@@ -31019,7 +30801,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListDepositAccountCurrencyRespV2Dto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getDepositCoinList:
     post:
@@ -31081,7 +30862,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSetString'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getDepositExchangeRate:
     post:
@@ -31144,7 +30924,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryCustomerDepositExchangeRateDto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannels:
     post:
@@ -31215,7 +30994,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV2:
     post:
@@ -31281,7 +31059,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespDto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getPayChannelsV3:
     post:
@@ -31349,7 +31126,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListQueryCustomerPaymentChannelRespV3Dto
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.getPayStatus:
     post:
@@ -31411,7 +31187,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultQueryCoinPayStatusRespDto'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.judgeIsAlreadyDeposit:
     post:
@@ -31474,7 +31249,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBoolean'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.manualLoan:
     post:
@@ -31536,7 +31310,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.manualRepayment:
     post:
@@ -31598,7 +31371,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult1'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService/queryDepositProposal:
     post:
@@ -31660,7 +31432,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerDepositProposalDto'
-          headers: {}
       security: []
   /global/fund.app.DepositAppDubboService.queryPayChannelType:
     post:
@@ -31722,7 +31493,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListFundPayChannelTypeDto'
-          headers: {}
       security: []
   /global/fund.app.CustomerProposalQueryService.isHaveUnCompleteProposal:
     post:
@@ -31749,7 +31519,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBoolean'
-          headers: {}
       security: []
   /global/fund.app.CustomerProposalQueryService.queryDepositAdjustPageList:
     post:
@@ -31777,7 +31546,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerAdjustProposalDto
-          headers: {}
       security: []
   /global/fund.app.CustomerProposalQueryService.queryDepositPageList:
     post:
@@ -31805,7 +31573,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerDepositProposalDto
-          headers: {}
       security: []
   /global/fund.app.CustomerProposalQueryService.queryWithdrawPageList:
     post:
@@ -31868,7 +31635,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultBasePageVoCustomerWithdrawProposalDto
-          headers: {}
       security: []
   /global/fund.app.FundExchangeRateQueryService.getExchangeRateList:
     post:
@@ -31931,7 +31697,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListExchangeRateConvertDto'
-          headers: {}
       security: []
   /global/fund.app.FundExchangeRateQueryService.getTradeExchangeRate:
     post:
@@ -32040,7 +31805,6 @@ paths:
                     type: string
                   fail:
                     type: string
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.computeWithdrawFee:
     post:
@@ -32067,7 +31831,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultComputeWithdrawFeeRespDto'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawExchangeRate:
     post:
@@ -32095,7 +31858,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryCustomerWithdrawExchangeRateDto
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.createWithdrawProposal:
     post:
@@ -32241,7 +32003,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultCustomerWithdrawProposalDto'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getAccountMarginRate:
     post:
@@ -32268,7 +32029,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultString'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getAllWithdrawCurrencyList:
     post:
@@ -32331,7 +32091,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getCoinWithdrawCurrencyList:
     post:
@@ -32359,7 +32118,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAccountCurrencyList:
     post:
@@ -32386,7 +32144,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultSetString'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawAmountLimitInfo:
     post:
@@ -32414,7 +32171,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultWithdrawAmountLimitRespDto'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawCurrencyList:
     post:
@@ -32477,7 +32233,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultListCustomerGroupWithdrawCurrencyConfigDto
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawMethodList:
     post:
@@ -32539,7 +32294,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getWithdrawTimesIn24Hour:
     post:
@@ -32566,7 +32320,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultInteger'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.queryPayWithdrawBankList:
     post:
@@ -32593,7 +32346,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultJSONArray'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.queryWithdrawLimitConfig:
     post:
@@ -32620,7 +32372,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultQueryWithdrawLimitConfigRespDto'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.withdrawCurrencyList:
     post:
@@ -32647,7 +32398,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultWithdrawCurrencyResDto'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.getCustomerGroupWithdrawMethodList:
     post:
@@ -32712,7 +32462,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultListWithdrawMethodQueryDto'
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.queryCustomerGroupWithdrawRiskConfig:
     post:
@@ -33022,7 +32771,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.checkWithdrawRiskLimitConfig:
     post:
@@ -33189,7 +32937,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/fund.app.WithdrawAppDubboService.queryRemainWithdrawAmount:
     post:
@@ -33257,7 +33004,6 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/BaseResultQueryRemainWithdrawAmountRespDto
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardActiveService.applyCard:
     post:
@@ -33442,7 +33188,6 @@ paths:
                 data: true
                 bizCode: PASS_TO_CREDIT
                 tm: 1585
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardActiveService.activationCard:
     post:
@@ -33589,7 +33334,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardActiveService.lockCard:
     post:
@@ -33711,7 +33455,6 @@ paths:
                     title: Return message body.
                     description: Return message body. true-success
                 title: ''
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardActiveService.addSuspendCardProposal:
     post:
@@ -33829,7 +33572,6 @@ paths:
                     title: Return message body.
                     description: true-Success
                 title: ''
-          headers: {}
       security: []
   /global/passToCredit.app.AmountActiveService.addTransferProposal:
     post:
@@ -33959,7 +33701,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardActiveService.unlockCard:
     post:
@@ -34078,7 +33819,6 @@ paths:
                     title: Return message body.
                     description: Return message body. true-success
                 title: ''
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardActiveService.modifyTradePassword:
     post:
@@ -34223,7 +33963,6 @@ paths:
                 msgParams: null
                 ok: false
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardActiveService.settingCardLimit:
     post:
@@ -34340,7 +34079,6 @@ paths:
                     title: Return message body.
                     description: Return message body. true-success
                 title: ''
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.sendVerifyCode:
     post:
@@ -34498,7 +34236,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.batchSettingSubscriptionType:
     post:
@@ -34640,7 +34377,6 @@ paths:
                     title: Return message body.
                     description: Return message body. true-success
                 title: ''
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.sendWatsAppVerifyCode:
     post:
@@ -34778,7 +34514,6 @@ paths:
                 msgParams: null
                 ok: false
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.updateWatsAppAccount:
     post:
@@ -34906,7 +34641,6 @@ paths:
                     title: Return message body.
                     description: Return message body. true-success
                 title: ''
-          headers: {}
       security: []
   /passToCreditUpload:
     post:
@@ -34969,7 +34703,6 @@ paths:
               schema:
                 type: object
                 properties: {}
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCardList:
     post:
@@ -35239,7 +34972,6 @@ paths:
                     code: '500'
                     bizCode: PASS_TO_CREDIT
                     tm: 429
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.getCardSensitiveInfo:
     post:
@@ -35391,7 +35123,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryApplyCardProposalList:
     post:
@@ -35662,7 +35393,6 @@ paths:
                     title: ''
                     description: Return message body.
                 title: ''
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCustomerOfAgentPage:
     post:
@@ -35921,7 +35651,6 @@ paths:
                   - data
                   - fail
                   - ok
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordPage:
     post:
@@ -36265,7 +35994,6 @@ paths:
                     code: '500'
                     bizCode: PASS_TO_CREDIT
                     tm: 143
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.queryCustomerNoticeSubscription:
     post:
@@ -36432,7 +36160,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.querySendVerifyCodeInfo:
     post:
@@ -36590,7 +36317,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordList:
     post:
@@ -36957,7 +36683,6 @@ paths:
                     code: '500'
                     bizCode: PASS_TO_CREDIT
                     tm: 143
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryAccountTransactionRecordMonthTotal:
     post:
@@ -37200,7 +36925,6 @@ paths:
                     code: '500'
                     bizCode: PASS_TO_CREDIT
                     tm: 143
-          headers: {}
       security: []
   /global/passToCredit.app.AppRateDubboService.findDepositExchangeRate:
     post:
@@ -37336,7 +37060,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCardTypeInfo:
     post:
@@ -37480,7 +37203,6 @@ paths:
                         description: Physical card daily consumption limit upper limit
                     title: Data Body
                     description: Data Body
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.sendCustomerPasswordUrl:
     post:
@@ -37593,7 +37315,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.checkCardDisplayStatus:
     post:
@@ -37717,7 +37438,6 @@ paths:
                           Timeout. 13-digit timestamp, proposal timeout at this
                           time
                     title: ''
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.checkActionStatus:
     post:
@@ -37844,7 +37564,6 @@ paths:
                     title: Display status
                     format: int32
                     description: Display status. 0-No action; 1-In progress;
-          headers: {}
       security: []
   /global/passToCredit.app.AppMessageService.checkWatsAppAccount:
     post:
@@ -37935,7 +37654,6 @@ paths:
                     msgParams: null
                     ok: true
                     class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AmountQueryService.queryCustomerTransferProposalPage:
     post:
@@ -38230,7 +37948,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.findCustomerInfoUnderAgentByCustomerNo:
     post:
@@ -38355,7 +38072,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/passToCredit.app.AppCardQueryService.queryCustomerOfAgentList:
     post:
@@ -38462,7 +38178,6 @@ paths:
                   fail:
                     type: boolean
                     description: Operation failure, true=success, false=failure
-          headers: {}
       security: []
   /global/passToCredit.app.AppContactCustomerDubboService.info:
     post:
@@ -38565,7 +38280,6 @@ paths:
                   fail:
                     type: boolean
                     description: Operation failure, true=success, false=failure
-          headers: {}
       security: []
   /marketPosition:
     post:
@@ -38710,7 +38424,6 @@ paths:
                   - remark
                   - estimateForcePrice
                   - floatProfitLoss
-          headers: {}
       security: []
   /global/config.app.AppJcStrategyDubboService.getPageView:
     post:
@@ -38876,7 +38589,6 @@ paths:
                     type: string
                   fail:
                     type: string
-          headers: {}
       security: []
   /global/config.app.AppJcStrategyDubboService.add:
     post:
@@ -39018,7 +38730,6 @@ paths:
                     type: string
                   fail:
                     type: string
-          headers: {}
       security: []
   /global/config.app.AppJcStrategyDubboService.updateStatus:
     post:
@@ -39147,7 +38858,6 @@ paths:
                     type: string
                   fail:
                     type: string
-          headers: {}
       security: []
   /global/config.app.AppJcStrategyDubboService.update:
     post:
@@ -39291,7 +39001,6 @@ paths:
                     type: string
                   fail:
                     type: string
-          headers: {}
       security: []
   /global/config.app.AppJcStrategyDubboService.removeById:
     post:
@@ -39415,7 +39124,6 @@ paths:
                     type: string
                   fail:
                     type: string
-          headers: {}
       security: []
   /marketTrade:
     post:
@@ -39621,7 +39329,6 @@ paths:
                   - interest
                   - executeTime
                   - status
-          headers: {}
       security: []
   /marketEntrust:
     post:
@@ -39789,7 +39496,6 @@ paths:
                   - status
                   - externalOrderId
                   - blacklist
-          headers: {}
       security: []
   /marketStpRecord:
     post:
@@ -39993,7 +39699,6 @@ paths:
                   - openClose
                   - currency
                   - executeTime
-          headers: {}
       security: []
   /marketNetRecord:
     post:
@@ -40197,7 +39902,6 @@ paths:
                   - openClose
                   - currency
                   - executeTime
-          headers: {}
       security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketMatchProfitRecord:
     post:
@@ -40364,7 +40068,6 @@ paths:
                   - tradeCurrency
                   - tradeVolume
                   - profitLossU
-          headers: {}
       security: []
   /api/cats-gateway/global/report.app.ReportDatadDubboService.marketStpProfitRecord:
     post:
@@ -40515,7 +40218,6 @@ paths:
                   - executeTime
                   - tradeCurrency
                   - commission
-          headers: {}
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.settlementProfitLossDayReport:
     post:
@@ -40590,7 +40292,6 @@ paths:
                   - date
                   - executeTime
                   - totalNetProfitLoss
-          headers: {}
       security: []
   /marketNetStatistics:
     post:
@@ -40653,7 +40354,6 @@ paths:
                   - stpLongThreshold
                   - stpShortThreshold
                   - status
-          headers: {}
       security: []
   /global/config.app.AppJcStrategyDubboService.getSymbolList:
     post:
@@ -40789,7 +40489,6 @@ paths:
                 tm: 4
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /global/config.app.AppJcStrategyDubboService.queryJcAllAccount:
     post:
@@ -40959,7 +40658,6 @@ paths:
                 tm: 4
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /marketStpStatistics:
     post:
@@ -41109,7 +40807,6 @@ paths:
                   - lpDealId
                   - createTime
                   - occupyTheMarginTarget
-          headers: {}
       security: []
   /marketDay:
     post:
@@ -41198,7 +40895,6 @@ paths:
                   - floatProfitLoss
                   - executeTime
                   - occupyTheMargin
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.addSymbolMMBotConf:
     post:
@@ -41319,7 +41015,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultMMBotConfVo'
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.querySymbolMMBotConfPageList:
     post:
@@ -41390,7 +41085,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoMMBotConfVo'
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.addAmmSymbol:
     post:
@@ -41498,7 +41192,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.addAmmMaker:
     post:
@@ -41558,7 +41251,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.addAmmAmount:
     post:
@@ -41618,7 +41310,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolInfo:
     post:
@@ -41660,7 +41351,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolInfoVo'
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.getAmmSymbolAmount:
     post:
@@ -41698,7 +41388,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultAmmSymbolAmountVo'
-          headers: {}
       security: []
   /global/makerbot.app.MMBotService.queryAmmSymbolPage:
     post:
@@ -41751,7 +41440,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResultBasePageVoAmmSymbolInfoVo'
-          headers: {}
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.getUnclaimedMarketAmount:
     post:
@@ -41797,7 +41485,6 @@ paths:
                   - shortIncome
                   - shortIncomePercent
                   - accountCurrency
-          headers: {}
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.extractUnclaimedMarketAmount:
     post:
@@ -41822,7 +41509,6 @@ paths:
               schema:
                 type: object
                 properties: {}
-          headers: {}
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.getLevel:
     post:
@@ -41856,7 +41542,6 @@ paths:
                 required:
                   - makerLevel
                   - takerLevel
-          headers: {}
       security: []
   /getNetPositionStatistics:
     post:
@@ -41899,7 +41584,6 @@ paths:
                   - longVolume
                   - shortVolume
                   - totalVolume
-          headers: {}
       security: []
   /getNetFloatProfitStatistics:
     post:
@@ -41942,7 +41626,6 @@ paths:
                   - longFloatProfit
                   - shortFloatProfit
                   - totalFloatProfit
-          headers: {}
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.marketIncomeReport:
     post:
@@ -42061,7 +41744,6 @@ paths:
                   - executeAmountU
                   - amount
                   - percent
-          headers: {}
       security: []
   /api/cats-gateway/global/benefit.app.ReportDatadDubboService.trafficStatisticsDayReport:
     post:
@@ -42140,7 +41822,6 @@ paths:
                   - takerShortTrafficFee
                   - takerLongTrafficFee
                   - takerShortTraffic
-          headers: {}
       security: []
 components:
   schemas:
@@ -49882,6 +49563,7 @@ components:
           format: int64
           description: Google ID
           minimum: 1
+  responses: {}
   securitySchemes: {}
 servers:
   - url: https://prewppc-3.cmfbl.com/api
