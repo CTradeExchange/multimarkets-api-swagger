@@ -313,7 +313,6 @@ paths:
                       updateTime: 1669188193142
                 ok: true
                 fail: false
-          headers: {}
       security: []
   /config.admin.AdminDictDubboService.getListByParentCode:
     post:
@@ -468,7 +467,6 @@ paths:
                 tm: 3
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminDictDubboService.getCountryListByParentCode:
     post:
@@ -2172,7 +2170,6 @@ paths:
                 tm: 7
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminAssetsDubboService.getAssetsList:
     post:
@@ -4330,7 +4327,6 @@ paths:
                 tm: 3
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminAssetsDubboService.getTradeTypeList:
     post:
@@ -4473,7 +4469,6 @@ paths:
                 tm: 194
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolTradeTypeByCompanyId:
     post:
@@ -4622,7 +4617,6 @@ paths:
                 tm: 225
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolList:
     post:
@@ -4752,7 +4746,6 @@ paths:
                 tm: 74
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolGroupList:
     post:
@@ -4853,7 +4846,6 @@ paths:
                 tm: 8
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminSymbolDubboService.getSymbolByCompanyId:
     post:
@@ -5063,7 +5055,6 @@ paths:
                 tm: 52
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /config.admin.AdminSymbolDubboService.getFundByCompanyId:
     post:
@@ -5233,7 +5224,6 @@ paths:
                 tm: 15
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /fund.admin.CustomerAdjustProposalAdminDubboService.addCustomerAdjustProposal:
     post:
@@ -5356,7 +5346,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.operationBonus:
     post:
@@ -5502,7 +5491,6 @@ paths:
                   - bizCode
                   - code
                   - tm
-          headers: {}
       security: []
   /fund.admin.CustomerFundAdminDubboService.getExchangeRate:
     post:
@@ -5633,7 +5621,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.lockTradeAccount:
     post:
@@ -5718,7 +5705,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.unlockTradeAccount:
     post:
@@ -5799,7 +5785,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryOneLockTradeAccount:
     post:
@@ -5869,7 +5854,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BaseResult'
-          headers: {}
       security: []
   /fund.admin.CustomerActivityBonusAdminDubboService.queryTradeTypeLockTradeAccount:
     post:
@@ -5982,7 +5966,6 @@ paths:
                   - code
                   - tm
               example: "lockStatus：是否被锁定，true被锁定\r\n{\r\n    \"msg\": \"Success\",\r\n    \"fail\": false,\r\n    \"trace\": \"t-c88b6-no22of4-2je3o88-t6o3s5-1660556892\",\r\n    \"code\": \"0\",\r\n    \"data\": [\r\n        {\r\n            \"lockStatus\": false,\r\n            \"type\": 1,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        },\r\n        {\r\n            \"lockStatus\": false,\r\n            \"type\": 2,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        },\r\n        {\r\n            \"lockStatus\": true,\r\n            \"type\": 3,\r\n            \"class\": \"com.cats.fund.api.dto.CustomerQueryTradeTypeLockTradeAccountDto\"\r\n        }\r\n    ],\r\n    \"bizCode\": \"\",\r\n    \"tm\": 54,\r\n    \"msgParams\": null,\r\n    \"ok\": true,\r\n    \"class\": \"com.cats.common.core.base.vo.BaseResult\"\r\n}"
-          headers: {}
       security: []
   /fund.admin.CustomerAdjustProposalAdminDubboService.getCustomerAdjustProposalById:
     post:
@@ -6080,7 +6063,6 @@ paths:
                   - bizCode
                   - code
                   - tm
-          headers: {}
       security: []
   /customer.app.CustomerWebApiService.checkCustomerExist:
     post:
@@ -6180,7 +6162,6 @@ paths:
                   - bizCode
                   - code
                   - tm
-          headers: {}
       security: []
   /customer.admin.WhiteCustomerAdminApiService.addCusAndOpenAccountAndKyc:
     post:
@@ -6414,7 +6395,6 @@ paths:
                 tm: 236026513
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /customer.admin.WhiteCustomerAdminApiService.page:
     post:
@@ -6660,7 +6640,6 @@ paths:
                 ok: true
                 tm: 0
                 trace: ''
-          headers: {}
       security: []
   /customer.admin.WhiteCustomerAdminApiService.detail:
     post:
@@ -7056,7 +7035,6 @@ paths:
                 ok: true
                 tm: 0
                 trace: ''
-          headers: {}
       security: []
   /customer.admin.CustomerAdminApiService.queryAccountList:
     post:
@@ -7167,7 +7145,6 @@ paths:
                     "msgParams": null,
                     "ok": true
                 }
-          headers: {}
       security: []
   /customer.admin.CustomerGroupAdminApiService.groupList:
     post:
@@ -7253,7 +7230,6 @@ paths:
                     type: boolean
                   fail:
                     type: boolean
-          headers: {}
       security: []
   /message.admin.VerificationAdminService.queryCodeSendStatus:
     post:
@@ -7398,7 +7374,6 @@ paths:
                   - trace
                   - msgParams
                   - data
-          headers: {}
       security: []
   /message.admin.PlatFormMessageThirdSendAdminService.add:
     post:
@@ -7536,7 +7511,6 @@ paths:
                 msgParams: null
                 ok: true
                 class: com.cats.common.core.base.vo.BaseResult
-          headers: {}
       security: []
   /global/report.admin.CatsTradeDealService.getTradeDealInfoByDealId:
     post:
@@ -7694,7 +7668,6 @@ paths:
                     tm: 2
                     msgParams: null
                     ok: true
-          headers: {}
       security: []
   /global/report.admin.CatsTradeDealService.getTradeDealInfoByOrderId:
     post:
@@ -7858,7 +7831,6 @@ paths:
                     tm: 2
                     msgParams: null
                     ok: true
-          headers: {}
       security: []
   /tradeapi.admin.OrderAdminApiService.cancelPboOrder:
     post:
@@ -7954,7 +7926,6 @@ paths:
                 tm: 5
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /tradeapi.admin.OrderAdminApiService.forcedOrder:
     post:
@@ -8050,7 +8021,6 @@ paths:
                 tm: 7
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /tradeapi.admin.OrderAdminApiService.queryCapitalFlowList:
     post:
@@ -8322,7 +8292,6 @@ paths:
                         title: 流水集合
                         description: 流水集合
                     description: 数据体
-          headers: {}
       security: []
   /tradeapi.admin.OrderAdminApiService.queryPositionPage:
     post:
@@ -8690,7 +8659,6 @@ paths:
                 tm: 16
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /tradeapi.admin.PositionAdminApiService.queryAllPositionPage:
     post:
@@ -9428,7 +9396,6 @@ paths:
                 tm: 414
                 msgParams: null
                 ok: true
-          headers: {}
       security: []
   /quote-b-api/kline:
     get:
@@ -9541,7 +9508,6 @@ paths:
                       low_price: '136.397'
                       volume: '0'
                       turnover: '0'
-          headers: {}
       security: []
   /quote-stock-b-api/kline:
     get:
@@ -9654,7 +9620,6 @@ paths:
                       low_price: '136.397'
                       volume: '0'
                       turnover: '0'
-          headers: {}
       security: []
   /quote-b-api/batch-kline:
     get:
@@ -9811,7 +9776,6 @@ paths:
                       low_price: '136.397'
                       volume: '0'
                       turnover: '0'
-          headers: {}
       security: []
   /quote-stock-b-api/batch-kline:
     get:
@@ -9968,7 +9932,6 @@ paths:
                       low_price: '136.397'
                       volume: '0'
                       turnover: '0'
-          headers: {}
       security: []
   /quote-b-api/depth-tick:
     get:
@@ -10089,7 +10052,6 @@ paths:
                       asks:
                         - price: '136.427'
                           volume: '400000.00'
-          headers: {}
       security: []
   /quote-stock-b-api/depth-tick:
     get:
@@ -10210,7 +10172,6 @@ paths:
                       asks:
                         - price: '136.427'
                           volume: '400000.00'
-          headers: {}
       security: []
   /quote-b-api/trade-tick:
     get:
@@ -10317,7 +10278,6 @@ paths:
                       volume: '0'
                       turnover: '0'
                       trade_direction: 0
-          headers: {}
       security: []
   /quote-stock-b-api/trade-tick:
     get:
@@ -10424,7 +10384,6 @@ paths:
                       volume: '0'
                       turnover: '0'
                       trade_direction: 0
-          headers: {}
       security: []
 components:
   schemas:
@@ -12199,6 +12158,7 @@ components:
         - bizCode
         - code
         - tm
+  responses: {}
   securitySchemes: {}
 servers:
   - url: https://pre-api-test.cmfbl.com/openapi-b
