@@ -144,14 +144,14 @@ paths:
           in: header
           description: Company Id, country where the user is located
           required: false
-          example: 0
+          example: ''
           schema:
             type: integer
         - name: timestamp
           in: header
           description: Request initiation timestamp, accurate to the millisecond, 13 digits
           required: true
-          example: 0
+          example: ''
           schema:
             type: number
       requestBody:
@@ -28644,14 +28644,14 @@ paths:
           in: header
           description: Company Id, country where the user is located
           required: false
-          example: 0
+          example: ''
           schema:
             type: integer
         - name: timestamp
           in: header
           description: Request initiation timestamp, accurate to the millisecond, 13 digits
           required: true
-          example: 0
+          example: ''
           schema:
             type: number
       requestBody:
@@ -28841,7 +28841,7 @@ paths:
             Request initiation timestamp, accurate to the millisecond, 13
             digits.
           required: true
-          example: 0
+          example: ''
           schema:
             type: number
       requestBody:
@@ -29022,7 +29022,7 @@ paths:
             Request initiation timestamp, accurate to the millisecond, 13
             digits.
           required: false
-          example: 0
+          example: ''
           schema:
             type: number
       requestBody:
@@ -34702,6 +34702,11 @@ paths:
                   example: '{% mock ''phone'' %}'
               required:
                 - userPhone
+            example:
+              object: >-
+                file://C:\Users\admin\Pictures\Saved
+                Pictures\51e7ce01-11b1-49a0-b42f-33130c966cd4IMG_6054.HEIC
+              userPhone: '{% mock ''phone'' %}'
       responses:
         '200':
           description: ''
