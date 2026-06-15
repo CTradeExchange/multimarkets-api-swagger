@@ -142,14 +142,14 @@ paths:
           in: header
           description: Company Id，用户所在国家
           required: false
-          example: 0
+          example: ''
           schema:
             type: integer
         - name: timestamp
           in: header
           description: 请求发起时间戳，精确到毫秒，13位
           required: true
-          example: 0
+          example: ''
           schema:
             type: number
       requestBody:
@@ -33149,6 +33149,11 @@ paths:
                   type: string
               required:
                 - userPhone
+            example:
+              object: >-
+                file://C:\Users\admin\Pictures\Saved
+                Pictures\51e7ce01-11b1-49a0-b42f-33130c966cd4IMG_6054.HEIC
+              userPhone: '{% mock ''phone'' %}'
       responses:
         '200':
           description: ''
@@ -36856,14 +36861,14 @@ paths:
           in: header
           description: Company Id，用户所在国家
           required: false
-          example: 0
+          example: ''
           schema:
             type: integer
         - name: timestamp
           in: header
           description: 请求发起时间戳，精确到毫秒，13位
           required: true
-          example: 0
+          example: ''
           schema:
             type: number
       requestBody:
